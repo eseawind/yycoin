@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+	<osgi:service ref="tcpApplyDAO" interface="com.china.center.oa.tcp.dao.TcpApplyDAO" />
+
+	<osgi:service ref="tcpPrepaymentDAO" interface="com.china.center.oa.tcp.dao.TcpPrepaymentDAO" />
+
+	<osgi:service ref="tcpShareDAO" interface="com.china.center.oa.tcp.dao.TcpShareDAO" />
+
+	<osgi:service ref="travelApplyDAO" interface="com.china.center.oa.tcp.dao.TravelApplyDAO" />
+
+	<osgi:service ref="travelApplyItemDAO" interface="com.china.center.oa.tcp.dao.TravelApplyItemDAO" />
+
+	<osgi:service ref="travelApplyPayDAO" interface="com.china.center.oa.tcp.dao.TravelApplyPayDAO" />
+
+	<osgi:service ref="tcpFlowDAO" interface="com.china.center.oa.tcp.dao.TcpFlowDAO" />
+	
+	<osgi:service ref="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+
+	<osgi:service ref="travelApplyManager" interface="com.china.center.oa.tcp.manager.TravelApplyManager" />
+
+	<osgi:service ref="tcpApproveDAO" interface="com.china.center.oa.tcp.dao.TcpApproveDAO" />
+
+	<osgi:service ref="tcpFlowManager" interface="com.china.center.oa.tcp.manager.TcpFlowManager" />
+
+	<osgi:service ref="tcpHandleHisDAO" interface="com.china.center.oa.tcp.dao.TcpHandleHisDAO" />
+
+	<osgi:service ref="expenseApplyDAO" interface="com.china.center.oa.tcp.dao.ExpenseApplyDAO" />
+
+	<osgi:service ref="expenseManager" interface="com.china.center.oa.tcp.manager.ExpenseManager" />
+
+	<osgi:service ref="rebateApplyDAO" interface="com.china.center.oa.tcp.dao.RebateApplyDAO" />
+	<osgi:service ref="outBatchPriceDAO" interface="com.china.center.oa.tcp.dao.OutBatchPriceDAO" />
+	<osgi:service ref="rebateManager" interface="com.china.center.oa.tcp.manager.RebateManager" />
+	
+	<osgi:service ref="preInvoiceManager" interface="com.china.center.oa.tcp.manager.PreInvoiceManager" />
+	
+	<osgi:service ref="backPrePayManager" interface="com.china.center.oa.tcp.manager.BackPrePayManager" />
+</beans>

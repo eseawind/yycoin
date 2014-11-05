@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xmlns:iaop="http://www.springframework.org/schema/iaop"
+    xmlns:osgi="http://www.springframework.org/schema/osgi"
+    xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/iaop
+  http://www.springframework.org/schema/iaop/spring-iaop-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+  default-autowire="byName" default-init-method="init">
+  
+	<iaop:annotation-integrationAOP integrationAOP-manager="integrationAOPManager"
+	           integrationAuth-manager="integrationAuthManager"/>
+	
+	<tx:annotation-driven transaction-manager="transactionManager" />
+	
+</beans>

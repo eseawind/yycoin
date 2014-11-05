@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+    
+    <osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+    
+    <osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+    
+    <osgi:reference id="enumDAO" interface="com.china.center.oa.publics.dao.EnumDAO" />
+    
+    <osgi:reference id="dutyDAO" interface="com.china.center.oa.publics.dao.DutyDAO" />
+    
+    <osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+    
+    <osgi:reference id="authManager" interface="com.china.center.oa.publics.manager.AuthManager" />
+    
+    <osgi:reference id="stafferManager" interface="com.china.center.oa.publics.manager.StafferManager" />
+    
+    <osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />
+    
+    <osgi:reference id="showDAO" interface="com.china.center.oa.publics.dao.ShowDAO" />
+    
+    <osgi:reference id="flowLogDAO" interface="com.china.center.oa.publics.dao.FlowLogDAO" />
+    
+    <osgi:reference id="stafferTransferDAO" interface="com.china.center.oa.publics.dao.StafferTransferDAO" />
+    
+    <osgi:reference id="dutyVSInvoiceDAO" interface="com.china.center.oa.publics.dao.DutyVSInvoiceDAO" />	
+
+	<osgi:reference id="productDAO" interface="com.china.center.oa.product.dao.ProductDAO" />
+	
+	<osgi:reference id="principalshipDAO" interface="com.china.center.oa.publics.dao.PrincipalshipDAO" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	    
+   	<osgi:reference id="allProfitDAO" interface="com.china.center.oa.commission.dao.AllProfitDAO" />
+
+	<osgi:reference id="badDropAssessDAO" interface="com.china.center.oa.commission.dao.BadDropAssessDAO" />
+	
+	<osgi:reference id="commissionDAO" interface="com.china.center.oa.commission.dao.CommissionDAO" />
+	
+	<osgi:reference id="commissionLogDAO" interface="com.china.center.oa.commission.dao.CommissionLogDAO" />
+
+	<osgi:reference id="commissionMonthDAO" interface="com.china.center.oa.commission.dao.CommissionMonthDAO" />
+	
+	<osgi:reference id="curFeeDAO" interface="com.china.center.oa.commission.dao.CurFeeDAO" />
+	
+	<osgi:reference id="curMoneyDAO" interface="com.china.center.oa.commission.dao.CurMoneyDAO" />
+	
+	<osgi:reference id="curProfitDAO" interface="com.china.center.oa.commission.dao.CurProfitDAO" />
+	
+	<osgi:reference id="deductionTurnDAO" interface="com.china.center.oa.commission.dao.DeductionTurnDAO" />
+	
+	<osgi:reference id="externalAssessDAO" interface="com.china.center.oa.commission.dao.ExternalAssessDAO" />
+	
+	<osgi:reference id="externalStafferYearDAO" interface="com.china.center.oa.commission.dao.ExternalStafferYearDAO" />
+	
+	<osgi:reference id="financeFeeStatsDAO" interface="com.china.center.oa.commission.dao.FinanceFeeStatsDAO" />
+	
+	<osgi:reference id="financeFeeResultDAO" interface="com.china.center.oa.commission.dao.FinanceFeeResultDAO" />
+		
+	<osgi:reference id="commissionManager" interface="com.china.center.oa.commission.manager.CommissionManager" />
+
+	<osgi:reference id="commissionFacade" interface="com.china.center.oa.commission.facade.CommissionFacade" />	
+	
+	<osgi:reference id="curFeeDetailDAO" interface="com.china.center.oa.commission.dao.CurFeeDetailDAO" />
+	
+	<osgi:reference id="curMoneyDetailDAO" interface="com.china.center.oa.commission.dao.CurMoneyDetailDAO" />
+	
+	<osgi:reference id="financeFeeStatsDetailDAO" interface="com.china.center.oa.commission.dao.FinanceFeeStatsDetailDAO" />
+	
+	<osgi:reference id="badDropAssessDetailDAO" interface="com.china.center.oa.commission.dao.BadDropAssessDetailDAO" />
+	
+	<osgi:reference id="blackRuleDAO" interface="com.china.center.oa.commission.dao.BlackRuleDAO" />
+	
+	<osgi:reference id="blackRuleProductDAO" interface="com.china.center.oa.commission.dao.BlackRuleProductDAO" />
+	
+	<osgi:reference id="blackRuleStafferDAO" interface="com.china.center.oa.commission.dao.BlackRuleStafferDAO" />
+	
+	<osgi:reference id="reDateRuleDAO" interface="com.china.center.oa.commission.dao.ReDateRuleDAO" />
+	
+	<osgi:reference id="blackManager" interface="com.china.center.oa.commission.manager.BlackManager" />
+	
+	<osgi:reference id="commissionFreezeDAO" interface="com.china.center.oa.commission.dao.CommissionFreezeDAO" />
+    
+    <osgi:reference id="outDAO" interface="com.china.center.oa.sail.dao.OutDAO" />
+    
+    <osgi:reference id="baseDAO" interface="com.china.center.oa.sail.dao.BaseDAO" />
+    
+    <osgi:reference id="outBalanceDAO" interface="com.china.center.oa.sail.dao.OutBalanceDAO" />
+    
+    <osgi:reference id="baseBalanceDAO" interface="com.china.center.oa.sail.dao.BaseBalanceDAO" />
+    
+    <osgi:reference id="blackDAO" interface="com.china.center.oa.commission.dao.BlackDAO" />
+	
+	<osgi:reference id="blackOutDAO" interface="com.china.center.oa.commission.dao.BlackOutDAO" />
+	
+    <osgi:reference id="blackOutDetailDAO" interface="com.china.center.oa.commission.dao.BlackOutDetailDAO" />
+    
+    <osgi:reference id="hisBlackDAO" interface="com.china.center.oa.commission.dao.HisBlackDAO" />
+	
+	<osgi:reference id="hisBlackOutDAO" interface="com.china.center.oa.commission.dao.HisBlackOutDAO" />
+	
+    <osgi:reference id="hisBlackOutDetailDAO" interface="com.china.center.oa.commission.dao.HisBlackOutDetailDAO" />
+    
+</beans>

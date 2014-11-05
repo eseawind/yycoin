@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="webapps">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/spring.dm.tld.3076716235882142160.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/spring.dm.tld.632447851462946452.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/spring.dm.tld.1819873868147537462.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/spring.dm.tld.8600916061681391905.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

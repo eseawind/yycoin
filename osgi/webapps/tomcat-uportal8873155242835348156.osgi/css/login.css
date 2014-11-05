@@ -1,0 +1,32 @@
+
+A { text-decoration: none; color: #000000; }
+A:hover { color: #428EFF; text-decoration: underline; }
+
+BODY
+{
+	font-family: "宋体";
+	font-size: 9pt;
+	text-decoration: none;
+	line-height: 150%;
+	SCROLLBAR-FACE-COLOR: #C6EBDE;
+	SCROLLBAR-HIGHLIGHT-COLOR: #ffffff; 
+	SCROLLBAR-SHADOW-COLOR: #39867B; 
+	SCROLLBAR-3DLIGHT-COLOR: #39867B; 
+	SCROLLBAR-ARROW-COLOR: #330000; 
+	SCROLLBAR-TRACK-COLOR: #E2F3F1; 
+	SCROLLBAR-DARKSHADOW-COLOR: #ffffff;
+}
+
+TD { font-family: "宋体"; font-size: 9pt; }
+Input { font-size: 9pt; height: 20px; }
+Button { font-size: 9pt; height: 20px; }
+Select { font-size: 9pt; height: 20px; }
+
+.Title { background:url(../Images/topBar_bg.gif); }
+.Border { border: 1px solid #39867B; }
+.Tdbg{ background:#E1F4EE; line-height: 120%; }
+.Topbg { background:url(../Images/topbg.gif); color: #FFFFFF; }
+
+.ButtonGreen { background-image:url(../images/bbkGreen.gif); background-color:#ffffff; height: 22; font-size: 9pt; border:#666666 1px solid; }
+.InputEdit{ text-decoration: none; line-height: 14px; font-size: 9pt; font-family: "宋体"; border: 1px #39867B solid; }
+.InputCheck{ border: 1px #39867B solid; }

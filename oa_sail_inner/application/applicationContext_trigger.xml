@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-destroy-method="destroy">
+	
+	<bean id="synJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="unitViewDAO" />
+        <property name="targetMethod" value="syn" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="synTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="synJob" />
+        <property name="cronExpression" value="0 10 23 * * ?" />
+    </bean>
+    
+    <bean id="synNewJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="unitViewDAO" />
+        <property name="targetMethod" value="synNew" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="synNewTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="synNewJob" />
+        <property name="cronExpression" value="0 0 0/1 * * ?" />
+    </bean>
+    
+     <bean id="exportAllStafferCreditJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="outManager" />
+        <property name="targetMethod" value="exportAllStafferCredit" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="exportAllStafferCreditTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="exportAllStafferCreditJob" />
+        <property name="cronExpression" value="0 58 23 * * ?" />
+    </bean>
+  
+     <bean id="handleCheckPayJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="outManager" />
+        <property name="targetMethod" value="handleCheckPay" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="handleCheckPayTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="handleCheckPayJob" />
+        <property name="cronExpression" value="0 0/10 * * * ?" />
+    </bean>  
+    
+     <bean id="statsPersonalSwatchJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="outStatManager" />
+        <property name="targetMethod" value="statsPersonalSwatch" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="statsPersonalSwatchTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="statsPersonalSwatchJob" />
+        <property name="cronExpression" value="0 40 23 * * ?" />
+    </bean>    
+    
+     <bean id="createOAOrderFromAppJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="appOutManager" />
+        <property name="targetMethod" value="createOAOrder" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="createOAOrderFromAppTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="createOAOrderFromAppJob" />
+        <property name="cronExpression" value="0 0/10 * * * ?" />
+    </bean>        
+    
+    <bean
+        class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="synTrigger" />
+                <ref bean="synNewTrigger" />
+                <ref bean="exportAllStafferCreditTrigger" />
+                <ref bean="handleCheckPayTrigger" />
+                <ref bean="statsPersonalSwatchTrigger" />
+                <ref bean="createOAOrderFromAppTrigger"/>
+            </list>
+        </property>
+    </bean>
+    
+</beans>

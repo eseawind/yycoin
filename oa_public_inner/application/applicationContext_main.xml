@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/ex 
+  	  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="areaDAO" class="com.china.center.oa.publics.dao.impl.AreaDAOImpl" />
+
+	<bean id="authDAO" class="com.china.center.oa.publics.dao.impl.AuthDAOImpl" />
+
+	<bean id="cityDAO" class="com.china.center.oa.publics.dao.impl.CityDAOImpl" />
+
+	<bean id="commonDAO" class="com.china.center.oa.publics.dao.impl.CommonDAOImpl" />
+
+	<bean id="departmentDAO" class="com.china.center.oa.publics.dao.impl.DepartmentDAOImpl" />
+
+	<bean id="enumDAO" class="com.china.center.oa.publics.dao.impl.EnumDAOImpl" />
+
+	<bean id="locationDAO" class="com.china.center.oa.publics.dao.impl.LocationDAOImpl" />
+
+	<bean id="locationVSCityDAO" class="com.china.center.oa.publics.dao.impl.LocationVSCityDAOImpl" />
+
+	<bean id="logDAO" class="com.china.center.oa.publics.dao.impl.LogDAOImpl" />
+
+	<bean id="menuItemDAO" class="com.china.center.oa.publics.dao.impl.MenuItemDAOImpl" />
+
+	<bean id="orgDAO" class="com.china.center.oa.publics.dao.impl.OrgDAOImpl" />
+
+	<bean id="parameterDAO" class="com.china.center.oa.publics.dao.impl.ParameterDAOImpl" />
+
+	<bean id="postDAO" class="com.china.center.oa.publics.dao.impl.PostDAOImpl" />
+
+	<bean id="principalshipDAO" class="com.china.center.oa.publics.dao.impl.PrincipalshipDAOImpl" />
+
+	<bean id="provinceDAO" class="com.china.center.oa.publics.dao.impl.ProvinceDAOImpl" />
+
+	<bean id="roleAuthDAO" class="com.china.center.oa.publics.dao.impl.RoleAuthDAOImpl" />
+
+	<bean id="roleDAO" class="com.china.center.oa.publics.dao.impl.RoleDAOImpl" />
+
+	<bean id="stafferDAO" class="com.china.center.oa.publics.dao.impl.StafferDAOImpl" />
+
+	<bean id="systemTemplateFileDAO" class="com.china.center.oa.publics.dao.impl.SystemTemplateFileDAOImpl" />
+
+	<bean id="userDAO" class="com.china.center.oa.publics.dao.impl.UserDAOImpl" />
+
+	<bean id="commonManager" class="com.china.center.oa.publics.manager.impl.CommonManagerImpl" />
+
+	<bean id="departmentManager" class="com.china.center.oa.publics.manager.impl.DepartmentManagerImpl" />
+
+	<bean id="enumManager" class="com.china.center.oa.publics.manager.impl.EnumManagerImpl" />
+
+	<bean id="locationManager" class="com.china.center.oa.publics.manager.impl.LocationManagerImpl" />
+
+	<bean id="orgManager" class="com.china.center.oa.publics.manager.impl.OrgManagerImpl" />
+
+	<bean id="postManager" class="com.china.center.oa.publics.manager.impl.PostManagerImpl" />
+
+	<bean id="publicQueryManager" class="com.china.center.oa.publics.manager.impl.PublicQueryManagerImpl" />
+
+	<bean id="roleManager" class="com.china.center.oa.publics.manager.impl.RoleManagerImpl" />
+
+	<bean id="stafferManager" class="com.china.center.oa.publics.manager.impl.StafferManagerImpl" />
+
+	<bean id="userManager" class="com.china.center.oa.publics.manager.impl.UserManagerImpl" />
+	
+	<bean id="dbJob" class="com.china.center.oa.publics.trigger.impl.DBJob" />
+	
+	<bean id="deleleTempPicJob" class="com.china.center.oa.publics.trigger.impl.DeleleTempPic" />
+
+	<bean id="publicTrigger" class="com.china.center.oa.publics.trigger.impl.PublicTriggerImpl" />
+
+	<bean id="publicFacade" class="com.china.center.oa.publics.facade.impl.PublicFacadeImpl" />
+
+	<bean id="dutyDAO" class="com.china.center.oa.publics.dao.impl.DutyDAOImpl" />
+
+	<bean id="dutyManager" class="com.china.center.oa.publics.manager.impl.DutyManagerImpl" />
+
+	<bean id="commonFacade" class="com.china.center.oa.publics.facade.impl.CommonFacadeImpl" />
+
+	<bean id="stafferVSPriDAO" class="com.china.center.oa.publics.dao.impl.StafferVSPriDAOImpl" />
+
+	<bean id="enumDefineDAO" class="com.china.center.oa.publics.dao.impl.EnumDefineDAOImpl" />
+
+	<bean id="queryManager" class="com.china.center.oa.publics.manager.impl.QueryManagerImpl" />
+
+	<bean id="invoiceDAO" class="com.china.center.oa.publics.dao.impl.InvoiceDAOImpl" />
+
+	<bean id="invoiceManager" class="com.china.center.oa.publics.manager.impl.InvoiceManagerImpl" />
+
+	<bean id="flowLogDAO" class="com.china.center.oa.publics.dao.impl.FlowLogDAOImpl" />
+	
+	<bean id="notifyManager" class="com.china.center.oa.publics.manager.impl.NotifyManagerImpl" />
+
+	<bean id="authManager" class="com.china.center.oa.publics.manager.impl.AuthManagerImpl" />
+
+	<bean id="fatalNotify" class="com.china.center.oa.publics.manager.impl.FatalNotifyImpl" />
+	
+	<bean id="weblogicTransactionManagerLookup" class="org.hibernate.transaction.WeblogicTransactionManagerLookup" />
+
+	<bean id="menuManager" class="com.china.center.oa.publics.manager.impl.MenuManagerImpl" />
+
+	<bean id="showDAO" class="com.china.center.oa.publics.dao.impl.ShowDAOImpl" />
+
+	<bean id="showManager" class="com.china.center.oa.publics.manager.impl.ShowManagerImpl" />
+
+	<bean id="stafferVSIndustryDAO" class="com.china.center.oa.publics.dao.impl.StafferVSIndustryDAOImpl" />
+
+	<bean id="dutyVSInvoiceDAO" class="com.china.center.oa.publics.dao.impl.DutyVSInvoiceDAOImpl" />
+
+	<bean id="invoiceCreditDAO" class="com.china.center.oa.publics.dao.impl.InvoiceCreditDAOImpl" />
+
+	<bean id="planDAO" class="com.china.center.oa.publics.dao.impl.PlanDAOImpl" />
+
+	<bean id="planManager" class="com.china.center.oa.publics.manager.impl.PlanManagerImpl" />
+
+	<bean id="publishMessage" class="com.china.center.oa.publics.message.impl.PublishMessageImpl" />
+	
+	<bean id="publicTriggerHander" class="com.china.center.oa.publics.trigger.PublicTriggerHander">
+        <property name="publicTrigger">
+            <ref bean="publicTrigger"/>
+        </property>
+        <property name="dayJobList">
+            <list>
+                <ref bean="deleleTempPicJob" />
+                <ref bean="dbJob" />
+            </list>
+        </property>
+    </bean>
+
+	<bean id="attachmentDAO" class="com.china.center.oa.publics.dao.impl.AttachmentDAOImpl" />
+	
+	<bean id="integrationAuthManager" class="com.china.center.oa.publics.manager.impl.IntegrationAuthManagerImpl" />
+
+	<bean id="stafferTransferDAO" class="com.china.center.oa.publics.dao.impl.StafferTransferDAOImpl" />
+
+	<bean id="desktopManager" class="com.china.center.oa.publics.manager.impl.DesktopManagerImpl" />
+	
+	<bean id="monitorImpl" class="com.china.center.oa.publics.trigger.impl.MonitorImpl" />
+
+	<bean id="alarmDAO" class="com.china.center.oa.publics.dao.impl.AlarmDAOImpl" />
+	
+	<bean id="commonMailManager" class="com.china.center.oa.publics.manager.impl.CommonMailManagerImpl" />
+	
+	<bean id="agentConfigDAO" class="com.china.center.oa.publics.dao.impl.AgentConfigDAOImpl" />
+
+</beans>

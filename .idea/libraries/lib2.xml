@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="lib2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/antlr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/jsr173_1.0_ri.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/stax-api-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/stax-utils-snapshot-20040917.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/wstx-asl-2.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/xfire-all-1.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/wsdl4j-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/backport-util-concurrent-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/XmlSchema-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/jaxen-1.1-beta-9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-webservice5202328321887998619.osgi/WEB-INF/lib/asm-2.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

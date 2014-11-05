@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+	
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+	
+	<osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+	
+	<osgi:reference id="customerMainDAO" interface="com.china.center.oa.client.dao.CustomerMainDAO" />
+	
+	<osgi:reference id="providerDAO" interface="com.china.center.oa.product.dao.ProviderDAO" />
+	
+	<osgi:reference id="stafferVSPriDAO" interface="com.china.center.oa.publics.dao.StafferVSPriDAO" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="projectApproveDAO" interface="com.china.center.oa.project.dao.ProjectApproveDAO" />
+	
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+	
+	<osgi:reference id="enumDAO" interface="com.china.center.oa.publics.dao.EnumDAO" />
+	
+	<osgi:reference id="orgManager" interface="com.china.center.oa.publics.manager.OrgManager" />
+	
+	<osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+	
+	<osgi:reference id="authManager" interface="com.china.center.oa.publics.manager.AuthManager" />
+	
+	<osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />
+	
+	<osgi:reference id="commonMailManager" interface="com.china.center.oa.publics.manager.CommonMailManager" />
+	
+	<osgi:reference id="flowLogDAO" interface="com.china.center.oa.publics.dao.FlowLogDAO" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+
+	<osgi:reference id="projectDAO" interface="com.china.center.oa.project.dao.ProjectDAO" />
+	
+	<osgi:reference id="agreementDAO" interface="com.china.center.oa.project.dao.AgreementDAO" />
+	
+	<osgi:reference id="proLineProjectDAO" interface="com.china.center.oa.project.dao.ProLineProjectDAO" />
+	
+	<osgi:reference id="payLineProjectDAO" interface="com.china.center.oa.project.dao.PayLineProjectDAO"/>
+	
+	<osgi:reference id="tranLineProjectDAO" interface="com.china.center.oa.project.dao.TranLineProjectDAO"/>
+	
+	<osgi:reference id="invoiceLineProjectDAO" interface="com.china.center.oa.project.dao.InvoiceLineProjectDAO"/>
+	
+	<osgi:reference id="stafferProjectDAO" interface="com.china.center.oa.project.dao.StafferProjectDAO"/>
+	
+	<osgi:reference id="taskDAO" interface="com.china.center.oa.project.dao.TaskDAO" />
+	
+	<osgi:reference id="dutyDAO" interface="com.china.center.oa.publics.dao.DutyDAO" />
+	
+	<osgi:reference id="taskManager" interface="com.china.center.oa.project.manager.TaskManager" />
+	
+	<osgi:reference id="agreementManager" interface="com.china.center.oa.project.manager.AgreementManager" />
+	
+	<osgi:reference id="proLineProjectManager" interface="com.china.center.oa.project.manager.ProLineProjectManager" />
+	
+	<osgi:reference id="payLineProjectManager" interface="com.china.center.oa.project.manager.PayLineProjectManager" />
+	
+	<osgi:reference id="tranLineProjectManager" interface="com.china.center.oa.project.manager.TranLineProjectManager" />
+	
+	<osgi:reference id="invoiceLineProjectManager" interface="com.china.center.oa.project.manager.InvoiceLineProjectManager" />
+	
+	<osgi:reference id="stafferProjectManager" interface="com.china.center.oa.project.manager.StafferProjectManager" />
+	
+	<osgi:reference id="projectManager" interface="com.china.center.oa.project.manager.ProjectManager" />
+
+
+</beans>

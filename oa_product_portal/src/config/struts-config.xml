@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		<action path="/product/product" parameter="method" folder="/product/"
+			bean="Product" type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="configProductVSLocation" />
+			<forward name="rptQueryProduct" />
+			<forward name="rptQueryAbsProduct" />
+			<forward name="queryApplyProduct" />
+			<forward name="composeProduct" />
+			<forward name="detailCompose" />
+			<forward name="priceChange" />
+			<forward name="queryPriceChange" />
+			<forward name="queryComposeFeeDefined" />
+			<forward name="updateComposeFeeDefined" />
+			<forward name="detailPriceChange" />
+			<forward name="selectProjectpro" path="/product/selectProjectpro.jsp"/>
+			<forward name="selectAgreementpro" path="/product/selectAgreementpro.jsp"/>
+			<forward name="importCiticProduct" />
+			<forward name="rptQueryProductBom" />
+			<forward name="decomposeProduct50" />
+			<forward name="detailDecompose" />
+			<forward name="queryDecompose" />
+			<forward name="rptQueryComposeProduct" />
+			<forward name="queryCiticProduct" path="/product/queryCiticProduct.jsp"/>
+		</action>
+
+		<action path="/provider/provider" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="queryProvider" path="/provider/queryProvider.jsp" />
+			<forward name="bingProductType" path="/provider/bingProductType.jsp" />
+			<forward name="rptQueryProvider" path="/provider/rptQueryProvider.jsp" />
+			<forward name="addOrUpdateProviderUser" path="/provider/addOrUpdateProviderUser.jsp" />
+			<forward name="updateProvider" path="/provider/updateProvider.jsp" />
+			<forward name="detailProvider" path="/provider/detailProvider.jsp" />
+			<forward name="addOrUpdateUser" path="/provider/addOrUpdateUser.jsp" />
+		</action>
+
+		<action path="/depot/depot" parameter="method" folder="/depot/"
+			bean="Depot" type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+		</action>
+
+		<action path="/depot/depotpart" parameter="method" folder="/depot/"
+			bean="Depotpart" type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="rptQueryDepotpart" path="/depot/rptQueryDepotpart.jsp" />
+		</action>
+
+		<action path="/depot/storage" parameter="method" folder="/depot/"
+			bean="Storage" type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="moveDepotpart" path="/depot/moveDepotpart.jsp" />
+			<forward name="queryStorageRelation" path="/depot/queryStorageRelation.jsp" />
+			<forward name="queryDepotStorageRelation" path="/depot/queryDepotStorageRelation.jsp" />
+			<forward name="transferStorageRelation" path="/depot/transferStorageRelation.jsp" />
+			<forward name="listStorageLog" path="/depot/listStorageLog.jsp" />
+			<forward name="listStorageLog1" path="/depot/listStorageLog1.jsp" />
+			<forward name="addStorageApply" path="/depot/addStorageApply.jsp" />
+			<forward name="querySelfStorageRelation" path="/depot/querySelfStorageRelation.jsp" />
+			<forward name="rptQueryProductInDepotpart" path="/depot/rptQueryProductInDepotpart.jsp" />
+			<forward name="rptQueryProductInDepot" path="/depot/rptQueryProductInDepot.jsp" />
+			<forward name="rptQueryStorageRelationInDepot" path="/depot/rptQueryStorageRelationInDepot.jsp" />
+			<forward name="rptQueryStorageRelationInDepotByDiaobo" path="/depot/rptQueryStorageRelationInDepotByDiaobo.jsp" />
+			<forward name="rptQueryStorageRelationInDepot_bak" path="/depot/rptQueryStorageRelationInDepot_bak.jsp" />
+			<forward name="queryProductInOut" path="/depot/queryProductInOut.jsp" />
+			<forward name="checkStorageLog" path="/depot/checkStorageLog.jsp" />
+			<forward name="queryMoveProduct" path="/depot/queryMoveProduct.jsp" />
+			<forward name="rptQueryComStorageRelationInDepot" path="/depot/rptQueryComStorageRelationInDepot.jsp" />
+			<forward name="addGSOut" path="/depot/addGSOut.jsp" />
+			<forward name="updateGSOut" path="/depot/updateGSOut.jsp" />
+			<forward name="handleGSIn" path="/depot/handleGSIn.jsp" />
+			<forward name="detailGSOut" path="/depot/detailGSOut.jsp" />
+			<forward name="queryGSOut" path="/depot/queryGSOut.jsp" />
+		</action>
+
+		<action path="/product/reports" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="queryReports" path="/report/queryReports.jsp" />
+			<forward name="listStorageLog" path="/report/listStorageLog.jsp" />
+		</action>
+
+		<action path="/product/productApply" parameter="method" folder="/product/"
+			bean="ProductApply" type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+		
+		</action>
+		
+		<action path="/product/priceConfig" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy" validate="false">
+			<forward name="addPriceConfig" path="/product/addPriceConfig.jsp" />
+			<forward name="updatePriceConfig" path="/product/updatePriceConfig.jsp" />
+			<forward name="detailPriceConfig" path="/product/detailPriceConfig.jsp" />
+			<forward name="queryPriceConfig" path="/product/queryPriceConfig.jsp" />
+		</action>
+
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+	
+	<osgi:reference id="commonMailManager" interface="com.china.center.oa.publics.manager.CommonMailManager" />
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+	
+	<osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+	
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<osgi:reference id="mailDAO" interface="com.china.center.oa.mail.dao.MailDAO" />
+	
+	<osgi:reference id="flowBelongDAO" interface="com.china.center.oa.flow.dao.FlowBelongDAO" />
+
+	<osgi:reference id="flowDefineDAO" interface="com.china.center.oa.flow.dao.FlowDefineDAO" />
+
+	<osgi:reference id="flowInstanceDAO" interface="com.china.center.oa.flow.dao.FlowInstanceDAO" />
+
+	<osgi:reference id="flowInstanceLogDAO" interface="com.china.center.oa.flow.dao.FlowInstanceLogDAO" />
+
+	<osgi:reference id="flowInstanceViewDAO" interface="com.china.center.oa.flow.dao.FlowInstanceViewDAO" />
+
+	<osgi:reference id="flowTokenDAO" interface="com.china.center.oa.flow.dao.FlowTokenDAO" />
+
+	<osgi:reference id="flowViewerDAO" interface="com.china.center.oa.flow.dao.FlowViewerDAO" />
+
+	<osgi:reference id="flowVSTemplateDAO" interface="com.china.center.oa.flow.dao.FlowVSTemplateDAO" />
+
+	<osgi:reference id="instanceTemplateDAO" interface="com.china.center.oa.flow.dao.InstanceTemplateDAO" />
+
+	<osgi:reference id="templateFileDAO" interface="com.china.center.oa.flow.dao.TemplateFileDAO" />
+
+	<osgi:reference id="tokenVSHanderDAO" interface="com.china.center.oa.flow.dao.TokenVSHanderDAO" />
+
+	<osgi:reference id="tokenVSOperationDAO" interface="com.china.center.oa.flow.dao.TokenVSOperationDAO" />
+
+	<osgi:reference id="tokenVSTemplateDAO" interface="com.china.center.oa.flow.dao.TokenVSTemplateDAO" />
+
+	<osgi:reference id="flowInstanceManager" interface="com.china.center.oa.flow.manager.FlowInstanceManager" />
+
+	<osgi:reference id="pluginManager" interface="com.china.center.oa.flow.manager.PluginManager" />
+
+	<osgi:reference id="templateFileManager" interface="com.china.center.oa.flow.manager.TemplateFileManager" />
+
+	<osgi:reference id="flowManager" interface="com.china.center.oa.flow.manager.FlowManager" />
+
+	<osgi:reference id="workFlowFacade" interface="com.china.center.oa.flow.facade.WorkFlowFacade" />
+
+</beans>

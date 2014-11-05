@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-destroy-method="destroy">
+	
+    <bean id="checkPriceAskOverTimeJob"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="priceAskManager" />
+		<property name="targetMethod" value="checkOverTime_Job" />
+		<property name="concurrent" value="false" />
+	</bean>
+
+	<bean id="checkPriceAskOverTimeTrigger"
+		class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+		<property name="jobDetail" ref="checkPriceAskOverTimeJob" />
+		<property name="startDelay" value="30000" />
+		<property name="repeatInterval" value="300000" />
+	</bean>
+	
+	<bean id="statsStockWorkJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean" >
+        <property name="targetObject" ref="stockWorkManager" />
+        <property name="targetMethod" value="statsStockWork" />
+        <property name="concurrent" value="false" />
+    </bean >
+   
+    <bean id="statsStockWorkTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean" >
+        <property name="jobDetail" ref="statsStockWorkJob" />
+        <property name="cronExpression" value="0 40 23 * * ?" />
+    </bean >
+
+	<bean
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="checkPriceAskOverTimeTrigger" />
+				<ref bean="statsStockWorkTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

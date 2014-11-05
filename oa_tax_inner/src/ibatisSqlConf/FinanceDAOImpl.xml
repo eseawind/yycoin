@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="FinanceDAOImpl">
+
+    <!-- 检查重复的index-->
+    <select id="queryDuplicateMonthIndex" parameterClass="java.util.Map" resultClass="java.lang.String">
+        <![CDATA[
+            select DISTINCT(t1.id) from 
+			(
+			    select * from t_center_finance where logTime >= #beginTime# and logTime <= #endTime#
+			) t1, 
+			(
+			    select * from t_center_finance where logTime >= #beginTime# and logTime <= #endTime#
+			) t2 
+			where t1.monthIndex = t2.monthIndex and t1.id > t2.id
+			order by t1.id desc
+        ]]>
+    </select>
+    
+</sqlMap>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+	
+	<osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+	
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+	
+	<osgi:reference id="enumDAO" interface="com.china.center.oa.publics.dao.EnumDAO" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="invoiceDAO" interface="com.china.center.oa.publics.dao.InvoiceDAO" />
+	
+	<osgi:reference id="dutyDAO" interface="com.china.center.oa.publics.dao.DutyDAO" />
+	
+	<osgi:reference id="orgManager" interface="com.china.center.oa.publics.manager.OrgManager" />
+	
+	<osgi:reference id="stafferVSIndustryDAO" interface="com.china.center.oa.publics.dao.StafferVSIndustryDAO" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<osgi:reference id="locationDAO" interface="com.china.center.oa.publics.dao.LocationDAO" />
+	
+	<osgi:reference id="productCombinationDAO" interface="com.china.center.oa.product.dao.ProductCombinationDAO" />
+
+	<osgi:reference id="productDAO" interface="com.china.center.oa.product.dao.ProductDAO" />
+
+	<osgi:reference id="productVSLocationDAO" interface="com.china.center.oa.product.dao.ProductVSLocationDAO" />
+
+	<osgi:reference id="productFacade" interface="com.china.center.oa.product.facade.ProductFacade" />
+
+	<osgi:reference id="productManager" interface="com.china.center.oa.product.manager.ProductManager" />
+	
+	<osgi:reference id="providerDAO" interface="com.china.center.oa.product.dao.ProviderDAO" />
+
+	<osgi:reference id="providerHisDAO" interface="com.china.center.oa.product.dao.ProviderHisDAO" />
+
+	<osgi:reference id="providerUserDAO" interface="com.china.center.oa.product.dao.ProviderUserDAO" />
+
+	<osgi:reference id="productTypeVSCustomerDAO" interface="com.china.center.oa.product.dao.ProductTypeVSCustomerDAO" />
+	
+	<osgi:reference id="depotDAO" interface="com.china.center.oa.product.dao.DepotDAO" />
+
+	<osgi:reference id="depotpartDAO" interface="com.china.center.oa.product.dao.DepotpartDAO" />
+
+	<osgi:reference id="storageDAO" interface="com.china.center.oa.product.dao.StorageDAO" />
+	
+	<osgi:reference id="storageLogDAO" interface="com.china.center.oa.product.dao.StorageLogDAO" />
+
+	<osgi:reference id="storageRelationDAO" interface="com.china.center.oa.product.dao.StorageRelationDAO" />
+	
+	<osgi:reference id="providerManager" interface="com.china.center.oa.product.manager.ProviderManager" />
+	
+	<osgi:reference id="depotManager" interface="com.china.center.oa.product.manager.DepotManager" />
+
+	<osgi:reference id="storageManager" interface="com.china.center.oa.product.manager.StorageManager" />
+
+	<osgi:reference id="depotpartManager" interface="com.china.center.oa.product.manager.DepotpartManager" />
+	
+	<osgi:reference id="composeProductDAO" interface="com.china.center.oa.product.dao.ComposeProductDAO" />
+	
+	<osgi:reference id="composeItemDAO" interface="com.china.center.oa.product.dao.ComposeItemDAO" />
+	
+	<osgi:reference id="priceChangeDAO" interface="com.china.center.oa.product.dao.PriceChangeDAO" />
+	
+	<osgi:reference id="storageApplyDAO" interface="com.china.center.oa.product.dao.StorageApplyDAO" />
+	
+	<osgi:reference id="storageRelationManager" interface="com.china.center.oa.product.manager.StorageRelationManager" />
+	
+	<osgi:reference id="composeProductManager" interface="com.china.center.oa.product.manager.ComposeProductManager" />
+	
+	<osgi:reference id="composeFeeDefinedDAO" interface="com.china.center.oa.product.dao.ComposeFeeDefinedDAO" />
+	
+	<osgi:reference id="productChangeRecordDAO" interface="com.china.center.oa.product.dao.ProductChangeRecordDAO" />
+	
+	<osgi:reference id="outManager" interface="com.china.center.oa.sail.manager.OutManager" />
+	
+	<osgi:reference id="financeDAO" interface="com.china.center.oa.tax.dao.FinanceDAO" />
+	
+	<osgi:reference id="sailConfigDAO" interface="com.china.center.oa.sail.dao.SailConfigDAO" />
+	
+	<osgi:reference id="sailConfigManager" interface="com.china.center.oa.sail.manager.SailConfigManager" />
+	
+	<osgi:reference id="principalshipDAO" interface="com.china.center.oa.publics.dao.PrincipalshipDAO" />
+	<!-- add 2012.5.23 -->
+	<osgi:reference id="productApplyFacade" interface="com.china.center.oa.product.facade.ProductApplyFacade" />
+	
+	<osgi:reference id="productApplyManager" interface="com.china.center.oa.product.manager.ProductApplyManager" />
+	
+	<osgi:reference id="productApplyDAO" interface="com.china.center.oa.product.dao.ProductApplyDAO" />		
+	
+	<osgi:reference id="productSubApplyDAO" interface="com.china.center.oa.product.dao.ProductSubApplyDAO" />		
+	
+	<osgi:reference id="productVSStafferDAO" interface="com.china.center.oa.product.dao.ProductVSStafferDAO" />
+	
+	<osgi:reference id="flowLogDAO" interface="com.china.center.oa.publics.dao.FlowLogDAO" />
+	
+	<osgi:reference id="priceConfigDAO" interface="com.china.center.oa.product.dao.PriceConfigDAO" />
+	
+	<osgi:reference id="priceConfigManager" interface="com.china.center.oa.product.manager.PriceConfigManager" />
+	
+	<osgi:reference id="goldSilverPriceDAO" interface="com.china.center.oa.product.dao.GoldSilverPriceDAO" />	
+	
+	<osgi:reference id="productBOMDAO" interface="com.china.center.oa.product.dao.ProductBOMDAO" />
+	
+	<osgi:reference id="decomposeProductDAO" interface="com.china.center.oa.product.dao.DecomposeProductDAO" />
+	
+	<osgi:reference id="gsOutDAO" interface="com.china.center.oa.product.dao.GSOutDAO" />
+	
+	<osgi:reference id="gsOutItemDAO" interface="com.china.center.oa.product.dao.GSOutItemDAO" />
+	
+	<osgi:reference id="citicVSOAProductDAO" interface="com.china.center.oa.product.dao.CiticVSOAProductDAO" />
+</beans>

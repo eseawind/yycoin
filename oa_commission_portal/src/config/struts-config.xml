@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		<action path="/commission/commission" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+			<forward name="queryCommission" path="/commission/queryCommission.jsp" />
+			<forward name="querySelfCommission" path="/commission/querySelfCommission.jsp" />
+			<forward name="detailSelfCommission0" path="/commission/detailSelfCommission0.jsp" />
+			<forward name="detailSelfCommission1" path="/commission/detailSelfCommission1.jsp" />
+			<forward name="detailSelfCommission2" path="/commission/detailSelfCommission2.jsp" />
+			<forward name="detailSelfCommission3" path="/commission/detailSelfCommission3.jsp" />
+			<forward name="detailSelfCommission4" path="/commission/detailSelfCommission4.jsp" />
+			<forward name="detailSelfCommission5" path="/commission/detailSelfCommission5.jsp" />
+			<forward name="detailSelfCommission6" path="/commission/detailSelfCommission6.jsp" />
+			<forward name="importExport" path="/commission/importExport.jsp" />
+			<forward name="externalStaffer" path="/commission/externalStaffer.jsp" />
+			<forward name="externalAssess" path="/commission/externalAssess.jsp" />
+        </action>        
+		
+		<action path="/commission/black" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+			<forward name="queryBlackRule" path="/black/queryBlackRule.jsp" />
+			<forward name="rptQueryProductType" path="/black/rptQueryProductType.jsp" />
+			<forward name="addBlackRule" path="/black/addBlackRule.jsp" />
+			<forward name="updateBlackRule" path="/black/updateBlackRule.jsp" />
+			<forward name="detailBlackRule" path="/black/detailBlackRule.jsp" />
+			<forward name="detailBlack" path="/black/detailBlack.jsp" />	
+
+        </action>
+		
+	</action-mappings>
+</struts-config>

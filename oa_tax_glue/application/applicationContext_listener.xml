@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+	
+	<bean id="backPayApplyListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.BackPayApplyListenerTaxGlueImpl" />
+	
+	<bean id="backPayApplyLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="backPayApplyManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="backPayApplyListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+	<bean id="backPrePayApplyLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="backPrePayManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="backPayApplyListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="billListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.BillListenerTaxGlueImpl" />
+    
+    <bean id="billLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="billOutManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="billListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="billLoadListener_bill"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="billManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="billListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="composeProductListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.ComposeProductListenerTaxGlueImpl" />
+    
+    <bean id="composeProductLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="composeProductManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="composeProductListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="storageApplyListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.StorageApplyListenerTaxGlueImpl" />
+    
+    <bean id="storageApplyLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="storageApplyManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="storageApplyListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="outListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.OutListenerTaxGlueImpl" />
+    
+    <bean id="outLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="outManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="outListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="paymentApplyListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.PaymentApplyListenerTaxGlueImpl" />
+    
+    <bean id="paymentApplyLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="paymentApplyManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="paymentApplyListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="paymentListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.PaymentListenerTaxGlueImpl" />
+    
+    <bean id="paymentLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="paymentManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="paymentListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="priceChangeListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.PriceChangeListenerTaxGlueImpl" />
+    
+    <bean id="priceChangeLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="priceChangeManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="priceChangeListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+
+    <bean id="fechProductListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.FechProductListenerTaxGlueImpl" />
+    
+    <bean id="fechProductLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="fechProductManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="fechProductListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="stockPayApplyListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.StockPayApplyListenerTaxGlueImpl" />
+    
+    <bean id="stockPayApplyLoadListener"
+        class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="stockPayApplyManager" />
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="stockPayApplyListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="customerListenerTaxImpl" class="com.china.center.oa.tax.glue.listener.impl.CustomerListenerTaxImpl" />
+    
+    <bean id="customerLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="clientManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="customerListenerTaxImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="providerListenerTaxImpl" class="com.china.center.oa.tax.glue.listener.impl.ProviderListenerTaxImpl" />
+    
+    <bean id="providerLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="providerManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="providerListenerTaxImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="tcpPayListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.TcpPayListenerTaxGlueImpl" />
+    
+    <bean id="travelApplyLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="travelApplyManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="tcpPayListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="expenseLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="expenseManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="tcpPayListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="rebateLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="rebateManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="tcpPayListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="invoiceinsListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.InvoiceinsListenerTaxGlueImpl" />
+    
+    <bean id="invoiceinsLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="invoiceinsManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="invoiceinsListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="autoPayListenerTaxGlueImpl" class="com.china.center.oa.tax.glue.listener.impl.AutoPayListenerTaxGlueImpl" />
+    
+    <bean id="autoPayLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="autoPayManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="autoPayListenerTaxGlueImpl" />
+            </list>
+        </property>
+    </bean>
+    
+</beans>

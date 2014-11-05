@@ -1,0 +1,24 @@
+GET /iiss/admin/service.do?firstLoad=1&method=queryService&currentLocationId=100190&currLocal=zh_CN HTTP/1.1
+Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+Referer: http://10.137.39.71:11690/iiss/admin/tree.jsp
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0)
+Accept-Encoding: gzip, deflate
+Host: 10.137.39.71:11690
+Connection: Keep-Alive
+Cookie: JSESSIONID=C5D89506EE68B89F84027D1239705B3F
+
+POST /iiss/admin/service.do? HTTP/1.1
+Accept: image/gif, image/jpeg, image/pjpeg, image/pjpeg, application/x-shockwave-flash, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+Referer: http://10.137.39.71:11690/iiss/admin/service.do?method=queryForAddServ&currentLocationId=100190
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 5.1; Trident/4.0)
+Content-Type: application/x-www-form-urlencoded
+Accept-Encoding: gzip, deflate
+Host: 10.137.39.71:11690
+Content-Length: 341
+Connection: Keep-Alive
+Cache-Control: no-cache
+Cookie: JSESSIONID=C5D89506EE68B89F84027D1239705B3F
+
+method=configServiceBase&locationId=100190&serviceTypeId=100351&projectTypeName=PUSH%E7%B1%BB&brandName=3G&serviceTypeName=ROOT&projectType=2&brandId=100350&serviceName=dddd&accessNo=333&serviceCode=3232&aliasCode=&parentServiceType=ROOT&beginDate=2010-04-01&endDate=9999-12-31&maxDateCheck=checkbox&weight=&miscCode=&dataDuration=&descript=

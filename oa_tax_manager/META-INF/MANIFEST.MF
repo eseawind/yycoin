@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.china.center.oa.tax.manager
+Bundle-SymbolicName: com.china.center.oa.tax.manager
+Bundle-Version: 1.0.0
+Bundle-Activator: com.china.center.oa.tax.init.Activator
+Import-Package: org.osgi.framework;version="1.3.0"
+Export-Package: 
+ com.china.center.oa.tax.bean;version="1.0.0",
+ com.china.center.oa.tax.constanst;version="1.0.0",
+ com.china.center.oa.tax.dao;version="1.0.0",
+ com.china.center.oa.tax.facade;version="1.0.0",
+ com.china.center.oa.tax.helper;version="1.0.0",
+ com.china.center.oa.tax.manager;version="1.0.0",
+ com.china.center.oa.tax.vo;version="1.0.0"
+Require-Bundle: 
+ com.china.center.oa.finance.manager;bundle-version="1.0.0",
+ com.china.center.oa.publics.manager;bundle-version="1.0.0",
+ com.china.center.osgi.jdbc;bundle-version="1.0.0",
+ com.china.center.osgi.tools;bundle-version="1.0.0",
+ com.china.center.osgi.taglib;bundle-version="1.0.0",
+ com.china.center.osgi.dym;bundle-version="1.0.0",
+ com.china.center.osgi.config;bundle-version="1.0.0"
+Spring-Context: application/applicationContext_*.xml
+
+

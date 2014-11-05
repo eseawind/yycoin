@@ -1,0 +1,624 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+    
+    <item name="queryBank" deaultpfix="BankBean">
+        <condtion name="name" caption="名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="mtype" caption="管理">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubManagerType</option>
+        </condtion>
+        <condtion name="dutyId" caption="纳税实体">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$dutyList</option>
+        </condtion>
+    </item>
+    
+    <item name="queryPayment" deaultpfix="PaymentBean">
+        <condtion name="alogTime" filed="logTime" caption="导入时间从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="aupdateTime" filed="updateTime" caption="认领时间从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="bupdateTime" filed="updateTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="bankId" caption="帐户" inner="style='width:400px'">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$bankList</option>
+        </condtion>
+        <condtion name="fromer" caption="回款来源">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" caption="ID(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$paymentType</option>
+        </condtion>
+        <condtion name="customerName" filed="name" caption="客户" pfix="UnitViewBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$paymentStatus</option>
+        </condtion>
+         <condtion name="checkStatus" caption="核对状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$paymentChechStatus</option>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="认领人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refId" caption="标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="amoney" filed="money" caption="金额从">
+            <opr>&gt;=</opr>
+            <datatype>1</datatype>
+            <type>text</type>
+        </condtion>
+        <condtion name="bmoney" filed="money" caption="到">
+            <opr>&lt;=</opr>
+            <datatype>1</datatype>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="querySelfPayment" alias="queryPayment"/>
+    
+    <item name="queryInvoiceins" deaultpfix="InvoiceinsBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+       <condtion name="dutyId" caption="纳税实体">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$dutyList</option>
+       </condtion>
+       <condtion name="invoiceId" caption="发票类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$invoiceList</option>
+        </condtion>
+        <condtion name="type" caption="开票类型">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$invoiceinsType</option>
+        </condtion>
+        <condtion name="unit" caption="开票单位">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="headContent" caption="开票抬头">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refIds" caption="单据标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" caption="标识(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="开票人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="customerName" filed="name" caption="客户" pfix="UnitViewBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="invoiceNum" filed="invoiceNum" caption="发票号码" pfix="InsVSInvoiceNumBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="vtype" caption="关注类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubVtype</option>
+        </condtion>
+        <condtion name="checkStatus" caption="核对状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+        <condtion name="stype" caption="特殊类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$invoiceinssType</option>
+        </condtion>
+    </item>
+    
+    <item name="queryImportInvoice" deaultpfix="InvoiceStorageBean">
+    	<condtion name="stafferName" caption="申请人">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+   	 	<condtion name="invoiceId" caption="发票类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$invoiceList</option>
+        </condtion>
+    </item>
+    
+    <item name="queryPaymentApply" deaultpfix="PaymentApplyBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="申请人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="customerName" filed="name" caption="客户" pfix="UnitViewBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="paymentId" caption="回款标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+         <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$payApplyType</option>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$payApplyStatus</option>
+        </condtion>
+        <condtion name="vtype" caption="关注类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubVtype</option>
+        </condtion>
+        <condtion name="checkStatus" caption="核对状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+    </item>
+    
+    <item name="querySelfPaymentApply" alias="queryPaymentApply"/>
+    
+    <item name="queryPaymentApplyCheck" alias="queryPaymentApply"/>
+    
+    <item name="queryInBill" deaultpfix="InBillBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="alogTime1" filed="changeTime" caption="库管开始" pfix="OutBean">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime1" filed="changeTime" caption="库管结束" pfix="OutBean">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="clogTime1" filed="payTime" caption="付款时间" pfix="OutBean">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="dlogTime1" filed="payTime" caption="付款时间" pfix="OutBean">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="所属职员" pfix="SB2">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stafferName2" filed="name" caption="所属会计" pfix="SB1">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="customerName" filed="name" caption="单位" pfix="UnitViewBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" caption="标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="paymentId" caption="回款标识(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="outId" caption="单号(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="bankId" caption="帐户">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$bankList</option>
+        </condtion>
+       <condtion name="bankName" caption="帐户名" filed="name" pfix="BankBean">
+           <opr>like</opr>
+           <type>text</type>
+        </condtion>
+        <condtion name="checkStatus" caption="核对">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$inbillType</option>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$inbillStatus</option>
+        </condtion>
+        <condtion name="createType" caption="创建类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$billCreateType</option>
+        </condtion>
+        <condtion name="lock" caption="锁定" filed="ulock">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$billLock</option>
+        </condtion>
+    </item>
+    
+    <item name="querySelfInBill" alias="queryInBill"/>
+    
+    <item name="querySelfCustomerInBill" deaultpfix="InbillBean">
+    	<condtion name="customerName" filed="name" caption="单位" pfix="t2">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryOutBill" deaultpfix="OutBillBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="所属职员" pfix="SB2">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stafferName2" filed="name" caption="所属会计" pfix="SB1">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="provideName" filed="name" caption="单位" pfix="UnitViewBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" caption="标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stockId" caption="单号(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="bankId" caption="帐户">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$bankList</option>
+        </condtion>
+        <condtion name="bankName" caption="帐户名" filed="name" pfix="BankBean">
+           <opr>like</opr>
+           <type>text</type>
+        </condtion>
+        <condtion name="checkStatus" caption="核对">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outbillType</option>
+        </condtion>
+        <condtion name="payType" caption="付款方式">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outbillPayType</option>
+        </condtion>
+        <condtion name="createType" caption="创建类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$billCreateType</option>
+        </condtion>
+        <condtion name="lock" caption="锁定" filed="ulock">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$billLock</option>
+        </condtion>
+    </item>
+    
+    <item name="queryStat" deaultpfix="StatBankBean">
+        <condtion name="timeKey" filed="timeKey" caption="统计年月(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="bankId" caption="帐户">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$bankList</option>
+        </condtion>
+    </item>
+    
+    <item name="queryStockPayApply" deaultpfix="StockPayApplyBean">
+        <condtion name="alogTime" filed="payDate" caption="付款开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="payDate" caption="付款结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="stockId" filed="stockId" caption="采购单号(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="provideName" filed="name" caption="供应商" pfix="ProviderBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+         <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$stockPayApplyStatus</option>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="采购人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryCEOStockPayApply" alias="queryStockPayApply"/>
+    
+    <item name="queryStockPrePayApply" deaultpfix="StockPrePayApplyBean">
+        <condtion name="providerName" filed="name" caption="供应商" pfix="ProviderBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+         <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$stockPayApplyStatus</option>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="采购人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+         <condtion name="invoiceId" caption="发票类型">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$invoiceList</option>
+        </condtion>
+    </item>
+    
+    <item name="queryCEOStockPrePayApply" alias="queryStockPrePayApply"/>
+    
+    
+    <item name="queryBackPayApply" deaultpfix="BackPayApplyBean">
+        <condtion name="alogTime" filed="logTime" caption="申请时间从">
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="所属职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="outId"  caption="销售单">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="billId"  caption="收款单">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$backPayApplyStatus</option>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$backPayApplyType</option>
+        </condtion>
+    </item>
+    
+    <item name="queryTransferOutBill" deaultpfix="OutBillBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="id" caption="标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="bankId" caption="源帐户">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$bankList</option>
+        </condtion>
+         <condtion name="destBankId" caption="目的帐户">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$bankList</option>
+        </condtion>
+        <condtion name="payType" caption="付款方式">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outbillPayType</option>
+        </condtion>
+    </item>
+    
+    <item name="queryInvoiceinsImport" deaultpfix="InvoiceinsImportBean">
+        <condtion name="batchId" caption="批次标识" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="outId" caption="销单号" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="beginDate" filed="logTime" caption="日期从" >
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="beginDate1" filed="logTime" caption="到" >
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+    </item>
+    
+    <item name="queryInsImportLog" deaultpfix="InsImportLogBean">
+        <condtion name="batchId" caption="批次标识" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$logStatus</option>
+        </condtion>
+        <condtion name="beginDate" filed="logTime" caption="日期从" >
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="beginDate1" filed="logTime" caption="到" >
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>         
+    </item>
+    
+</query>

@@ -1,0 +1,15 @@
+#Wed Apr 23 11:33:21 CST 2014
+eclipse.preferences.version=1
+encoding//webroot/budget/addBudget.jsp=UTF-8
+encoding//webroot/budget/addOrUpdateFeeItem.jsp=UTF-8
+encoding//webroot/budget/detailBudget.jsp=UTF-8
+encoding//webroot/budget/detailBudgetApply.jsp=UTF-8
+encoding//webroot/budget/queryApplyBudget.jsp=UTF-8
+encoding//webroot/budget/queryBudget.jsp=UTF-8
+encoding//webroot/budget/queryBudgetItem.jsp=UTF-8
+encoding//webroot/budget/queryBudgetLog.jsp=UTF-8
+encoding//webroot/budget/queryRunBudget.jsp=UTF-8
+encoding//webroot/budget/updateBudget.jsp=UTF-8
+encoding//webroot/budget/updateBudget2.jsp=UTF-8
+encoding//webroot/budget/updateBudget3.jsp=UTF-8
+encoding/<project>=UTF-8

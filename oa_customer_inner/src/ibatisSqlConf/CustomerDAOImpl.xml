@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="CustomerDAOImpl">
+
+	<update id="autoUpdateCustomerStatus">
+		update t_center_customer_main t1 JOIN t_center_vs_stacus t2 set t1.status = 1 where t1.id = t2.CUSTOMERID
+	</update>
+	
+	<update id="updateCityCustomerToInit" parameterClass="java.lang.String">
+        update t_center_customer_main t1 JOIN t_center_vs_stacus t2 set t1.status = 0 where t1.id = t2.CUSTOMERID and t1.cityid = #cityId# and t1.selltype = 1
+    </update>
+    
+    <update id="updateApplyCityCustomerToInit" parameterClass="java.lang.String">
+        update t_center_customer_main t1 JOIN t_center_cusassignaly t2 set t1.status = 0 where t1.id = t2.CUSTOMERID and t1.cityid = #cityId# and t1.selltype = 1
+    </update>
+	
+	<update id="preAutoUpdateCustomerStatus">
+        update t_center_customer_main set status = 0 where status = 1;
+    </update>
+    
+    <update id="updayeCustomerNewTypeInTer">
+    <![CDATA[
+        update t_center_customer_main tt1 join 
+		(
+		SELECT DISTINCT (t2.id) from t_center_out t1 , t_center_customer_main t2 
+		where t2.protype2 = 0 and t1.customerid = t2.id and t2.selltype = 0 
+		and t1.type = 0 and t1.status >= 3
+		) tt2
+		set tt1.protype2 = 1 where tt1.id = tt2.id
+	]]>
+    </update>
+    
+    <update id="updateAllCustomerByStafferId" parameterClass="java.util.Map">
+        update t_center_customer_main t1 JOIN t_center_vs_stacus t2 set t1.status = #status# where t1.id = t2.CUSTOMERID and t2.stafferId = #stafferId#
+    </update>
+    
+    <update id="updateCustomerByStafferIdAndSelltype" parameterClass="java.util.Map">
+        update t_center_customer_main t1 JOIN t_center_vs_stacus t2 set t1.status = #status# where t1.id = t2.CUSTOMERID and t2.stafferId = #stafferId# and t1.selltype = #selltype#
+    </update>
+    
+    <update id="updateNewByCityId" parameterClass="java.lang.String">
+        update t_center_customer_main t1 set t1.protype2 = 0 and t1.hasNew = 0 where t1.selltype = 1
+        and t1.cityId = #cityId# 
+    </update>
+    
+    <delete id="delVSByCityId" parameterClass="java.lang.String">
+        delete t1 from t_center_vs_stacus t1 , t_center_customer_main t2 where t1.CUSTOMERID = t2.id and t2.selltype = 1 and t2.cityId = #cityId# 
+    </delete>
+    
+    <delete id="delAssignByCityId" parameterClass="java.lang.String">
+        delete t1 from t_center_cusassignaly t1 , t_center_customer_main t2 where t1.CUSTOMERID = t2.id and t2.selltype = 1 and t2.cityId = #cityId#
+    </delete>
+    
+    <delete id="delAllCustomerByStafferId" parameterClass="java.util.Map">
+        delete t2 from t_center_vs_stacus t2 , t_center_customer_main t1 where t1.id = t2.CUSTOMERID and t2.stafferId = #stafferId#
+    </delete>
+    
+    <delete id="delCustomerByStafferIdAndSelltype" parameterClass="java.util.Map">
+        delete t2 from t_center_vs_stacus t2 , t_center_customer_main t1 where t1.id = t2.CUSTOMERID and t2.stafferId = #stafferId# and t1.selltype = #selltype#
+    </delete>
+    
+    <update id="synCustomerNewTypeYear" parameterClass="java.util.Map">
+	 <![CDATA[
+		update t_center_customer_main t1 join  t_center_out t2 set t1.protype2 = 1, t1.hasNew = 1 
+        where t1.id = t2.customerid and t1.selltype = 1 
+        and t1.protype2 = 0 and t2.type = 0 and t2.status >= 3 and t2.outTime >= #begin# and t2.outTime < #end#
+     ]]>
+	</update>
+</sqlMap>

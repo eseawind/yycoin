@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-destroy-method="destroy">
+	
+    <bean id="statBankJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="statBankManager" />
+        <property name="targetMethod" value="statBank" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="statBankTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="statBankJob" />
+        <property name="cronExpression" value="0 30 2 * * ?" />
+    </bean>
+    
+    <bean id="clearRejectInvoiceinsBeanJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="invoiceinsManager" />
+        <property name="targetMethod" value="clearRejectInvoiceinsBean" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="clearRejectInvoiceinsBeanTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="clearRejectInvoiceinsBeanJob" />
+        <property name="cronExpression" value="0 0 3 * * ?" />
+    </bean>
+    
+    <bean id="exportAllCurrentBankStatJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="bankManager" />
+        <property name="targetMethod" value="exportAllCurrentBankStat" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="exportAllCurrentBankStatTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="exportAllCurrentBankStatJob" />
+        <property name="cronExpression" value="0 58 23 * * ?" />
+    </bean>
+    
+    <bean id="autoProcessPaymentToPreJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="autoPayManager" />
+        <property name="targetMethod" value="autoProcessPaymentToPre" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <!-- 每小时 -->
+    <bean id="autoProcessPaymentToPreTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="autoProcessPaymentToPreJob" />
+        <property name="cronExpression" value="0 0 * * * ?" />
+    </bean>    
+    
+    <bean id="autoRefInbillToSailJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="autoPayManager" />
+        <property name="targetMethod" value="autoRefInbillToSail" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <!-- 每2小时 -->
+    <bean id="autoRefInbillToSailTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="autoRefInbillToSailJob" />
+        <property name="cronExpression" value="0 10 0/2 * * ?" />
+    </bean>
+    
+    <bean id="createPackageJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="packageManager" />
+        <property name="targetMethod" value="createPackage" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="createPackageTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="createPackageJob" />
+        <property name="cronExpression" value="0 0/10 * * * ?" />
+    </bean>
+    
+    <bean
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="statBankTrigger" />
+				<ref bean="exportAllCurrentBankStatTrigger" />
+				<ref bean="clearRejectInvoiceinsBeanTrigger" />
+				<ref bean="autoProcessPaymentToPreTrigger" />
+				<ref bean="autoRefInbillToSailTrigger" />
+				<ref bean="createPackageTrigger"/>
+			</list>
+		</property>
+	</bean>
+</beans>

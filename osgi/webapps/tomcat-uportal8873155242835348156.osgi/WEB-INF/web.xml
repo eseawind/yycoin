@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<display-name>Web Portal</display-name>
+
+	<description>Web Page Container</description>
+
+	<context-param>
+		<param-name>contextClass</param-name>
+		<param-value>
+			org.springframework.osgi.web.context.support.OsgiBundleXmlWebApplicationContext
+		</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:application/applicationContext_*.xml
+		</param-value>
+	</context-param>
+
+	<!-- this is must the first listener,otherwise the application may be dead lock -->
+	<listener>
+		<listener-class>
+			com.china.center.webplugin.inter.impl.WebPluginServletContextListener
+		</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>
+			com.china.center.webplugin.inter.WebPathListener
+		</listener-class>
+	</listener>
+	
+	<listener>
+		<listener-class>
+			com.china.center.webportal.listener.MySessionListener
+		</listener-class>
+	</listener>
+	
+
+	<servlet>
+		<servlet-name>action</servlet-name>
+		<servlet-class>
+			com.china.center.struts.wrap.WrapActionServlet
+		</servlet-class>
+		<init-param>
+			<param-name>config</param-name>
+			<param-value>/WEB-INF/struts-config.xml</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>bfapp</servlet-name>
+		<servlet-class>
+			net.buffalo.web.servlet.ApplicationServlet
+		</servlet-class>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>action</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+		<filter-name>dyFilter</filter-name>
+		<filter-class>
+			com.china.center.webportal.filter.ServletFilter
+		</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>dyFilter</filter-name>
+		<url-pattern>*.jsp</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>dyFilter</filter-name>
+		<url-pattern>*.do</url-pattern>
+	</filter-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>bfapp</servlet-name>
+		<url-pattern>/bfapp/*</url-pattern>
+	</servlet-mapping>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	
+	<error-page>
+        <error-code>404</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>500</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+    
+    <error-page>
+        <error-code>505</error-code>
+        <location>/error.jsp</location>
+    </error-page>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+	<jsp-config>
+		<taglib>
+			<taglib-uri>http://center.org/jsp-page-taglib</taglib-uri>
+			<taglib-location>/WEB-INF/tld/pageTld.tld</taglib-location>
+		</taglib>
+
+		<taglib>
+			<taglib-uri>http://center.org/jsp-page-functions</taglib-uri>
+			<taglib-location>/WEB-INF/tld/common.tld</taglib-location>
+		</taglib>
+	</jsp-config>
+
+</web-app>

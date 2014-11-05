@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+	<osgi:service ref="taxTypeDAO" interface="com.china.center.oa.tax.dao.TaxTypeDAO" />
+
+	<osgi:service ref="taxDAO" interface="com.china.center.oa.tax.dao.TaxDAO" />
+
+	<osgi:service ref="taxFacade" interface="com.china.center.oa.tax.facade.TaxFacade" />
+
+	<osgi:service ref="taxManager" interface="com.china.center.oa.tax.manager.TaxManager" />
+
+	<osgi:service ref="financeDAO" interface="com.china.center.oa.tax.dao.FinanceDAO" />
+
+	<osgi:service ref="financeItemDAO" interface="com.china.center.oa.tax.dao.FinanceItemDAO" />
+
+	<osgi:service ref="financeManager" interface="com.china.center.oa.tax.manager.FinanceManager" />
+
+	<osgi:service ref="unitDAO" interface="com.china.center.oa.tax.dao.UnitDAO" />
+
+	<osgi:service ref="checkViewDAO" interface="com.china.center.oa.tax.dao.CheckViewDAO" />
+
+	<osgi:service ref="financeTurnDAO" interface="com.china.center.oa.tax.dao.FinanceTurnDAO" />
+
+	<osgi:service ref="financeMonthDAO" interface="com.china.center.oa.tax.dao.FinanceMonthDAO" />
+
+	<osgi:service ref="financeRepDAO" interface="com.china.center.oa.tax.dao.FinanceRepDAO" />
+
+	<osgi:service ref="financeTempDAO" interface="com.china.center.oa.tax.dao.FinanceTempDAO" />
+
+	<osgi:service ref="financeItemTempDAO" interface="com.china.center.oa.tax.dao.FinanceItemTempDAO" />
+
+	<osgi:service ref="financeReferDAO" interface="com.china.center.oa.tax.dao.FinanceReferDAO" />
+    	<!-- add -->
+	<osgi:service ref="financeMidDAO" interface="com.china.center.oa.tax.dao.FinanceMidDAO" />
+
+	<osgi:service ref="financeItemMidDAO" interface="com.china.center.oa.tax.dao.FinanceItemMidDAO" />
+	
+	<osgi:service ref="financeMonthBefDAO" interface="com.china.center.oa.tax.dao.FinanceMonthBefDAO" />
+	
+	<osgi:service ref="financeTurnRollbackDAO" interface="com.china.center.oa.tax.dao.FinanceTurnRollbackDAO" />
+	
+	<osgi:service ref="financeTagDAO" interface="com.china.center.oa.tax.dao.FinanceTagDAO" />
+	
+	<osgi:service ref="financeTagManager" interface="com.china.center.oa.tax.manager.FinanceTagManager" />
+	
+	<osgi:service ref="financeShowDAO" interface="com.china.center.oa.tax.dao.FinanceShowDAO" />
+	
+</beans>

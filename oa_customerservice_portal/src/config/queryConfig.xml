@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	<item name="queryFeedBack" deaultpfix="FeedBackBean">
+		<condtion name="cname" filed="name" caption="客户" pfix="CustomerBean">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="sname" filed="name" caption="业务员" pfix="StafferBean">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="id" filed="id" caption="任务单号">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="type" caption="任务类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$feedbackType</option>
+		</condtion>		
+		<condtion name="status" caption="任务状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$feedbackStatus</option>
+		</condtion>	
+		<condtion name="bearName" caption="任务负责人">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="industryIdName" caption="事业部">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="beginTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+				
+	</item>
+
+	<item name="queryFeedBackVisit" deaultpfix="FeedBackVisitBean">
+		<condtion name="customerName" caption="客户">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="stafferName" caption="业务员">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="caller" caption="回访者">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="taskId" caption="任务单号">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="exceptionProcesserName" caption="异常处理人">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="exceptionStatus" caption="异常状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$exceptionStatus</option>
+		</condtion>				
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$feedbackPstatus</option>
+		</condtion>
+		<condtion name="beginTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+	</item>
+
+	<item name="queryFeedBackCheck" deaultpfix="FeedBackCheckBean">
+		<condtion name="customerName" caption="客户">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="stafferName" caption="业务员">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>		
+		<condtion name="caller" caption="回访者">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="taskId" caption="任务单号">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="ifPromiseReplyCheck" caption="是否承诺对账回复">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$promiseReplyCheck</option>
+		</condtion>		
+		<condtion name="ifReceiveConfirmFax" caption="是否收到确认传真">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$confirmFax</option>
+		</condtion>	
+		<condtion name="checkResult" caption="对账结果">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$checkResult</option>
+		</condtion>
+		<condtion name="industryIdName" caption="事业部">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$feedbackPstatus</option>
+		</condtion>
+	</item>
+	
+	<item name="queryShortMessage" deaultpfix="ShortMessageBean">
+		<condtion name="smType" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$232</option>
+		</condtion>
+		<condtion name="mobile" caption="手机号">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>		
+		<condtion name="content" caption="内容">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="stafferName" caption="操作人">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		
+	</item>
+
+</query>

@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="registerActionConfig"
+		class="com.china.center.struts.wrapinner.RegisterActionConfig"
+		destroy-method="destroy">
+		<property name="actionConfigManager">
+			<ref bean="actionConfigManager" />
+		</property>
+		<property name="paths">
+			<value>classpath:config/struts-config.xml</value>
+		</property>
+	</bean>
+	
+	<bean id="defaultQueryConfigImpl"
+		class="com.china.center.actionhelper.query.DefaultQueryConfigImpl"
+		destroy-method="destroy">
+		<property name="configXMLPath">
+			<value>classpath:config/queryConfig.xml</value>
+		</property>
+	</bean>
+	
+	<bean id="buffaloOSGiConfigurerFactory"
+		class="com.china.center.webplugin.inter.BuffaloOSGiConfigurerFactory"
+		destroy-method="destroy">
+		<property name="services">
+			<map>
+				<entry key="userManager">
+                    <ref bean="userManager" />
+                </entry>
+                <entry key="orgManager">
+                    <ref bean="orgManager" />
+                </entry>
+                <entry key="commonManager">
+                    <ref bean="commonManager" />
+                </entry>
+                <entry key="checkuser">
+                    <ref bean="/admin/checkuser" />
+                </entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean name="/admin/common"
+		class="com.china.center.oa.publics.action.CommonAction" />
+
+	<bean name="/admin/down"
+		class="com.china.center.oa.publics.action.DownFileAction" />
+		
+	<bean name="/down/down"
+		class="com.china.center.oa.publics.action.DownFileAction" />
+
+	<bean name="/admin/location"
+		class="com.china.center.oa.publics.action.LocationAction" />
+
+	<bean name="/admin/checkuser" id="aaaa"
+		class="com.china.center.oa.publics.action.LoginAction" />
+
+	<bean name="/admin/logout"
+		class="com.china.center.oa.publics.action.LogoutAction" />
+
+	<bean name="/admin/org"
+		class="com.china.center.oa.publics.action.OrgAction" />
+
+	<bean name="/admin/pop"
+		class="com.china.center.oa.publics.action.PopQueryAction" />
+
+	<bean name="/admin/query"
+		class="com.china.center.oa.publics.action.PublicQueryAction" />
+
+	<bean name="/admin/role"
+		class="com.china.center.oa.publics.action.RoleAction" />
+
+	<bean name="/admin/user"
+		class="com.china.center.oa.publics.action.UserAction" />
+
+	<bean name="/admin/staffer"
+		class="com.china.center.oa.publics.action.StafferAction" />
+		
+	<bean name="/admin/duty"
+		class="com.china.center.oa.publics.action.DutyAction" />
+		
+	<bean name="/admin/enum"
+		class="com.china.center.oa.publics.action.EnumAction" />
+		
+	<bean name="/admin/invoice"
+		class="com.china.center.oa.publics.action.InvoiceAction" />
+		
+	<bean name="/admin/show"
+        class="com.china.center.oa.publics.action.ShowAction" />
+        
+    <bean name="/admin/desktop"
+        class="com.china.center.oa.publics.action.DesktopAction" />
+        
+    <bean name="/admin/alarm"
+        class="com.china.center.oa.publics.action.AlarmAction" />
+        
+	<bean name="/admin/logon"
+		class="com.china.center.oa.publics.action.LogonAction" />
+</beans>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/ex 
+  	  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="productCombinationDAO" class="com.china.center.oa.product.dao.impl.ProductCombinationDAOImpl" />
+
+	<bean id="productDAO" class="com.china.center.oa.product.dao.impl.ProductDAOImpl" />
+
+	<bean id="productVSLocationDAO" class="com.china.center.oa.product.dao.impl.ProductVSLocationDAOImpl" />
+	
+	<bean id="productFacade" class="com.china.center.oa.product.facade.impl.ProductFacadeImpl" />
+
+	<bean id="productManager" class="com.china.center.oa.product.manager.impl.ProductManagerImpl" />
+
+	<bean id="providerDAO" class="com.china.center.oa.product.dao.impl.ProviderDAOImpl" />
+
+	<bean id="providerHisDAO" class="com.china.center.oa.product.dao.impl.ProviderHisDAOImpl" />
+
+	<bean id="providerUserDAO" class="com.china.center.oa.product.dao.impl.ProviderUserDAOImpl" />
+
+	<bean id="productTypeVSCustomerDAO" class="com.china.center.oa.product.dao.impl.ProductTypeVSCustomerDAOImpl" />
+
+	<bean id="providerManager" class="com.china.center.oa.product.manager.impl.ProviderManagerImpl" />
+
+	<bean id="depotDAO" class="com.china.center.oa.product.dao.impl.DepotDAOImpl" />
+
+	<bean id="depotManager" class="com.china.center.oa.product.manager.impl.DepotManagerImpl" />
+
+	<bean id="depotpartDAO" class="com.china.center.oa.product.dao.impl.DepotpartDAOImpl" />
+
+	<bean id="storageDAO" class="com.china.center.oa.product.dao.impl.StorageDAOImpl" />
+
+	<bean id="storageRelationDAO" class="com.china.center.oa.product.dao.impl.StorageRelationDAOImpl" />
+
+	<bean id="storageManager" class="com.china.center.oa.product.manager.impl.StorageManagerImpl" />
+
+	<bean id="depotpartManager" class="com.china.center.oa.product.manager.impl.DepotpartManagerImpl" />
+
+	<bean id="storageLogDAO" class="com.china.center.oa.product.dao.impl.StorageLogDAOImpl" />
+
+	<bean id="storageRelationManager" class="com.china.center.oa.product.manager.impl.StorageRelationManagerImpl" />
+
+	<bean id="composeFeeDAO" class="com.china.center.oa.product.dao.impl.ComposeFeeDAOImpl" />
+
+	<bean id="composeItemDAO" class="com.china.center.oa.product.dao.impl.ComposeItemDAOImpl" />
+
+	<bean id="composeProductDAO" class="com.china.center.oa.product.dao.impl.ComposeProductDAOImpl" />
+
+	<bean id="composeProductManager" class="com.china.center.oa.product.manager.impl.ComposeProductManagerImpl" />
+
+	<bean id="priceChangeDAO" class="com.china.center.oa.product.dao.impl.PriceChangeDAOImpl" />
+
+	<bean id="priceChangeNewItemDAO" class="com.china.center.oa.product.dao.impl.PriceChangeNewItemDAOImpl" />
+
+	<bean id="priceChangeSrcItemDAO" class="com.china.center.oa.product.dao.impl.PriceChangeSrcItemDAOImpl" />
+
+	<bean id="priceChangeManager" class="com.china.center.oa.product.manager.impl.PriceChangeManagerImpl" />
+
+	<bean id="priceHistoryDAO" class="com.china.center.oa.product.dao.impl.PriceHistoryDAOImpl" />
+
+	<bean id="storageApplyDAO" class="com.china.center.oa.product.dao.impl.StorageApplyDAOImpl" />
+
+	<bean id="storageApplyManager" class="com.china.center.oa.product.manager.impl.StorageApplyManagerImpl" />
+
+	<bean id="composeFeeDefinedDAO" class="com.china.center.oa.product.dao.impl.ComposeFeeDefinedDAOImpl" />
+
+	<bean id="orgProductManager" class="com.china.center.oa.product.manager.impl.OrgProductManagerImpl" />
+
+	<bean id="productChangeRecordDAO" class="com.china.center.oa.product.dao.impl.ProductChangeRecordDAOImpl" />
+
+	<!-- add 2012.5.23 -->
+	<bean id="productApplyDAO" class="com.china.center.oa.product.dao.impl.ProductApplyDAOImpl" />
+	
+	<bean id="productApplyFacade" class="com.china.center.oa.product.facade.impl.ProductApplyFacadeImpl" />
+	
+	<bean id="productApplyManager" class="com.china.center.oa.product.manager.impl.ProductApplyManagerImpl" />
+	
+	<bean id="productSubApplyDAO" class="com.china.center.oa.product.dao.impl.ProductSubApplyDAOImpl" />
+	
+	<bean id="productVSStafferDAO" class="com.china.center.oa.product.dao.impl.ProductVSStafferDAOImpl" />
+	
+	<bean id="priceConfigDAO" class="com.china.center.oa.product.dao.impl.PriceConfigDAOImpl" />
+	
+	<bean id="priceConfigManager" class="com.china.center.oa.product.manager.impl.PriceConfigManagerImpl" />
+		
+	<bean id="goldSilverPriceDAO" class="com.china.center.oa.product.dao.impl.GoldSilverPriceDAOImpl" />	
+		
+	<bean id="citicVSOAProductDAO" class="com.china.center.oa.product.dao.impl.CiticVSOAProductDAOImpl" />
+	
+	<bean id="productVSGiftDAO" class="com.china.center.oa.product.dao.impl.ProductVSGiftDAOImpl" />
+	
+	<bean id="storageSnapshotDAO" class="com.china.center.oa.product.dao.impl.StorageSnapshotDAOImpl" />
+	
+	<bean id="productBOMDAO" class="com.china.center.oa.product.dao.impl.ProductBOMDAOImpl" />
+	
+	<bean id="sequenceDAO" class="com.china.center.oa.product.dao.impl.SequenceDAOImpl" />
+	
+	<bean id="decomposeProductDAO" class="com.china.center.oa.product.dao.impl.DecomposeProductDAOImpl" />
+	
+	<bean id="gsOutDAO" class="com.china.center.oa.product.dao.impl.GSOutDAOImpl" />
+	
+	<bean id="gsOutItemDAO" class="com.china.center.oa.product.dao.impl.GSOutItemDAOImpl" />
+	
+</beans>

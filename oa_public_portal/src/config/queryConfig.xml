@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	<item name="queryStaffer" deaultpfix="StafferBean">
+		<condtion name="name" filed="name" caption="姓名">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="工号">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="locationId" caption="分公司">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$locationList</option>
+		</condtion>
+		<condtion name="status" caption="状态">
+            <opr>=</opr>
+            <type>select</type>
+            <datatype>1</datatype>
+            <option>$stafferStatus</option>
+        </condtion>
+		<condtion name="industryName" filed="name" caption="事业部" pfix="INDUSTRY">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="industryName2" filed="name" caption="大区" pfix="INDUSTRY2">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="industryName3" filed="name" caption="部门" pfix="INDUSTRY3">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="examType" caption="属性">
+			<opr>=</opr>
+			<type>select</type>
+			<option>$examType</option>
+		</condtion>
+		<condtion name="black" caption="信用属性">
+            <opr>=</opr>
+            <type>select</type>
+            <datatype>1</datatype>
+            <option>$stafferBlack</option>
+        </condtion>
+	</item>
+	<item name="queryRole" deaultpfix="RoleBean">
+		<condtion name="name" caption="角色名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="locationId" caption="分公司">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$locationlist</option>
+		</condtion>
+	</item>
+
+	<item name="queryUser" deaultpfix="UserBean">
+		<condtion name="name" caption="用户名">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferId" caption="职员">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$staffer_location</option>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$userStatus</option>
+		</condtion>
+	</item>
+
+	<item name="queryProvider" deaultpfix="ProviderBean">
+		<condtion name="name" caption="供应商名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="供应商编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="供应商类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$109</option>
+		</condtion>
+	</item>
+
+	<item name="queryCityConfig" deaultpfix="CityConfigBean">
+		<condtion name="name" caption="地市" pfix="CityBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="parentId" caption="省/自治区" pfix="CityBean">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$provinceList</option>
+		</condtion>
+	</item>
+	
+	<item name="queryDuty" deaultpfix="DutyBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryInvoice" deaultpfix="InvoiceBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryEnum" deaultpfix="EnumBean">
+		<condtion name="val" caption="配置项">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$enumStatus</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$enumDefine</option>
+		</condtion>
+	</item>
+	
+	<item name="queryShow" deaultpfix="ShowBean">
+        <condtion name="name" caption="名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="dutyName" filed="name" caption="纳税实体" pfix="DutyBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryInvoiceCredit" deaultpfix="InvoiceCreditBean">
+        <condtion name="name" filed="name" caption="职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryAlarm" deaultpfix="AlarmBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+        </condtion>
+        <condtion name="refId" caption="相关单据(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$alarmStatus</option>
+        </condtion>
+        <condtion name="alarmContent" caption="告警内容">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+
+</query>

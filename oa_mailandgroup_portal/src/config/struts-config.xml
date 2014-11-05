@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		<action path="/mail/mail" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="addMail" path="/mail/addMail.jsp" />
+			<forward name="detailMail" path="/mail/detailMail.jsp" />
+			<forward name="queryMail" path="/mail/queryMail.jsp" />
+			<forward name="queryMail2" path="/mail/queryMail2.jsp" />
+			<forward name="detailMail" path="/mail/detailMail.jsp" />
+			<forward name="replyMail" path="/mail/replyMail.jsp" />
+			<forward name="transmitMail" path="/mail/transmitMail.jsp" />
+		</action>
+		
+		<action path="/group/group" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="addGroup" path="/group/addGroup.jsp" />
+			<forward name="updateGroup" path="/group/addGroup.jsp" />
+			<forward name="detailGroup" path="/group/detailGroup.jsp" />
+			<forward name="queryGroup" path="/group/queryGroup.jsp" />
+			<forward name="querySystemGroup" path="/group/querySystemGroup.jsp" />
+			<forward name="queryPublicGroup" path="/group/queryPublicGroup.jsp" />
+			<forward name="rptQueryGroup" path="/group/rptQueryGroup.jsp" />
+			<forward name="vocAndWorkGroup" path="/group/vocAndWorkGroup.jsp" />
+			<forward name="rptQueryGroupMember" path="/group/rptQueryGroupMember.jsp" />
+			<forward name="rptQueryStaffer2" path="/group/rptQueryStaffer2.jsp" />
+			<forward name="rptQueryAllStaffer" path="/group/rptQueryAllStaffer.jsp" />
+			<forward name="selectDutyStaffer" path="/group/selectDutyStaffer.jsp" />
+			<forward name="selectpartaker" path="/group/selectpartaker.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

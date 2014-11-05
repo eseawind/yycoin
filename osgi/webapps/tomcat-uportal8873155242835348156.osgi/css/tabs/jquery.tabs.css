@@ -1,0 +1,123 @@
+
+@media Screen, Projection    
+{
+.tabs-hide {
+	DISPLAY: none
+}
+
+}
+
+@media Print    
+{
+.tabs-nav {
+	DISPLAY: none
+}
+    }
+.tabs-nav {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 4px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.tabs-nav:unknown {
+	CLEAR: both; DISPLAY: block; content: " "
+}
+.tabs-nav LI {
+	MIN-WIDTH: 84px; FLOAT: left; MARGIN: 0px 0px 0px 1px
+}
+.tabs-nav A {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 10px; BACKGROUND: url(tab.png) no-repeat; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.tabs-nav A SPAN {
+	PADDING-RIGHT: 10px; DISPLAY: block; PADDING-LEFT: 10px; BACKGROUND: url(tab.png) no-repeat; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}
+.tabs-nav A {
+	PADDING-LEFT: 0px; FONT-WEIGHT: bold; FONT-SIZE: 12px; Z-INDEX: 2; COLOR: #27537a; LINE-HEIGHT: 1.2; WHITE-SPACE: nowrap; POSITION: relative; TOP: 1px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+.tabs-nav .tabs-selected A {
+	COLOR: #000
+}
+.tabs-nav .tabs-selected A {
+	BACKGROUND-POSITION: 100% -150px; outline: 0
+}
+.tabs-nav A:hover {
+	BACKGROUND-POSITION: 100% -150px; outline: 0
+}
+.tabs-nav A:focus {
+	BACKGROUND-POSITION: 100% -150px; outline: 0
+}
+.tabs-nav A:active {
+	BACKGROUND-POSITION: 100% -150px; outline: 0
+}
+.tabs-nav A {
+	BACKGROUND-POSITION: 100% -100px
+}
+.tabs-nav .tabs-disabled A:hover {
+	BACKGROUND-POSITION: 100% -100px
+}
+.tabs-nav .tabs-disabled A:focus {
+	BACKGROUND-POSITION: 100% -100px
+}
+.tabs-nav .tabs-disabled A:active {
+	BACKGROUND-POSITION: 100% -100px
+}
+.tabs-nav A SPAN {
+	PADDING-RIGHT: 0px; MIN-WIDTH: 64px; MIN-HEIGHT: 18px; WIDTH: 64px; PADDING-TOP: 6px; HEIGHT: 18px
+}
+* > .tabs-nav A SPAN {
+	WIDTH: auto; HEIGHT: auto
+}
+.tabs-nav .tabs-selected A SPAN {
+	PADDING-TOP: 7px
+}
+.tabs-nav .tabs-selected A SPAN {
+	BACKGROUND-POSITION: 0px -50px
+}
+.tabs-nav A:hover SPAN {
+	BACKGROUND-POSITION: 0px -50px
+}
+.tabs-nav A:focus SPAN {
+	BACKGROUND-POSITION: 0px -50px
+}
+.tabs-nav A:active SPAN {
+	BACKGROUND-POSITION: 0px -50px
+}
+.tabs-nav A SPAN {
+	BACKGROUND-POSITION: 0px 0px
+}
+.tabs-nav .tabs-disabled A:hover SPAN {
+	BACKGROUND-POSITION: 0px 0px
+}
+.tabs-nav .tabs-disabled A:focus SPAN {
+	BACKGROUND-POSITION: 0px 0px
+}
+.tabs-nav .tabs-disabled A:active SPAN {
+	BACKGROUND-POSITION: 0px 0px
+}
+.tabs-nav .tabs-selected A:link {
+	CURSOR: text
+}
+.tabs-nav .tabs-selected A:visited {
+	CURSOR: text
+}
+.tabs-nav .tabs-disabled A:link {
+	CURSOR: text
+}
+.tabs-nav .tabs-disabled A:visited {
+	CURSOR: text
+}
+.tabs-nav A:hover {
+	CURSOR: pointer
+}
+.tabs-nav A:focus {
+	CURSOR: pointer
+}
+.tabs-nav A:active {
+	CURSOR: pointer
+}
+.tabs-nav .tabs-disabled {
+	opacity: .4
+}
+.tabs-container {
+	PADDING-RIGHT: 0px; BORDER-TOP: #97a5b0 1px solid; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0em; PADDING-TOP: 1em
+}
+.tabs-loading EM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 20px; BACKGROUND: url(loading.gif) no-repeat 0px 50%; PADDING-BOTTOM: 0px; PADDING-TOP: 0px
+}

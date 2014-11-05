@@ -1,0 +1,41 @@
+<Server port="11112" shutdown="SHUTDOWN">
+
+  <Service name="Catalina">
+  
+     <Executor name="tomcatThreadPool" namePrefix="catalina-exec-"    
+         maxThreads="900" minSpareThreads="50" maxIdleTime="60000"/>
+         
+     <!--executor="tomcatThreadPool"-->
+  
+     <Connector port="8888" protocol="HTTP/1.1"
+               enableLookups="false"
+               redirectPort="6443"
+               acceptCount="500"
+               connectionTimeout="20000"
+               disableUploadTimeout="true"
+               maxThreads="900" 
+               minSpareThreads="50" 
+               maxSpareThreads="100"
+               URIEncoding="UTF-8"
+               compression="on"
+               compressionMinSize="202400"
+               noCompressionUserAgents="gozilla,traviata"
+               compressableMimeType="text/html,text/xml,text/javascript,text/css,text/plain,application/xml"
+              />
+                
+                
+    <Engine name="Catalina" defaultHost="localhost">
+      <Host name="localhost" unpackWARs="false" autoDeploy="false"
+       liveDeploy="false" deployOnStartup="false"
+       xmlValidation="false" xmlNamespaceAware="false">
+       <Context path="/pic" reloadable="false" docBase="D:\oa_attachment\picPath"/>
+       <Context path="/webdav2" reloadable="false" docBase="D:\oa_attachment\readonlyflow" debug="1"/>
+       <Context path="/webdav" reloadable="false" docBase="D:\oa_attachment\flow" debug="1"/>
+       <!--
+       <Context path="/exam" reloadable="false" docBase="C:\Tomcat 5.5\webapps\exam" debug="1"/>
+       -->
+      </Host>  
+    </Engine>
+    
+  </Service>
+</Server>

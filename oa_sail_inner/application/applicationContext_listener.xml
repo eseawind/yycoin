@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+	
+	<bean id="priceChangeListenerSailImpl" class="com.china.center.oa.sail.listener.impl.PriceChangeListenerSailImpl" />
+	
+	<bean id="defaultLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+		<property name="listenerManager">
+			<ref bean="priceChangeManager"/>
+		</property>
+		<property name="listenerList">
+			<list>
+				<ref bean="priceChangeListenerSailImpl" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="customerListenerSailImpl" class="com.china.center.oa.sail.listener.impl.CustomerListenerSailImpl" />
+	
+	<bean id="customerLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+		<property name="listenerManager">
+			<ref bean="clientManager"/>
+		</property>
+		<property name="listenerList">
+			<list>
+				<ref bean="customerListenerSailImpl" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="storageRelationListenerSailImpl" class="com.china.center.oa.sail.listener.impl.StorageRelationListenerSailImpl" />
+	
+	<bean id="storageRelationLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="storageRelationManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="storageRelationListenerSailImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="productListenerSailImpl" class="com.china.center.oa.sail.listener.impl.ProductListenerSailImpl" />
+    
+    <bean id="productLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="productManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="productListenerSailImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="providerListenerSailImpl" class="com.china.center.oa.sail.listener.impl.ProviderListenerSailImpl" />
+    
+    <bean id="providerLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="providerManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="providerListenerSailImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="depotListenerSailImpl" class="com.china.center.oa.sail.listener.impl.DepotListenerSailImpl" />
+    
+    <bean id="depotListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="depotManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="depotListenerSailImpl" />
+            </list>
+        </property>
+    </bean>
+	
+</beans>

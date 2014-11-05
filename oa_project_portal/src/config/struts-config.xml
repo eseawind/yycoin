@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		<action path="/project/project" parameter="method" folder="/project/"
+			bean="Project" type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="selectpartyA" path="/project/selectpartyA.jsp" />
+			<forward name="selectpartyB" path="/project/selectpartyB.jsp" />
+			<forward name="selectBeforeAgre" path="/project/selectBeforeAgre.jsp" />
+			<forward name="selectAfterAgre" path="/project/selectAfterAgre.jsp" />
+			<forward name="selectPayBeforeTask" path="/project/selectPayBeforeTask.jsp" />
+			<forward name="selectPayAfterTask" path="/project/selectPayAfterTask.jsp" />
+			<forward name="selectTranBeforeTask" path="/project/selectTranBeforeTask.jsp" />
+			<forward name="selectTranAfterTask" path="/project/selectTranAfterTask.jsp" />
+			<forward name="selectInvoiceBeforeTask" path="/project/selectInvoiceBeforeTask.jsp" />
+			<forward name="selectInvoiceAfterTask" path="/project/selectInvoiceAfterTask.jsp" />
+			<forward name="selectTaskBefore" path="/project/selectTaskBefore.jsp" />
+			<forward name="selectTaskAfter" path="/project/selectTaskAfter.jsp" />
+			<forward name="selectReceiver" path="/project/selectReceiver.jsp" />
+			<forward name="queryTask" path="/project/queryTask.jsp" />
+			<forward name="updateTask" path="/project/updateTask.jsp" />
+			<forward name="processTask" path="/project/processTask.jsp" />
+			<forward name="detailProject" path="/project/detailProject.jsp" />
+			<forward name="updateProject" path="/project/updateProject.jsp" />
+			<forward name="queryAgreement" path="/project/queryAgreement.jsp" />
+			<forward name="queryProject" path="/project/queryProject.jsp" />
+			<forward name="updateAgreement" path="/project/updateAgreement.jsp" />
+			<forward name="detailAgreement" path="/project/detailAgreement.jsp" />
+			<forward name="selectPaycurrentTask1" path="/project/selectPaycurrentTask1.jsp" />
+			<forward name="selectTrancurrentTask1" path="/project/selectTrancurrentTask1.jsp" />
+			<forward name="selectinvocurrentTask" path="/project/selectinvocurrentTask.jsp" />
+			<forward name="selectProject" path="/project/selectProject.jsp" />
+			<forward name="getTabAgreement" path="/project/getTabAgreement.jsp"></forward>
+			<forward name="queryTabTask" path="/project/queryTabTask.jsp"></forward>
+			<forward name="uploadFileTab" path="/project/uploadFileTab.jsp"></forward>
+			<forward name="drawGant" path="/project/drawGant.jsp"></forward>
+			<forward name="querySelfApprove" path="/project/querySelfApprove.jsp"></forward>
+			<forward name="detailTask" path="/project/detailTask.jsp"></forward>
+		</action>
+
+	</action-mappings>
+</struts-config>

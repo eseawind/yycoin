@@ -1,0 +1,231 @@
+package com.china.center.oa.client.bean;
+
+import java.io.Serializable;
+
+import com.china.center.jdbc.annotation.Entity;
+import com.china.center.jdbc.annotation.FK;
+import com.china.center.jdbc.annotation.Id;
+import com.china.center.jdbc.annotation.Join;
+import com.china.center.jdbc.annotation.Table;
+import com.china.center.jdbc.annotation.enums.JoinType;
+import com.china.center.oa.publics.bean.AreaBean;
+import com.china.center.oa.publics.bean.CityBean;
+import com.china.center.oa.publics.bean.ProvinceBean;
+
+@SuppressWarnings("serial")
+@Entity(name = "客户地址薄")
+@Table(name = "T_CENTER_ADDRESS")
+public class AddressBean implements Serializable
+{
+	@Id
+	private String id = "";
+	
+	/**
+	 * 客户ID  - 一个客户有多个地址
+	 */
+	@FK
+	private String customerId = "";
+	
+	private String customerName = "";
+	
+	/**
+	 * 省
+	 */
+	@Join(tagClass=ProvinceBean.class, type = JoinType.LEFT)
+	private String provinceId = "";
+	
+	/**
+	 * 市
+	 */
+	@Join(tagClass=CityBean.class, type = JoinType.LEFT)
+	private String cityId = "";
+	
+	/**
+	 * 区
+	 */
+	@Join(tagClass = AreaBean.class, type = JoinType.LEFT)
+	private String areaId = "";
+	
+	/**
+	 * 详细地址
+	 */
+	private String address = "";
+	
+	/**
+	 * 收货人
+	 */
+	private String receiver = "";
+	
+	/**
+	 * 手机
+	 */
+	private String mobile = "";
+	
+	/**
+	 * 固话
+	 */
+	private String telephone = "";
+	
+	/**
+	 * 业务员
+	 */
+	private String stafferId = "";
+	
+	/**
+	 * 时间
+	 */
+	private String logTime = "";
+	
+	public AddressBean()
+	{
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
+	}
+
+	public String getProvinceId() {
+		return provinceId;
+	}
+
+	public void setProvinceId(String provinceId) {
+		this.provinceId = provinceId;
+	}
+
+	public String getCityId() {
+		return cityId;
+	}
+
+	public void setCityId(String cityId) {
+		this.cityId = cityId;
+	}
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public String getReceiver() {
+		return receiver;
+	}
+
+	public void setReceiver(String receiver) {
+		this.receiver = receiver;
+	}
+
+	public String getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
+	}
+
+	public String getTelephone() {
+		return telephone;
+	}
+
+	public void setTelephone(String telephone) {
+		this.telephone = telephone;
+	}
+	
+	public String getCustomerName()
+	{
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName)
+	{
+		this.customerName = customerName;
+	}
+
+	public String getStafferId()
+	{
+		return stafferId;
+	}
+
+	public void setStafferId(String stafferId)
+	{
+		this.stafferId = stafferId;
+	}
+
+	public String getLogTime()
+	{
+		return logTime;
+	}
+
+	public void setLogTime(String logTime)
+	{
+		this.logTime = logTime;
+	}
+
+	/**
+	 * @return the areaId
+	 */
+	public String getAreaId()
+	{
+		return areaId;
+	}
+
+	/**
+	 * @param areaId the areaId to set
+	 */
+	public void setAreaId(String areaId)
+	{
+		this.areaId = areaId;
+	}
+
+	public String toString()
+	{
+        final String TAB = ",";
+
+        StringBuilder retValue = new StringBuilder();
+
+        retValue
+            .append("AddressBean ( ")
+            .append(super.toString())
+            .append(TAB)
+            .append("id = ")
+            .append(this.id)
+            .append(TAB)
+            .append("customerId = ")
+            .append(this.customerId)
+            .append(TAB)
+            .append("provinceId = ")
+            .append(this.provinceId)
+            .append(TAB)
+            .append("cityId = ")
+            .append(this.cityId)
+            .append(TAB)
+            .append("address = ")
+            .append(this.address)
+            .append(TAB)
+            .append("receiver = ")
+            .append(this.receiver)
+            .append(TAB)
+            .append("mobile = ")
+            .append(this.mobile)
+            .append(TAB)
+            .append("telephone = ")
+            .append(this.telephone)
+            .append(TAB)
+            .append(" )");
+
+        return retValue.toString();
+    }
+}

@@ -1,0 +1,1 @@
+[2014-11-05 01:00:08]INFO  com.china.center.oa.customer.job.impl.CustomerJobImpl.excuteJob(Unknown Source) [org.springframework.scheduling.quartz.SchedulerFactoryBean#0_Worker-10] 同步客户的状态和新旧属性中更新了31953个客户的新旧属性状态

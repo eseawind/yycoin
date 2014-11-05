@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="StafferDAOImpl">
+
+	<select id="queryStafferByAuthId"
+		parameterClass="java.util.Map" resultClass="com.china.center.oa.publics.bean.StafferBean">
+		select x.* from t_center_oastaffer x,
+		  (select DISTINCT(tt.STAFFERID) from t_center_oauser tt where tt.ROLEID in        
+		  (select DISTINCT(ROLEID) from t_center_roleauth t where AUTHID = #authId#)) y
+		 where x.status = 0 and x.id = y.STAFFERID  
+	</select>
+	
+	<select id="queryStafferByAuthIdAndIndustryId"
+        parameterClass="java.util.Map" resultClass="com.china.center.oa.publics.bean.StafferBean">
+        select 
+    		distinct x.*
+		from
+		    t_center_oastaffer x,
+		    t_center_postcredit y,
+		    t_center_oauser tt,
+		    t_center_roleauth t
+		where
+		    x.status = 0 and x.id = y.stafferId and y.invoiceID = #industryId# and x.id = tt.stafferid and tt.roleid = t.roleid and t.authid = #authId#
+    </select>
+    
+    <select id="queryStafferByPostId"
+        parameterClass="java.util.Map" resultClass="com.china.center.oa.publics.bean.StafferBean">
+        select 
+    		*
+		from
+		    t_center_oastaffer 
+		where
+		    postid = #postId#
+    </select>
+    
+    <select id="queryStafferByPostIdAndPrincipalshipId"
+        parameterClass="java.util.Map" resultClass="com.china.center.oa.publics.bean.StafferBean">
+       select * from 
+       t_center_oastaffer  
+       where principalshipId 
+       in (select id from T_CENTER_PRINCIPALSHIP where parentid=
+       (select parentid from T_CENTER_PRINCIPALSHIP where  id=#principalshipId#)) 
+       and postid in(16,17,18,20)
+    </select>
+    
+    <select id="queryAllStaffer"
+        parameterClass="java.util.Map" resultClass="com.china.center.oa.publics.bean.StafferBean">
+        select 
+    		*
+		from
+		    t_center_oastaffer 
+    </select>
+    
+    <select id="queryStafferTwoLevel"
+        parameterClass="java.util.Map" resultClass="com.china.center.oa.publics.bean.StafferBean">
+       select * from 
+       t_center_oastaffer  
+       where principalshipId 
+       in (select id from T_CENTER_PRINCIPALSHIP where parentid=       
+       (select parentid from T_CENTER_PRINCIPALSHIP where id =       
+       (select parentid from T_CENTER_PRINCIPALSHIP where  id=#principalshipId#)))
+       and postid in(16,17,18,20)
+    </select>
+    
+     <select id="queryStafferThreeLevel"
+        parameterClass="java.util.Map" resultClass="com.china.center.oa.publics.bean.StafferBean">
+       select * from 
+       t_center_oastaffer  
+       where principalshipId 
+       in (select id from T_CENTER_PRINCIPALSHIP where parentid=       
+       (select parentid from T_CENTER_PRINCIPALSHIP where id =       
+       (select parentid from T_CENTER_PRINCIPALSHIP where id =
+       (select parentid from T_CENTER_PRINCIPALSHIP where  id=#principalshipId#)))) 
+       and postid in(16,17,18,20)
+    </select>
+
+</sqlMap>

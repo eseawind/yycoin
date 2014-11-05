@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	<item name="queryStockWork" deaultpfix="StockWorkBean">
+        <condtion name="alogTime" filed="workDate" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="workDate" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="id" caption="标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="provideName" caption="供应商">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="productName" caption="产品">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stockId" caption="采购单号">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$stockWorkStatus</option>
+        </condtion>
+        <condtion name="stafferName" caption="跟单人">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="querySelfStockWork" deaultpfix="StockWorkBean">
+        <condtion name="alogTime" filed="workDate" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="workDate" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="id" caption="标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="provideName" caption="供应商">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="productName" caption="产品">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stockId" caption="采购单号">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$stockWorkStatus</option>
+        </condtion>
+        <condtion name="stafferName" caption="跟单人">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+</query>

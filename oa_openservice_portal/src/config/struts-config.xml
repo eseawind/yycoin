@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		 
+		<action path="/openService/openService" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			
+		</action>
+		
+		<action path="/openService/appsService" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			
+		</action>		
+			
+	</action-mappings>
+</struts-config>

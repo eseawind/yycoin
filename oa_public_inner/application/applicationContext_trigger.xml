@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	 default-destroy-method="destroy">
+	 
+	<bean id="monitorImplJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="monitorImpl" />
+        <property name="targetMethod" value="monitor" />
+        <property name="concurrent" value="false" />
+    </bean>
+
+    <bean id="monitorImplTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="monitorImplJob" />
+        <property name="cronExpression" value="0 0/1 * * * ?" />
+    </bean>
+	
+    <bean id="everyDayCarryWithOutTransactionalJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="publicTrigger" />
+        <property name="targetMethod" value="everyDayCarryWithOutTransactional" />
+        <property name="concurrent" value="false" />
+    </bean>
+
+    <bean id="everyDayCarryWithOutTransactionalTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="everyDayCarryWithOutTransactionalJob" />
+        <property name="cronExpression" value="0 0 1 * * ?" />
+    </bean>
+    
+    <bean id="everyHourCarryWithOutTransactionalJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="publicTrigger" />
+        <property name="targetMethod" value="everyHourCarryWithOutTransactional" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="everyHourCarryWithOutTransactionalTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="everyHourCarryWithOutTransactionalJob" />
+        <property name="cronExpression" value="0 0 * * * ?" />
+    </bean>
+    
+    <bean id="hotLoadingParameterJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="parameterDAO" />
+        <property name="targetMethod" value="init" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="hotLoadingParameterTrigger"
+        class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="hotLoadingParameterJob" />
+        <property name="startDelay" value="30000" />
+        <property name="repeatInterval" value="30000" />
+    </bean>
+    
+    <bean id="planJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="planManager" />
+        <property name="targetMethod" value="carryPlan" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="planTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="planJob" />
+        <property name="cronExpression" value="0 30 0 * * ?" />
+    </bean>
+
+	<bean
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="monitorImplTrigger" />
+				<ref bean="everyDayCarryWithOutTransactionalTrigger" />
+				<ref bean="everyHourCarryWithOutTransactionalTrigger" />
+				<ref bean="hotLoadingParameterTrigger" />
+				<ref bean="planTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

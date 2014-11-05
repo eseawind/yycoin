@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+
+	<osgi:reference id="transactionManager"
+		interface="org.springframework.transaction.PlatformTransactionManager" />
+
+	<osgi:reference id="jdbcOperation"
+		interface="com.china.center.jdbc.inter.JdbcOperation" />
+
+	<osgi:reference id="dataSource" interface="javax.sql.DataSource" />
+
+	<osgi:reference id="travelApplyDAO" interface="com.china.center.oa.tcp.dao.TravelApplyDAO" />
+
+	<osgi:reference id="convertEncode"
+		interface="com.china.center.jdbc.inter.Convert" />
+		
+	<osgi:reference id="integrationAOPManager"
+		interface="org.china.center.spring.iaop.annotation.IntegrationAOPManager" />
+		
+	<osgi:reference id="integrationAuthManager" 
+	    interface="org.china.center.spring.iaop.annotation.IntegrationAuthManager" />
+	
+	<osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />
+	
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+	
+	<osgi:reference id="orgManager" interface="com.china.center.oa.publics.manager.OrgManager" />
+	
+	<osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="locationManager" interface="com.china.center.oa.publics.manager.LocationManager" />
+	
+	<osgi:reference id="queryManager" interface="com.china.center.oa.publics.manager.QueryManager" />
+	
+	<osgi:reference id="notifyManager" interface="com.china.center.oa.publics.manager.NotifyManager" />
+	
+	<osgi:reference id="publicTrigger" interface="com.china.center.oa.publics.trigger.PublicTrigger" />
+	
+	<osgi:reference id="locationVSCityDAO" interface="com.china.center.oa.publics.dao.LocationVSCityDAO" />
+	
+	<osgi:reference id="stafferManager" interface="com.china.center.oa.publics.manager.StafferManager" />
+	
+	<osgi:reference id="flowLogDAO" interface="com.china.center.oa.publics.dao.FlowLogDAO" />
+	
+	<osgi:reference id="attachmentDAO" interface="com.china.center.oa.publics.dao.AttachmentDAO" />
+	
+	<osgi:reference id="fatalNotify" interface="com.china.center.oa.publics.manager.FatalNotify" />
+	
+	<osgi:reference id="publishMessage" interface="com.china.center.oa.publics.message.PublishMessage" />
+	
+	<osgi:reference id="desktopManager" interface="com.china.center.oa.publics.manager.DesktopManager" />
+	
+	<!-- ************************************************************************************** -->
+	
+	<osgi:reference id="mailMangaer" interface="com.china.center.oa.mail.manager.MailMangaer" />
+	
+	<osgi:reference id="groupVSStafferDAO" interface="com.china.center.oa.group.dao.GroupVSStafferDAO" />
+	
+	<osgi:reference id="budgetManager" interface="com.china.center.oa.budget.manager.BudgetManager" />
+	
+	<osgi:reference id="budgetItemDAO" interface="com.china.center.oa.budget.dao.BudgetItemDAO" />
+	
+	<osgi:reference id="budgetDAO" interface="com.china.center.oa.budget.dao.BudgetDAO" />
+	
+	<osgi:reference id="bankDAO" interface="com.china.center.oa.finance.dao.BankDAO" />
+	
+	<osgi:reference id="billManager" interface="com.china.center.oa.finance.manager.BillManager" />
+	
+	<osgi:reference id="budgetLogDAO" interface="com.china.center.oa.budget.dao.BudgetLogDAO" />
+	
+	<osgi:reference id="budgetLogTmpDAO" interface="com.china.center.oa.budget.dao.BudgetLogTmpDAO" />
+	
+	<osgi:reference id="baseDAO" interface="com.china.center.oa.sail.dao.BaseDAO" />
+
+	<osgi:reference id="outDAO" interface="com.china.center.oa.sail.dao.OutDAO" />
+
+	<osgi:reference id="outBalanceDAO" interface="com.china.center.oa.sail.dao.OutBalanceDAO" />
+
+	<osgi:reference id="baseBalanceDAO" interface="com.china.center.oa.sail.dao.BaseBalanceDAO" />
+	
+	<osgi:reference id="invoiceinsItemDAO" interface="com.china.center.oa.finance.dao.InvoiceinsItemDAO" />
+
+	<osgi:reference id="preInvoiceApplyDAO" interface="com.china.center.oa.finance.dao.PreInvoiceApplyDAO" />
+	
+	<osgi:reference id="preInvoiceVSOutDAO" interface="com.china.center.oa.finance.dao.PreInvoiceVSOutDAO" />
+	
+	<osgi:reference id="inBillDAO" interface="com.china.center.oa.finance.dao.InBillDAO" />
+	
+	<osgi:reference id="insVSOutDAO" interface="com.china.center.oa.finance.dao.InsVSOutDAO" />  
+	
+	<osgi:reference id="backPrePayApplyDAO" interface="com.china.center.oa.finance.dao.BackPrePayApplyDAO" />
+
+</beans>

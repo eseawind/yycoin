@@ -1,0 +1,23 @@
+<component name="libraryTable">
+  <library name="repository">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.jdbc_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.webservice_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/org.eclipse.osgi.services.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.actionhelper_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.monitor_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/spring-osgi-extender.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.taglib_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.dym_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.config_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.command.customize_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/spring-osgi-web-extender.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.event_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.webportal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.tools_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/repository/com.china.center.osgi.il18n_1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

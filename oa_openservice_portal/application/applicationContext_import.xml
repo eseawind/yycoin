@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+	
+	<osgi:reference id="buffaloOSGiConfigurer" interface="com.china.center.webplugin.inter.BuffaloOSGiConfigurer" />
+	
+	<osgi:reference id="roleAuthDAO" interface="com.china.center.oa.publics.dao.RoleAuthDAO" />		
+	
+	<osgi:reference id="locationDAO" interface="com.china.center.oa.publics.dao.LocationDAO" />
+	
+	<osgi:reference id="menuManager" interface="com.china.center.oa.publics.manager.MenuManager" />
+	
+	<osgi:reference id="menuItemDAO" interface="com.china.center.oa.publics.dao.MenuItemDAO" />
+	
+	<osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />	
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+
+	<osgi:reference id="userDAO" interface="com.china.center.oa.publics.dao.UserDAO" />	
+	
+	<osgi:reference id="principalshipDAO" interface="com.china.center.oa.publics.dao.PrincipalshipDAO" />
+
+	<osgi:reference id="commonFacade" interface="com.china.center.oa.publics.facade.CommonFacade" />
+
+	<!-- ws  -->
+	<osgi:reference id="serverManager" interface="com.china.center.osgi.ws.service.ServerManager" cardinality="0..1"/>
+
+	<osgi:reference id="appUserDAO"
+		interface="com.china.center.oa.client.dao.AppUserDAO" />
+
+	<osgi:reference id="appUserApplyDAO"
+		interface="com.china.center.oa.client.dao.AppUserApplyDAO" />
+		
+	<osgi:reference id="appUserManager" interface="com.china.center.oa.client.manager.AppUserManager" />		
+	
+	<osgi:reference id="appOutDAO"
+		interface="com.china.center.oa.sail.dao.AppOutDAO" />
+	
+	<osgi:reference id="appBaseDAO"
+		interface="com.china.center.oa.sail.dao.AppBaseDAO" />
+	
+	<osgi:reference id="appInvoiceDAO"
+		interface="com.china.center.oa.sail.dao.AppInvoiceDAO" />
+	
+	<osgi:reference id="appDistributionDAO"
+		interface="com.china.center.oa.sail.dao.AppDistributionDAO" />
+		
+	<osgi:reference id="appOutManager" interface="com.china.center.oa.sail.manager.AppOutManager" />	
+
+</beans>

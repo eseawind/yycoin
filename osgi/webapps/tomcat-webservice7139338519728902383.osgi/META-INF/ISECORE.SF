@@ -1,0 +1,210 @@
+Signature-Version: 1.0
+SHA1-Digest-Manifest-Main-Attributes: hDwr+zcSCnLGmPpjRkfJIbTaGkQ=
+Created-By: 1.6.0_01 (Sun Microsystems Inc.)
+SHA1-Digest-Manifest: dJbeqAv/Y37vCytqiP9eWZAgF/o=
+
+Name: com/china/center/osgi/ws/service/constant/WSConstant.class
+SHA1-Digest: RzbdrVhLAnmGhhAx1Gt1htJVxDg=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/bean/WSServiceB
+ ean.class
+SHA1-Digest: QKv1/OwgsyQ2fQZkU39nNBIbeZA=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/WSDispatcherServlet.cla
+ ss
+SHA1-Digest: EogJZckTadkCsqv9EAKvPt/M3f0=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/SOAPAbstractHan
+ dler.class
+SHA1-Digest: x4QBPbU/0Ym7Sm3vT7bivpj4Go8=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/RegisterServer.
+ class
+SHA1-Digest: yR/9u0sXF4dnlo5dOXCKtYXCWIo=
+
+Name: META-INF/x.tld
+SHA1-Digest: EqS/5l2xn92zTG3micIspnS7w4o=
+
+Name: WEB-INF/lib/antlr.jar
+SHA1-Digest: elEDwb5HXtvi19R2j2qcoXNKAOA=
+
+Name: WEB-INF/lib/wsdl4j-1.5.2.jar
+SHA1-Digest: Y3i/wtIvVGRgq0zModl+6OHLf6A=
+
+Name: META-INF/spring-form.tld
+SHA1-Digest: McRxjOXgHW3e/BkzSsly3dNfzVw=
+
+Name: META-INF/sql.tld
+SHA1-Digest: 37g/KbPs6rivD27fH43rcKn0hic=
+
+Name: META-INF/pageTld.tld
+SHA1-Digest: KNW8lRCjYgp1LiWWIzXVzB/kB2Q=
+
+Name: WEB-INF/lib/jsr173_1.0_ri.jar
+SHA1-Digest: C9rikeClPByUT/JABey7k2cWOKU=
+
+Name: com/china/center/osgi/ws/service/SOAPAbstractHandler.class
+SHA1-Digest: cd1zoT1uUPzhRaIpUZfqTOrskwg=
+
+Name: META-INF/c.tld
+SHA1-Digest: qdFZfLXRvAZ2/2P8hkhNgoyAQoY=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/constant/WSCons
+ tant.class
+SHA1-Digest: oGE0bHaGwhfLGbF2OLt3/Tf6prA=
+
+Name: WEB-INF/lib/wstx-asl-2.9.3.jar
+SHA1-Digest: G7wxpvoM46GCp6XaX2WV2JqavzA=
+
+Name: com/china/center/osgi/ws/Activator.class
+SHA1-Digest: NQFVP5zNZwkV0wjWj88MeXEYOI0=
+
+Name: WEB-INF/web.xml
+SHA1-Digest: SIx5ij74dH9YRlj1hj7dlimluv4=
+
+Name: WEB-INF/lib/stax-utils-snapshot-20040917.jar
+SHA1-Digest: 7nY5XPfHFoCKs5WVMrY9vP8FUlo=
+
+Name: com/china/center/osgi/ws/service/impl/ServerManagerImpl.class
+SHA1-Digest: JT9/iEhSUgvQtSCvFQMCjYZ1glk=
+
+Name: META-INF/permittedTaglibs.tld
+SHA1-Digest: nv/LeoxWy3LuX6rM1rixhufYoRk=
+
+Name: WEB-INF/lib/asm-2.2.1.jar
+SHA1-Digest: sU87jbHvzbAytL0dpmLWlinkdKY=
+
+Name: META-INF/sql-1_0-rt.tld
+SHA1-Digest: TTP67sb3XmuWMJQmmymPgZg9Q/M=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/impl/ServerMana
+ gerImpl.class
+SHA1-Digest: V5XmdomhNzqteJideMkDN66fpE0=
+
+Name: WEB-INF/lib/backport-util-concurrent-3.0.jar
+SHA1-Digest: a62KWL8hC3ftcAfY2w/Q66KjDhE=
+
+Name: WEB-INF/lib/xfire-all-1.2.1.jar
+SHA1-Digest: 3DPbCyJ1Fdn6K4AQ20wXPzRUojc=
+
+Name: META-INF/fmt-1_0-rt.tld
+SHA1-Digest: nkOustfFwo/YsRJW7gOXPwml+dc=
+
+Name: META-INF/scriptfree.tld
+SHA1-Digest: 1g60C0vvSB3c5wgqF4lQIyYGlJQ=
+
+Name: META-INF/x-1_0-rt.tld
+SHA1-Digest: sfnm5VVoN7ZEvIfsfIhosB9aWmM=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/impl/ServerMana
+ gerImpl$InnerThread.class
+SHA1-Digest: vC6c+9HyhKpvp+p2LSS72JQUYIQ=
+
+Name: com/china/center/osgi/ws/service/bean/WSServiceBean.class
+SHA1-Digest: qMmRQDFdRU+KGSveZNuV8cj+cKQ=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/Activator.class
+SHA1-Digest: Sq6yVeCKDyBARHjss1v/y3LFUsc=
+
+Name: META-INF/spring.handlers
+SHA1-Digest: Eh2qm0O+dVoHFH63aSkfz7OYKMg=
+
+Name: index.jsp
+SHA1-Digest: 26SxeNonUUOpS8bllDavcO9EPFM=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/WSModal.class
+SHA1-Digest: EiQyP4vOD9LE/ABCMrF7/3e1kTQ=
+
+Name: com/china/center/osgi/ws/service/impl/ServerTools.class
+SHA1-Digest: 5/+RmTlIY7NE90wylhO+o89Sh3Y=
+
+Name: META-INF/x-1_0.tld
+SHA1-Digest: y8L+CBBRWxdYnnakh40UWm9sxjo=
+
+Name: META-INF/c-1_0.tld
+SHA1-Digest: 3fLnDxbfH0A1MhajLqSo19JbUpw=
+
+Name: META-INF/spring.schemas
+SHA1-Digest: sL4QfjqT6k7kd7XUlQwgwV+RN0w=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/impl/SOAPHandle
+ rImpl.class
+SHA1-Digest: L+z1CPv6wRrtgL4kxSwAK143mpc=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/impl/ServerTool
+ s.class
+SHA1-Digest: h/UCUkavXGdXYoBtP4hvOJ3PyDA=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/impl/ServerTool
+ s$PathExposingHandlerInterceptor.class
+SHA1-Digest: SAHsAQGxaYxxlvtcbafxmgqkTJM=
+
+Name: WEB-INF/lib/XmlSchema-1.0.3.jar
+SHA1-Digest: 4ySQrAaBYRdD7arR1sku31/Gs6o=
+
+Name: WEB-INF/remoting-servlet.xml
+SHA1-Digest: xOHLR2ejJ0cneswUTafnD5bJwQ8=
+
+Name: com/china/center/osgi/ws/service/RegisterServer.class
+SHA1-Digest: bXoICdoqnRqlvdC/nSUy4yEFbEk=
+
+Name: application/applicationContext_main.xml
+SHA1-Digest: pivKB38dAMKNKycOOdDO4uvncAc=
+
+Name: WEB-INF/lib/jaxen-1.1-beta-9.jar
+SHA1-Digest: di8vf55QOCU3VR408wWEw/1z/Ec=
+
+Name: com/china/center/osgi/ws/service/impl/SOAPHandlerImpl.class
+SHA1-Digest: RmvkcRmx8lOcoDvTdD1Kf+3r160=
+
+Name: com/china/center/osgi/ws/service/impl/ServerManagerImpl$InnerThr
+ ead.class
+SHA1-Digest: xVfrKGsJy4wCBIl+vuY2CxTzA+c=
+
+Name: application/applicationContext_export.xml
+SHA1-Digest: j7lv3UJbTzMsuXFfrh8Xr7GkE3E=
+
+Name: META-INF/common.tld
+SHA1-Digest: ulSry0x61hIz7k9uB/23owAwOqk=
+
+Name: WEB-INF/classes/com/china/center/osgi/ws/service/ServerManager.c
+ lass
+SHA1-Digest: 0FoHLlJkMlbEtLiGPwokaNI3Z44=
+
+Name: com/china/center/osgi/ws/service/impl/ServerTools$PathExposingHa
+ ndlerInterceptor.class
+SHA1-Digest: moLMngzJNrVwOZjJkB2mq6l7+Gg=
+
+Name: META-INF/c-1_0-rt.tld
+SHA1-Digest: SR5nbYlW0qVOI5Ol6dhxc8Kfq3w=
+
+Name: com/china/center/osgi/ws/WSDispatcherServlet.class
+SHA1-Digest: dhUYBGy7A8JZy2+rfOWzQx+IkPM=
+
+Name: META-INF/spring.tld
+SHA1-Digest: 7wvTffUKNZpoOWisbpYT2nveaNE=
+
+Name: META-INF/fmt.tld
+SHA1-Digest: tpH4OLlJ0AUVf42esMPVdVycVXI=
+
+Name: META-INF/sql-1_0.tld
+SHA1-Digest: nlLAvjMxLsmJvdSLmNtcOQ/MlUo=
+
+Name: com/china/center/osgi/ws/service/ServerManager.class
+SHA1-Digest: LWHguzW3qViaVxx0NoBZCqoPeJQ=
+
+Name: META-INF/fmt-1_0.tld
+SHA1-Digest: 7mvxn5T/xWr592btY5MWuTtRWaU=
+
+Name: WEB-INF/lib/activation.jar
+SHA1-Digest: Bmh2GQg1+RBtIvq+h74ijOB1wuE=
+
+Name: META-INF/fn.tld
+SHA1-Digest: 8hmR9Pr9ZblefGZYKjSfqGfOHcM=
+
+Name: com/china/center/osgi/ws/service/WSModal.class
+SHA1-Digest: Ur3jWNlMMVipyMKhjvQPhqecg64=
+
+Name: WEB-INF/lib/stax-api-1.0.1.jar
+SHA1-Digest: RmI0nMOMHPkFPbQBegiXD6BRAmg=
+

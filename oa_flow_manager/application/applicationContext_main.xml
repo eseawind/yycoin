@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/ex 
+  	  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="flowBelongDAO" class="com.china.center.oa.flow.dao.impl.FlowBelongDAOImpl" />
+
+	<bean id="flowDefineDAO" class="com.china.center.oa.flow.dao.impl.FlowDefineDAOImpl" />
+
+	<bean id="flowInstanceDAO" class="com.china.center.oa.flow.dao.impl.FlowInstanceDAOImpl" />
+
+	<bean id="flowInstanceLogDAO" class="com.china.center.oa.flow.dao.impl.FlowInstanceLogDAOImpl" />
+
+	<bean id="flowInstanceViewDAO" class="com.china.center.oa.flow.dao.impl.FlowInstanceViewDAOImpl" />
+
+	<bean id="flowTokenDAO" class="com.china.center.oa.flow.dao.impl.FlowTokenDAOImpl" />
+
+	<bean id="flowViewerDAO" class="com.china.center.oa.flow.dao.impl.FlowViewerDAOImpl" />
+
+	<bean id="flowVSTemplateDAO" class="com.china.center.oa.flow.dao.impl.FlowVSTemplateDAOImpl" />
+
+	<bean id="instanceTemplateDAO" class="com.china.center.oa.flow.dao.impl.InstanceTemplateDAOImpl" />
+
+	<bean id="templateFileDAO" class="com.china.center.oa.flow.dao.impl.TemplateFileDAOImpl" />
+
+	<bean id="tokenVSHanderDAO" class="com.china.center.oa.flow.dao.impl.TokenVSHanderDAOImpl" />
+
+	<bean id="tokenVSOperationDAO" class="com.china.center.oa.flow.dao.impl.TokenVSOperationDAOImpl" />
+
+	<bean id="tokenVSTemplateDAO" class="com.china.center.oa.flow.dao.impl.TokenVSTemplateDAOImpl" />
+
+	<bean id="flowInstanceManager" class="com.china.center.oa.flow.manager.impl.FlowInstanceManagerImpl" />
+
+	<bean id="pluginManager" class="com.china.center.oa.flow.manager.impl.PluginManagerImpl" />
+
+	<bean id="endHandlerPluginImpl" class="com.china.center.oa.flow.plugin.impl.EndHandlePluginImpl" />
+	
+	<bean id="groupHandlerPluginImpl" class="com.china.center.oa.flow.plugin.impl.GroupHandlePluginImpl" />
+	
+	<bean id="selfHandlerPluginImpl" class="com.china.center.oa.flow.plugin.impl.SelfHandlePluginImpl" />
+	
+	<bean id="stafferHandlerPluginImpl" class="com.china.center.oa.flow.plugin.impl.StafferHandlePluginImpl" />
+	
+	<bean id="orgHandlePluginImpl" class="com.china.center.oa.flow.plugin.impl.OrgHandlePluginImpl" />
+	
+	<bean id="defaultConfigPlugin"
+		class="com.china.center.oa.flow.manager.DefaultConfigPlugin" destroy-method="destroy">
+		<constructor-arg>
+			<list>
+				<ref bean="endHandlerPluginImpl" />
+				<ref bean="groupHandlerPluginImpl" />
+				<ref bean="selfHandlerPluginImpl" />
+				<ref bean="orgHandlePluginImpl" />
+				<ref bean="stafferHandlerPluginImpl" />
+			</list>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="templateFileManager" class="com.china.center.oa.flow.manager.impl.TemplateFileManagerImpl" />
+
+	<bean id="flowManager" class="com.china.center.oa.flow.manager.impl.FlowManagerImpl" />
+
+	<bean id="workFlowFacade" class="com.china.center.oa.flow.facade.impl.WorkFlowFacadeImpl" />
+	
+	<bean id="groupListenerFlowImpl" class="com.china.center.oa.flow.listener.impl.GroupListenerFlowImpl" />
+	
+	<bean id="defaultLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+		<property name="listenerManager">
+			<ref bean="groupManager"/>
+		</property>
+		<property name="listenerList">
+			<list>
+				<ref bean="groupListenerFlowImpl" />
+			</list>
+		</property>
+	</bean>
+</beans>

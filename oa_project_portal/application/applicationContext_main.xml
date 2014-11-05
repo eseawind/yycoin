@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init"
+	default-destroy-method="destroy">
+
+	<bean id="registerActionConfig" class="com.china.center.struts.wrapinner.RegisterActionConfig"
+		destroy-method="destroy">
+		<property name="actionConfigManager">
+			<ref bean="actionConfigManager" />
+		</property>
+		<property name="paths">
+			<value>classpath:config/struts-config.xml</value>
+		</property>
+	</bean>
+
+	<bean id="defaultQueryConfigImpl"
+		class="com.china.center.actionhelper.query.DefaultQueryConfigImpl"
+		destroy-method="destroy">
+		<property name="configXMLPath">
+			<value>classpath:config/queryConfig.xml</value>
+		</property>
+	</bean>
+
+	<bean name="/project/project" class="com.china.center.oa.project.action.ProjectAction" />
+
+</beans>

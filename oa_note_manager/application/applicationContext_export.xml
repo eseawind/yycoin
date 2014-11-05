@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+	
+	<osgi:service ref="receiveTaskDAO" interface="com.china.center.oa.note.dao.ReceiveTaskDAO" />
+
+	<osgi:service ref="shortMessageTaskDAO" interface="com.china.center.oa.note.dao.ShortMessageTaskDAO" />
+
+	<osgi:service ref="shortMessageTaskHisDAO" interface="com.china.center.oa.note.dao.ShortMessageTaskHisDAO" />
+
+	<osgi:service ref="noteManager" interface="com.china.center.oa.note.manager.NoteManager" />
+
+	<osgi:service ref="processShortMessage" interface="com.china.center.oa.note.manager.ProcessShortMessage" />
+
+	<osgi:service ref="sendMessageManager" interface="com.china.center.oa.sms.manager.SendMessageManager" />
+
+</beans>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		 <action path="/stock/ask" parameter="method" folder="/ask/" bean="PriceAsk"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryPriceAsk"/>
+            <forward name="queryAllPriceAsk"/>
+            <forward name="queryPriceAskForProcess"/>
+            <forward name="processAskPrice"/>
+            <forward name="queryPriceAskForNetProcess"/>
+            <forward name="queryPriceAskForNetManager"/>
+            <forward name="queryPriceAskForNetProviderProcess"/>
+            <forward name="processAskPriceForNetAsk"/>
+        </action>
+        
+        <action path="/netask/checkuser" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+           <forward name="success" path="/netask/main.jsp"
+				redirect="true" />
+			<forward name="index" path="/netask/index.jsp"
+				redirect="false" />
+			<forward name="error" path="/netask/index.jsp" redirect="true" />
+			<forward name="password" path="/netask/modifyPassword.jsp"/>
+        </action>
+        
+        <action path="/stock/stock" parameter="method" folder="/stock/" bean="Stock"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+             <forward name="addStock"/>
+             <forward name="addStock1"/>
+             <forward name="processStock"/>
+             <forward name="processStock2"/>
+             <forward name="processStock21"/>
+             <forward name="rptPriceAskProviderList"/>
+             <forward name="stockAskPriceForNet"/>
+             <forward name="stockAskPrice"/>
+             <forward name="stockAskChange"/>
+			 <forward name="rptQueryStockItem"/>
+			 <forward name="updateStockDutyConfig"/>
+        </action>
+        
+        <action path="/stock/work" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryStockWork" path="/stockwork/queryStockWork.jsp"/>
+            <forward name="querySelfStockWork" path="/stockwork/querySelfStockWork.jsp"/>
+            <forward name="detailStockWork" path="/stockwork/detailStockWork.jsp"/>
+            <forward name="handleStockWork" path="/stockwork/handleStockWork.jsp"/>
+        </action>
+		
+	</action-mappings>
+</struts-config>

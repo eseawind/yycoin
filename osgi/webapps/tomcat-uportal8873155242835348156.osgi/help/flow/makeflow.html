@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><title>流程图</title>
+<link rel="stylesheet" href="makejs/treestyles.css" type="text/css"/>
+<script type="text/javascript" src="makejs/marktree.js"></script>
+<script language="javascript">
+
+function redToken(id)
+{
+	var tid = document.getElementById(id);
+	
+	if (tid.innerHTML.indexOf('font') == -1)
+	{
+		 tid.innerHTML = '<font color=red>' + tid.innerHTML + '(当前环节)</font>';
+	}
+	
+}
+
+function load1()
+{
+    var par = window.opener;
+    
+    var iid = par.gtid;
+    
+	redToken(iid);
+}
+
+	</script>
+	</head>
+	<body onload="load1()">
+	<div class="basetop"><a href="#" onclick="expandAll(document.getElementById('base'))">Expand</a> -
+<a href="#" onclick="collapseAll(document.getElementById('base'))">Collapse</a></div><div id="base" class="basetext"><ul>
+	<li class="col" id="FMID_1258962077FM"><div class="nodecontent">流程图</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_925937246FM"><div class="nodecontent">定制流程</div>
+		<ul class="subexp">
+	<li class="col" id="FMID_1123126900FM"><div class="nodecontent">1、提交项目概况</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_83791638FM"><div class="nodecontent" id="t11">业务员(流程开始)</div></li>
+	<li class="basic" id="FMID_381121099FM"><div class="nodecontent" id="t12">产中经理</div></li>
+	<li class="basic" id="FMID_168854565FM"><div class="nodecontent" id="t13">分公司经理</div></li>
+	<li class="basic" id="FMID_1367188593FM"><div class="nodecontent" id="t14">总经理</div></li>
+	<li class="basic" id="FMID_1738667993FM"><div class="nodecontent" id="t15">定制客服</div></li></ul> </li>
+	<li class="col" id="FMID_1714233660FM"><div class="nodecontent">2、估价环节</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_147175056FM"><div class="nodecontent" id="t21">业务员（编辑询价单）</div></li>
+	<li class="basic" id="FMID_462126039FM"><div class="nodecontent" id="t22">产中经理</div></li>
+	<li class="basic" id="FMID_826727280FM"><div class="nodecontent" id="t23">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_1898061713FM"><div class="nodecontent">3、设计创意</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_760080305FM"><div class="nodecontent" id="t31">设计师（编辑产品设计方案、工艺审核清单）</div></li>
+	<li class="basic" id="FMID_774307771FM"><div class="nodecontent" id="t32">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_1697127917FM"><div class="nodecontent">4、工艺审核</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_878285905FM"><div class="nodecontent" id="t41">产中经理</div></li>
+	<li class="basic" id="FMID_1087005007FM"><div class="nodecontent" id="t42">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_838232857FM"><div class="nodecontent">5、设计立项</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1132385522FM"><div class="nodecontent" id="t51">设计师（编辑设计费表格）</div></li>
+	<li class="basic" id="FMID_1009182336FM"><div class="nodecontent" id="t52">业务员</div></li>
+	<li class="basic" id="FMID_874650994FM"><div class="nodecontent" id="t53">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_934380492FM"><div class="nodecontent">6、产前工艺确认</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_654885687FM"><div class="nodecontent" id="t61">设计师（编辑产前工艺审核清单）</div></li>
+	<li class="basic" id="FMID_853639522FM"><div class="nodecontent" id="t62">产中经理</div></li>
+	<li class="basic" id="FMID_1621665998FM"><div class="nodecontent" id="t63">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_44550267FM"><div class="nodecontent">7、设计定稿</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1891708648FM"><div class="nodecontent" id="t71">定制客服（编辑新设计跟踪单 ）</div></li>
+	<li class="basic" id="FMID_1010636533FM"><div class="nodecontent" id="t72">业务员</div></li>
+	<li class="basic" id="FMID_326551573FM"><div class="nodecontent" id="t73">设计师</div></li>
+	<li class="basic" id="FMID_663586381FM"><div class="nodecontent" id="t74">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_304217396FM"><div class="nodecontent">8、核价</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_634375884FM"><div class="nodecontent" id="t81">业务员（编辑核价单，拷贝询价单）</div></li>
+	<li class="basic" id="FMID_1039016797FM"><div class="nodecontent" id="t82">定制客服</div></li>
+	<li class="basic" id="FMID_386233137FM"><div class="nodecontent" id="t83">产中经理</div></li>
+	<li class="basic" id="FMID_388450949FM"><div class="nodecontent" id="t84">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_1493656292FM"><div class="nodecontent">9、打样</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1859222114FM"><div class="nodecontent" id="t91">业务员（编辑打样费声明或者不打样免责声明）</div></li>
+	<li class="basic" id="FMID_1111521875FM"><div class="nodecontent" id="t92">定制客服</div></li>
+	<li class="basic" id="FMID_675924972FM"><div class="nodecontent" id="t93">业务员（如果选择打样，编辑样品确认书，否则此环节不存在）</div></li>
+	<li class="basic" id="FMID_425216372FM"><div class="nodecontent" id="t94">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_286242412FM"><div class="nodecontent">10、合同</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1398131648FM"><div class="nodecontent"  id="t101">业务员（编辑新承揽合同范本、制作合同）</div></li>
+	<li class="basic" id="FMID_230334445FM"><div class="nodecontent"  id="t102">财务</div></li>
+	<li class="basic" id="FMID_362442330FM"><div class="nodecontent"  id="t104">分公司经理</div></li>
+	<li class="basic" id="FMID_1976047578FM"><div class="nodecontent" id="t104">总经理</div></li>
+	<li class="basic" id="FMID_1667014071FM"><div class="nodecontent" id="t105">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_1297836072FM"><div class="nodecontent">11、出菲林</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_757898805FM"><div class="nodecontent" id="t111">设计师（编辑发排确认书）</div></li>
+	<li class="basic" id="FMID_1285350622FM"><div class="nodecontent" id="t112">文案</div></li>
+	<li class="basic" id="FMID_1528653114FM"><div class="nodecontent" id="t113">设计主管</div></li>
+	<li class="basic" id="FMID_87557752FM"><div class="nodecontent" id="t114">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_1563704273FM"><div class="nodecontent">12、产前生产确认</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_1769730380FM"><div class="nodecontent" id="t121">产中经理（编辑产前确认单）</div></li>
+	<li class="basic" id="FMID_600356790FM"><div class="nodecontent" id="t122">业务员</div></li>
+	<li class="basic" id="FMID_1253776018FM"><div class="nodecontent" id="t123">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_1109745641FM"><div class="nodecontent">13、产前生产下发</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_100388291FM"><div class="nodecontent" id="t131">产中经理（编辑询价单）</div></li>
+	<li class="basic" id="FMID_1024343670FM"><div class="nodecontent" id="t132">分公司经理</div></li>
+	<li class="basic" id="FMID_186621003FM"><div class="nodecontent" id="t133">产中经理（编辑与工厂合同、生产单）</div></li>
+	<li class="basic" id="FMID_188481084FM"><div class="nodecontent" id="t134">总经理</div></li>
+	<li class="basic" id="FMID_488081636FM"><div class="nodecontent" id="t135">产中经理（编辑合成单）</div></li>
+	<li class="basic" id="FMID_1226034386FM"><div class="nodecontent" id="t136">财务</div></li>
+	<li class="basic" id="FMID_1947365420FM"><div class="nodecontent" id="t137">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_1766470462FM"><div class="nodecontent">14、产前交货通知</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_817430188FM"><div class="nodecontent" id="t141">物流（编辑产前交货通知书）</div></li>
+	<li class="basic" id="FMID_239601344FM"><div class="nodecontent" id="t142">定制客服</div></li></ul></li>
+	<li class="col" id="FMID_242820279FM"><div class="nodecontent">15、发货通知</div>
+		<ul class="subexp">
+	<li class="basic" id="FMID_177516619FM"><div class="nodecontent" id="t151">物流</div></li>
+	<li class="basic" id="FMID_26368214FM"><div class="nodecontent" id="t152">业务员</div></li>
+	<li class="basic" id="FMID_1270429611FM"><div class="nodecontent" id="t153">定制客服(流程结束)</div></li></ul></li></ul></li></ul></li></ul></div></body></html>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+	
+	<osgi:reference id="commonMailManager" interface="com.china.center.oa.publics.manager.CommonMailManager" />
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+	
+	<osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+	
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+	
+	<osgi:reference id="postDAO" interface="com.china.center.oa.publics.dao.PostDAO" />
+	
+	<osgi:reference id="enumDAO" interface="com.china.center.oa.publics.dao.EnumDAO" />
+	
+	<osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+	
+	<osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />
+	
+	<osgi:reference id="commonManager" interface="com.china.center.oa.publics.manager.CommonManager" />
+	
+	<osgi:reference id="stafferManager" interface="com.china.center.oa.publics.manager.StafferManager" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<osgi:reference id="locationDAO" interface="com.china.center.oa.publics.dao.LocationDAO" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="dutyDAO" interface="com.china.center.oa.publics.dao.DutyDAO" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<osgi:reference id="assignApplyDAO" interface="com.china.center.oa.client.dao.AssignApplyDAO" />
+	
+	<osgi:reference id="changeLogDAO" interface="com.china.center.oa.client.dao.ChangeLogDAO" />
+	
+	<osgi:reference id="accessLogDAO" interface="com.china.center.oa.client.dao.AccessLogDAO" />
+
+	<osgi:reference id="customerApplyDAO" interface="com.china.center.oa.customer.dao.CustomerApplyDAO" />
+
+	<osgi:reference id="customerCheckDAO" interface="com.china.center.oa.customer.dao.CustomerCheckDAO" />
+
+	<osgi:reference id="customerCheckItemDAO" interface="com.china.center.oa.customer.dao.CustomerCheckItemDAO" />
+
+	<osgi:reference id="customerHisDAO" interface="com.china.center.oa.customer.dao.CustomerHisDAO" />
+
+	<osgi:reference id="stafferVSCustomerDAO" interface="com.china.center.oa.client.dao.StafferVSCustomerDAO" />
+
+	<osgi:reference id="customerCheckManager" interface="com.china.center.oa.customer.manager.CustomerCheckManager" />
+
+	<osgi:reference id="creditCoreDAO" interface="com.china.center.oa.credit.dao.CreditCoreDAO" />
+
+	<osgi:reference id="creditItemDAO" interface="com.china.center.oa.credit.dao.CreditItemDAO" />
+
+	<osgi:reference id="creditItemSecDAO" interface="com.china.center.oa.credit.dao.CreditItemSecDAO" />
+
+	<osgi:reference id="creditItemThrDAO" interface="com.china.center.oa.credit.dao.CreditItemThrDAO" />
+
+	<osgi:reference id="creditLevelDAO" interface="com.china.center.oa.credit.dao.CreditLevelDAO" />
+
+	<osgi:reference id="creditlogDAO" interface="com.china.center.oa.credit.dao.CreditlogDAO" />
+
+	<osgi:reference id="curOutDAO" interface="com.china.center.oa.credit.dao.CurOutDAO" />
+
+	<osgi:reference id="customerCreditApplyDAO" interface="com.china.center.oa.credit.dao.CustomerCreditApplyDAO" />
+
+	<osgi:reference id="customerCreditDAO" interface="com.china.center.oa.credit.dao.CustomerCreditDAO" />
+
+	<osgi:reference id="creditItemManager" interface="com.china.center.oa.credit.manager.CreditItemManager" />
+
+	<osgi:reference id="customerCreditManager" interface="com.china.center.oa.credit.manager.CustomerCreditManager" />
+
+	<osgi:reference id="principalshipDAO" interface="com.china.center.oa.publics.dao.PrincipalshipDAO" />
+	
+	<osgi:reference id="stafferVSPriDAO" interface="com.china.center.oa.publics.dao.StafferVSPriDAO" />
+	
+	<osgi:reference id="destStafferVSCustomerDAO" interface="com.china.center.oa.client.dao.DestStafferVSCustomerDAO" />
+	
+	<osgi:reference id="addressDAO" interface="com.china.center.oa.client.dao.AddressDAO" />
+	
+	<osgi:reference id="customerLogDAO" interface="com.china.center.oa.client.dao.CustomerLogDAO" />
+	
+	<osgi:reference id="citicBranchDAO" interface="com.china.center.oa.client.dao.CiticBranchDAO" />
+	
+	<osgi:reference id="citicVSStafferDAO" interface="com.china.center.oa.client.dao.CiticVSStafferDAO" />	
+	
+	<osgi:reference id="appUserDAO"
+		interface="com.china.center.oa.client.dao.AppUserDAO" />
+
+	<osgi:reference id="appUserApplyDAO"
+		interface="com.china.center.oa.client.dao.AppUserApplyDAO" />
+		
+	<osgi:reference id="appUserManager" interface="com.china.center.oa.client.manager.AppUserManager" />	
+	
+	<osgi:reference id="appUserVSCustomerDAO" interface="com.china.center.oa.client.dao.AppUserVSCustomerDAO" />	
+	
+	<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+	<osgi:reference id="customerMainDAO" interface="com.china.center.oa.client.dao.CustomerMainDAO" />
+	
+	<osgi:reference id="customerFormerNameDAO" interface="com.china.center.oa.client.dao.CustomerFormerNameDAO" />
+	
+	<osgi:reference id="customerApproveDAO" interface="com.china.center.oa.client.dao.CustomerApproveDAO" />
+	
+	<osgi:reference id="clientFacade" interface="com.china.center.oa.client.facade.ClientFacade" />
+	
+	<osgi:reference id="clientManager" interface="com.china.center.oa.client.manager.ClientManager" />
+	
+	<osgi:reference id="customerIndividualHisDAO" interface="com.china.center.oa.client.dao.CustomerIndividualHisDAO" />
+	<osgi:reference id="customerIndividualApplyDAO" interface="com.china.center.oa.client.dao.CustomerIndividualApplyDAO" />
+	<osgi:reference id="customerIndividualDAO" interface="com.china.center.oa.client.dao.CustomerIndividualDAO" />
+	
+	<osgi:reference id="customerDepartHisDAO" interface="com.china.center.oa.client.dao.CustomerDepartHisDAO" />
+	<osgi:reference id="customerDepartApplyDAO" interface="com.china.center.oa.client.dao.CustomerDepartApplyDAO" />
+	<osgi:reference id="customerDepartDAO" interface="com.china.center.oa.client.dao.CustomerDepartDAO" />
+	
+	<osgi:reference id="customerCorporationHisDAO" interface="com.china.center.oa.client.dao.CustomerCorporationHisDAO" />
+	<osgi:reference id="customerCorporationApplyDAO" interface="com.china.center.oa.client.dao.CustomerCorporationApplyDAO" />
+	<osgi:reference id="customerCorporationDAO" interface="com.china.center.oa.client.dao.CustomerCorporationDAO" />
+	
+	<osgi:reference id="customerContactHisDAO" interface="com.china.center.oa.client.dao.CustomerContactHisDAO" />
+	<osgi:reference id="customerContactApplyDAO" interface="com.china.center.oa.client.dao.CustomerContactApplyDAO" />
+	<osgi:reference id="customerContactDAO" interface="com.china.center.oa.client.dao.CustomerContactDAO" />
+	
+	<osgi:reference id="customerBusinessHisDAO" interface="com.china.center.oa.client.dao.CustomerBusinessHisDAO" />
+	<osgi:reference id="customerBusinessApplyDAO" interface="com.china.center.oa.client.dao.CustomerBusinessApplyDAO" />
+	<osgi:reference id="customerBusinessDAO" interface="com.china.center.oa.client.dao.CustomerBusinessDAO" />
+	
+	<osgi:reference id="customerDistAddrHisDAO" interface="com.china.center.oa.client.dao.CustomerDistAddrHisDAO" />
+	<osgi:reference id="customerDistAddrApplyDAO" interface="com.china.center.oa.client.dao.CustomerDistAddrApplyDAO" />
+	<osgi:reference id="customerDistAddrDAO" interface="com.china.center.oa.client.dao.CustomerDistAddrDAO" />	
+	
+</beans>

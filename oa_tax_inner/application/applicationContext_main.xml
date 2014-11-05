@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="taxTypeDAO" class="com.china.center.oa.tax.dao.impl.TaxTypeDAOImpl" />
+
+	<bean id="taxDAO" class="com.china.center.oa.tax.dao.impl.TaxDAOImpl" />
+
+	<bean id="taxFacade" class="com.china.center.oa.tax.facade.impl.TaxFacadeImpl" />
+
+	<bean id="taxManager" class="com.china.center.oa.tax.manager.impl.TaxManagerImpl" />
+
+	<bean id="financeDAO" class="com.china.center.oa.tax.dao.impl.FinanceDAOImpl" />
+
+	<bean id="financeItemDAO" class="com.china.center.oa.tax.dao.impl.FinanceItemDAOImpl" />
+
+	<bean id="financeManager" class="com.china.center.oa.tax.manager.impl.FinanceManagerImpl" />
+
+	<bean id="unitDAO" class="com.china.center.oa.tax.dao.impl.UnitDAOImpl" />
+
+	<bean id="checkViewDAO" class="com.china.center.oa.tax.dao.impl.CheckViewDAOImpl" />
+
+	<bean id="financeTurnDAO" class="com.china.center.oa.tax.dao.impl.FinanceTurnDAOImpl" />
+
+	<bean id="financeMonthDAO" class="com.china.center.oa.tax.dao.impl.FinanceMonthDAOImpl" />
+
+	<bean id="financeRepDAO" class="com.china.center.oa.tax.dao.impl.FinanceRepDAOImpl" />
+
+	<bean id="financeTempDAO" class="com.china.center.oa.tax.dao.impl.FinanceTempDAOImpl" />
+
+	<bean id="financeItemTempDAO" class="com.china.center.oa.tax.dao.impl.FinanceItemTempDAOImpl" />
+
+	<bean id="financeReferDAO" class="com.china.center.oa.tax.dao.impl.FinanceReferDAOImpl" />
+		<!-- add  -->
+	<bean id="financeMidDAO" class="com.china.center.oa.tax.dao.impl.FinanceMidDAOImpl" />
+
+	<bean id="financeItemMidDAO" class="com.china.center.oa.tax.dao.impl.FinanceItemMidDAOImpl" />
+
+	<bean id="financeMonthBefDAO" class="com.china.center.oa.tax.dao.impl.FinanceMonthBefDAOImpl" />
+
+	<bean id="financeTurnRollbackDAO" class="com.china.center.oa.tax.dao.impl.FinanceTurnRollbackDAOImpl" />
+	
+	<bean id="financeTagDAO" class="com.china.center.oa.tax.dao.impl.FinanceTagDAOImpl" />
+	
+	<bean id="financeTagManager" class="com.china.center.oa.tax.manager.impl.FinanceTagManagerImpl" />
+	
+	<bean id="financeShowDAO" class="com.china.center.oa.tax.dao.impl.FinanceShowDAOImpl" />
+</beans>

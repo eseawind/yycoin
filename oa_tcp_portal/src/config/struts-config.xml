@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+	
+		<action path="/tcp/apply" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="addTravelApply0" path="/tcp/addTravelApply0.jsp" />
+			<forward name="addTravelApply1" path="/tcp/addTravelApply1.jsp" />
+			<forward name="addTravelApply2" path="/tcp/addTravelApply2.jsp" />
+			<forward name="addTravelApply3" path="/tcp/addTravelApply3.jsp" />
+			<forward name="addTravelApply7" path="/tcp/addTravelApply7.jsp" />
+			<forward name="addVocationAndWork" path="/tcp/addVocationAndWork.jsp" />
+			<forward name="addCommission" path="/tcp/addCommission.jsp" />
+			<forward name="queryAllCommissionApprove" path="/tcp/queryAllCommissionApprove.jsp" />
+			<forward name="detailOrUpdateComission" path="/tcp/detailOrUpdateComission.jsp" />
+			<forward name="processCommission" path="/tcp/processCommission.jsp" />
+			
+			<forward name="updateTravelApply0" path="/tcp/updateTravelApply0.jsp" />
+			<forward name="updateTravelApply1" path="/tcp/updateTravelApply1.jsp" />
+			<forward name="updateTravelApply2" path="/tcp/updateTravelApply2.jsp" />
+			<forward name="updateTravelApply3" path="/tcp/updateTravelApply3.jsp" />
+			<forward name="updateTravelApply7" path="/tcp/updateTravelApply7.jsp" />
+			<forward name="updateVocationAndWork" path="/tcp/updateVocationAndWork.jsp" />
+			<forward name="processVocationAndWork" path="/tcp/processVocationAndWork.jsp" />
+			<forward name="detailVocationAndWork" path="/tcp/detailVocationAndWork.jsp" />
+			
+			<forward name="queryTravelApply" path="/tcp/queryTravelApply.jsp" />
+			
+			<forward name="queryAllVocationAndWork" path="/tcp/queryAllVocationAndWork.jsp" />
+			<forward name="updateVocationAndWork" path="/tcp/updateVocationAndWork.jsp" />
+			
+			<forward name="querySelfTravelApply0" path="/tcp/querySelfTravelApply0.jsp" />
+			<forward name="querySelfTravelApply1" path="/tcp/querySelfTravelApply1.jsp" />
+			<forward name="querySelfTravelApply2" path="/tcp/querySelfTravelApply2.jsp" />
+			<forward name="querySelfTravelApply3" path="/tcp/querySelfTravelApply3.jsp" />
+			<forward name="querySelfTravelApply7" path="/tcp/querySelfTravelApply7.jsp" />
+			
+			<forward name="detailTravelApply0" path="/tcp/detailTravelApply0.jsp" />
+			<forward name="detailTravelApply1" path="/tcp/detailTravelApply1.jsp" />
+			<forward name="detailTravelApply2" path="/tcp/detailTravelApply2.jsp" />
+			<forward name="detailTravelApply3" path="/tcp/detailTravelApply3.jsp" />
+			<forward name="detailTravelApply7" path="/tcp/detailTravelApply7.jsp" />
+			
+			<forward name="processTravelApply0" path="/tcp/processTravelApply0.jsp" />
+			<forward name="processTravelApply1" path="/tcp/processTravelApply1.jsp" />
+			<forward name="processTravelApply2" path="/tcp/processTravelApply2.jsp" />
+			<forward name="processTravelApply3" path="/tcp/processTravelApply3.jsp" />
+			<forward name="processTravelApply7" path="/tcp/processTravelApply7.jsp" />
+			
+			<forward name="querySelfApprove" path="/tcp/querySelfApprove.jsp" />
+			<forward name="rptQueryTravelApply" path="/tcp/rptQueryTravelApply.jsp" />
+			
+			<forward name="importShare" path="/tcp/importShare.jsp" />
+		</action>
+		
+		<action path="/tcp/expense" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="addExpense11" path="/expense/addExpense11.jsp" />
+            <forward name="addExpense12" path="/expense/addExpense12.jsp" />
+            <forward name="addExpense13" path="/expense/addExpense13.jsp" />
+            <forward name="addExpense14" path="/expense/addExpense14.jsp" />
+            <forward name="addExpense15" path="/expense/addExpense15.jsp" />
+            
+            <forward name="updateExpense11" path="/expense/updateExpense11.jsp" />
+            <forward name="updateExpense12" path="/expense/updateExpense12.jsp" />
+            <forward name="updateExpense13" path="/expense/updateExpense13.jsp" />
+            <forward name="updateExpense14" path="/expense/updateExpense14.jsp" />
+            <forward name="updateExpense15" path="/expense/updateExpense15.jsp" />
+            
+            <forward name="queryExpense" path="/expense/queryExpense.jsp" />
+            
+            <forward name="querySelfExpense11" path="/expense/querySelfExpense11.jsp" />
+            <forward name="querySelfExpense12" path="/expense/querySelfExpense12.jsp" />
+            <forward name="querySelfExpense13" path="/expense/querySelfExpense13.jsp" />
+            <forward name="querySelfExpense14" path="/expense/querySelfExpense14.jsp" />
+            <forward name="querySelfExpense15" path="/expense/querySelfExpense15.jsp" />
+            
+            <forward name="detailExpense11" path="/expense/detailExpense11.jsp" />
+            <forward name="detailExpense12" path="/expense/detailExpense12.jsp" />
+            <forward name="detailExpense13" path="/expense/detailExpense13.jsp" />
+            <forward name="detailExpense14" path="/expense/detailExpense14.jsp" />
+            <forward name="detailExpense15" path="/expense/detailExpense15.jsp" />
+            
+            <forward name="processExpense11" path="/expense/processExpense11.jsp" />
+            <forward name="processExpense12" path="/expense/processExpense12.jsp" />
+            <forward name="processExpense13" path="/expense/processExpense13.jsp" />
+            <forward name="processExpense14" path="/expense/processExpense14.jsp" />
+            <forward name="processExpense15" path="/expense/processExpense15.jsp" />
+             <forward name="queryTabExpense" path="/expense/queryTabExpense.jsp" />
+             
+            <forward name="querySelfApprove" path="/tcp/querySelfApprove.jsp" />
+            <forward name="importShare" path="/tcp/importShare.jsp" />
+        </action>
+		
+		<action path="/tcp/rebate" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="addRebate" path="/rebate/addRebate.jsp" />
+            <forward name="updateRebate" path="/rebate/updateRebate.jsp" />
+            <forward name="processRebate" path="/rebate/processRebate.jsp" />
+            <forward name="detailRebate" path="/rebate/detailRebate.jsp" />
+            <forward name="querySelfRebate" path="/rebate/querySelfRebate.jsp" />
+            <forward name="querySelfApprove" path="/tcp/querySelfApprove.jsp" />
+            <forward name="importBatchPrice" path="/rebate/importBatchPrice.jsp" />
+        </action>
+        
+		<action path="/tcp/preinvoice" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="addPreInvoice" path="/preInvoice/addPreInvoice.jsp" />
+            <forward name="updatePreInvoice" path="/preInvoice/updatePreInvoice.jsp" />
+            <forward name="processPreInvoice" path="/preInvoice/processPreInvoice.jsp" />
+            <forward name="detailPreInvoice" path="/preInvoice/detailPreInvoice.jsp" />
+            <forward name="querySelfPreInvoice" path="/preInvoice/querySelfPreInvoice.jsp" />
+            <forward name="queryAllPreInvoice" path="/preInvoice/queryAllPreInvoice.jsp" />
+            <forward name="querySelfApprove" path="/tcp/querySelfApprove.jsp" />
+        </action>      
+        
+        <action path="/tcp/backprepay" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="addBackPrePay" path="/backprepay/addBackPrePay.jsp" />
+            <forward name="updateBackPrePay" path="/backprepay/updateBackPrePay.jsp" />
+            <forward name="processBackPrePay" path="/backprepay/processBackPrePay.jsp" />
+            <forward name="detailBackPrePay" path="/backprepay/detailBackPrePay.jsp" />
+            <forward name="querySelfBackPrePay" path="/backprepay/querySelfBackPrePay.jsp" />
+            <forward name="queryAllBackPrePay" path="/backprepay/queryAllBackPrePay.jsp" />
+            <forward name="querySelfApprove" path="/tcp/querySelfApprove.jsp" />
+        </action>  
+	</action-mappings>
+</struts-config>

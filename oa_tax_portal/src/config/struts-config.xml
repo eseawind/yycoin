@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+	
+		<action path="/tax/tax" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="queryTax" path="/tax/queryTax.jsp" />
+			<forward name="addTax" path="/tax/addTax.jsp" />
+			<forward name="updateTax" path="/tax/updateTax.jsp" />
+			<forward name="rptQueryTax" path="/tax/rptQueryTax.jsp" />
+			<forward name="detailTax" path="/tax/detailTax.jsp" />
+		</action>
+		
+		<action path="/finance/finance" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="queryFinance" path="/finance/queryFinance.jsp" />
+			<forward name="queryTempFinance" path="/finance/queryTempFinance.jsp" />
+			<forward name="queryCheckView" path="/finance/queryCheck.jsp" />
+			<forward name="addFinance" path="/finance/addFinance.jsp" />
+			<forward name="importFinance" path="/finance/importFinance.jsp" />
+			<forward name="updateFinance" path="/finance/updateFinance.jsp" />
+			<forward name="detailFinance" path="/finance/detailFinance.jsp" />
+			<forward name="rptQueryUnit" path="/finance/rptQueryUnit.jsp" />
+			<forward name="queryInBill" path="/bill/queryInBill.jsp" />
+			<forward name="queryOutBill" path="/bill/queryOutBill.jsp" />
+			<forward name="queryPriceChange" path="/product/queryPriceChange.jsp" />
+			<forward name="queryCompose" path="/product/queryCompose.jsp?foward=3" />
+			<forward name="addFinanceTurn" path="/finance/addFinanceTurn.jsp" />
+			<forward name="queryFinanceTurn" path="/finance/queryFinanceTurn.jsp" />
+			<forward name="queryTaxFinance1" path="/finance/queryTaxFinance1.jsp" />
+			<forward name="queryTaxFinance2" path="/finance/queryTaxFinance2.jsp" />
+			<forward name="queryTaxFinance3" path="/finance/queryTaxFinance3.jsp" />
+			<forward name="queryTaxFinance4" path="/finance/queryTaxFinance4.jsp" />
+			<forward name="queryTaxReport1" path="/finance/queryTaxReport1.jsp" />
+			<forward name="queryTaxReport2" path="/finance/queryTaxReport2.jsp" />
+		</action>
+		
+	</action-mappings>
+</struts-config>

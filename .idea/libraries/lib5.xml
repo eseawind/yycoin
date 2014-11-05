@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/13/1/.cp/lib/pinyin4j.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/13/1/.cp/lib/sunjce_provider.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

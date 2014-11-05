@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+    
+    <item name="queryTax" deaultpfix="TaxBean">
+        <condtion name="name" caption="名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="code" caption="编码">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="ptype" caption="分类">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$taxPtypeList</option>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxType</option>
+        </condtion>
+        <condtion name="bottomFlag" caption="节点">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxBottomFlag</option>
+        </condtion>
+        <condtion name="forward" caption="余额方向">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxForward</option>
+        </condtion>
+        <condtion name="checkStaffer" caption="计算提成">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxCheckStaffer</option>
+        </condtion>
+        <condtion name="unit" caption="辅助-单位">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxCheck</option>
+        </condtion>
+        <condtion name="department" caption="辅助-部门">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxCheck</option>
+        </condtion>
+        <condtion name="staffer" caption="辅助-职员">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxCheck</option>
+        </condtion>
+        <condtion name="depot" caption="辅助-仓库">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxCheck</option>
+        </condtion>
+        <condtion name="product" caption="辅助-产品">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxCheck</option>
+        </condtion>
+        <condtion name="duty" caption="辅助-纳税">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taxCheck</option>
+        </condtion>
+    </item>
+    
+    <item name="queryFinance" deaultpfix="FinanceBean">
+		<condtion name="afinanceDate" filed="financeDate" caption="凭证日期从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+        </condtion>
+        <condtion name="bfinanceDate" filed="financeDate" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+        </condtion>
+		<condtion name="id" caption="标识">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="dutyId" caption="纳税实体">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$dutyList</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$financeType</option>
+		</condtion>
+		<condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$financeStatus</option>
+        </condtion>
+        <condtion name="updateFlag" caption="更新标识">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$financeUpdateFlag</option>
+        </condtion>
+		<condtion name="createType" caption="分类">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$financeCreateType</option>
+		</condtion>
+		<condtion name="createrName" filed="name" caption="创建/更新人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refId" caption="关联单据(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+	</item>
+	
+	<item name="queryTempFinance" deaultpfix="FinanceTempBean">
+        <condtion name="afinanceDate" filed="financeDate" caption="凭证日期从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+        </condtion>
+        <condtion name="bfinanceDate" filed="financeDate" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+        </condtion>
+        <condtion name="id" caption="标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="dutyId" caption="纳税实体">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$dutyList</option>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$financeType</option>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$financeStatus</option>
+        </condtion>
+        <condtion name="createType" caption="分类">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$financeCreateType</option>
+        </condtion>
+        <condtion name="createrName" filed="name" caption="创建人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refId" caption="关联单据(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+	
+	<item name="queryFinanceItem" deaultpfix="FinanceItemBean">
+        <condtion name="afinanceDate" filed="financeDate" caption="凭证日期从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+        </condtion>
+        <condtion name="bfinanceDate" filed="financeDate" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+        </condtion>
+        <condtion name="pid" caption="凭证标识">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="taxCode" filed="code" caption="科目编码(A)" pfix="TaxBean">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="dutyId" caption="纳税实体">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$dutyList</option>
+        </condtion>
+        <condtion name="taxCode0" filed="code" caption="一级编码(A)" pfix="TA0">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="taxCode1" filed="code" caption="二级编码(A)" pfix="TA1">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="taxCode2" filed="code" caption="三级编码(A)" pfix="TA2">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="taxCode3" filed="code" caption="四级编码(A)" pfix="TA3">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refOut" caption="销售单(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refBill" caption="收付款单(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refStock" caption="采购单(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+	
+	<item name="queryCheckView" deaultpfix="CheckViewBean">
+        <condtion name="alogTime" filed="logTime" caption="时间从">
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+        </condtion>
+        <condtion name="id" caption="标识(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$checkType</option>
+        </condtion>
+        <condtion name="checkStatus" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+        <condtion name="refId" caption="关联单据(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="unitName" caption="单位" filed="name" pfix="UnitBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryFinanceTurn" deaultpfix="FinanceTurnBean">
+        <condtion name="monthKey" caption="统计月份(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryFinanceMonth" deaultpfix="FinanceMonthBean">
+        <condtion name="monthKey" caption="统计月份(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="taxId" caption="科目编码">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="taxId2" filed="taxId" caption="科目编码(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryFinanceTag" deaultpfix="FinanceTagBean">
+        <condtion name="typeName" caption="标记类型">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="afinanceTagDate" filed="statsTime" caption="统计时间从">
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+        </condtion>
+        <condtion name="bfinanceTagDate" filed="statsTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+        </condtion>
+    </item>
+	
+</query>

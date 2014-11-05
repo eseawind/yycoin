@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+	<osgi:service ref="budgetApplyDAO" interface="com.china.center.oa.budget.dao.BudgetApplyDAO" />
+
+	<osgi:service ref="budgetDAO" interface="com.china.center.oa.budget.dao.BudgetDAO" />
+
+	<osgi:service ref="budgetItemDAO" interface="com.china.center.oa.budget.dao.BudgetItemDAO" />
+
+	<osgi:service ref="budgetLogDAO" interface="com.china.center.oa.budget.dao.BudgetLogDAO" />
+
+	<osgi:service ref="feeItemDAO" interface="com.china.center.oa.budget.dao.FeeItemDAO" />
+
+	<osgi:service ref="budgetApplyManager" interface="com.china.center.oa.budget.manager.BudgetApplyManager" />
+
+	<osgi:service ref="budgetManager" interface="com.china.center.oa.budget.manager.BudgetManager" />
+
+	<osgi:service ref="feeItemManager" interface="com.china.center.oa.budget.manager.FeeItemManager" />
+
+	<osgi:service ref="budgetFacade" interface="com.china.center.oa.budget.facade.BudgetFacade" />
+
+	<osgi:service ref="budgetLogTmpDAO" interface="com.china.center.oa.budget.dao.BudgetLogTmpDAO" />
+
+</beans>

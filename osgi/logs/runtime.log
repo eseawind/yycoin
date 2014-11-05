@@ -1,0 +1,1 @@
+[2014-11-05 00:30:01][org.springframework.scheduling.quartz.SchedulerFactoryBean#0_Worker-10] Cost too mush public abstract boolean com.china.center.oa.publics.manager.CarryPlan.carryPlan(com.china.center.oa.publics.bean.PlanBean,boolean) (ms):1577

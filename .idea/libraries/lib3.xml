@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib3">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/14/1/.cp/WEB-INF/lib/buffalo-2.0-osgi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/14/1/.cp/WEB-INF/lib/dtd.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

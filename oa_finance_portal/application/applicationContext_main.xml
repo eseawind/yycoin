@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/ex 
+  	  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+    <bean id="registerActionConfig"
+        class="com.china.center.struts.wrapinner.RegisterActionConfig"
+        destroy-method="destroy">
+        <property name="actionConfigManager">
+            <ref bean="actionConfigManager" />
+        </property>
+        <property name="paths">
+            <value>classpath:config/struts-config.xml</value>
+        </property>
+    </bean>
+    
+    <bean id="defaultQueryConfigImpl"
+        class="com.china.center.actionhelper.query.DefaultQueryConfigImpl"
+        destroy-method="destroy">
+        <property name="configXMLPath">
+            <value>classpath:config/queryConfig.xml</value>
+        </property>
+    </bean>
+    
+    <bean name="/finance/bank" class="com.china.center.oa.finance.portal.action.FinanceAction" />
+    
+    <bean name="/finance/invoiceins" class="com.china.center.oa.finance.portal.action.InvoiceinsAction" />
+    
+    <bean name="/finance/bill" class="com.china.center.oa.finance.portal.action.BillAction" />
+    
+    <bean name="/finance/stock" class="com.china.center.oa.finance.portal.action.StockPayAction" />
+    
+    <bean name="/finance/backpay" class="com.china.center.oa.finance.portal.action.BackPayApplyAction" />
+    
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="registerActionConfig"
+		class="com.china.center.struts.wrapinner.RegisterActionConfig"
+		destroy-method="destroy">
+		<property name="actionConfigManager">
+			<ref bean="actionConfigManager" />
+		</property>
+		<property name="paths">
+			<value>classpath:config/struts-config.xml</value>
+		</property>
+	</bean>
+	
+	<bean id="defaultQueryConfigImpl"
+		class="com.china.center.actionhelper.query.DefaultQueryConfigImpl"
+		destroy-method="destroy">
+		<property name="configXMLPath">
+			<value>classpath:config/queryConfig.xml</value>
+		</property>
+	</bean>
+	
+	<!--  
+	<bean name="/customer/customer"
+		class="com.china.center.oa.customer.action.CustomerAction"/>
+		-->
+		
+	<bean name="/customer/check"
+		class="com.china.center.oa.customer.action.CustomerCheckAction" />
+		
+	<bean name="/credit/credit"
+		class="com.china.center.oa.credit.action.CreditItemAction" />
+		
+	<bean name="/credit/customer"
+		class="com.china.center.oa.credit.action.CustomerCreditAction" />
+		
+	<bean name="/customer/address"
+		class="com.china.center.oa.customer.action.CustomerAddressAction" />
+		
+	<bean name="/customer/citicGroup"
+		class="com.china.center.oa.customer.action.CustomerCiticGroupAction" />	
+		
+	<!-- new custome -->
+	<bean name="/client/client"
+		class="com.china.center.oa.client.action.ClientAction"/>		
+	
+</beans>

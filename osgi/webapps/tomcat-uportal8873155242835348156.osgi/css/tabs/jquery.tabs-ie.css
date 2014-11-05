@@ -1,0 +1,9 @@
+.tabs-nav {
+	DISPLAY: inline-block
+}
+.tabs-nav .tabs-disabled {
+	FILTER: alpha(opacity=40); POSITION: relative
+}
+.tabs-nav .tabs-disabled A SPAN {
+	MIN-HEIGHT: 19px; _height: 19px
+}

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+	<osgi:service ref="baseDAO" interface="com.china.center.oa.sail.dao.BaseDAO" />
+
+	<osgi:service ref="outDAO" interface="com.china.center.oa.sail.dao.OutDAO" />
+
+	<osgi:service ref="outUniqueDAO" interface="com.china.center.oa.sail.dao.OutUniqueDAO" />
+
+	<osgi:service ref="consignDAO" interface="com.china.center.oa.sail.dao.ConsignDAO" />
+	
+	<osgi:service ref="consign2DAO" interface="com.china.center.oa.sail.dao.Consign2DAO" />
+
+	<osgi:service ref="consignManager" interface="com.china.center.oa.sail.manager.ConsignManager" />
+
+	<osgi:service ref="outBalanceDAO" interface="com.china.center.oa.sail.dao.OutBalanceDAO" />
+
+	<osgi:service ref="baseBalanceDAO" interface="com.china.center.oa.sail.dao.BaseBalanceDAO" />
+
+	<osgi:service ref="unitViewDAO" interface="com.china.center.oa.sail.dao.UnitViewDAO" />
+	
+	<osgi:service ref="outManager" interface="com.china.center.oa.sail.manager.OutManager" />
+
+	<osgi:service ref="sailConfigDAO" interface="com.china.center.oa.sail.dao.SailConfigDAO" />
+
+	<osgi:service ref="sailConfigManager" interface="com.china.center.oa.sail.manager.SailConfigManager" />
+
+	<osgi:service ref="sailManager" interface="com.china.center.oa.sail.manager.SailManager" />
+
+	<osgi:service ref="sailConfDAO" interface="com.china.center.oa.sail.dao.SailConfDAO" />
+
+	<osgi:service ref="sailTranApplyDAO" interface="com.china.center.oa.sail.dao.SailTranApplyDAO" />
+
+	<osgi:service ref="outStatManager" interface="com.china.center.oa.sail.manager.OutStatManager" />
+	
+	
+	<osgi:service ref="promotionDAO" interface="com.china.center.oa.sail.dao.PromotionDAO"/>
+	
+	<osgi:service ref="promotionItemDAO" interface="com.china.center.oa.sail.dao.PromotionItemDAO"/>
+	
+	<osgi:service ref="promotionManager" interface="com.china.center.oa.sail.manager.PromotionManager"/>
+	
+	<osgi:service ref="baseRepaireDAO" interface="com.china.center.oa.sail.dao.BaseRepaireDAO" />
+
+    <osgi:service ref="outRepaireDAO" interface="com.china.center.oa.sail.dao.OutRepaireDAO" />
+
+	<osgi:service ref="distributionDAO" interface="com.china.center.oa.sail.dao.DistributionDAO" />
+	
+	<osgi:service ref="distributionBaseDAO" interface="com.china.center.oa.sail.dao.DistributionBaseDAO" />
+
+	<osgi:service ref="expressDAO" interface="com.china.center.oa.sail.dao.ExpressDAO"/>
+	
+	<osgi:service ref="auditRuleDAO" interface="com.china.center.oa.sail.dao.AuditRuleDAO" />
+	
+	<osgi:service ref="auditRuleItemDAO" interface="com.china.center.oa.sail.dao.AuditRuleItemDAO" />
+	
+	<osgi:service ref="auditRuleManager" interface="com.china.center.oa.sail.manager.AuditRuleManager" />
+
+	<osgi:service ref="outImportDAO" interface="com.china.center.oa.sail.dao.OutImportDAO" />
+
+	<osgi:service ref="outImportResultDAO" interface="com.china.center.oa.sail.dao.OutImportResultDAO" />
+
+	<osgi:service ref="outImportManager" interface="com.china.center.oa.sail.manager.OutImportManager" />
+
+	<osgi:service ref="replenishmentDAO" interface="com.china.center.oa.sail.dao.ReplenishmentDAO" />
+	
+	<osgi:service ref="outImportLogDAO" interface="com.china.center.oa.sail.dao.OutImportLogDAO" />
+	
+	<osgi:service ref="appOutDAO"
+		interface="com.china.center.oa.sail.dao.AppOutDAO" />
+	
+	<osgi:service ref="appBaseDAO"
+		interface="com.china.center.oa.sail.dao.AppBaseDAO" />
+	
+	<osgi:service ref="appInvoiceDAO"
+		interface="com.china.center.oa.sail.dao.AppInvoiceDAO" />
+	
+	<osgi:service ref="appDistributionDAO"
+		interface="com.china.center.oa.sail.dao.AppDistributionDAO" />
+		
+	<osgi:service ref="appOutManager" interface="com.china.center.oa.sail.manager.AppOutManager" />
+	
+	<osgi:service ref="appOutVSOutDAO" interface="com.china.center.oa.sail.dao.AppOutVSOutDAO" />
+	<osgi:service ref="batchApproveDAO" interface="com.china.center.oa.sail.dao.BatchApproveDAO" />
+	<osgi:service ref="batchSwatchDAO" interface="com.china.center.oa.sail.dao.BatchSwatchDAO" />
+	<osgi:service ref="statsDeliveryRankDAO" interface="com.china.center.oa.sail.dao.StatsDeliveryRankDAO" />
+	<osgi:service ref="deliveryRankVSOutDAO" interface="com.china.center.oa.sail.dao.DeliveryRankVSOutDAO" />
+	
+	<osgi:service ref="packageDAO" interface="com.china.center.oa.sail.dao.PackageDAO" />
+	<osgi:service ref="packageItemDAO" interface="com.china.center.oa.sail.dao.PackageItemDAO" />
+	<osgi:service ref="preConsignDAO" interface="com.china.center.oa.sail.dao.PreConsignDAO" />
+	
+	<osgi:service ref="shipManager" interface="com.china.center.oa.sail.manager.ShipManager" />	
+	
+	<osgi:service ref="packageVSCustomerDAO" interface="com.china.center.oa.sail.dao.PackageVSCustomerDAO" />
+	
+	<osgi:service ref="outBackDAO" interface="com.china.center.oa.sail.dao.OutBackDAO" />
+	<osgi:service ref="outBackManager" interface="com.china.center.oa.sail.manager.OutBackManager" />
+	
+	<osgi:service ref="zjrcOutDAO" interface="com.china.center.oa.extsail.dao.ZJRCOutDAO" />
+	<osgi:service ref="zjrcBaseDAO" interface="com.china.center.oa.extsail.dao.ZJRCBaseDAO" />
+	<osgi:service ref="zjrcProductDAO" interface="com.china.center.oa.extsail.dao.ZJRCProductDAO" />
+	<osgi:service ref="zjrcManager" interface="com.china.center.oa.extsail.manager.ZJRCManager" />
+	
+	<osgi:service ref="zjrcDistributionDAO" interface="com.china.center.oa.extsail.dao.ZJRCDistributionDAO" />
+	
+	<osgi:service ref="batchReturnLogDAO" interface="com.china.center.oa.sail.dao.BatchReturnLogDAO" />
+	
+	<osgi:service ref="vmOutManager" interface="com.china.center.oa.sail.manager.VMOutManager" />
+	
+	<osgi:service ref="outPayTagDAO" interface="com.china.center.oa.sail.dao.OutPayTagDAO" />
+	
+	<osgi:service ref="bankSailDAO" interface="com.china.center.oa.sail.dao.BankSailDAO" />
+	
+	<osgi:service ref="estimateProfitDAO" interface="com.china.center.oa.sail.dao.EstimateProfitDAO" />
+</beans>

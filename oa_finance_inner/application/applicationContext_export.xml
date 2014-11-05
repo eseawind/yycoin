@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+	
+	<osgi:service ref="bankDAO" interface="com.china.center.oa.finance.dao.BankDAO" />
+
+	<osgi:service ref="bankManager" interface="com.china.center.oa.finance.manager.BankManager" />
+
+	<osgi:service ref="financeFacade" interface="com.china.center.oa.finance.facade.FinanceFacade" />
+
+	<osgi:service ref="paymentDAO" interface="com.china.center.oa.finance.dao.PaymentDAO" />
+
+	<osgi:service ref="paymentManager" interface="com.china.center.oa.finance.manager.PaymentManager" />
+
+	<osgi:service ref="inBillDAO" interface="com.china.center.oa.finance.dao.InBillDAO" />
+
+	<osgi:service ref="paymentVSOutDAO" interface="com.china.center.oa.finance.dao.PaymentVSOutDAO" />
+
+	<osgi:service ref="billManager" interface="com.china.center.oa.finance.manager.BillManager" />
+
+	<osgi:service ref="invoiceinsDAO" interface="com.china.center.oa.finance.dao.InvoiceinsDAO" />
+
+	<osgi:service ref="invoiceinsItemDAO" interface="com.china.center.oa.finance.dao.InvoiceinsItemDAO" />
+
+	<osgi:service ref="insVSOutDAO" interface="com.china.center.oa.finance.dao.InsVSOutDAO" />
+
+	<osgi:service ref="invoiceinsManager" interface="com.china.center.oa.finance.manager.InvoiceinsManager" />
+
+	<osgi:service ref="paymentApplyDAO" interface="com.china.center.oa.finance.dao.PaymentApplyDAO" />
+
+	<osgi:service ref="paymentApplyManager" interface="com.china.center.oa.finance.manager.PaymentApplyManager" />
+
+	<osgi:service ref="outBillDAO" interface="com.china.center.oa.finance.dao.OutBillDAO" />
+
+	<osgi:service ref="statBankDAO" interface="com.china.center.oa.finance.dao.StatBankDAO" />
+
+	<osgi:service ref="statBankManager" interface="com.china.center.oa.finance.manager.StatBankManager" />
+
+	<osgi:service ref="stockPayApplyDAO" interface="com.china.center.oa.finance.dao.StockPayApplyDAO" />
+
+	<osgi:service ref="stockPayApplyManager" interface="com.china.center.oa.finance.manager.StockPayApplyManager" />
+
+	<osgi:service ref="backPayApplyDAO" interface="com.china.center.oa.finance.dao.BackPayApplyDAO" />
+
+	<osgi:service ref="backPayApplyManager" interface="com.china.center.oa.finance.manager.BackPayApplyManager" />
+	
+	<osgi:service ref="outListenerFinanceImpl" interface="com.china.center.oa.finance.manager.BillOutManager" />
+
+	<osgi:service ref="invoiceinsExceptionDAO" interface="com.china.center.oa.finance.dao.InvoiceinsExceptionDAO" />
+	
+	<osgi:service ref="autoPayManager" interface="com.china.center.oa.finance.manager.AutoPayManager" />
+	
+	<osgi:service ref="autoPayMonitorDAO" interface="com.china.center.oa.finance.dao.AutoPayMonitorDAO" />
+
+	<osgi:service ref="preInvoiceApplyDAO" interface="com.china.center.oa.finance.dao.PreInvoiceApplyDAO" />
+	
+	<osgi:service ref="preInvoiceVSOutDAO" interface="com.china.center.oa.finance.dao.PreInvoiceVSOutDAO" />
+	
+	<osgi:service ref="stockPayVSPreDAO" interface="com.china.center.oa.finance.dao.StockPayVSPreDAO" />
+	
+	<osgi:service ref="stockPrePayApplyDAO" interface="com.china.center.oa.finance.dao.StockPrePayApplyDAO" />
+	
+	<osgi:service ref="invoiceStorageDAO" interface="com.china.center.oa.finance.dao.InvoiceStorageDAO" />
+	
+	<osgi:service ref="invoiceBindOutDAO" interface="com.china.center.oa.finance.dao.InvoiceBindOutDAO" />
+	
+	<osgi:service ref="invoiceinsDetailDAO" interface="com.china.center.oa.finance.dao.InvoiceinsDetailDAO" />
+	
+	<osgi:service ref="insVSInvoiceNumDAO" interface="com.china.center.oa.finance.dao.InsVSInvoiceNumDAO" />
+	
+	<osgi:service ref="stockPayVSComposeDAO" interface="com.china.center.oa.finance.dao.StockPayVSComposeDAO" />
+	
+	<osgi:service ref="invoiceinsTagDAO" interface="com.china.center.oa.finance.dao.InvoiceinsTagDAO" />
+	
+	<osgi:service ref="sailTagConfigDAO" interface="com.china.center.oa.finance.dao.SailTagConfigDAO" />
+	
+	<osgi:service ref="insImportLogDAO" interface="com.china.center.oa.finance.dao.InsImportLogDAO" />
+	
+	<osgi:service ref="invoiceinsImportDAO" interface="com.china.center.oa.finance.dao.InvoiceinsImportDAO" />
+	
+	<osgi:service ref="packageManager" interface="com.china.center.oa.finance.manager.PackageManager" />
+	
+	<osgi:service ref="backPrePayApplyDAO" interface="com.china.center.oa.finance.dao.BackPrePayApplyDAO" />
+	
+</beans>

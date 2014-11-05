@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="ext">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jxl.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jfreechart-1.0.11.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jackson-core-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/com.china.center.osgi.public_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/buffalo-2.0-osgi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jackson-databind-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jackson-annotations-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jfreechart-1.0.11-swt.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/poi-2.5.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jackson-module-jaxb-annotations-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/readWord.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jcommon-1.0.14.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/lib/ext/jfreechart-1.0.11-experimental.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

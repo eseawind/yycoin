@@ -1,0 +1,969 @@
+Manifest-Version: 1.0
+Export-Package: net.buffalo.request;version="1.0.0",com.china.center.o
+ sgi.jsp;version="1.0.0",com.china.center.struts.wrap;version="1.0.0",
+ com.china.center.struts.wrapinner;version="1.0.0",com.china.center.we
+ bplugin.inter;version="1.0.0",com.china.center.webportal.listener;ver
+ sion="1.0.0",com.china.center.webportal.filter;version="1.0.0"
+Bundle-ClassPath: .,WEB-INF/classes/,WEB-INF/lib/buffalo-2.0-osgi.jar,
+ WEB-INF/lib/dtd.jar
+Bundle-Name: com.china.center.osgi.webportal
+Created-By: 1.6.0_01-b06 (Sun Microsystems Inc.)
+Web-ContextPath: uportal
+Ant-Version: Apache Ant 1.7.0
+Bundle-Vendor: PUBLIC
+Bundle-Version: 1.0.0
+Spring-Context: application/applicationContext_*.xml
+Bundle-Activator: com.china.center.webplugin.init.Activator
+Bundle-ManifestVersion: 2
+Import-Package: com.china.center.common.taglib;version="1.0.0",com.chi
+ na.center.tools;version="1.0.0",com.china.center.osgi.dym;version="1.
+ 0.0",org.osgi.framework;version="1.3.0"
+Bundle-SymbolicName: com.china.center.osgi.webportal
+
+Name: js/plugin/dialog/css/icons/redo.png
+SHA1-Digest: 6Wgzrn1dRz+bZMUQyOhSJ12S63c=
+
+Name: com/china/center/webplugin/inter/FilterLoad.class
+SHA1-Digest: rG4TwqXYu/+saN4Enyb34Gvjhuc=
+
+Name: js/plugin/accordion/css/i/accordion-left.png
+SHA1-Digest: l4+u5N91aOKKVlcsmgQqJpev4BQ=
+
+Name: css/flexigrid/images/get.png
+SHA1-Digest: y1TL1cY101RQ6vrKbrqOxke9bn4=
+
+Name: images/opr/realse.gif
+SHA1-Digest: emc5XIdSKspUf1llQRFof42rSxo=
+
+Name: images/oa/process.gif
+SHA1-Digest: vMBBuGzMISoE2MZXQKB1aR26vSw=
+
+Name: images/login/welcome.gif
+SHA1-Digest: 0EozXJcKw0zazyvBLwU3cW+kewo=
+
+Name: js/tree.js
+SHA1-Digest: 09cK2XnCGTWo0sPbk/1M5z0/ECw=
+
+Name: css/flexigrid/images/add.png
+SHA1-Digest: UWvPIskzNzdsL18dhEel+HKl5mw=
+
+Name: css/ccc.css
+SHA1-Digest: efNa6lr7zzrSPxTTX8hPVjg/fbo=
+
+Name: js/plugin/blockui/jquery.blockUI.1.33.js
+SHA1-Digest: dA3a40azGv3CtLOhNx1H2IYH/JE=
+
+Name: js/tableSort.js
+SHA1-Digest: bJ2CzTmqreULM5dT9eaQYwzmHOE=
+
+Name: com/china/center/webplugin/inter/FilterLoad$2.class
+SHA1-Digest: I2285tJB5ZKFuG8eG/yx1pJx4yY=
+
+Name: js/buffalo_debug.js
+SHA1-Digest: UOAwok+9gPJewrQVT8yC/Vg9wFY=
+
+Name: swf/help/mail.swf
+SHA1-Digest: AcSMRUxQSOaNCpVu/dJmtTUueug=
+
+Name: css/flexigrid/images/first.gif
+SHA1-Digest: wrEIOivrISMg3KJ8iejNxyl+wvY=
+
+Name: css/flexigrid/images/table.png
+SHA1-Digest: tw6Cw3Mjq1x1InvlIcIwOtmhlWM=
+
+Name: META-INF/sql.tld
+SHA1-Digest: d9UA0kAI4jOY+wkwUfEs0crTCTA=
+
+Name: js/plugin/dialog/css/images/messager_question.gif
+SHA1-Digest: D4h9FbHdNjjxed86O0roitMU7kU=
+
+Name: js/prototype.js
+SHA1-Digest: aAaF40MlpvK2JubufCW+fLQ7aPg=
+
+Name: css/default.css
+SHA1-Digest: bXr7cq8kB6YN3aXSmkABlCJU0+o=
+
+Name: js/assets.js
+SHA1-Digest: ir3StbY1kvxLF37aN4uGl+BcDD0=
+
+Name: com/china/center/webplugin/inter/BuffaloOSGiConfigurerFactory.cl
+ ass
+SHA1-Digest: 7aSytG4dYpf2zxRcMeBqLXOALYk=
+
+Name: WEB-INF/struts-config.xml
+SHA1-Digest: AOF527D7n9rydlX3eUry2XHbyIo=
+
+Name: js/plugin/accordion/bg.gif
+SHA1-Digest: rnonCKIqWwrXTBXDh2LHQYzWA4k=
+
+Name: WEB-INF/web.xml
+SHA1-Digest: ALaOAezi7daC+wymIjzUWPphKVM=
+
+Name: js/calendar/calendar2.js
+SHA1-Digest: PIgE8/fZSMseEKLI0NNaiQs9wfo=
+
+Name: js/key_debug.js
+SHA1-Digest: TOcp1Y3CgfB+91pErsGvcZIFCk4=
+
+Name: js/plugin/accordion/AccordionTab2.gif
+SHA1-Digest: cxL5D8IJlcSxLNZFj95BJ38XKnA=
+
+Name: com/china/center/webportal/filter/ServletFilter.class
+SHA1-Digest: omJ8u4H5n7nUt/dpZCozCxONNyc=
+
+Name: js/center_cal/skins/aqua/rowhover-bg.gif
+SHA1-Digest: aOXiUoP6Yjd5L9dlpHyWU1Fbh4k=
+
+Name: com/china/center/webplugin/inter/impl/DefaultRegisterWebPluginIm
+ pl.class
+SHA1-Digest: sMtA23tR74l3WjjuNB7yJyq799I=
+
+Name: META-INF/sql-1_0-rt.tld
+SHA1-Digest: eYIkf0QsoIlZTx7f1BqzSXpAJzI=
+
+Name: css/tabs/jquery.tabs-ie.css
+SHA1-Digest: DVDDij5ISd3pS9N44ss++rZIXT0=
+
+Name: images/help/flow/special.png
+SHA1-Digest: Xbed707jd0KVcE7CFovcghpVmeM=
+
+Name: js/tree/t.gif
+SHA1-Digest: FQrV1BMj+3WMk5mFwoZDg1f/9oY=
+
+Name: css/flexigrid/flexigrid.css
+SHA1-Digest: yL7daQKP8Dxsi/PRxmA2MaC9lmI=
+
+Name: css/flexigrid/images/edit.gif
+SHA1-Digest: rk31EyqnG0+Vf+6fU/KVw0iz4wA=
+
+Name: css/flexigrid/images/pass.png
+SHA1-Digest: 7wPVaIRqzmhqS1B14D5zCMJVB4s=
+
+Name: WEB-INF/tld/common.tld
+SHA1-Digest: a7vdZEUOR8HCvbtKj6Af+H5iBk4=
+
+Name: js/json_debug.js
+SHA1-Digest: qL3F2tXjv9+EXaHc7tyYLTest+c=
+
+Name: js/plugin/dialog/jquery.dialog_debug.js
+SHA1-Digest: ST3CQW+fe4mAdqvKO5F6EXmCXQY=
+
+Name: js/math.js
+SHA1-Digest: GsXS+dC58JtjAUkWQyZYbRUud8c=
+
+Name: js/test.js
+SHA1-Digest: Jtb3+bsQZbb4meU24vzxXQ/WpUs=
+
+Name: images/opr/change.gif
+SHA1-Digest: +LCRRl/x4CGchIXe2S5qFAJn/U0=
+
+Name: META-INF/spring.handlers
+SHA1-Digest: 25wRfHplMi0u0vklU3WoFBDS+fY=
+
+Name: com/china/center/webplugin/init/Activator$ScanResource.class
+SHA1-Digest: Z3KHAoDNT2Y92CfHZvPPbQIvhHY=
+
+Name: images/help/flow/addflow.png
+SHA1-Digest: QiWY4cWaVCAP6L5mV772EcufiHI=
+
+Name: css/flexigrid/images/up.png
+SHA1-Digest: u8Ic6onxIjmdyInp95q8Mloyo6Q=
+
+Name: js/plugin/highlight/jquery.highlight.js
+SHA1-Digest: K8jj17+grMKbdiCrwGp7kPXP+xo=
+
+Name: js/center_cal/skins/aqua/menuarrow.gif
+SHA1-Digest: eEhMCAZ5ak4RXKxEGs843j4waLU=
+
+Name: css/flexigrid/images/prev.gif
+SHA1-Digest: UbSPk9PrvkT2ZWIh3CQiNVnhHas=
+
+Name: com/china/center/webplugin/inter/ResourceLoad.class
+SHA1-Digest: pU+6rMRfn3iH7UkQoNAzpz1z08E=
+
+Name: js/jquery/jquery_oldest.js
+SHA1-Digest: NiibMvzzKJnSk0ozWsiBsChgF1A=
+
+Name: js/tree/rplus.gif
+SHA1-Digest: gJsTbmu/13XNWspKIM48tfIFTCU=
+
+Name: META-INF/c-1_0.tld
+SHA1-Digest: zewt8LiWQjfOpRWTKVcVJJLfinA=
+
+Name: js/fanye_debug.js
+SHA1-Digest: CzmOlXOqP9nW02JqoRkJvsdhGSw=
+
+Name: css/flexigrid/images/load.png
+SHA1-Digest: WhO5qKtgPiydZNZB7HEjGIeEekg=
+
+Name: META-INF/spring.schemas
+SHA1-Digest: 6PWD4bgYRyAES3D9e/P/t0YlScE=
+
+Name: js/plugin/dialog/css/icons/print.png
+SHA1-Digest: ouQPV6zQjS9xIbNvkP66zoCSUzM=
+
+Name: js/plugin/accordion/css/i/accordion-right.png
+SHA1-Digest: azJ8M54lU4F7nDOrKsPkpa5/nNE=
+
+Name: common/error.jsp
+SHA1-Digest: GzedIUCcIzia/MNfqf/+daa6xN0=
+
+Name: images/login/vistablue.jpg
+SHA1-Digest: Efkj9K4mmlTforgfeLdKmBk93+M=
+
+Name: images/login/top_bg1.gif
+SHA1-Digest: KJQo7yeErJfzXnoJy/jJcRnzGmU=
+
+Name: images/help/flow/dll.png
+SHA1-Digest: 7X+cVYyBY//0MwssRapGz1wJAjA=
+
+Name: images/opr/edit.gif
+SHA1-Digest: ORdbiusbUMBfJp/DkeBWiSCenzU=
+
+Name: js/plugin/dialog/css/icons/filesave.png
+SHA1-Digest: AoiWo3IKFgMaPz3tlFTOk7g8oxk=
+
+Name: application/applicationContext_main.xml
+SHA1-Digest: pFEwRCeWQApTDMiTVvs0330RNMc=
+
+Name: js/plugin/blockui/211.js
+SHA1-Digest: WQDxWLIoonp8+db5E25zL1JPGKc=
+
+Name: js/center_cal/calendar.js
+SHA1-Digest: ETh61g7j7+yJTbF9lZJTHnbro04=
+
+Name: css/login.css
+SHA1-Digest: /CWp7wa1MtaUaVK7VN/FrpgjyNY=
+
+Name: images/oa/help.png
+SHA1-Digest: cwGbOn57MgJC30PIS1L3JTlzEw0=
+
+Name: images/opr/end.gif
+SHA1-Digest: cu3t0MSBiCadL8YGNfLEBm/OngY=
+
+Name: js/tree/lplus.gif
+SHA1-Digest: rBh0m7MvLFV4hms8M7W7c9YIYgk=
+
+Name: js/control.js
+SHA1-Digest: t93mEDzCIGCBtDiEP0Mi1hahpgI=
+
+Name: css/flexigrid/images/btn-sprite.gif
+SHA1-Digest: 0NbCJm+Bb6wnPy2WJgP7/n3Uffk=
+
+Name: images/oa/logout.gif
+SHA1-Digest: B9SezLtUuc7rieDYZngftl89pqw=
+
+Name: js/jquery/jquery-1.2.6_oldest.js
+SHA1-Digest: ZCfXpm/bF8DvOodwhRK50NQXgR0=
+
+Name: common/common.jsp
+SHA1-Digest: oX1hPJ3w13yilXM21j4C6uCe9GA=
+
+Name: js/center_cal/skins/aqua/hover-bg.gif
+SHA1-Digest: zIZfC1KlqAEdoVgAJ7TFl9J/d/g=
+
+Name: js/plugin/accordion/css/flora.accordion.css
+SHA1-Digest: eBQPRpLI3Ij37ZLChaY3L1kFc6M=
+
+Name: css/flexigrid/images/ddn.png
+SHA1-Digest: Zctfbcm/SeX1tWARv5aoG0JQMaI=
+
+Name: WEB-INF/lib/org.eclipse.osgi_3.3.2.R33x_v20080105.jar
+SHA1-Digest: j5OHyjtmj9+UXzvoFu43dwRV0Po=
+
+Name: META-INF/fn.tld
+SHA1-Digest: LczzRil8YoZP8s7Wiq331w3tWrg=
+
+Name: js/tree/lminus.gif
+SHA1-Digest: xZeYpJRVOJGH5uBwUZvXPsR1+MA=
+
+Name: js/calendar/cal2.htm
+SHA1-Digest: 5k3G1h3Zqz8ZKGYfdP5e7mpO9s8=
+
+Name: com/china/center/webplugin/inter/FilterLoad$1.class
+SHA1-Digest: XwWa382v8ojNIDjfOvXRZgb4Re8=
+
+Name: css/flexigrid/images/history.png
+SHA1-Digest: o6+GLkdCvc8gXipfwwlWrvwLQio=
+
+Name: WEB-INF/struts-config_1_1.dtd
+SHA1-Digest: 55NRVjTuU26i9lWpZhpjq1Tbm7A=
+
+Name: images/oa/del.gif
+SHA1-Digest: J0nUoJ/RjFOxay9ExG6zB13QeGY=
+
+Name: common/common_js.jsp
+SHA1-Digest: MtpltH7JutcxUIaFRnHVkyd0G0A=
+
+Name: com/china/center/webplugin/inter/impl/WebPluginServletContextLis
+ tener.class
+SHA1-Digest: qy6FfJb7/yiYjtsnypEGMza9TUs=
+
+Name: images/error.gif
+SHA1-Digest: it/sO5rkFAb3hnSCFdL4zIXpuGg=
+
+Name: com/china/center/webplugin/inter/impl/DelegatingRequestProcessor
+ .class
+SHA1-Digest: cqiepr4D5F7qvda2xSM7asTmSRo=
+
+Name: js/tree/root.gif
+SHA1-Digest: IhpYZBTwhu4aAv920DyD1qMI2rc=
+
+Name: swf/co-01.swf
+SHA1-Digest: Rw1Vc9wMmiB2H4+A9qSDenKSvOs=
+
+Name: com/china/center/struts/wrap/ActionConfigManagerImpl.class
+SHA1-Digest: VkvfPNYvfaxxdZLFzZrOPODfpOs=
+
+Name: META-INF/spring-form.tld
+SHA1-Digest: qUI3KPuKEf3wqo9YtrXpRorlZMk=
+
+Name: images/arrow-up-d.gif
+SHA1-Digest: xhUJcfgUildXnFQVA95IHfNXRkA=
+
+Name: images/oa/loading.gif
+SHA1-Digest: zX1hzjradSNBefi+s3Ne57EZUnA=
+
+Name: css/flexigrid/images/bg.gif
+SHA1-Digest: 4OxF25VkfL1gsXZpyeRuvaXlZC0=
+
+Name: META-INF/pageTld.tld
+SHA1-Digest: wgR0Q2z2CMGdEYbZmlSzlVFbVfI=
+
+Name: js/string.js
+SHA1-Digest: 2ue8z31Yw/fPLFuyg6BKe6DiX0s=
+
+Name: com/china/center/struts/wrap/ForwardConfigWrap.class
+SHA1-Digest: +58qZnTV555NcaBv2IsQ8WnTGnU=
+
+Name: com/china/center/webplugin/inter/WebPathListener.class
+SHA1-Digest: QiqFKqd8UC5BPImTK1IuMzNeYQg=
+
+Name: js/calendar/queren.gif
+SHA1-Digest: ThCSzofdVQGkPLPVPI+CyqZ9xu0=
+
+Name: js/jquery/jquery-1.2.6.js
+SHA1-Digest: GuQ48cybQDt8AIGRQm0Pqmrtgcs=
+
+Name: js/plugin/dialog/css/images/shadow_total.png
+SHA1-Digest: iAFTSO2uV2qamIuBMaU5yVC7K1Y=
+
+Name: images/oa/replied.gif
+SHA1-Digest: CBNa2t/MVnj3v+ZOiNeqlBUeLZ0=
+
+Name: js/plugin/accordion/accordion.css
+SHA1-Digest: YYKB5A9H5ubeUDSXQFF5xlOQ55Q=
+
+Name: com/china/center/osgi/jsp/ElTools.class
+SHA1-Digest: tFWtZVpfxwb3LMLfOE1KhxYFEic=
+
+Name: js/calendar/calendar1.js
+SHA1-Digest: V6z2LEtS/akXZBTgPiyMo1Z3VTk=
+
+Name: js/tree/close.gif
+SHA1-Digest: 6CaiWYWjwt7ZBmUkdiCJ6Hxmgsg=
+
+Name: js/tree/rminus.gif
+SHA1-Digest: LLZTXGwbP6KDvmSnm1amoJbBYgo=
+
+Name: META-INF/permittedTaglibs.tld
+SHA1-Digest: NnRHIZS6n828OUX67u3ioEbuPzo=
+
+Name: js/plugin/accordion/jquery.accordion_debug.js
+SHA1-Digest: X/xSPyxXgIHmtBzSqXkzSTUw69Y=
+
+Name: js/tree/file.gif
+SHA1-Digest: UWtPgC7YklScjv31g2lHFzjELBY=
+
+Name: js/plugin/dialog/css/icons/cancel.png
+SHA1-Digest: qw82ZcjkpnTMb4THRiktCaTZ3yo=
+
+Name: images/oa/mail2.gif
+SHA1-Digest: QTHMhSIJQtaYzzbeI2wkTFAznnc=
+
+Name: js/center_cal/skins/aqua/today-bg.gif
+SHA1-Digest: FhgMgXZE84COeVx7eIQP8YhV01c=
+
+Name: com/china/center/struts/wrapinner/RegisterActionConfig.class
+SHA1-Digest: g/ykVHHK8aNp80RytE7lmPJgpvs=
+
+Name: css/flexigrid/images/line.gif
+SHA1-Digest: qiSh82tP5waa6XvZxC218zEN1/Y=
+
+Name: js/tree/r.gif
+SHA1-Digest: 32CDtIpbb0RvTkjrwQgTP1MRzO4=
+
+Name: js/plugin/accordion/css/i/accordion-right-over.png
+SHA1-Digest: t60bBe4kEay9d+2xmSVFFXcCnqI=
+
+Name: META-INF/scriptfree.tld
+SHA1-Digest: JwtopzuZjcvH5o0ywf1KsjpTm9Q=
+
+Name: js/plugin/accordion/css/i/accordion-left-act.png
+SHA1-Digest: ZIuKIdCgiP0EpIPc3XtcNgq0hzo=
+
+Name: js/title_div.js
+SHA1-Digest: keZ0ibxD84FK1aITECV5aL2HJK0=
+
+Name: js/compatible.js
+SHA1-Digest: bmM7ZcmREN9xDZFfQ5vBy5FWVmY=
+
+Name: js/plugin/accordion/css/i/accordion-right-act.png
+SHA1-Digest: V5BxRMeSoUFCt9iRQ02K54QnfR8=
+
+Name: js/lang/eng/public_resources.js
+SHA1-Digest: A/QYZdaVdBOGdkYOEhBlyeLt/x8=
+
+Name: com/china/center/webportal/filter/FilterListener.class
+SHA1-Digest: m3mYMSb60Pwg25colxnkZ6Iyvco=
+
+Name: js/tree/i.gif
+SHA1-Digest: PInY8OJexh4l8cNd+a4YTqGgnSQ=
+
+Name: swf/co-02.swf
+SHA1-Digest: fYg8dOymg1ZUg2mlmedsUKPuxVY=
+
+Name: js/plugin/accordion/AccordionTab0.gif
+SHA1-Digest: Mm1/WUHS/UIa9UjzA//0HhCkq3E=
+
+Name: css/shousuo.css
+SHA1-Digest: tDdin9NoNwpvj474nx4iH8WHIf4=
+
+Name: css/flexigrid/images/uup.png
+SHA1-Digest: fJUMwaL953uCI0HShfeRv7gLpY4=
+
+Name: js/plugin/accordion/css/i/accordion-middle-act.png
+SHA1-Digest: S6vSjfKX43OgnHzQImiNtZ7wdlo=
+
+Name: images/arrow-down.gif
+SHA1-Digest: IwqNZXOc+W5T24J8li17LwfZ098=
+
+Name: js/jquery/jquery.js
+SHA1-Digest: /WyCbhteEQwbRMrcCdgwCARAt1I=
+
+Name: css/flexigrid/images/load.gif
+SHA1-Digest: 7TBVsxItbuaAYaWKuo2iU4YkVOk=
+
+Name: js/center_cal/skins/aqua/active-bg.gif
+SHA1-Digest: qK2661uWIkb5b4h924Vw3ByXLS4=
+
+Name: js/popmenu.js
+SHA1-Digest: yMi/XDhSS88n4ONwZybQi2mfPC0=
+
+Name: js/calendar/cal1.htm
+SHA1-Digest: jzGwAxjQ6gqSOJdH/A0ps3CWp3g=
+
+Name: js/configExamine.js
+SHA1-Digest: wo/J82gYWzGTiKLvtfUr9RUAXo4=
+
+Name: js/plugin/dialog/css/images/button_a_bg.gif
+SHA1-Digest: ETnarwGbs3dmKxTwmasAc9tkzQk=
+
+Name: css/flexigrid/images/hl.png
+SHA1-Digest: RiOa6roIoug+VdX0S8fHtOlTLOA=
+
+Name: images/help/flow/operation.png
+SHA1-Digest: yxqRdgsLi7QkkmdxWOuqhNnFggc=
+
+Name: js/plugin/dialog/css/images/dialog_content_bg.gif
+SHA1-Digest: 8MEyuD9oUtVmJL+9HdV/4/oKJY8=
+
+Name: js/plugin/dialog/css/images/dialog_tools.gif
+SHA1-Digest: qG0ncXuOGF0YccvQCkuNKnwOIkw=
+
+Name: js/plugin/accordion/jquery.accordion.js
+SHA1-Digest: q56amF4f7wftzX2+pa9VRhHLro0=
+
+Name: images/opr/del.gif
+SHA1-Digest: J0nUoJ/RjFOxay9ExG6zB13QeGY=
+
+Name: js/plugin/interface/interface.js
+SHA1-Digest: jntV3jw5aPlr19e4S/RYN1HmR7I=
+
+Name: js/tree/blank.gif
+SHA1-Digest: CgHCKA4clh6xlHpeuZGrSiPZeIY=
+
+Name: META-INF/fmt.tld
+SHA1-Digest: /7t/+BcDFNOZByTXid1aK3a5ZRg=
+
+Name: js/plugin/dialog/css/icons/no.png
+SHA1-Digest: 0qWRbILu/U6pLxkUJ69vhiPYKQE=
+
+Name: js/plugin/dialog/jquery.dialog.js
+SHA1-Digest: HBc1oqjGchJU2GjO1hvDNhjD5PM=
+
+Name: js/center_cal/skins/aqua/theme.css
+SHA1-Digest: 8UsaURdZx9lrXq0UggEYpMyzoQQ=
+
+Name: com/china/center/webplugin/init/Activator$1.class
+SHA1-Digest: DNTqDht6CgezqGBi4kRN+oZXD68=
+
+Name: images/arrow-up.gif
+SHA1-Digest: EXOEDQu3vBVvSNXjIt/6idDwMQk=
+
+Name: images/dot_line.gif
+SHA1-Digest: h0V6aSrpNn6MC+RyQMtUQX9t2tw=
+
+Name: js/fanye.js
+SHA1-Digest: KsExxgCcRCpSF/8oLGdst9/082Q=
+
+Name: js/public.js
+SHA1-Digest: F5llc8F7mKerOxA6lHVZyrVP96M=
+
+Name: css/tabs/jquery.tabs.css
+SHA1-Digest: mMvs6+jsBxJm9VFZSXPw9LXrcQw=
+
+Name: js/plugin/dialog/css/icons/ok.png
+SHA1-Digest: m70eC7H07cr+ngoMvRui4ldVcPo=
+
+Name: js/chinese.js
+SHA1-Digest: ALJd6ofw4fKAhwDjXfIww3bGB7k=
+
+Name: js/calendar/chongzhi.gif
+SHA1-Digest: nTv9RWkdVxXI7l/K1inyCbzn78Q=
+
+Name: js/calendar/calendar.css
+SHA1-Digest: hId4URmRckeRsSY1RrxLditJQFA=
+
+Name: swf/co-04.swf
+SHA1-Digest: 8QSMa7TINO9WtYj0MeuFnXw0TRs=
+
+Name: css/flexigrid/images/search.png
+SHA1-Digest: wgtUU3BM3wZD1F+pr7GxJVL6j30=
+
+Name: WEB-INF/lib/dtd.jar
+SHA1-Digest: p/f1B1FrVi1KqAU2fAZkOSwustQ=
+
+Name: swf/help/group.swf
+SHA1-Digest: kxcaUrT1KojTK7aHUWiL0+0AUA8=
+
+Name: js/common.js
+SHA1-Digest: j0S/+oYu0NARV8rjaXHx0LIBOX8=
+
+Name: META-INF/x.tld
+SHA1-Digest: tS7bjKsKCFf8E/2AWrYRA2xlVck=
+
+Name: js/center_cal/lang/cn_utf8.js
+SHA1-Digest: +YHaNCbBvVdksQ26itrgFo/D+24=
+
+Name: images/sys_8.gif
+SHA1-Digest: UzPij6yyTTMx1ySDCkkZg9c0qQ8=
+
+Name: css/flexigrid/images/wbg.gif
+SHA1-Digest: 73+IhIlFt0XD2+/ukNVSP87m6lU=
+
+Name: js/plugin/dialog/css/icons/back.png
+SHA1-Digest: 4EefBcA9a2QtR9d8VvYHqp1ihr0=
+
+Name: css/flexigrid/images/oget.png
+SHA1-Digest: rvLryj0AvTOBAsi6kbTMGDavXWk=
+
+Name: META-INF/c.tld
+SHA1-Digest: 4WQRTgpSjVJNpEz0Mi6Dr63kRjk=
+
+Name: js/calendar/cal.htm
+SHA1-Digest: vGrB0QHgM+O3+rmJChgY0vRyvsA=
+
+Name: css/flexigrid/images/fhbg.gif
+SHA1-Digest: uaSScLEHwrmdU87ZsSlOtVqeUgY=
+
+Name: images/error/pic_404.gif
+SHA1-Digest: 9zH1EkaGKVbR52sbtKe0nBycpu0=
+
+Name: images/login/bbs_bghd.png
+SHA1-Digest: de0EXabPDH9vIj9cdR5rHwVQVsY=
+
+Name: common/commonQuery.jsp
+SHA1-Digest: Z3Li8JXRvUPwXpwDwVroYQ6gibo=
+
+Name: js/check.js
+SHA1-Digest: WmJzlt4kjz6170GqLKnFOuru7Zc=
+
+Name: js/plugin/dialog/css/icons/edit_remove.png
+SHA1-Digest: jPKfSiE1y8Q77IQFzZE5X+znjEo=
+
+Name: css/self.css
+SHA1-Digest: nagl4vArhDwlZFzVwsUzDysdfqI=
+
+Name: js/jquery/jquery-1.3.2.js
+SHA1-Digest: aRQyZJdhPwM4zJuU3dS0EejW108=
+
+Name: js/calendar/fanhui.gif
+SHA1-Digest: olvi+fhUI+ghLOMt8oKRffw1f6M=
+
+Name: js/tree/book.gif
+SHA1-Digest: WmJK/1ci09xqmojpoYMKmiuH8vo=
+
+Name: common/timeout.jsp
+SHA1-Digest: nWApMB0bpFZgw+waAjmHInuMeiw=
+
+Name: js/plugin/dialog/css/images/messager_error.gif
+SHA1-Digest: m07+xFTuYv7pxb/McWEjy9HzOfY=
+
+Name: js/center_cal/skins/aqua/status-bg.gif
+SHA1-Digest: LvwnvrNBEbP9kWY1OtQE3DXjGtU=
+
+Name: META-INF/x-1_0-rt.tld
+SHA1-Digest: RQZySOdyt/OiZi6Jq7n1+plZqxw=
+
+Name: images/succeed.gif
+SHA1-Digest: IykqzYSAoZrsvJIOgRWGydcQxaE=
+
+Name: images/login/top_bg_bak.gif
+SHA1-Digest: 8MS7Ij4V80V+WDc5sr8/CaZX+bc=
+
+Name: js/popmenu_data.js
+SHA1-Digest: i8AXsCIcW+UPGoibVaTS+HGKztw=
+
+Name: index.jsp
+SHA1-Digest: WtVx+EAJlquhrNVIkNVs5z9Vj2U=
+
+Name: js/key.js
+SHA1-Digest: 2FI1xVU69cohb91/zI6bXsaqRcw=
+
+Name: images/oa/attachment.gif
+SHA1-Digest: NSWU1KXrFV3G643U6ghJCB5zLdQ=
+
+Name: js/cnchina_debug.js
+SHA1-Digest: dnxnyPxsTCC4IvEXzakAIWwvP4c=
+
+Name: common/success.jsp
+SHA1-Digest: trq3bwNir4paC3gf9poGMwzPe6c=
+
+Name: images/help/flow/createinstance.png
+SHA1-Digest: 8vlT7hVvRFOWBUZF4/vyA4Vnq5E=
+
+Name: index2.jsp
+SHA1-Digest: wof+wCjgtLAGtwbUk5b1zMn5840=
+
+Name: js/tree/open.gif
+SHA1-Digest: og7GAVrmysdzh/YlVZrEAorXGpo=
+
+Name: js/plugin/dialog/css/dialog.css
+SHA1-Digest: Vsjwpvq9wApRlIT1+DBpLX/EBhA=
+
+Name: css/flexigrid/images/reject.png
+SHA1-Digest: FyvwtrJx4MHvMRQMUIyZDzGCTHU=
+
+Name: js/tree/tplus.gif
+SHA1-Digest: sb5lXJNoeLMhE+G5j76u5GrogwA=
+
+Name: js/plugin/accordion/css/i/accordion-middle-over.png
+SHA1-Digest: bJjDmK1R/mpi6hvfT3Lgr2F5XKo=
+
+Name: images/help/flow/configtoken.png
+SHA1-Digest: tVlUfY6G4iRy6S0MML5i8ESORKY=
+
+Name: js/plugin/highlight/jquery.highlight_debug.js
+SHA1-Digest: H6kx3BRClDYUhbVa2XUlnHqOD8A=
+
+Name: css/flexigrid/images/last.gif
+SHA1-Digest: 08++n5nTAqHL/TZixkTDkZzzxho=
+
+Name: js/plugin/accordion/css/i/accordion-left-over.png
+SHA1-Digest: h0X68cYR7qA72jXm0F9XWs9M96o=
+
+Name: js/buffalo.js
+SHA1-Digest: iF5vM3/1tT3e1Ygxr2guFd540/s=
+
+Name: js/pop.js
+SHA1-Digest: 378CWwq5YFImXdyEm6/ikJMRwtU=
+
+Name: WEB-INF/tld/pageTld.tld
+SHA1-Digest: wgR0Q2z2CMGdEYbZmlSzlVFbVfI=
+
+Name: js/tree/tminus.gif
+SHA1-Digest: rATNSsX0sEEoxQEOdlpBTy+wf14=
+
+Name: css/flexigrid/images/replied.png
+SHA1-Digest: lFFkzxXEGdWfwsEX6JxDW0v/b2g=
+
+Name: META-INF/common.tld
+SHA1-Digest: a7vdZEUOR8HCvbtKj6Af+H5iBk4=
+
+Name: js/plugin/accordion/css/i/accordion-middle.png
+SHA1-Digest: 016L469WIQcwVjyfMxrrnUebgWk=
+
+Name: swf/co-03.swf
+SHA1-Digest: QC8zVk1zN5EZdv8pbbzcmj7ey8E=
+
+Name: js/cnchina.js
+SHA1-Digest: pNUadeUfmkS56HdllfL4d6/QJrI=
+
+Name: css/flexigrid/images/forward.png
+SHA1-Digest: NHoAVcTViYc08I04ug3Kt6mXn30=
+
+Name: META-INF/c-1_0-rt.tld
+SHA1-Digest: 5R/jRmjjiyloEhQI5rftbV4qA+0=
+
+Name: css/webfxlayout.local.css
+SHA1-Digest: hUsGsZGTnUYz/RWro2yvtILPAAA=
+
+Name: META-INF/sql-1_0.tld
+SHA1-Digest: XRWvQDr0xzDOcKLOVB3CpzvgJt4=
+
+Name: META-INF/fmt-1_0.tld
+SHA1-Digest: GM5wKEPqiaBNAceMCheef61Tb2U=
+
+Name: js/calendar/calendar.js
+SHA1-Digest: M8UJYl02mFIss8demuNobRmf9oE=
+
+Name: images/dot_r.gif
+SHA1-Digest: eriqq+PmMRy1VxzuDzBpNEqFnpM=
+
+Name: js/center_cal/lang/calendar-zh.js
+SHA1-Digest: PdnYKgGxxbZr63c0IglIh2Cvovs=
+
+Name: com/china/center/struts/wrap/ActionConfigManager.class
+SHA1-Digest: FxLJljC1/AYcJB9VSo+YHUibr4c=
+
+Name: js/center_cal/skins/aqua/normal-bg.gif
+SHA1-Digest: 3OzNMb9L/7/98mUCTyX6wvzi/0Y=
+
+Name: js/center_cal/skins/aqua/dark-bg.gif
+SHA1-Digest: CCiNZE13YcXAextPs/2HGBxBQNw=
+
+Name: images/bg.gif
+SHA1-Digest: Bn+8RXWXDhmAjiIWx3UB4hPyby0=
+
+Name: swf/help/office.swf
+SHA1-Digest: xqP4WUAPxNJS4WNIi153BqmBb/g=
+
+Name: error.jsp
+SHA1-Digest: 9KyszM8eyY3Wk6jGMXrlTxpMSNc=
+
+Name: com/china/center/webportal/filter/FilterListenerService.class
+SHA1-Digest: N204U8TdAa9nMOcOAHgLhswxQHQ=
+
+Name: css/get_post.TXT
+SHA1-Digest: RD2+y/jaBp7UPLTvROZ/P25P+VU=
+
+Name: js/plugin/accordion/collapsed.gif
+SHA1-Digest: os1luoNKpGH49RUXy0ADGXBH85Q=
+
+Name: css/center.css
+SHA1-Digest: 7afpiLpIv9vN95QhcljUfXVriVU=
+
+Name: images/calendar.gif
+SHA1-Digest: ZIE3F2nPYpG0545JsWYD4xBck8Q=
+
+Name: js/jsloader.js
+SHA1-Digest: aNeAAIMrbEex9TvKWvYSDp+s8lk=
+
+Name: js/plugin/dialog/css/images/messager_warning.gif
+SHA1-Digest: PU8Ee53o8X0Ys5+r/BZvtrG2PTs=
+
+Name: js/plugin/dialog/css/icons/edit_add.png
+SHA1-Digest: HucQuvo/AhS8TTlK5653cDkVnPw=
+
+Name: images/center_10.gif
+SHA1-Digest: fkShKk1OJl1cUdJ/ABxMV32R+tw=
+
+Name: css/flexigrid/images/magnifier.png
+SHA1-Digest: wgtUU3BM3wZD1F+pr7GxJVL6j30=
+
+Name: images/center_08.gif
+SHA1-Digest: OZTQTQavjlZyiq+69YskVQOhIyI=
+
+Name: js/plugin/dialog/css/icons/search.png
+SHA1-Digest: d6xtZh/OinCiagEaH9YHsPmPm3I=
+
+Name: js/plugin/blockui/jquery.blockUI_debug.js
+SHA1-Digest: cMgyATyyXW4Z2oG5EIcp7wVGpHo=
+
+Name: css/style1.css
+SHA1-Digest: vJAOeQpmmZFo+/ynEoy3KLq2kuk=
+
+Name: com/china/center/webplugin/inter/BuffaloOSGiConfigurer.class
+SHA1-Digest: H3UX92uiqXGw++MO1Pcq9j3dUkE=
+
+Name: images/dot_a.gif
+SHA1-Digest: fzCHIOuC0TwywR7PjnulGERSfIg=
+
+Name: com/china/center/struts/wrap/ActionConfigWrap.class
+SHA1-Digest: bJUW59tyURgOnpPuav2KzqUQevw=
+
+Name: images/help/flow/flowlist.png
+SHA1-Digest: 8epR5mgdh/IonluJwulCU3tN9h8=
+
+Name: images/oa/forward.gif
+SHA1-Digest: kC1XNkzyHeecGBH1iwSpayFmuok=
+
+Name: js/json.js
+SHA1-Digest: 3BGzLVZCU21HBPJInHlolH9+yFA=
+
+Name: js/center_cal/skins/aqua/title-bg.gif
+SHA1-Digest: qeZINkwdDgyqBz3lYmxvvY2Cmek=
+
+Name: images/oa/desk.png
+SHA1-Digest: 0yYBVcncil56USIyKFhZsvWNPu8=
+
+Name: images/opr/reject.gif
+SHA1-Digest: Pn33lCgcpmmXdmqToeifZ8t3YmY=
+
+Name: images/arrow-down-d.gif
+SHA1-Digest: aMfWkaog2VR9OJXWuDBbJgeUuY0=
+
+Name: js/adapter.js
+SHA1-Digest: VQaN3d09GQzKLwDhcGLdmUPWkVQ=
+
+Name: css/tabs/tab.png
+SHA1-Digest: VonQukNWqRfE/V7J2qb4/zwWCjY=
+
+Name: images/opr/detail.png
+SHA1-Digest: ZvqYlRrbUg4mhySJhzB5Rby3w48=
+
+Name: js/jquery/jquery_zhuzhu.js
+SHA1-Digest: 3j+oJijtLnRGn+QZu5WfL/KbE08=
+
+Name: js/jquery/jquery.tabs.js
+SHA1-Digest: gfWLtvUYo2UMD50koxJylgGPR+8=
+
+Name: com/china/center/webplugin/inter/RegisterWebPlugin.class
+SHA1-Digest: rCLrXl4QDI1sJjU5Os53VJ/rcXk=
+
+Name: images/help/flow/edittemplate.png
+SHA1-Digest: hPWJ7J1j6wr9mC23Zb/eELfC9E0=
+
+Name: js/plugin/dialog/css/icons/reload.png
+SHA1-Digest: R07Mpu5v07eAZowUDJ8y6EibW8I=
+
+Name: com/china/center/webplugin/inter/impl/BuffaloOSGiConfigurerImpl.
+ class
+SHA1-Digest: H/i+OuK3qGFWkB/zoL5psLjdbpM=
+
+Name: META-INF/fmt-1_0-rt.tld
+SHA1-Digest: xBqEAjgPpHDX5ZY0RMpiWjhfsxA=
+
+Name: com/china/center/webplugin/init/Activator.class
+SHA1-Digest: ZiAeRSAzSpIpkzXXqNTRQEmGUp8=
+
+Name: js/plugin/blockui/jquery.blockUI.js
+SHA1-Digest: 3qj3Gihl1/G8mlxaKI7WS7vXWKQ=
+
+Name: com/china/center/struts/wrap/ResourceLocator.class
+SHA1-Digest: Wis1109TKR7RyWbNjp3CLDdXxEk=
+
+Name: js/flexigrid.js
+SHA1-Digest: RVZavs1qYvEYCzEguj7RXUC56f8=
+
+Name: js/lang/zh/public_resources.js
+SHA1-Digest: A/QYZdaVdBOGdkYOEhBlyeLt/x8=
+
+Name: js/autosuggest.js
+SHA1-Digest: pHDwOJLGyhq4zNz6EGj1OGIBFvs=
+
+Name: js/lang/utf8/public_resources.js
+SHA1-Digest: A/QYZdaVdBOGdkYOEhBlyeLt/x8=
+
+Name: js/prototype_debug.js
+SHA1-Digest: CYjOLbNtYjMxk50RpSqRhrDGXL8=
+
+Name: com/china/center/webportal/include/Include.class
+SHA1-Digest: XuQI+nMosmq4ZBs3NzccquFSUMY=
+
+Name: js/jquery.blockUI.js
+SHA1-Digest: EAbd0XZGw5XmZwWxTX2TmcOqFLA=
+
+Name: css/flexigrid/images/next.gif
+SHA1-Digest: j89JSpBkBjZU7Ol7hFK8UaSfIeM=
+
+Name: css/popmenu.css
+SHA1-Digest: tq6VXDGmSlbQQtMQIKcekIBkhSM=
+
+Name: images/center_12.gif
+SHA1-Digest: EUg2l5v1XqunOxgntqVYLZh+AIw=
+
+Name: META-INF/x-1_0.tld
+SHA1-Digest: XtpMFxfuFS9OYDvpMESagBOnfHc=
+
+Name: js/tree_debug.js
+SHA1-Digest: 6m0F8AtsBpltKWjp3A04p6w0lkw=
+
+Name: js/plugin/dialog/css/images/messager_info.gif
+SHA1-Digest: lmD5J5JM1HpqGlce9Oc93rKcKnQ=
+
+Name: js/center_cal/skins/aqua/theme.jsp
+SHA1-Digest: gkySiq3HJUI8Kv06NpUD3OOQ5OQ=
+
+Name: js/plugin/accordion/expanded.gif
+SHA1-Digest: Wyu69Hz0jn2Hp/4dpIgRPr2ECyU=
+
+Name: js/plugin/dialog/css/icons/undo.png
+SHA1-Digest: 2hhncEFv7YCoNBqUx9f7of4vJxY=
+
+Name: js/plugin/dialog/css/icons/help.png
+SHA1-Digest: pmEBzX12MQn+JU5yWZkEk+6Z0Oo=
+
+Name: WEB-INF/lib/buffalo-2.0-osgi.jar
+SHA1-Digest: j1GuBw6qsK/qXDSAn/uWQbTx8tc=
+
+Name: js/tree/l.gif
+SHA1-Digest: AIA/sRQ/GWjS1BGc3KhdFQXQgkE=
+
+Name: js/jquery/jquery-1.3.2_old.js
+SHA1-Digest: 8LlemSJfMU++N8z2t0zi+RbFF94=
+
+Name: js/plugin/dialog/css/icons/cut.png
+SHA1-Digest: RyEb3560vZ29udCikWOLdNxpzyY=
+
+Name: css/flexigrid/images/dn.png
+SHA1-Digest: w9/jpCH1oMrCdiS5Zh7FdvE1uyM=
+
+Name: images/center_07.gif
+SHA1-Digest: QoWjny2dBYnJffmnA/X8ipWMDvU=
+
+Name: com/china/center/webplugin/inter/ResourceLoad$1.class
+SHA1-Digest: Xz4BaPiaoxePEsFaPXtv1FosHB4=
+
+Name: css/flexigrid/images/close.png
+SHA1-Digest: Tz29k83inSfBPOgoutFiVBGSxZI=
+
+Name: application/applicationContext_export.xml
+SHA1-Digest: MD4D29+ClJbOiAyn2KsCn9O/51s=
+
+Name: css/style.css
+SHA1-Digest: eLUPGyQ+VSvgfgwfBEdKEqlHPX0=
+
+Name: timeout.jsp
+SHA1-Digest: ywe3houbmSIyEyJQWo2tTQ4GvNk=
+
+Name: js/center_cal/calendar_debug.js
+SHA1-Digest: GELWpl4oFqHAo0G0BSjSJd4Elfo=
+
+Name: images/oa/mail1.gif
+SHA1-Digest: EvEDOfV8py8h/mHm7cFmZ+yHbws=
+
+Name: com/china/center/webportal/listener/MySessionListener.class
+SHA1-Digest: ZP++ptrj8corTFj64u6niRUK13Y=
+
+Name: com/china/center/webplugin/inter/ResourceLoad$2.class
+SHA1-Digest: RzgT3ySHnt4noN/b7Y4ufPDC8iM=
+
+Name: com/china/center/webplugin/inter/impl/MyContextAware.class
+SHA1-Digest: fteqNEpE5kLkm4/Z8/eTyY8IcXQ=
+
+Name: js/plugin/dialog/css/images/button_span_bg.gif
+SHA1-Digest: SoZHccMM46P8KZMnPByf0hY1F4g=
+
+Name: META-INF/spring.tld
+SHA1-Digest: E7sKMT7lPbseQFXDA6cz6nrUlno=
+
+Name: images/login/welcome_xxglpt.jpg
+SHA1-Digest: hQQyGSux5CH89Ck52HCXFF/gnSE=
+
+Name: images/login/logo_gl.gif
+SHA1-Digest: //IpoPg3bD90aJePJF9wjp8YRd0=
+
+Name: com/china/center/struts/wrap/WrapActionServlet.class
+SHA1-Digest: KVbwqasNzcooQpjeCOYpRfR/pN4=
+
+Name: images/help/flow/configview.png
+SHA1-Digest: UCbIvGLboza3wOn2pviDpLYrUAM=
+
+Name: js/JCheck.js
+SHA1-Digest: zBIyw92G6yARk7KM0Kev0y7rDMw=
+
+Name: js/plugin/dialog/css/images/button_plain_hover.png
+SHA1-Digest: qEThp2Z4/nN4EvK2PRx7QAXrXZ8=
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		
+		<action path="/customer/check" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="queryCheckCustomer"
+				path="/customer/queryCheckCustomer.jsp" />
+			<forward name="addCheckCustomer"
+				path="/customer/addCheckCustomer.jsp" />
+			<forward name="updateCheckCustomer"
+				path="/customer/updateCheckCustomer.jsp" />
+			<forward name="detailCheckCustomer"
+				path="/customer/detailCheckCustomer.jsp" />
+		</action>
+		
+		<action path="/customer/address" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="queryAddress"
+				path="/customer/queryAddress.jsp" />
+			<forward name="addAddress"
+				path="/customer/addAddress.jsp" />
+			<forward name="updateAddress"
+				path="/customer/updateAddress.jsp" />
+			<forward name="detailAddress"
+				path="/customer/detailAddress.jsp" />
+			<forward name="rptQueryAddress"
+				path="/customer/rptQueryAddress.jsp" />	
+		</action>
+		
+		<action path="/customer/citicGroup" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="addCiticGroup" path="/customer/addCiticGroup.jsp" />
+			<forward name="updateCiticGroup" path="/customer/addCiticGroup.jsp" />
+			<forward name="detailCiticGroup" path="/customer/detailCiticGroup.jsp" />
+			<forward name="queryCiticGroup" path="/customer/queryCiticGroup.jsp" />
+		</action>		
+		
+		<action path="/credit/credit" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryCreditItem" path="/credit/queryCreditItem.jsp" />
+            <forward name="queryCreditItemSec" path="/credit/queryCreditItemSec.jsp" />
+            <forward name="queryCreditItemThr" path="/credit/queryCreditItemThr.jsp" />
+            <forward name="addCreditItemThr" path="/credit/addCreditItemThr.jsp" />
+            <forward name="updateCreditItemThr" path="/credit/updateCreditItemThr.jsp" />
+            <forward name="queryCreditLevel" path="/credit/queryCreditLevel.jsp" />
+        </action>
+        
+        <action path="/credit/customer" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="querySelfClient"
+                path="/client/querySelfClient.jsp" />
+            <forward name="configCustomerCredit" path="/credit/configCustomerCredit.jsp" />
+            <forward name="detailCustomerCredit" path="/credit/detailCustomerCredit.jsp" />
+            <forward name="interposeCredit" path="/credit/interposeCredit.jsp" />
+            <forward name="uploadCustomerCredit" path="/credit/uploadCustomerCredit.jsp" />
+            <forward name="queryApplyClientForCredit" path="/client/queryApplyClientForCredit.jsp" />
+        </action>
+        
+        <action path="/client/client" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="addClient" path="/client/addClient.jsp" />
+            <forward name="updateClient" path="/client/updateClient.jsp" />
+            <forward name="querySelfClient" path="/client/querySelfClient.jsp" />
+            <forward name="queryApplyClient" path="/client/queryApplyClient.jsp" />
+            <forward name="detailClient" path="/client/detailClient.jsp" />
+			<forward name="compareUpdateClient" path="/client/compareUpdateClient.jsp" />
+			<forward name="queryCheckApplyClient" path="/client/queryCheckApplyClient.jsp" />
+			<forward name="rptQueryClientBatchTrans" path="/client/rptQueryClientBatchTrans.jsp" />
+			<forward name="queryClientDistribute" path="/client/queryClientDistribute.jsp" />
+			<forward name="rptQueryAllClient" path="/client/rptQueryAllClient.jsp" />
+			<forward name="rptQueryMultiClient" path="/client/rptQueryMultiClient.jsp" />
+			<forward name="rptQueryMultiClientByStaff" path="/client/rptQueryMultiClientByStaff.jsp" />
+			<forward name="rptQuerySelfClient" path="/client/rptQuerySelfClient.jsp" />
+			<forward name="rptQuerySelfClient1" path="/client/rptQuerySelfClient1.jsp" />
+			<forward name="rptQueryPublicClient" path="/client/rptQueryPublicClient.jsp" />
+			<forward name="rptQuerySelfPublicClient" path="/client/rptQuerySelfPublicClient.jsp" />
+			<forward name="interposeLever" path="/client/interposeLever.jsp" />
+			<forward name="applyAssignPer" path="/customer/applyAssignPer.jsp" />
+			<forward name="queryAppUserApply" path="/client/queryAppUserApply.jsp" />
+			<forward name="rptQueryAllAppUser" path="/client/rptQueryAllAppUser.jsp" />
+			<forward name="detailAppUserApply" path="/client/detailAppUserApply.jsp" />
+			<forward name="rptQuerySelfRelateClient" path="/client/rptQuerySelfRelateClient.jsp" />
+			<forward name="rptQueryNotUseClient" path="/client/rptQueryNotUseClient.jsp" />
+        </action>        
+		
+	</action-mappings>
+</struts-config>

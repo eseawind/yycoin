@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/application/applicationContext_main.xml</file>
+          <file>file://$MODULE_DIR$/application/applicationContext_import.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+    <facet type="Osmorc" name="OSGi">
+      <configuration manifestGenerationMode="Manually" manifestLocation="META-INF/MANIFEST.MF" jarfileLocation="oa_tcp_portal.jar" outputPathType="CompilerOutputPath" bndFileLocation="" bundlorFileLocation="" bundleActivator="" bundleSymbolicName="" bundleVersion="1.0.0" ignoreFilePattern="" useProjectDefaultManifestFileLocation="false" alwaysRebuildBundleJAR="false" doNotSynchronizeWithMaven="false">
+        <additionalProperties />
+        <additionalJARContents />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="osgi" level="project" />
+    <orderEntry type="library" name="lib6" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="pickup" level="project" />
+    <orderEntry type="library" name="ext" level="project" />
+    <orderEntry type="library" name="repository" level="project" />
+    <orderEntry type="module" module-name="oa_finance_manager" />
+    <orderEntry type="module" module-name="oa_public_manager" />
+    <orderEntry type="module" module-name="oa_sail_manager" />
+    <orderEntry type="module" module-name="oa_product_manager" />
+    <orderEntry type="module" module-name="oa_tcp_manager" />
+    <orderEntry type="module" module-name="oa_budget_manager" />
+    <orderEntry type="module" module-name="oa_tax_manager" />
+  </component>
+</module>
+

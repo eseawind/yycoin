@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		<action path="/sms/sms" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+		</action>
+		
+	</action-mappings>
+</struts-config>

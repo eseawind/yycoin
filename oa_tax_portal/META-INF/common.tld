@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taglib xmlns="http://java.sun.com/xml/ns/j2ee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-jsptaglibrary_2_0.xsd"
+    version="2.0">
+	<tlib-version>1.0</tlib-version>
+	<uri>http://center.org/jsp-page-functions</uri>
+
+	<function>
+		<description>Reverses the length of object</description>
+		<name>length</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			int length( java.lang.Object )
+		</function-signature>
+	</function>
+
+	<function>
+		<description>Reverses the length of array</description>
+		<name>lengthArray</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			int lengthArray( java.lang.Object[] )
+		</function-signature>
+	</function>
+
+	<function>
+		<description>truncate the string</description>
+		<name>truncateString</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			java.lang.String truncateString(java.lang.String , int, int)
+		</function-signature>
+	</function>
+
+	<function>
+		<description>format</description>
+		<name>formatNum</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			java.lang.String formatNum(double)
+		</function-signature>
+	</function>
+
+	<function>
+		<description>getValue</description>
+		<name>getValue</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			java.lang.String getValue(int, java.lang.Object[])
+		</function-signature>
+	</function>
+	
+	<function>
+		<description>get</description>
+		<name>get</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			java.lang.String get(java.lang.String, int)
+		</function-signature>
+	</function>
+	
+	<function>
+		<description>auth</description>
+		<name>auth</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			boolean auth(com.center.china.osgi.publics.User, java.lang.String)
+		</function-signature>
+	</function>
+
+	<function>
+		<description>parserInt</description>
+		<name>parserInt</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			int parserInt(java.lang.String)
+		</function-signature>
+	</function>
+	
+	<function>
+		<description>show</description>
+		<name>show</name>
+		<function-class>
+			com.china.center.osgi.jsp.ElTools
+		</function-class>
+		<function-signature>
+			String show(java.lang.String, java.lang.String)
+		</function-signature>
+	</function>
+
+</taglib>

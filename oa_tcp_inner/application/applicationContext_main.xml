@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="tcpApplyDAO" class="com.china.center.oa.tcp.dao.impl.TcpApplyDAOImpl" />
+
+	<bean id="tcpPrepaymentDAO" class="com.china.center.oa.tcp.dao.impl.TcpPrepaymentDAOImpl" />
+
+	<bean id="tcpShareDAO" class="com.china.center.oa.tcp.dao.impl.TcpShareDAOImpl" />
+
+	<bean id="travelApplyDAO" class="com.china.center.oa.tcp.dao.impl.TravelApplyDAOImpl" />
+
+	<bean id="travelApplyItemDAO" class="com.china.center.oa.tcp.dao.impl.TravelApplyItemDAOImpl" />
+
+	<bean id="travelApplyPayDAO" class="com.china.center.oa.tcp.dao.impl.TravelApplyPayDAOImpl" />
+
+	<bean id="tcpFlowDAO" class="com.china.center.oa.tcp.dao.impl.TcpFlowDAOImpl" />
+
+	<bean id="travelApplyManager" class="com.china.center.oa.tcp.manager.impl.TravelApplyManagerImpl" />
+
+	<bean id="tcpApproveDAO" class="com.china.center.oa.tcp.dao.impl.TcpApproveDAOImpl" />
+
+	<bean id="tcpFlowManager" class="com.china.center.oa.tcp.manager.impl.TcpFlowManagerImpl" />
+
+	<bean id="tcpHandleHisDAO" class="com.china.center.oa.tcp.dao.impl.TcpHandleHisDAOImpl" />
+
+	<bean id="expenseApplyDAO" class="com.china.center.oa.tcp.dao.impl.ExpenseApplyDAOImpl" />
+
+	<bean id="expenseManager" class="com.china.center.oa.tcp.manager.impl.ExpenseManagerImpl" />
+
+	<bean id="rebateApplyDAO" class="com.china.center.oa.tcp.dao.impl.RebateApplyDAOImpl" />
+	<bean id="outBatchPriceDAO" class="com.china.center.oa.tcp.dao.impl.OutBatchPriceDAOImpl" />
+	
+	<bean id="rebateManager" class="com.china.center.oa.tcp.manager.impl.RebateManagerImpl" />
+	
+	<bean id="preInvoiceManager" class="com.china.center.oa.tcp.manager.impl.PreInvoiceManagerImpl" />
+	
+	<bean id="backPrePayManager" class="com.china.center.oa.tcp.manager.impl.BackPrePayManagerImpl" />
+</beans>

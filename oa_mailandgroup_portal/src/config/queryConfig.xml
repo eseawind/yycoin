@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	<item name="queryMail" deaultpfix="MailBean">
+		<condtion name="alogTime" filed="logTime" caption="开始时间">
+			<opr>&gt;=</opr>
+			<type>date</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="结束时间">
+			<opr>&lt;=</opr>
+			<type>date</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="title" caption="标题">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="senderId" caption="发送人">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$staffer</option>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$mailStatus</option>
+		</condtion>
+		<condtion name="feeback" caption="是否回复">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$mailFeeback</option>
+		</condtion>
+		<condtion name="attachment" caption="是否有附件">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$mailAttachment</option>
+		</condtion>
+	</item>
+
+	<item name="queryMail2" deaultpfix="MailBean2">
+		<condtion name="alogTime" filed="logTime" caption="开始时间">
+			<opr>&gt;=</opr>
+			<type>date</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="结束时间">
+			<opr>&lt;=</opr>
+			<type>date</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="title" caption="标题">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="attachment" caption="是否有附件">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$mailAttachment</option>
+		</condtion>
+	</item>
+	
+	<item name="queryGroup" deaultpfix="GroupBean">
+        <condtion name="name" caption="名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryPublicGroup" alias="queryGroup"/>
+    
+    <item name="querySystemGroup" alias="queryGroup"/>
+
+</query>

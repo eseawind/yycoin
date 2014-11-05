@@ -1,0 +1,20 @@
+<component name="libraryTable">
+  <library name="lib1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/stax-utils-snapshot-20040917.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/activation.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/jaxen-1.1-beta-9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/antlr.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/stax-api-1.0.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/XmlSchema-1.0.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/wstx-asl-2.9.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/asm-2.2.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/jsr173_1.0_ri.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/wsdl4j-1.5.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/backport-util-concurrent-3.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/config/configuration_ext/org.eclipse.osgi/bundles/15/1/.cp/WEB-INF/lib/xfire-all-1.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

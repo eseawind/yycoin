@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>   
+
+    <item name="queryCommission" deaultpfix="CommissionMonthBean">
+        <condtion name="month" caption="月份">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        
+    </item>
+    
+    <item name="querySelfCommission" deaultpfix="CommissionBean">
+        <condtion name="month" caption="月份">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        
+    </item>
+    
+    <item name="queryBlackRule" deaultpfix="BlackRuleBean">
+        <condtion name="type" caption="类型">
+			<opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$blackType</option>
+        </condtion>
+        
+    </item>
+    
+    <item name="queryBlack" deaultpfix="BlackBean">
+        <condtion name="sname" filed="name" caption="职员" pfix= "StafferBean">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+        </condtion>
+        <condtion name="credit" caption="信用属性">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$stafferBlack</option>
+        </condtion>
+        <condtion name="industryName" filed="name" caption="事业部名称" pfix= "PrincipalshipBean">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+        </condtion>
+    </item>
+    
+    <item name="queryHisBlack" deaultpfix="HisBlackBean">
+    	<condtion name="logDate" caption="生成日期">
+            <opr>=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="sname" filed="name" caption="职员" pfix= "StafferBean">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+        </condtion>
+        <condtion name="credit" caption="信用属性">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$stafferBlack</option>
+        </condtion>
+        <condtion name="industryName" filed="name" caption="事业部名称" pfix= "PrincipalshipBean">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+        </condtion>
+    </item>
+    
+    <item name="queryExternalStaffer" deaultpfix="ExternalStafferYearBean">
+        <condtion name="stafferName" caption="职员" >
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+        </condtion>
+        
+    </item>
+    
+    <item name="queryExternalAssess" deaultpfix="ExternalAssessBean">        
+        <condtion name="month" caption="月份">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+        </condtion>
+        <condtion name="sname" filed="name" caption="职员" pfix= "StafferBean">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+        </condtion>
+    </item>
+    
+</query>

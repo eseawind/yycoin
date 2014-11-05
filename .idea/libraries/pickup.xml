@@ -1,0 +1,54 @@
+<component name="libraryTable">
+  <library name="pickup">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.commission.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.flow.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.tax.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.customervssail.glue_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.product.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.product.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.sail.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.stock.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.customer.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.finance.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.publics.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.budget.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.project.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.flow.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.flow.manager.dy_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.project.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.sail.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.tcp.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.customerservice.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.publics.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.mailgroup.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.tcp.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.commission.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.budget.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.tax.glue_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.openservice.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.finance.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.stockvssail.glue_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.tax.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.customerservice.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.project.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.customerservice.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.customer.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.mailgroup.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.stock.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.tax.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.tcp.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.commission.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.product.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.finance.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.stock.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.sail.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.budget.portal_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.note.manager_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.customer.inner_1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/pickup/com.china.center.oa.publics.manager_1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

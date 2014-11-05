@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+
+	<osgi:service ref="projectDAO" interface="com.china.center.oa.project.dao.ProjectDAO" />
+	
+	<osgi:service ref="agreementDAO" interface="com.china.center.oa.project.dao.AgreementDAO" />
+	
+	<osgi:service ref="proLineProjectDAO" interface="com.china.center.oa.project.dao.ProLineProjectDAO" />
+	
+	<osgi:service ref="payLineProjectDAO" interface="com.china.center.oa.project.dao.PayLineProjectDAO" />
+	
+	<osgi:service ref="tranLineProjectDAO" interface="com.china.center.oa.project.dao.TranLineProjectDAO" />
+	
+	<osgi:service ref="invoiceLineProjectDAO" interface="com.china.center.oa.project.dao.InvoiceLineProjectDAO" />
+	
+	<osgi:service ref="stafferProjectDAO" interface="com.china.center.oa.project.dao.StafferProjectDAO" />
+	
+	<osgi:service ref="taskDAO" interface="com.china.center.oa.project.dao.TaskDAO" />
+	
+	<osgi:service ref="projectHandleHisDAO" interface="com.china.center.oa.project.dao.ProjectHandleHisDAO" />
+	
+	<osgi:service ref="taskManager" interface="com.china.center.oa.project.manager.TaskManager" />
+	
+	<osgi:service ref="agreementManager" interface="com.china.center.oa.project.manager.AgreementManager" />
+	
+	<osgi:service ref="proLineProjectManager" interface="com.china.center.oa.project.manager.ProLineProjectManager" />
+	
+	<osgi:service ref="payLineProjectManager" interface="com.china.center.oa.project.manager.PayLineProjectManager" />
+	
+	<osgi:service ref="tranLineProjectManager" interface="com.china.center.oa.project.manager.TranLineProjectManager" />
+	
+	<osgi:service ref="stafferProjectManager" interface="com.china.center.oa.project.manager.StafferProjectManager" />
+	
+	<osgi:service ref="projectManager" interface="com.china.center.oa.project.manager.ProjectManager" />
+	
+	<osgi:service ref="invoiceLineProjectManager" interface="com.china.center.oa.project.manager.InvoiceLineProjectManager" />
+	
+	<osgi:service ref="projectApplyDAO" interface="com.china.center.oa.project.dao.ProjectApplyDAO" />
+	
+	<osgi:service ref="projectFlowDAO" interface="com.china.center.oa.project.dao.ProjectFlowDAO" />
+	
+	<osgi:service ref="projectApproveDAO" interface="com.china.center.oa.project.dao.ProjectApproveDAO" />
+
+	<osgi:service ref="taskMailPlanDAO" interface="com.china.center.oa.project.dao.TaskMailPlanDAO" />
+
+</beans>

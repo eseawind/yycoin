@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/ex 
+  	  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="groupDAO" class="com.china.center.oa.group.dao.impl.GroupDAOImpl" />
+
+	<bean id="groupVSStafferDAO" class="com.china.center.oa.group.dao.impl.GroupVSStafferDAOImpl" />
+
+	<bean id="groupManager" class="com.china.center.oa.group.manager.impl.GroupManagerImpl" />
+
+	<bean id="attachmentDAO" class="com.china.center.oa.mail.dao.impl.AttachmentDAOImpl" />
+
+	<bean id="mailDAO2" class="com.china.center.oa.mail.dao.impl.MailDAO2Impl" />
+
+	<bean id="mailDAO" class="com.china.center.oa.mail.dao.impl.MailDAOImpl" />
+
+	<bean id="mailMangaer" class="com.china.center.oa.mail.manager.impl.MailMangaerImpl" />
+
+	<bean id="mailGroupFacade" class="com.china.center.oa.mg.facade.impl.MailGroupFacadeImpl" />
+	
+	<bean id="mailCleanManager" class="com.china.center.oa.mail.manager.impl.MailCleanManagerImpl">
+	   <property name="days">
+	       <value>-180</value>
+	   </property>
+	</bean>
+
+</beans>

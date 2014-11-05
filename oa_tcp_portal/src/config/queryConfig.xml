@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query namespace="tcp">
+	<item name="queryTcpPoolApprove" alias="queryTcpSelfApprove" />
+
+	<item name="querySelfTravelApply" deaultpfix="TravelApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+		<condtion name="stype" caption="系列">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStype</option>
+		</condtion>
+		<condtion name="borrow" caption="借款">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$travelApplyBorrow</option>
+		</condtion>
+		<condtion name="feedback" caption="报销">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpApplyFeedback</option>
+		</condtion>
+		<condtion name="compliance" caption="合规标志">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$tcpComplianceType</option>
+		</condtion>
+	</item>
+
+	<item name="queryVocationAndWorkTravelApply" deaultpfix="TravelApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+	</item>
+
+	<item name="queryAllTravelApply" deaultpfix="TravelApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferName" caption="申请人" pfix="StafferBean"
+			filed="name">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+		<condtion name="stype" caption="系列">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStype</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpType</option>
+		</condtion>
+		<condtion name="borrow" caption="借款">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$travelApplyBorrow</option>
+		</condtion>
+		<condtion name="feedback" caption="报销">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpApplyFeedback</option>
+		</condtion>
+		<condtion name="compliance" caption="合规标志">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$tcpComplianceType</option>
+		</condtion>
+	</item>
+
+	<item name="queryTcpSelfApprove" deaultpfix="TcpApproveBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="applyId" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="departmentName" filed="name" caption="部门"
+			pfix="PrincipalshipBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+		<condtion name="stype" caption="系列">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStype</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpType</option>
+		</condtion>
+		<condtion name="payType" caption="付款类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpPayType</option>
+		</condtion>
+		<condtion name="applyerId" filed="name" caption="申请人" pfix="APPLYER">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+
+	<item name="queryTcpHis" deaultpfix="TcpHandleHisBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="refId" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpType</option>
+		</condtion>
+		<condtion name="applyId" filed="name" caption="申请人" pfix="SB2">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+
+	<item name="querySelfExpense" deaultpfix="ExpenseApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="refId" caption="关联申请(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+		<condtion name="stype" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStype</option>
+		</condtion>
+		<condtion name="compliance" caption="合规标志">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$tcpComplianceType</option>
+		</condtion>
+	</item>
+
+	<item name="queryAllExpense" deaultpfix="ExpenseApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="refId" caption="关联申请(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferName" caption="申请人" pfix="StafferBean"
+			filed="name">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpType</option>
+		</condtion>
+		<condtion name="stype" caption="系列">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStype</option>
+		</condtion>
+		<condtion name="compliance" caption="合规标志">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$tcpComplianceType</option>
+		</condtion>
+	</item>
+
+	<item name="querySelfCommission" deaultpfix="CommissionApplyBean">
+		<condtion name="startTime" filed="startTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="endTime" filed="endTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$commissionStatus</option>
+		</condtion>
+		<condtion name="changeType" caption="变更类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$selChangeType</option>
+		</condtion>
+	</item>
+
+	<item name="querySelfPreInvoice" deaultpfix="PreInvoiceApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+	</item>
+
+	<item name="queryAllPreInvoice" deaultpfix="PreInvoiceApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferName" caption="申请人" pfix="StafferBean"
+			filed="name">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+	</item>
+
+	<item name="querySelfBackPrePay" deaultpfix="BackPrePayApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="customerName" caption="客户">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+	</item>
+
+	<item name="queryAllBackPrePay" deaultpfix="BackPrePayApplyBean">
+		<condtion name="alogTime" filed="logTime" caption="日期从">
+			<opr>&gt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="到">
+			<opr>&lt;=</opr>
+			<type>date</type>
+		</condtion>
+		<condtion name="id" caption="标识(A)">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="目的">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="customerName" caption="客户">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferName" caption="申请人" pfix="StafferBean"
+			filed="name">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$tcpStatus</option>
+		</condtion>
+	</item>
+
+</query>

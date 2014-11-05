@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+	
+	<osgi:service ref="feedBackDAO" interface="com.china.center.oa.customerservice.dao.FeedBackDAO" />
+
+	<osgi:service ref="feedBackCheckDAO" interface="com.china.center.oa.customerservice.dao.FeedBackCheckDAO" />
+	
+	<osgi:service ref="feedBackDetailDAO" interface="com.china.center.oa.customerservice.dao.FeedBackDetailDAO" />
+	
+	<osgi:service ref="feedBackVisitDAO" interface="com.china.center.oa.customerservice.dao.FeedBackVisitDAO" />
+
+	<osgi:service ref="feedBackVisitItemDAO" interface="com.china.center.oa.customerservice.dao.FeedBackVisitItemDAO" />
+
+	<osgi:service ref="feedBackVSOutDAO" interface="com.china.center.oa.customerservice.dao.FeedBackVSOutDAO" />
+	
+	<osgi:service ref="customerServiceManager" interface="com.china.center.oa.customerservice.manager.CustomerServiceManager" />
+	
+	<osgi:service ref="shortMessageDAO" interface="com.china.center.oa.customerservice.dao.ShortMessageDAO" />
+	
+	<osgi:service ref="shortMessageStatusDAO" interface="com.china.center.oa.customerservice.dao.ShortMessageStatusDAO" />
+	
+	<osgi:service ref="shortMessageManager" interface="com.china.center.oa.customerservice.manager.ShortMessageManager" />
+</beans>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="lib6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-uportal7956732188917624215.osgi/WEB-INF/lib/buffalo-2.0-osgi.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-uportal7956732188917624215.osgi/WEB-INF/lib/dtd.jar!/" />
+      <root url="jar://$PROJECT_DIR$/osgi/webapps/tomcat-uportal7956732188917624215.osgi/WEB-INF/lib/org.eclipse.osgi_3.3.2.R33x_v20080105.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

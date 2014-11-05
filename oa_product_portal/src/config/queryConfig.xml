@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	
+	<item name="queryProduct" deaultpfix="ProductBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$productStatus</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$productType</option>
+		</condtion>
+		<condtion name="abstractType" caption="虚拟产品">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$productAbstractType</option>
+		</condtion>
+		<condtion name="stockType" caption="库存模型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$productStockType</option>
+		</condtion>
+		<condtion name="reserve4" caption="管理类型">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$pubManagerType</option>
+        </condtion>
+        <condtion name="reserve5" caption="产品阶段">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$productStep</option>
+        </condtion>
+	</item>
+	
+	<item name="queryApplyProduct" deaultpfix="ProductBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryCheckProduct" deaultpfix="ProductBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryProvider" deaultpfix="ProviderBean">
+		<condtion name="name" caption="供应商名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="供应商编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="供应商类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$109</option>
+		</condtion>
+		<condtion name="location" caption="所属片区">
+            <opr>=</opr>
+            <type>select</type>
+            <option>$123</option>
+        </condtion>
+	</item>
+	
+	<item name="queryCheckHisProvider" deaultpfix="ProviderHisBean">
+		<condtion name="name" caption="供应商名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="供应商编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="供应商类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$109</option>
+		</condtion>
+	</item>
+	
+	<item name="queryDepot" deaultpfix="DepotBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$depotType</option>
+		</condtion>
+	</item>
+	
+	<item name="queryDepotpart" deaultpfix="DepotpartBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$depotpartType</option>
+		</condtion>
+		<condtion name="locationId" caption="仓库">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$depotList</option>
+		</condtion>
+	</item>
+	
+	<item name="queryStorage" deaultpfix="StorageBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="locationId" caption="仓库">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$depotList</option>
+		</condtion>
+		<condtion name="sname" filed="name" caption="仓区" pfix="DepotpartBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryStorageRelation" deaultpfix="StorageRelationBean">
+		<condtion name="name" caption="名称" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="dbname" filed="name" caption="仓库" pfix="DepotBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="dname" filed="name" caption="仓区" pfix="DepotpartBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="sname" filed="name" caption="储位" pfix="StorageBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferName" filed="name" caption="职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+		<condtion name="type" caption="类型" pfix="DepotpartBean">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$depotpartType</option>
+		</condtion>
+		<condtion name="stafferId" caption="私有">
+            <opr>&lt;&gt;</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$pubStaffer</option>
+        </condtion>
+        <condtion name="ctype" caption="合成属性" pfix="ProductBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$productCtype</option>
+        </condtion>
+        <condtion name="amount" caption="数量">
+            <opr>&gt;</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$storageAmountType</option>
+        </condtion>
+        <condtion name="amount1" filed="amount" caption="或数量">
+            <opr>&lt;=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$storageAmountType1</option>
+        </condtion>
+        
+	</item>
+		
+	<!-- <item name="queryPublicStorageRelation" alias="queryStorageRelation"/> -->
+		
+	<item name="queryPublicStorageRelation" deaultpfix="StorageRelationBean">
+		<condtion name="name" caption="名称" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="dbname" filed="name" caption="仓库" pfix="DepotBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="dname" filed="name" caption="仓区" pfix="DepotpartBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="sname" filed="name" caption="储位" pfix="StorageBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferName" filed="name" caption="职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+		<condtion name="type" caption="类型" pfix="DepotpartBean">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$depotpartType</option>
+		</condtion>
+		<condtion name="stafferId" caption="私有">
+            <opr>&lt;&gt;</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$pubStaffer</option>
+        </condtion>
+        <condtion name="ctype" caption="合成属性" pfix="ProductBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$productCtype</option>
+        </condtion>
+        
+	</item>
+	
+	<item name="queryDepotStorageRelation" deaultpfix="StorageRelationBean">
+        <condtion name="name" caption="名称" pfix="ProductBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="code" caption="编码" pfix="ProductBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="dname" filed="name" caption="仓区" pfix="DepotpartBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="sname" filed="name" caption="储位" pfix="StorageBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="type" caption="类型" pfix="DepotpartBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$depotpartType</option>
+        </condtion>
+        <condtion name="stafferId" caption="私有">
+            <opr>&lt;&gt;</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$pubStaffer</option>
+        </condtion>
+        <condtion name="ctype" caption="合成属性" pfix="ProductBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$productCtype</option>
+        </condtion>
+        <condtion name="amount" caption="数量">
+            <opr>&gt;</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$storageAmountType</option>
+        </condtion>
+        <condtion name="amount1" filed="amount" caption="或数量">
+            <opr>&lt;=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$storageAmountType1</option>
+        </condtion>
+    </item>
+    
+    <item name="queryMoveProduct" deaultpfix="ProductChangeRecordBean">
+        <condtion name="fid" filed="flowid" caption="批次号" >
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="moveStaffer" filed="name" caption="移交人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="oldStore" filed="name" caption="源仓区" pfix="DepotpartBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="newStore" filed="name" caption="新仓区" pfix="DepotpartBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+       <condtion name="beginTime" filed="moveTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="moveTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+    </item>
+	
+	<item name="querySelfStorageRelation" alias="queryStorageRelation"/>
+	
+	<item name="queryCompose" deaultpfix="ComposeProductBean">
+		<condtion name="id" caption="标识">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="pname" filed="name" caption="合成产品名称" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="pcode" filed="code" caption="合成产品编码" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferId" caption="合成人">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$staffer</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$composeType</option>
+		</condtion>
+		<condtion name="checkStatus" caption="核对">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+        <condtion name="mtype" caption="管理类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubManagerType</option>
+        </condtion>
+	</item>
+	
+	<item name="queryDecompose" deaultpfix="DecomposeProductBean">
+		<condtion name="id" caption="标识">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="pname" filed="name" caption="成品名称" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="pcode" filed="code" caption="成品编码" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferId" filed="name" caption="操作人" pfix="StafferBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryPriceChange" deaultpfix="PriceChangeBean">
+		<condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+		<condtion name="id" caption="标识">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$priceChangeStatus</option>
+		</condtion>
+		<condtion name="checkStatus" caption="核对">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+		<condtion name="stafferId" caption="调价人">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$staffer</option>
+		</condtion>
+		<condtion name="description" caption="原因">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryComposeFeeDefined" deaultpfix="ComposeFeeDefinedBean">
+        <condtion name="name" caption="名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryProductApply" deaultpfix="ProductApplyBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		
+	</item>
+	
+	<item name="queryPriceConfig" deaultpfix="PriceConfigBean">
+		<condtion name="name" caption="产品名称" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$priceConfigType</option>
+		</condtion>
+	</item>
+	
+	<item name="queryCiticProduct" deaultpfix="CiticVSOAProductBean">
+		<condtion name="productName" caption="OA产品名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="citicProductName" caption="中信产品名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+</query>

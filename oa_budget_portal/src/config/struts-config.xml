@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		 
+		 <action path="/budget/budget" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryBudget" path="/budget/queryBudget.jsp" />
+            <forward name="detailBudget"
+                path="/budget/detailBudget.jsp" />
+            <forward name="addBudget" path="/budget/addBudget.jsp" />
+            <forward name="updateFeeItem" path="/budget/addOrUpdateFeeItem.jsp" />
+            <forward name="queryFeeItem" path="/budget/queryBudgetItem.jsp" />
+            <forward name="rptQueryReference" path="/budget/rptQueryReference.jsp" />
+            <forward name="updateBudget" path="/budget/updateBudget.jsp" />
+            <forward name="updateBudget2" path="/budget/updateBudget2.jsp" />
+            <forward name="updateBudget3" path="/budget/updateBudget3.jsp" />
+            <forward name="queryBudgetApply" path="/budget/queryApplyBudget.jsp" />
+            <forward name="detailBudgetApply" path="/budget/detailBudgetApply.jsp" />
+            <forward name="detailBudgetLog" path="/budget/detailBudgetLog.jsp" />
+            <forward name="queryRunBudget" path="/budget/queryRunBudget.jsp" />
+            <forward name="queryAllBudgetLog" path="/budget/queryAllBudgetLog.jsp" />
+            <forward name="rptQueryRunDepartmentBudget" path="/budget/rptQueryRunDepartmentBudget.jsp" />
+            <forward name="rptQueryDepartmentYearBudget" path="/budget/rptQueryDepartmentYearBudget.jsp" />
+            <forward name="importBudget" path="/budget/importBudget.jsp" />
+            
+        </action>
+		
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="FinanceItemDAOImpl">
+
+    <!-- 查询指定时间内发生凭证的单位-->
+    <select id="queryDistinctUnitByStafferId" parameterClass="java.util.Map" resultClass="java.lang.String">
+        <![CDATA[
+            select distinct(t1.unitId) from T_CENTER_FINANCEITEM t1, T_CENTER_VS_STACUS t2 
+            where t1.unitId = t2.customerId 
+            and t2.stafferId = #stafferId# 
+            and t1.financeDate >= #beginDate# 
+            and t1.financeDate <= #endDate#
+        ]]>
+    </select>
+    
+     <!-- 查询指定时间内发生凭证的单位2-->
+    <select id="queryDistinctUnit" parameterClass="java.util.Map" resultClass="java.lang.String">
+        <![CDATA[
+            select distinct(t1.unitId) from T_CENTER_FINANCEITEM t1 
+            where t1.financeDate >= #beginDate# 
+            and t1.financeDate <= #endDate#
+        ]]>
+    </select>
+    
+     <!-- 查询指定时间内发生凭证的职员-->
+    <select id="queryDistinctStafferId" parameterClass="java.util.Map" resultClass="java.lang.String">
+        <![CDATA[
+            select distinct(t1.stafferId) from T_CENTER_FINANCEITEM t1
+            where t1.financeDate >= #beginDate# 
+            and t1.financeDate <= #endDate#
+        ]]>
+    </select>
+</sqlMap>

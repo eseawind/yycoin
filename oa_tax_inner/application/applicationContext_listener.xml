@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+	
+	<bean id="queryListenerTaxTypeImpl" class="com.china.center.oa.tax.listener.impl.QueryListenerTaxTypeImpl" />
+    
+    <bean id="defaultLoadQueryListener" class="com.china.center.oa.publics.listener.DefaultLoadQueryListener">
+        <property name="listenerList">
+            <list>
+                <ref bean="queryListenerTaxTypeImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="bankListenerTaxImpl" class="com.china.center.oa.tax.listener.impl.BankListenerTaxImpl" />
+    
+    <bean id="defaultLoadListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+		<property name="listenerManager">
+			<ref bean="bankManager"/>
+		</property>
+		<property name="listenerList">
+			<list>
+				<ref bean="bankListenerTaxImpl" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="composeProductListenerTaxImpl" class="com.china.center.oa.tax.listener.impl.ComposeProductRegisterP2PTaxImpl" />
+    
+    <bean id="registerMessageManager" class="com.china.center.oa.publics.message.RegisterMessageManager">
+        <property name="p2pList">
+            <list>
+                <ref bean="composeProductListenerTaxImpl" />
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="dutyListenerTaxImpl" class="com.china.center.oa.tax.listener.impl.DutyListenerTaxImpl" />
+    
+    <bean id="defaultLoadDutyListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+		<property name="listenerManager">
+			<ref bean="dutyManager"/>
+		</property>
+		<property name="listenerList">
+			<list>
+				<ref bean="dutyListenerTaxImpl" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="orgListenerTaxImpl" class="com.china.center.oa.tax.listener.impl.OrgListenerTaxImpl" />
+    
+    <bean id="defaultLoadOrgListener" class="com.center.china.osgi.publics.DefaultLoadListener">
+        <property name="listenerManager">
+            <ref bean="orgManager"/>
+        </property>
+        <property name="listenerList">
+            <list>
+                <ref bean="orgListenerTaxImpl" />
+            </list>
+        </property>
+    </bean>
+	
+</beans>

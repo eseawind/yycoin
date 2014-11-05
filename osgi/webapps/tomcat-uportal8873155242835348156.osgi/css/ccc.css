@@ -1,0 +1,121 @@
+@charset "gb2312";
+
+body,div,td {
+	padding: 0px;
+	margin: 0px;
+	font-size: 12px;
+	font-family: Verdana, Tahoma, Arial, "宋体";
+	line-height: 130%;
+    color: #181818;
+}
+input,select {
+	font-family: Verdana, Tahoma, Arial, "宋体";
+	font-size: 12px;
+	color:#181818;
+}
+.input {
+	border: 1px solid #ABABAB;
+	color:#181818;
+	width:100px;
+	height:18px;
+}
+
+.input11 {
+	border: 1px solid #ABABAB;
+	color:#181818;
+	width:50px;
+	height:18px;
+}
+a {
+	font-family: Tahoma,Verdana, Arial, 宋体 ;
+	color: #181818;
+}
+
+a:link {
+	color:#181818;
+	text-decoration: none;
+}
+a:visited {
+	color:#181818;
+	text-decoration: none;
+}
+a:hover {
+	color:#006BE3;
+	text-decoration: none;
+}
+a:active {
+	color:#006BE3;
+	text-decoration: none;
+
+}
+.button  {
+	color:#FFFFFF;
+	padding-top:1px;
+	width: 38px;
+	height: 18px;
+	border: 1px solid #ababab;
+	background-image:url(../images/login/button_bg.gif);
+	background-color: #FFFFFF;
+	background-repeat: repeat-x;
+	background-position: right center;
+}
+
+/*---------login----------*/
+.login_name {
+	padding-left: 6px;
+	padding-top: 30px;
+	width:156px;
+}
+.login_input {
+	color:#FFFFFF;
+	padding-right: 22px;
+	padding-top: 46px;
+	width:560px;
+}
+.login_bg {
+	color:#FFFFFF;
+	width:167px;
+	height:223px;
+	background-image: url(../images/login/login_bg.gif);
+	background-repeat: no-repeat;
+}
+.login_bg_1 {
+	color:#FFFFFF;
+	width:167px;
+	height:223px;
+	background-image: url(../images/login/xxcjpt.gif);
+	background-repeat: no-repeat;
+}.login_bg_2 {
+	color:#FFFFFF;
+	width:167px;
+	height:223px;
+	background-image: url(../images/login/zwxxfbpt.gif);
+	background-repeat: no-repeat;
+}
+.login_bg_3{
+	color:#FFFFFF;
+	width:167px;
+	height:223px;
+	background-image: url(../images/login/xxglpt.gif);
+	background-repeat: no-repeat;
+}
+.pic {
+      padding:0px 0px 65px 0px;
+}
+/*---------welcome----------*/
+.text_link_12px {
+	color:#FFFFFF;
+	padding-right: 10px;
+	font-family: Verdana, Tahoma, Arial, "宋体";
+	font-size: 12px;
+	white-space: nowrap;
+	padding-top: 4px;
+	padding-right: 15px;
+}
+.text_link_12px a.link, .text_link_12px a:visited {
+	color:#FFFFFF;
+}
+.text_link_12px a:hover{
+	color:#FFFFFF;
+	text-decoration: underline;
+}

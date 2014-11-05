@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+
+	<osgi:reference id="transactionManager"
+		interface="org.springframework.transaction.PlatformTransactionManager" />
+
+	<osgi:reference id="jdbcOperation"
+		interface="com.china.center.jdbc.inter.JdbcOperation" />
+
+	<osgi:reference id="dataSource" interface="javax.sql.DataSource" />
+
+	<osgi:reference id="convertEncode"
+		interface="com.china.center.jdbc.inter.Convert" />
+		
+	<osgi:reference id="exceptionalManager"
+		interface="org.china.center.spring.ex.annotation.ExceptionalManager" />
+		
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+	
+	<osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="userDAO" interface="com.china.center.oa.publics.dao.UserDAO" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<osgi:reference id="processShortMessage" interface="com.china.center.oa.note.manager.ProcessShortMessage" />
+	
+	<osgi:reference id="shortMessageTaskDAO" interface="com.china.center.oa.note.dao.ShortMessageTaskDAO" />
+	
+	<osgi:reference id="shortMessageTaskHisDAO" interface="com.china.center.oa.note.dao.ShortMessageTaskHisDAO" />
+	
+	<osgi:reference id="flowInstanceManager" interface="com.china.center.oa.flow.manager.FlowInstanceManager" />
+	
+	<osgi:reference id="flowInstanceDAO" interface="com.china.center.oa.flow.dao.FlowInstanceDAO" />
+</beans>

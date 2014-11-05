@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		<action path="/finance/bank" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="addBank" path="/bank/addBank.jsp" />
+            <forward name="addPayment" path="/bank/addPayment.jsp" />
+            <forward name="updateBank" path="/bank/updateBank.jsp" />
+            <forward name="queryBank" path="/bank/queryBank.jsp" />
+            <forward name="rptQueryBank" path="/bank/rptQueryBank.jsp" />
+            <forward name="uploadPayment" path="/bank/uploadPayment.jsp" />
+            <forward name="detailPayment" path="/bank/detailPayment.jsp" />
+            <forward name="drawPayment" path="/bank/drawPayment.jsp" />
+            <forward name="drawPayment2" path="/bank/drawPayment2.jsp" />
+            <forward name="querySelfPayment" path="/bank/querySelfPayment.jsp" />
+            <forward name="detailPaymentApply" path="/bank/detailPaymentApply.jsp" />
+            <forward name="handlePaymentApply" path="/bank/handlePaymentApply.jsp" />
+            <forward name="queryPaymentApply" path="/bank/queryPaymentApply.jsp" />
+            <forward name="queryPaymentApplyCheck" path="/bank/queryPaymentApplyCheck.jsp" />
+            <forward name="queryPayment" path="/bank/queryPayment.jsp" />
+            <forward name="querySelfPaymentApply" path="/bank/querySelfPaymentApply.jsp" />
+            <forward name="refBill" path="/bank/refBill.jsp" />
+            <forward name="drawPayment5" path="/bank/drawPayment5.jsp" />
+            <forward name="querySelfInBill" path="/bill/querySelfInBill.jsp" />
+            <forward name="querySelfCustomerInBill" path="/bill/querySelfCustomerInBill.jsp" />
+            <forward name="drawPayment6" path="/bank/drawPayment6.jsp" />
+            <forward name="batchSplitInBill" path="/bank/batchSplitInBill.jsp" />
+            <forward name="drawTransfer" path="/bank/drawTransfer.jsp" />
+            <forward name="drawProvider" path="/bank/drawProvider.jsp" />
+            
+        </action>
+        
+        <action path="/finance/invoiceins" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="addInvoiceins" path="/invoiceins/addInvoiceins.jsp" />
+            <forward name="addInvoiceins2" path="/invoiceins/addInvoiceins2.jsp" />
+            <forward name="navigationAddInvoiceins1" path="/invoiceins/navigationAddInvoiceins1.jsp" />
+            <forward name="navigationAddInvoiceins2" path="/invoiceins/navigationAddInvoiceins2.jsp" />
+            <forward name="queryInvoiceins" path="/invoiceins/queryInvoiceins.jsp" />
+            <forward name="detailInvoiceins" path="/invoiceins/detailInvoiceins.jsp" />
+            <forward name="navigationUpdateInvoiceins1" path="/invoiceins/navigationUpdateInvoiceins1.jsp" />
+            <forward name="detailInvoiceinsException" path="/invoiceins/detailInvoiceinsException.jsp" />
+            <forward name="importInvoice" path="/invoiceins/importInvoice.jsp" />
+            <forward name="querySelfInvoice" path="/invoiceins/querySelfInvoice.jsp" />
+            <forward name="refConfirmInvoice" path="/invoiceins/refConfirmInvoice.jsp" />
+            <forward name="refInvoice" path="/invoiceins/refInvoice.jsp" />
+            <forward name="importInvoiceins" path="/invoiceins/importInvoiceins.jsp" />
+            <forward name="queryInsImportLog" path="/invoiceins/queryInsImportLog.jsp" />
+            <forward name="queryInvoiceinsImport" path="/invoiceins/queryInvoiceinsImport.jsp" />
+            <forward name="importInvoiceinsForCheck" path="/invoiceins/importInvoiceinsForCheck.jsp" />
+            <forward name="batchUpdateInsNum" path="/invoiceins/batchUpdateInsNum.jsp" />
+        </action>
+        
+        <action path="/finance/bill" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryInBill" path="/bill/queryInBill.jsp" />
+            <forward name="addInBill" path="/bill/addInBill.jsp" />
+            <forward name="detailInBill" path="/bill/detailInBill.jsp" />
+            <forward name="queryOutBill" path="/bill/queryOutBill.jsp" />
+            <forward name="addOutBill" path="/bill/addOutBill.jsp" />
+            <forward name="detailOutBill" path="/bill/detailOutBill.jsp" />            
+            <forward name="queryTabInBillAndOutBill" path="/bill/queryTabInBillAndOutBill.jsp" />
+            <forward name="rptQueryOutBill" path="/bill/rptQueryOutBill.jsp" />
+            <forward name="rptQueryInBill" path="/bill/rptQueryInBill.jsp" />
+        </action>
+        
+        <action path="/finance/stock" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryStockPayApply" path="/stockapply/queryStockPayApply.jsp" />
+            <forward name="queryCEOStockPayApply" path="/stockapply/queryCEOStockPayApply.jsp" />
+            <forward name="queryWarnStockPayApply" path="/stockapply/queryWarnStockPayApply.jsp" />
+            <forward name="detailStockPayApply" path="/stockapply/detailStockPayApply.jsp" />
+            <forward name="handleStockPayApply" path="/stockapply/handleStockPayApply.jsp" />
+            <forward name="queryWarnCEOStockPayApply" path="/stockapply/queryWarnCEOStockPayApply.jsp" />
+            
+            <forward name="addStockPrePayApply" path="/stockpreapply/addStockPrePayApply.jsp" />
+            <forward name="updateStockPrePayApply" path="/stockpreapply/updateStockPrePayApply.jsp" />
+            <forward name="queryStockPrePayApply" path="/stockpreapply/queryStockPrePayApply.jsp" />
+            <forward name="queryCEOStockPrePayApply" path="/stockpreapply/queryCEOStockPrePayApply.jsp" />
+            <forward name="detailStockPrePayApply" path="/stockpreapply/detailStockPrePayApply.jsp" />
+            <forward name="handleStockPrePayApply" path="/stockpreapply/handleStockPrePayApply.jsp" />
+            <forward name="refStockPrePay" path="/stockpreapply/refStockPrePay.jsp" />
+            <forward name="refConfirmInvoice" path="/invoiceins/refConfirmInvoice.jsp" />
+        </action>
+        
+         <action path="/finance/backpay" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryBackPayApply" path="/backpay/queryBackPayApply.jsp" />
+            <forward name="handleBackPayApply" path="/backpay/handleBackPayApply.jsp" />
+            <forward name="queryOut" path="/sail/out.do?method=queryOut" />
+        </action>
+		
+	</action-mappings>
+</struts-config>

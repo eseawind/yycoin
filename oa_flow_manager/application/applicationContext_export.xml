@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+	
+	<osgi:service ref="flowBelongDAO" interface="com.china.center.oa.flow.dao.FlowBelongDAO" />
+
+	<osgi:service ref="flowDefineDAO" interface="com.china.center.oa.flow.dao.FlowDefineDAO" />
+
+	<osgi:service ref="flowInstanceDAO" interface="com.china.center.oa.flow.dao.FlowInstanceDAO" />
+
+	<osgi:service ref="flowInstanceLogDAO" interface="com.china.center.oa.flow.dao.FlowInstanceLogDAO" />
+
+	<osgi:service ref="flowInstanceViewDAO" interface="com.china.center.oa.flow.dao.FlowInstanceViewDAO" />
+
+	<osgi:service ref="flowTokenDAO" interface="com.china.center.oa.flow.dao.FlowTokenDAO" />
+
+	<osgi:service ref="flowViewerDAO" interface="com.china.center.oa.flow.dao.FlowViewerDAO" />
+
+	<osgi:service ref="flowVSTemplateDAO" interface="com.china.center.oa.flow.dao.FlowVSTemplateDAO" />
+
+	<osgi:service ref="instanceTemplateDAO" interface="com.china.center.oa.flow.dao.InstanceTemplateDAO" />
+
+	<osgi:service ref="templateFileDAO" interface="com.china.center.oa.flow.dao.TemplateFileDAO" />
+
+	<osgi:service ref="tokenVSHanderDAO" interface="com.china.center.oa.flow.dao.TokenVSHanderDAO" />
+
+	<osgi:service ref="tokenVSOperationDAO" interface="com.china.center.oa.flow.dao.TokenVSOperationDAO" />
+
+	<osgi:service ref="tokenVSTemplateDAO" interface="com.china.center.oa.flow.dao.TokenVSTemplateDAO" />
+
+	<osgi:service ref="flowInstanceManager" interface="com.china.center.oa.flow.manager.FlowInstanceManager" />
+
+	<osgi:service ref="pluginManager" interface="com.china.center.oa.flow.manager.PluginManager" />
+
+	<osgi:service ref="templateFileManager" interface="com.china.center.oa.flow.manager.TemplateFileManager" />
+
+	<osgi:service ref="flowManager" interface="com.china.center.oa.flow.manager.FlowManager" />
+
+	<osgi:service ref="workFlowFacade" interface="com.china.center.oa.flow.facade.WorkFlowFacade" />
+
+</beans>

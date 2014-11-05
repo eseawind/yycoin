@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<comment>SYSTEM CONFIG</comment>
+	<entry key="db_name">uportal</entry>
+	<entry key="jdbc.username">uportal</entry>
+	<entry key="jdbc.password">Qwerty123789</entry>
+	<entry key="templateFilePath">d:/oa_attachment/flow/template</entry>
+	<entry key="instanceAttachmentRoot">d:/oa_attachment/flow/instance</entry>
+	<entry key="makeAttachmentRoot">d:/oa_attachment/flow/make</entry>
+	<entry key="instanceReadonlyAttachmentRoot">d:/oa_attachment/readonlyflow/instance</entry>
+	<entry key="flowAtt">d:/oa_attachment/flowAtt</entry>
+	<entry key="systemAtt">d:/oa_attachment/flow</entry>
+	<entry key="mailAttchmentPath">d:/oa_attachment/mail</entry>
+	<entry key="tcpAttachmentPath">d:/oa_attachment/tcp</entry>
+	<entry key="backPrePayAttachmentPath">d:/oa_attachment/backprepay</entry>
+	<entry key="outBackAttachmentPath">d:/oa_attachment/outback</entry>	
+	<entry key="invoiceinsAttachmentPath">d:/oa_attachment/invoiceins</entry>
+	<entry key="outAttachmentPath">d:/oa_attachment/outAttachment</entry>	
+	<entry key="productStore">d:/oa_attachment/product</entry>
+	<entry key="stafferCreditStore">d:/oa_attachment/stafferCredit</entry>
+	<entry key="bankStore">d:/oa_attachment/bank</entry>
+	<entry key="script">D:/oa_attachment/script</entry>
+	<entry key="picPath">D:/oa_attachment/picPath</entry>
+	<entry key="feedbackCheck">D:/oa_attachment/feedbackCheck</entry>
+	<entry key="db_bak">d:/oa_db_bak</entry>
+	<entry key="froot">D:/oa_attachment/oa_froot</entry>
+	<entry key="root_path">D:/oa_attachment</entry>
+	<entry key="mysql_root">D:/Program Files/MySQL/MySQL Server 5.5/bin</entry>
+	<entry key="picServerName">pic</entry>
+	<entry key="editServerName">webdav</entry>
+	<entry key="readonlyServerName">webdav2</entry>
+	<entry key="businessManagerId">14</entry>
+	<entry key="internal">300000</entry>
+	<entry key="exNumber">6000324</entry>
+	<entry key="sendSMSURL">http://127.0.0.1:8888/uportal/admin/index.jsp?MobilePhones=%s&amp;Content=%s&amp;MessageFlag=%s&amp;ModuleName=WebSms&amp;pwdpwd=yyoaCC&amp;ExNumber=%s</entry>
+	<entry key="version">V5.01.20120301</entry>
+</properties>

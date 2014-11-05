@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/ex 
+  	  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<bean id="allProfitDAO" class="com.china.center.oa.commission.dao.impl.AllProfitDAOImpl" />
+
+	<bean id="badDropAssessDAO" class="com.china.center.oa.commission.dao.impl.BadDropAssessDAOImpl" />
+	
+	<bean id="commissionDAO" class="com.china.center.oa.commission.dao.impl.CommissionDAOImpl" />
+	
+	<bean id="commissionLogDAO" class="com.china.center.oa.commission.dao.impl.CommissionLogDAOImpl" />
+
+	<bean id="commissionMonthDAO" class="com.china.center.oa.commission.dao.impl.CommissionMonthDAOImpl" />
+	
+	<bean id="curFeeDAO" class="com.china.center.oa.commission.dao.impl.CurFeeDAOImpl" />
+	
+	<bean id="curMoneyDAO" class="com.china.center.oa.commission.dao.impl.CurMoneyDAOImpl" />
+	
+	<bean id="curProfitDAO" class="com.china.center.oa.commission.dao.impl.CurProfitDAOImpl" />
+	
+	<bean id="deductionTurnDAO" class="com.china.center.oa.commission.dao.impl.DeductionTurnDAOImpl" />
+	
+	<bean id="externalAssessDAO" class="com.china.center.oa.commission.dao.impl.ExternalAssessDAOImpl" />
+	
+	<bean id="externalStafferYearDAO" class="com.china.center.oa.commission.dao.impl.ExternalStafferYearDAOImpl" />
+	
+	<bean id="financeFeeStatsDAO" class="com.china.center.oa.commission.dao.impl.FinanceFeeStatsDAOImpl" />
+	
+	<bean id="financeFeeResultDAO" class="com.china.center.oa.commission.dao.impl.FinanceFeeResultDAOImpl" />
+		
+	<bean id="commissionManager" class="com.china.center.oa.commission.manager.impl.CommissionManagerImpl" />
+	
+	<bean id="curFeeDetailDAO" class="com.china.center.oa.commission.dao.impl.CurFeeDetailDAOImpl" />
+	
+	<bean id="curMoneyDetailDAO" class="com.china.center.oa.commission.dao.impl.CurMoneyDetailDAOImpl" />
+	
+	<bean id="financeFeeStatsDetailDAO" class="com.china.center.oa.commission.dao.impl.FinanceFeeStatsDetailDAOImpl" />
+	
+	<bean id="badDropAssessDetailDAO" class="com.china.center.oa.commission.dao.impl.BadDropAssessDetailDAOImpl" />
+	
+	<bean id="commissionFacade" class="com.china.center.oa.commission.facade.impl.CommissionFacadeImpl" />
+	
+	<bean id="blackRuleDAO" class="com.china.center.oa.commission.dao.impl.BlackRuleDAOImpl" />
+	
+	<bean id="blackRuleProductDAO" class="com.china.center.oa.commission.dao.impl.BlackRuleProductDAOImpl" />
+	
+	<bean id="blackRuleStafferDAO" class="com.china.center.oa.commission.dao.impl.BlackRuleStafferDAOImpl" />
+	
+	<bean id="reDateRuleDAO" class="com.china.center.oa.commission.dao.impl.ReDateRuleDAOImpl" />
+	
+	<bean id="blackManager" class="com.china.center.oa.commission.manager.impl.BlackManagerImpl" />
+	
+	<bean id="outPayChangedDAO" class="com.china.center.oa.commission.dao.impl.OutPayChangedDAOImpl" />
+	
+	<bean id="commissionFreezeDAO" class="com.china.center.oa.commission.dao.impl.CommissionFreezeDAOImpl" />
+	
+	<bean id="blackDAO" class="com.china.center.oa.commission.dao.impl.BlackDAOImpl" />
+	
+	<bean id="blackOutDAO" class="com.china.center.oa.commission.dao.impl.BlackOutDAOImpl" />
+	
+	<bean id="blackOutDetailDAO" class="com.china.center.oa.commission.dao.impl.BlackOutDetailDAOImpl" />
+	
+	<bean id="hisBlackDAO" class="com.china.center.oa.commission.dao.impl.HisBlackDAOImpl" />
+	
+	<bean id="hisBlackOutDAO" class="com.china.center.oa.commission.dao.impl.HisBlackOutDAOImpl" />
+	
+	<bean id="hisBlackOutDetailDAO" class="com.china.center.oa.commission.dao.impl.HisBlackOutDetailDAOImpl" />
+	
+</beans>

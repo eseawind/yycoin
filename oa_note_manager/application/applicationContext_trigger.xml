@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-destroy-method="destroy">
+	
+     <bean id="synReceiveToSendJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="noteManager" />
+        <property name="targetMethod" value="synReceiveToSend" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="synReceiveToSendTrigger"
+        class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="synReceiveToSendJob" />
+        <property name="startDelay" value="60000" />
+        <property name="repeatInterval" value="30000" />
+    </bean>
+    
+     <bean id="handleMessageJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="processShortMessage" />
+        <property name="targetMethod" value="handleMessage" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="handleMessageTrigger"
+        class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="handleMessageJob" />
+        <property name="startDelay" value="30000" />
+        <property name="repeatInterval" value="15000" />
+    </bean>
+    
+    <bean id="sendMessageJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="sendMessageManager" />
+        <property name="targetMethod" value="sendShortMessage" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="sendMessageTrigger"
+        class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="sendMessageJob" />
+        <property name="startDelay" value="30000" />
+        <property name="repeatInterval" value="15000" />
+    </bean>
+    
+    <bean id="changeInitToWaitSendJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="noteManager" />
+        <property name="targetMethod" value="changeInitToWaitSend" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="changeInitToWaitSendTrigger"
+        class="org.springframework.scheduling.quartz.SimpleTriggerBean">
+        <property name="jobDetail" ref="changeInitToWaitSendJob" />
+        <property name="startDelay" value="30000" />
+        <property name="repeatInterval" value="15000" />
+    </bean>
+    
+    <bean
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="synReceiveToSendTrigger" />
+				<ref bean="handleMessageTrigger" />
+				<ref bean="sendMessageTrigger" />
+				<ref bean="changeInitToWaitSendTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

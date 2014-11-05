@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		 <action path="/flow/flow" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryFlowDefine" path="/flow/queryFlowDefine.jsp" />
+            <forward name="updateFlowDefine" path="/flow/updateFlowDefine.jsp" />
+            <forward name="detailFlowDefine" path="/flow/detailFlowDefine.jsp" />
+            <forward name="configToken" path="/flow/configToken.jsp" />
+            <forward name="configView" path="/flow/configView.jsp" />
+        </action>
+        
+         <action path="/flow/instance" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryFlowDefine2" path="/flow/queryFlowDefine2.jsp" />
+            <forward name="queryFlowInstance" path="/flow/queryFlowInstance.jsp?operation=0" />
+            <forward name="queryFlowInstance2" path="/flow/queryFlowInstance.jsp?operation=1" />
+            <forward name="addFlowInstance" path="/flow/addFlowInstance.jsp" />
+            <forward name="handleFlowInstance" path="/flow/handleFlowInstance.jsp" />
+            <forward name="detailFlowInstance" path="/flow/detailFlowInstance.jsp" />
+        </action>
+        
+        <action path="/flow/template" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryTemplateFile" path="/flow/queryTemplateFile.jsp" />
+            <forward name="detailTemplateFile" path="/flow/detailTemplateFile.jsp" />
+            <forward name="updateTemplateFile" path="/flow/updateTemplateFile.jsp" />
+            <forward name="rptQueryTemplateFile" path="/flow/rptQueryTemplateFile.jsp" />
+        </action>
+        
+	</action-mappings>
+</struts-config>

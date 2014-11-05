@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<project name="OA" default="doc">
+	<property name="OA.home" value="." />
+	<!-- 源jsp文件地址 -->
+	<property name="jsp.dir" value="${OA.home}/webroot" />
+	<!-- 源java文件地址 -->
+	<property name="java.dir" value="${OA.home}/src" />
+	<!-- 源lib文件地址 -->
+	<property name="libs.dir" value="D:/workspace_eclipse-SDK-3.3.2-win32_2/jar_depend" />
+	<!-- 源配置文件地址 -->
+	<property name="config.dir" value="${OA.home}/application" />
+
+	<!-- 最终发布文件地址 -->
+	<property name="dist.dir" value="${OA.home}/dist" />
+	<!-- 最终webroot文件地址 -->
+	<!--<property name="webroot.dir" value="${OA.home}/dist/webroot" /> -->
+	<!-- 最终application文件地址 -->
+	<property name="application.dir" value="${OA.home}/dist/application" />
+	<!-- 最终META-INF文件地址 -->
+	<property name="meta.dir" value="${OA.home}/dist/META-INF" />
+	<!-- 最终jar文件地址 -->
+	<property name="jar.dir" value="D:/workspace_eclipse-SDK-3.3.2-win32_2/jar_depend/pickup" />
+
+	<!--jar包名称-->
+	<property name="jar.name" value="com.china.center.oa.tax.manager_1.0.0" />
+
+	<property name="lib.dir" value="lib" />
+	<property name="dist.dir" value="dist" />
+	<property name="doc.dir" value="doc" />
+
+	<!-- 定义classpath -->
+	<path id="master-classpath">
+		<fileset dir="${libs.dir}">
+			<include name="**/*.jar" />
+		</fileset>
+	</path>
+	<!-- 初始化 -->
+	<target name="init">
+		<delete dir="${dist.dir}" />
+		<mkdir dir="${jar.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<mkdir dir="${application.dir}" />
+		<mkdir dir="${meta.dir}" />
+	</target>
+	<!-- 编译 -->
+	<target name="compile" depends="init" description="compile the source files">
+		<javac srcdir="${java.dir}" destdir="${dist.dir}" target="1.6" includeantruntime="on">
+			<compilerarg line="-encoding UTF-8" />
+			<classpath refid="master-classpath" />
+		</javac>
+	</target>
+	<!-- 测试 -->
+	<target name="test" depends="compile" description="run junit test">
+	</target>
+	<!-- 打包 -->
+	<target name="pack" depends="test" description="make .jar file">
+		<copy todir="${dist.dir}" preservelastmodified="true">
+			<fileset dir="${java.dir}">
+				<include name="**/**" />
+				<include name="**.**" />
+				<exclude name="com/**" />
+			</fileset>
+		</copy><!--
+		<copy todir="${webroot.dir}" preservelastmodified="true">
+			<fileset dir="${jsp.dir}">
+				<include name="**/**" />
+				<include name="**.**" />
+				<exclude name="classes/**" />
+			</fileset>
+		</copy> -->
+		<copy todir="${application.dir}" preservelastmodified="true">
+			<fileset dir="${config.dir}">
+				<include name="**/**" />
+				<include name="**.**" />
+				<!--<exclude name="**/**" />-->
+			</fileset>
+		</copy>
+		<copy todir="${meta.dir}" preservelastmodified="true">
+			<fileset dir="${OA.home}/META-INF">
+				<include name="**/**" />
+				<include name="**.**" />
+				<!--<exclude name="**/**" />-->
+			</fileset>
+		</copy>
+		<jar destfile="${jar.dir}/${jar.name}.jar" basedir="${dist.dir}" manifest="${meta.dir}/MANIFEST.MF" />
+	</target>
+	<!-- 文档 -->
+	<target name="doc" depends="pack" description="create api doc">
+	</target>
+</project>

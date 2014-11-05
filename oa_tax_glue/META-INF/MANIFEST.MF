@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: com.china.center.oa.tax.glue
+Bundle-SymbolicName: com.china.center.oa.tax.glue
+Bundle-Version: 1.0.0
+Bundle-Activator: com.china.center.oa.tax.glue.init.Activator
+Import-Package: org.osgi.framework;version="1.3.0"
+Require-Bundle: 
+ com.china.center.oa.tcp.manager;bundle-version="1.0.0",
+ com.china.center.oa.stockvssail.glue;bundle-version="1.0.0",
+ com.china.center.oa.customer.manager;bundle-version="1.0.0",
+ com.china.center.oa.tax.manager;bundle-version="1.0.0",
+ com.china.center.oa.stock.manager;bundle-version="1.0.0",
+ com.china.center.oa.finance.manager;bundle-version="1.0.0",
+ com.china.center.oa.sail.manager;bundle-version="1.0.0",
+ com.china.center.oa.product.manager;bundle-version="1.0.0",
+ com.china.center.oa.publics.manager;bundle-version="1.0.0",
+ com.china.center.osgi.jdbc;bundle-version="1.0.0",
+ com.china.center.osgi.tools;bundle-version="1.0.0",
+ com.china.center.osgi.taglib;bundle-version="1.0.0",
+ com.china.center.osgi.dym;bundle-version="1.0.0",
+ com.china.center.osgi.config;bundle-version="1.0.0"
+Spring-Context: application/applicationContext_*.xml
+
+

@@ -1,0 +1,72 @@
+A:link {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ffff00; TEXT-DECORATION: underline
+}
+.link2 A:link {
+	COLOR: #002450; TEXT-DECORATION: none
+}
+.link2 A:visited {
+	COLOR: #002450; TEXT-DECORATION: none
+}
+.link2 A:hover {
+	COLOR: #002450; TEXT-DECORATION: underline
+}
+.forms {
+	BORDER-RIGHT: #1875ba 1px solid; BORDER-TOP: #1875ba 1px solid; FONT-SIZE: 12px; BORDER-LEFT: #1875ba 1px solid; BORDER-BOTTOM: #1875ba 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.13t {
+	FONT-SIZE: 14px; LINE-HEIGHT: 18px
+}
+.11t {
+	FONT-SIZE: 11px; LINE-HEIGHT: 14px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.bg-1 {
+	BACKGROUND-POSITION: center center; BACKGROUND-REPEAT: no-repeat
+}
+.bg-2 {
+	BACKGROUND-POSITION: right bottom; FONT-SIZE: 12px; BACKGROUND-REPEAT: no-repeat
+}
+.forms2 {
+	BORDER-RIGHT: #0052b7 1px solid; BORDER-TOP: #0052b7 1px solid; FONT-SIZE: 11px; BORDER-LEFT: #0052b7 1px solid; BORDER-BOTTOM: #0052b7 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.form3 {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 9px; BORDER-LEFT: 0px; BORDER-BOTTOM: #99cc33 1px solid; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+TABLE {
+	FONT-SIZE: 12px; COLOR: #ffffff; LINE-HEIGHT: normal; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.12t {
+	FONT-SIZE: 12px; LINE-HEIGHT: 20px; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.black {
+	FONT-SIZE: 12px; COLOR: #002450; FONT-FAMILY: "Verdana", "Arial", "Helvetica", "sans-serif"
+}
+.headbg1 {
+	BACKGROUND-IMAGE: url(../images/kms-1_21.gif)
+}
+.class1 {
+	COLOR: #002450; BACKGROUND-COLOR: #a7c7ed
+}
+.class2 {
+	COLOR: #002450; BACKGROUND-COLOR: #9abeeb
+}
+.class3 {
+	COLOR: #002450; BACKGROUND-COLOR: #7eabe2
+}
+BODY {
+	SCROLLBAR-BASE-COLOR: #adbccd
+}
+.class4 {
+	COLOR: #002450; BACKGROUND-COLOR: #5994db
+}
+.headbg2 {
+	BACKGROUND-IMAGE: url(../images/kms-1_23.gif)
+}
+.hand {
+	CURSOR: hand
+}

@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	<item name="queryCustomer" deaultpfix="CustomerBean">
+	    <condtion name="alogTime" filed="createTime" caption="创建时间从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="createTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+		<condtion name="name" caption="客户名称">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="code" caption="客户编码">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="connector" caption="联系人">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="selltype" caption="客户类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$101</option>
+		</condtion>
+		<condtion name="creditLevelId" caption="客户等级">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$creditLevel</option>
+		</condtion>
+		<condtion name="htype" caption="行业属性">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$108</option>
+		</condtion>
+		<condtion name="createrId" caption="创建人">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$staffer</option>
+        </condtion>
+	</item>
+	
+	<item name="queryLocationCustomer" alias="queryCustomer"/>
+
+	<item name="queryCanAssignCustomer" deaultpfix="CustomerBean">
+		<condtion name="name" caption="客户名称">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="code" caption="客户编码">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="selltype" caption="客户类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$101</option>
+		</condtion>
+		<condtion name="creditLevelId" caption="客户等级">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$creditLevel</option>
+        </condtion>
+		<condtion name="mtype" caption="客户性质">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$107</option>
+		</condtion>
+		<condtion name="htype" caption="行业属性">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$108</option>
+		</condtion>
+	</item>
+
+	<item name="queryCustomerAssign" deaultpfix="t1">
+		<condtion name="name" caption="客户名称">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="code" caption="客户编码">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="selltype" caption="客户类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$101</option>
+		</condtion>
+		<condtion name="stafferId2" filed="name" caption="职员" pfix="t3">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="pname" filed="name" caption="省" pfix="t5">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="cname" filed="name" caption="市" pfix="t6">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>		
+	</item>
+	
+	<item name="queryCheckHisCustomer" deaultpfix="CustomerHisBean">
+		<condtion name="name" caption="客户名称">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="code" caption="客户编码">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="selltype" caption="客户类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$101</option>
+		</condtion>
+	</item>
+	
+	<item name="queryChangeLog" deaultpfix="ChangeLogBean">
+		<condtion name="alogTime" filed="logTime" caption="开始时间">
+			<opr>&gt;=</opr>
+			<type>date</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="blogTime" filed="logTime" caption="结束时间">
+			<opr>&lt;=</opr>
+			<type>date</type>
+			<inner></inner>
+		</condtion>
+	</item>
+	
+	<item name="queryCustomerCheck" deaultpfix="CustomerCheckBean">
+		<condtion name="applyerId" filed="name" caption="申请职员" pfix="s1">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="checkerId" filed="name" caption="被审核职员" pfix="s2">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$commonStatus</option>
+		</condtion>
+	</item>
+	
+	<item name="queryCheckItem" deaultpfix="CustomerCheckItemBean">
+		<condtion name="customerName" caption="客户名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="customerCode" caption="客户编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferId" caption="所属职员">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$staffer</option>
+		</condtion>
+		<condtion name="ret" caption="结果">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$commonResult</option>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$commonStatus</option>
+		</condtion>
+	</item>
+	
+	<item name="queryCreditItemSec" deaultpfix="CreditItemSecBean">
+        <condtion name="name" caption="指标">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="type" caption="得分类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$creditItemType</option>
+        </condtion>
+        <condtion name="face" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$creditItemFace</option>
+        </condtion>
+        <condtion name="sub" caption="类型2">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$creditItemSub</option>
+        </condtion>
+        <condtion name="parentType" caption="指标类型" filed="type" pfix="CreditItemBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$creditType</option>
+        </condtion>
+    </item>
+    
+    <item name="queryCreditItemThr" deaultpfix="CreditItemThrBean">
+        <condtion name="name" caption="指标项">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="face" caption="类型" pfix="CreditItemSecBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$creditItemFace</option>
+        </condtion>
+        <condtion name="pid" caption="父项">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$creditItemSecList</option>
+        </condtion>
+    </item>
+    
+    <item name="queryCustomerCreditLog" deaultpfix="CreditlogBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="log" caption="日志内容">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryCustomerCredit" deaultpfix="CustomerCreditBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="ptype" caption="指标类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$creditType</option>
+        </condtion>
+        <condtion name="log" caption="日志内容">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryAssignApply" deaultpfix="AssignApplyBean">
+        <condtion name="stafferName" caption="申请职员" filed="name" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="industryId" caption="事业部" pfix="StafferBean">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$industryList</option>
+        </condtion>
+    </item>
+    
+    <item name="queryCustomerBySubStaffer" deaultpfix="t1">
+		<condtion name="name" caption="客户名称">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="code" caption="客户编码">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>		
+		<condtion name="stafferId2" filed="name" caption="职员" pfix="t4">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+	</item>
+	
+	<item name="queryAddress" deaultpfix="AddressBean">
+		<condtion name="name" filed="customerName" caption="客户">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+	</item>
+	
+	<item name="queryCiticGroup" deaultpfix="CiticBranchBean">
+        <condtion name="name" filed="name" caption="职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryAppUserApply" deaultpfix="AppUserApplyBean">
+		<condtion name="loginName" caption="用户名">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$userApplyStatus</option>
+		</condtion>
+	</item>
+	
+	 <item name="queryAppUser" deaultpfix="AppUserBean">
+		<condtion name="loginName" caption="用户名">
+			<opr>like</opr>
+			<type>text</type>
+			<inner></inner>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$userApplyStatus</option>
+		</condtion>
+	</item>
+</query>

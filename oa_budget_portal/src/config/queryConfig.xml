@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	<item name="queryBudget" deaultpfix="BudgetBean">
+        <condtion name="name" caption="预算名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="type" caption="预算类型">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$budgetType</option>
+        </condtion>
+        <condtion name="level" caption="预算周期">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$budgetLevel</option>
+        </condtion>
+        <condtion name="carryStatus" caption="执行状态">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$budgetCarry</option>
+        </condtion>
+        <condtion name="stafferId" caption="提交人">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$staffer</option>
+        </condtion>
+        <condtion name="status" caption="预算状态">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$budgetStatus</option>
+        </condtion>
+    </item>
+    
+    <item name="querySelfBudget" alias="queryBudget"/>
+    
+    <item name="queryBudgetForApprove" deaultpfix="BudgetBean">
+        <condtion name="name" caption="预算名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stafferId" caption="提交人">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$staffer</option>
+        </condtion>
+        <condtion name="status" caption="预算状态">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$budgetStatus</option>
+        </condtion>
+    </item>
+    
+    <item name="queryBudgetLog" deaultpfix="BudgetLogBean">
+        <condtion name="alogTime" filed="logTime" caption="开始日期">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束日期">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="budgetName" filed="name" caption="部门月度预算" pfix="BudgetBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="budgetName2" filed="name" caption="部门年度预算" pfix="BU2">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="budgetName1" filed="name" caption="事业部年度预算" pfix="BU1">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+         <condtion name="budgetName0" filed="name" caption="公司年度预算" pfix="BU0">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="使用人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="departmentName" filed="name" caption="部门" pfix="PrincipalshipBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="refId" caption="单据(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="fromType" caption="使用来源">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$budgetLogFromType</option>
+        </condtion>
+        <condtion name="status" caption="形态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$budgetLogStatus</option>
+        </condtion>
+        <condtion name="userType" caption="使用类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$budgetLogUserType</option>
+        </condtion>
+        <condtion name="feeItemId" caption="预算项">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$feeItemList</option>
+        </condtion>
+    </item>
+	
+</query>

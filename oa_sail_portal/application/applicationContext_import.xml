@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+	
+	<osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+	
+	<osgi:reference id="financeFacade" interface="com.china.center.oa.finance.facade.FinanceFacade" />
+	
+	<osgi:reference id="stafferVSPriDAO" interface="com.china.center.oa.publics.dao.StafferVSPriDAO" />
+	
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+	
+	<osgi:reference id="enumDAO" interface="com.china.center.oa.publics.dao.EnumDAO" />
+	
+	<osgi:reference id="orgManager" interface="com.china.center.oa.publics.manager.OrgManager" />
+	
+	<osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+	
+	<osgi:reference id="authManager" interface="com.china.center.oa.publics.manager.AuthManager" />
+	
+	<osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />
+	
+	<osgi:reference id="commonMailManager" interface="com.china.center.oa.publics.manager.CommonMailManager" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<osgi:reference id="locationDAO" interface="com.china.center.oa.publics.dao.LocationDAO" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="userDAO" interface="com.china.center.oa.publics.dao.UserDAO" />
+	
+	<osgi:reference id="departmentDAO" interface="com.china.center.oa.publics.dao.DepartmentDAO" />
+	
+	<osgi:reference id="flowLogDAO" interface="com.china.center.oa.publics.dao.FlowLogDAO" />
+	
+	<osgi:reference id="invoiceDAO" interface="com.china.center.oa.publics.dao.InvoiceDAO" />
+	
+	<osgi:reference id="dutyDAO" interface="com.china.center.oa.publics.dao.DutyDAO" />
+	
+	<osgi:reference id="fatalNotify" interface="com.china.center.oa.publics.manager.FatalNotify" />
+	
+	<osgi:reference id="stafferManager" interface="com.china.center.oa.publics.manager.StafferManager" />
+	
+	<osgi:reference id="showDAO" interface="com.china.center.oa.publics.dao.ShowDAO" />
+	
+	<osgi:reference id="principalshipDAO" interface="com.china.center.oa.publics.dao.PrincipalshipDAO" />
+	
+	<osgi:reference id="invoiceCreditDAO" interface="com.china.center.oa.publics.dao.InvoiceCreditDAO" />
+	
+	<osgi:reference id="dutyVSInvoiceDAO" interface="com.china.center.oa.publics.dao.DutyVSInvoiceDAO" />
+	
+	<osgi:reference id="attachmentDAO" interface="com.china.center.oa.publics.dao.AttachmentDAO" />
+	
+	<osgi:reference id="unitViewDAO" interface="com.china.center.oa.sail.dao.UnitViewDAO" />
+	
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	
+	<osgi:reference id="baseDAO" interface="com.china.center.oa.sail.dao.BaseDAO" />
+
+	<osgi:reference id="outDAO" interface="com.china.center.oa.sail.dao.OutDAO" />
+
+	<osgi:reference id="outUniqueDAO" interface="com.china.center.oa.sail.dao.OutUniqueDAO" />
+
+	<osgi:reference id="outManager" interface="com.china.center.oa.sail.manager.OutManager" />
+	
+	<osgi:reference id="storageRelationManager" interface="com.china.center.oa.product.manager.StorageRelationManager" />
+	
+	<osgi:reference id="productDAO" interface="com.china.center.oa.product.dao.ProductDAO" />
+	
+	<osgi:reference id="customerMainDAO" interface="com.china.center.oa.client.dao.CustomerMainDAO" />
+	
+	<osgi:reference id="providerDAO" interface="com.china.center.oa.product.dao.ProviderDAO" />
+	
+	<osgi:reference id="storageDAO" interface="com.china.center.oa.product.dao.StorageDAO" />
+	
+	<osgi:reference id="depotDAO" interface="com.china.center.oa.product.dao.DepotDAO" />
+	
+	<osgi:reference id="depotpartDAO" interface="com.china.center.oa.product.dao.DepotpartDAO" />
+	
+	<osgi:reference id="consignDAO" interface="com.china.center.oa.sail.dao.ConsignDAO" />
+	
+	<osgi:reference id="consign2DAO" interface="com.china.center.oa.sail.dao.Consign2DAO" />
+	
+	<osgi:reference id="consignManager" interface="com.china.center.oa.sail.manager.ConsignManager" />
+	
+	<osgi:reference id="outBalanceDAO" interface="com.china.center.oa.sail.dao.OutBalanceDAO" />
+
+    <osgi:reference id="baseBalanceDAO" interface="com.china.center.oa.sail.dao.BaseBalanceDAO" />
+    
+    <osgi:reference id="inBillDAO" interface="com.china.center.oa.finance.dao.InBillDAO" />
+    
+    <osgi:reference id="outBillDAO" interface="com.china.center.oa.finance.dao.OutBillDAO" />
+    
+    <osgi:reference id="outQueryDAO" interface="com.china.center.oa.customervssail.dao.OutQueryDAO" />
+    
+    <osgi:reference id="financeDAO" interface="com.china.center.oa.tax.dao.FinanceDAO" />
+    
+    <osgi:reference id="insVSOutDAO" interface="com.china.center.oa.finance.dao.InsVSOutDAO" />
+    
+    <osgi:reference id="invoiceinsItemDAO" interface="com.china.center.oa.finance.dao.InvoiceinsItemDAO" />
+    
+    <osgi:reference id="sailConfigDAO" interface="com.china.center.oa.sail.dao.SailConfigDAO" />
+
+    <osgi:reference id="sailConfigManager" interface="com.china.center.oa.sail.manager.SailConfigManager" />
+    
+    <osgi:reference id="sailManager" interface="com.china.center.oa.sail.manager.SailManager" />
+    
+    <osgi:reference id="sailConfDAO" interface="com.china.center.oa.sail.dao.SailConfDAO" />
+    
+    <osgi:reference id="sailTranApplyDAO" interface="com.china.center.oa.sail.dao.SailTranApplyDAO" />
+    
+    <osgi:reference id="provinceDAO" interface="com.china.center.oa.publics.dao.ProvinceDAO" />
+    
+    <osgi:reference id="cityDAO" interface="com.china.center.oa.publics.dao.CityDAO" />
+    
+    <osgi:reference id="areaDAO" interface="com.china.center.oa.publics.dao.AreaDAO" />
+    
+    <osgi:reference id="stafferVSCustomerDAO" interface="com.china.center.oa.client.dao.StafferVSCustomerDAO" />
+    
+    <osgi:reference id="paymentDAO" interface="com.china.center.oa.finance.dao.PaymentDAO" />
+    
+    <osgi:reference id="promotionDAO" interface="com.china.center.oa.sail.dao.PromotionDAO"/>
+	
+	<osgi:reference id="promotionItemDAO" interface="com.china.center.oa.sail.dao.PromotionItemDAO"/>
+	
+	<osgi:reference id="promotionManager" interface="com.china.center.oa.sail.manager.PromotionManager"/>     
+	
+	<osgi:reference id="paymentApplyDAO" interface="com.china.center.oa.finance.dao.PaymentApplyDAO" />
+	
+	<osgi:reference id="baseRepaireDAO" interface="com.china.center.oa.sail.dao.BaseRepaireDAO" />
+
+    <osgi:reference id="outRepaireDAO" interface="com.china.center.oa.sail.dao.OutRepaireDAO" />
+	
+	<osgi:reference id="distributionDAO" interface="com.china.center.oa.sail.dao.DistributionDAO" />
+	
+	<osgi:reference id="distributionBaseDAO" interface="com.china.center.oa.sail.dao.DistributionBaseDAO" />
+	
+	<osgi:reference id="expressDAO" interface="com.china.center.oa.sail.dao.ExpressDAO"/>
+	
+	<osgi:reference id="addressDAO" interface="com.china.center.oa.client.dao.AddressDAO" />
+	
+	<osgi:reference id="priceConfigDAO" interface="com.china.center.oa.product.dao.PriceConfigDAO" />
+	
+	<osgi:reference id="auditRuleDAO" interface="com.china.center.oa.sail.dao.AuditRuleDAO" />
+	
+	<osgi:reference id="auditRuleItemDAO" interface="com.china.center.oa.sail.dao.AuditRuleItemDAO" />
+	
+	<osgi:reference id="auditRuleManager" interface="com.china.center.oa.sail.manager.AuditRuleManager" />
+	
+	<osgi:reference id="priceConfigManager" interface="com.china.center.oa.product.manager.PriceConfigManager" />
+	
+	<osgi:reference id="outImportDAO" interface="com.china.center.oa.sail.dao.OutImportDAO" />
+
+	<osgi:reference id="outImportResultDAO" interface="com.china.center.oa.sail.dao.OutImportResultDAO" />
+
+	<osgi:reference id="outImportManager" interface="com.china.center.oa.sail.manager.OutImportManager" />	
+	
+	<osgi:reference id="replenishmentDAO" interface="com.china.center.oa.sail.dao.ReplenishmentDAO" />
+	
+	<osgi:reference id="citicVSOAProductDAO" interface="com.china.center.oa.product.dao.CiticVSOAProductDAO" />
+	
+	<osgi:reference id="outImportLogDAO" interface="com.china.center.oa.sail.dao.OutImportLogDAO" />
+	
+	<osgi:reference id="citicBranchDAO" interface="com.china.center.oa.client.dao.CiticBranchDAO" />
+	
+	<osgi:reference id="citicVSStafferDAO" interface="com.china.center.oa.client.dao.CiticVSStafferDAO" />
+	
+	<osgi:reference id="appOutDAO" interface="com.china.center.oa.sail.dao.AppOutDAO" />
+		
+	<osgi:reference id="appOutVSOutDAO" interface="com.china.center.oa.sail.dao.AppOutVSOutDAO" />
+	
+	<osgi:reference id="batchApproveDAO" interface="com.china.center.oa.sail.dao.BatchApproveDAO" />
+	
+	<osgi:reference id="batchSwatchDAO" interface="com.china.center.oa.sail.dao.BatchSwatchDAO" />
+	
+	<osgi:reference id="statsDeliveryRankDAO" interface="com.china.center.oa.sail.dao.StatsDeliveryRankDAO" />
+	<osgi:reference id="deliveryRankVSOutDAO" interface="com.china.center.oa.sail.dao.DeliveryRankVSOutDAO" />
+	
+	<osgi:reference id="preInvoiceVSOutDAO" interface="com.china.center.oa.finance.dao.PreInvoiceVSOutDAO" />
+	
+	<osgi:reference id="packageDAO" interface="com.china.center.oa.sail.dao.PackageDAO" />
+	<osgi:reference id="packageItemDAO" interface="com.china.center.oa.sail.dao.PackageItemDAO" />
+	<osgi:reference id="preConsignDAO" interface="com.china.center.oa.sail.dao.PreConsignDAO" />	
+	
+	<osgi:reference id="shipManager" interface="com.china.center.oa.sail.manager.ShipManager" />
+	
+	<osgi:reference id="composeProductDAO" interface="com.china.center.oa.product.dao.ComposeProductDAO" />
+	
+	<osgi:reference id="composeItemDAO" interface="com.china.center.oa.product.dao.ComposeItemDAO" />
+	
+	<osgi:reference id="packageVSCustomerDAO" interface="com.china.center.oa.sail.dao.PackageVSCustomerDAO" />
+	
+	<osgi:reference id="outBackDAO" interface="com.china.center.oa.sail.dao.OutBackDAO" />
+	<osgi:reference id="outBackManager" interface="com.china.center.oa.sail.manager.OutBackManager" />
+	
+	<osgi:reference id="zjrcOutDAO" interface="com.china.center.oa.extsail.dao.ZJRCOutDAO" />
+	<osgi:reference id="zjrcBaseDAO" interface="com.china.center.oa.extsail.dao.ZJRCBaseDAO" />
+	<osgi:reference id="zjrcProductDAO" interface="com.china.center.oa.extsail.dao.ZJRCProductDAO" />
+	<osgi:reference id="zjrcManager" interface="com.china.center.oa.extsail.manager.ZJRCManager" />
+	
+	<osgi:reference id="zjrcDistributionDAO" interface="com.china.center.oa.extsail.dao.ZJRCDistributionDAO" />
+	
+	<osgi:reference id="batchReturnLogDAO" interface="com.china.center.oa.sail.dao.BatchReturnLogDAO" />
+	
+	<osgi:reference id="vmOutManager" interface="com.china.center.oa.sail.manager.VMOutManager" />
+	
+	<osgi:reference id="bankSailDAO" interface="com.china.center.oa.sail.dao.BankSailDAO" />
+	
+	<osgi:reference id="estimateProfitDAO" interface="com.china.center.oa.sail.dao.EstimateProfitDAO" />
+</beans>

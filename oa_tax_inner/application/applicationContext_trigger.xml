@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-destroy-method="destroy">
+	
+	<bean id="synJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="checkViewDAO" />
+        <property name="targetMethod" value="syn" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="synTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="synJob" />
+        <property name="cronExpression" value="0 0 0/1 * * ?" />
+    </bean>
+    
+    <bean id="synReferJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="financeReferDAO" />
+        <property name="targetMethod" value="syn" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="synReferTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="synReferJob" />
+        <property name="cronExpression" value="0 45 2 * * ?" />
+    </bean>
+    
+    <bean id="fixMonthIndexJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="financeManager" />
+        <property name="targetMethod" value="fixMonthIndex" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="fixMonthIndexTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="fixMonthIndexJob" />
+        <property name="cronExpression" value="0 10 0 * * ?" />
+    </bean>
+    
+    <bean id="financeTagJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="financeTagManager" />
+        <property name="targetMethod" value="processInvoiceinsTagData" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="financeTagTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="financeTagJob" />
+        <property name="cronExpression" value="0 10 23 * * ?" />
+    </bean>
+    
+    <bean id="financeOutPayTagJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="financeTagManager" />
+        <property name="targetMethod" value="processOutPayTagData" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="financeOutPayTagTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="financeOutPayTagJob" />
+        <property name="cronExpression" value="0 0 23 * * ?" />
+    </bean>
+    
+    <bean
+        class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="synTrigger" />
+                <ref bean="synReferTrigger" />
+                <ref bean="fixMonthIndexTrigger" />
+                <ref bean="financeTagTrigger"/>
+                <ref bean="financeOutPayTagTrigger"/>
+            </list>
+        </property>
+    </bean>
+    
+</beans>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		 <action path="/sail/out" parameter="method"
+			type="org.springframework.web.struts.DelegatingActionProxy"
+			validate="false">
+			<forward name="addBatchBack" path="/sail/addBatchBack.jsp" />
+			<forward name="addOut" path="/sail/addOut.jsp" />
+			<forward name="addOut1" path="/sail/addOut1.jsp" />
+			<forward name="addOut2" path="/sail/addOut2.jsp" />
+			<forward name="addOut3" path="/sail/addOut3.jsp" />
+			<forward name="addOut4" path="/sail/addOut4.jsp" />
+			<forward name="addOut4_bak" path="/sail/addOut4_bak.jsp" />
+			<forward name="addOut50" path="/sail/addOut50.jsp" />
+			<forward name="addOut501" path="/sail/addOut501.jsp" />
+			<forward name="addOut51" path="/sail/addOut51.jsp" />
+			<forward name="updateOut50" path="/sail/updateOut50.jsp" />
+			<forward name="updateOut501" path="/sail/updateOut501.jsp" />
+			<forward name="updateOut" path="/sail/updateOut.jsp" />
+			<forward name="updateOut2" path="/sail/updateOut2.jsp" />
+			<forward name="updateOut3" path="/sail/updateOut3.jsp" />
+			<forward name="updateOut4" path="/sail/updateOut4.jsp" />
+			<forward name="updateOut4_bak" path="/sail/updateOut4_bak.jsp" />
+			<forward name="querySelfOut" path="/sail/querySelfOut.jsp" />
+			<forward name="queryOut" path="/sail/queryOut.jsp" />
+			<forward name="listOut1" path="/sail/listOut1.jsp" />
+			<forward name="detailOut" path="/sail/detailOut.jsp" />
+			<forward name="handerOutBack" path="/sail/handerOutBack.jsp" />
+			<forward name="handerOutBack2" path="/sail/handerOutBack2.jsp" />
+			<forward name="print" path="/sail/print.jsp" />
+			<forward name="addOutBalance" path="/sail/addOutBalance.jsp" />
+			<forward name="queryOutBalance" path="/sail/queryOutBalance.jsp" />
+			<forward name="detailOutBalance" path="/sail/detailOutBalance.jsp" />
+			<forward name="addBuy" path="/sail/addBuy.jsp" />
+			<forward name="addDiaoBo" path="/sail/addDiaoBo.jsp" />
+			
+			<forward name="querySelfBuy" path="/sail/querySelfBuy.jsp" />
+			<forward name="updateDiaoBo" path="/sail/updateDiaoBo.jsp" />
+			<forward name="updateBuy" path="/sail/updateBuy.jsp" />
+			<forward name="detailBuy" path="/sail/detailBuy.jsp" />
+			<forward name="queryBuy" path="/sail/queryBuy.jsp" />
+			<forward name="handerInvokeBuy" path="/sail/handerInvokeBuy.jsp" />
+			<forward name="queryWarnOut" path="/sail/queryWarnOut.jsp" />
+			<forward name="rptQueryOut" path="/sail/rptQueryOut.jsp" />
+			<forward name="rptQueryOutBalance" path="/sail/rptQueryOutBalance.jsp" />
+			<forward name="applyBackPay" path="/sail/applyBackPay.jsp" />
+			<forward name="navigationAddOut1" path="/sail/navigationAddOut1.jsp" />
+			<forward name="handerOutBack3" path="/sail/handerOutBack3.jsp" />
+			<forward name="rptQueryHisOut" path="/sail/rptQueryHisOut.jsp" />
+			<forward name="rptQueryOutForInvoice" path="/sail/rptQueryOutForInvoice.jsp" />
+			<forward name="handerOutRepaire" path="/sail/handerOutRepaire.jsp" />
+			<forward name="detailOutRepaireApply" path="/sail/detailOutRepaireApply.jsp" />
+			<forward name="querySelfOutRepaireApply" path="/sail/querySelfOutRepaireApply.jsp" />
+			<forward name="queryTabOrder" path="/sail/queryTabOrder.jsp" />
+			<forward name="detailDistribution" path="/sail/detailDistribution.jsp" />
+			<forward name="print1" path="/sail/print1.jsp" />
+			<forward name="handerOutBalance" path="/sail/handerOutBalance.jsp" />
+			<forward name="rptCanSettle" path="/sail/rptCanSettle.jsp" />
+			<forward name="batchSettleOut" path="/sail/batchSettleOut.jsp" />
+			<forward name="rptCanSwatch" path="/sail/rptCanSwatch.jsp" />
+			<forward name="statsRank" path="/sail/statsRank.jsp" />
+			<forward name="queryStatsRank" path="/sail/queryStatsRank.jsp" />
+			<forward name="refConfirmInvoice" path="/invoiceins/refConfirmInvoice.jsp" />
+			<forward name="refPurchaseBack" path="/sail/refPurchaseBack.jsp" />
+		</action>
+		
+		<action path="/sail/transport" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="transportList"
+                path="/transport/listTransport.jsp" />
+            <forward name="addTransport" path="/transport/addTransport.jsp" />
+            <forward name="updateTransport" path="/transport/updateTransport.jsp" />
+            <forward name="queryConsign" path="/transport/queryConsign.jsp" />
+            <forward name="print1" path="/transport/print1.jsp" />
+            <forward name="print2" path="/transport/print2.jsp" />
+            <forward name="detailOut5" path="/transport/handleConsign.jsp" />
+            <forward name="handleConsign2" path="/transport/handleConsign2.jsp" />
+            <forward name="detailAllConsign" path="/transport/detailAllConsign.jsp" />
+            <forward name="detailAllConsign2" path="/transport/detailAllConsign2.jsp" />
+            <forward name="queryOut" path="/sail/queryOut.jsp" />
+            <forward name="queryTodayConsign" path="/transport/queryTodayConsign.jsp" />
+        </action>
+        
+        <action path="/sail/config" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="querySailConfig" path="/sailconfig/querySailConfig.jsp" />
+            <forward name="addSailConfig" path="/sailconfig/addSailConfig.jsp" />
+            <forward name="updateSailConfig" path="/sailconfig/updateSailConfig.jsp" />
+            <forward name="detailSailConfig" path="/sailconfig/detailSailConfig.jsp" />
+        </action>
+        
+         <action path="/sail/tran" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="querySelfSailTranApply" path="/sailtran/querySelfSailTranApply.jsp" />
+            <forward name="queryApproveSailTranApply" path="/sailtran/queryApproveSailTranApply.jsp" />
+            <forward name="detailSailTranApply" path="/sailtran/detailSailTranApply.jsp" />
+        </action>
+		
+		<!-- promotion rule struts config -->
+		<action path="/sail/promotion" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryPromotion" path="/promotion/queryPromotion.jsp" />
+            <forward name="addPromotion" path="/promotion/addPromotion.jsp" />
+            <forward name="updatePromotion" path="/promotion/updatePromotion.jsp" />
+            <forward name="detailPromotion" path="/promotion/detailPromotion.jsp" />
+            
+            <forward name="rptQueryPromotion" path="/promotion/rptQueryPromotion.jsp" />
+        </action>
+        
+        <action path="/sail/auditRule" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryAuditRule" path="/auditRule/queryAuditRule.jsp" />
+            <forward name="addAuditRule" path="/auditRule/addAuditRule.jsp" />
+            <forward name="updateAuditRule" path="/auditRule/updateAuditRule.jsp" />
+            <forward name="detailAuditRule" path="/auditRule/detailAuditRule.jsp" />
+        </action>
+        
+        <action path="/sail/outImport" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="importOut" path="/sailImport/importOut.jsp" />
+            <forward name="queryReplenishment" path="/sailImport/queryReplenishment.jsp" />
+            <forward name="queryOutImport" path="/sailImport/queryOutImport.jsp" />
+            <forward name="queryOutImportLog" path="/sailImport/queryOutImportLog.jsp" />
+            <forward name="queryBatchApprove" path="/sailImport/queryBatchApprove.jsp" />
+            <forward name="importBatchApprove" path="/sailImport/batchApproveImport.jsp" />
+            <forward name="queryBatchSwatch" path="/sailImport/queryBatchSwatch.jsp" />
+            <forward name="importBatchSwatch" path="/sailImport/batchSwatchImport.jsp" />
+            <forward name="importConsign" path="/sailImport/importConsign.jsp" />
+            <forward name="importOutId" path="/sailImport/importOutId.jsp" />
+            <forward name="importOutDepot" path="/sailImport/importOutDepot.jsp" />
+            <forward name="uploadDistAddress" path="/sailImport/uploadDistAddress.jsp" />
+            <forward name="querySplitOut" path="/sailImport/querySplitOut.jsp" />
+            <forward name="importRedate" path="/sailImport/importRedate.jsp" />
+            <forward name="importBankSail" path="/sailImport/importBankSail.jsp" />
+            <forward name="queryBankSail" path="/sailImport/queryBankSail.jsp" />
+            <forward name="importEstimateProfit" path="/sailImport/importEstimateProfit.jsp" />
+            <forward name="queryEstimateProfit" path="/sailImport/queryEstimateProfit.jsp" />
+        </action>
+        
+        <action path="/sail/ship" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryPickup" path="/transport/queryPickup.jsp" />
+            <forward name="queryPackage" path="/transport/queryPackage.jsp" />
+            <forward name="detailPackage" path="/transport/detailPackage.jsp" />
+            <forward name="printPickup" path="/transport/printPickup.jsp" />
+            <forward name="printPackage" path="/transport/printPackage.jsp" />
+            <forward name="printBankReceipt" path="/transport/printBankReceipt.jsp" />
+            <forward name="printPostReceipt" path="/transport/printPostReceipt.jsp" />
+            <forward name="printPufaReceipt" path="/transport/printPufaReceipt.jsp" />
+            <forward name="printShipment" path="/transport/printShipment.jsp" />
+            
+        </action>
+        
+        <action path="/sail/outback" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryOutBack" path="/sail/queryOutBack.jsp" />
+            <forward name="addOutBack" path="/sail/addOutBack.jsp" />
+            <forward name="updateOutBack" path="/sail/updateOutBack.jsp" />
+            <forward name="claimOutBack" path="/sail/claimOutBack.jsp" />
+            <forward name="checkOutBack" path="/sail/checkOutBack.jsp" />
+            <forward name="detailOutBack" path="/sail/detailOutBack.jsp" />
+        </action>
+        
+        <action path="/sail/extout" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="queryZJRCOut" path="/sailImport/queryZJRCOut.jsp" />
+            <forward name="querySelfZJRCOut" path="/sailImport/querySelfZJRCOut.jsp" />
+            <forward name="addZJRCOut" path="/sailImport/addZJRCOut.jsp" />
+            <forward name="updateZJRCOut" path="/sailImport/updateZJRCOut.jsp" />
+            <forward name="detailZJRCOut" path="/sailImport/detailZJRCOut.jsp" />
+            <forward name="rptQueryZJRCProduct" path="/sailImport/rptQueryZJRCProduct.jsp" />
+            <forward name="queryZJRCProduct" path="/sailImport/queryZJRCProduct.jsp" />
+            <forward name="addZJRCProduct" path="/sailImport/addZJRCProduct.jsp" />
+            <forward name="updateZJRCProduct" path="/sailImport/updateZJRCProduct.jsp" />
+            <forward name="detailZJRCProduct" path="/sailImport/detailZJRCProduct.jsp" />
+        </action>
+        
+        <action path="/sail/vmOutImport" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+            <forward name="importVMOut" path="/sailImport/importVMOut.jsp" />
+        </action>
+        
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<struts-config>
+	<action-mappings>
+		
+		<action path="/customerService/feedback" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+			<forward name="queryFeedBack" path="/feedback/queryFeedBack.jsp" />
+			<forward name="detailFeedBack" path="/feedback/detailFeedBack.jsp" />
+			<forward name="queryFeedBackVisit" path="/feedback/queryFeedBackVisit.jsp" />
+			<forward name="detailFeedBackVisit" path="/feedback/detailFeedBackVisit.jsp" />
+			<forward name="queryFeedBackCheck" path="/feedback/queryFeedBackCheck.jsp" />
+			<forward name="detailFeedBackCheck" path="/feedback/detailFeedBackCheck.jsp" />
+			<forward name="addFeedBackCheck" path="/feedback/addFeedBackCheck.jsp" />
+			<forward name="processFeedBackCheck" path="/feedback/processFeedBackCheck.jsp" />
+			<forward name="addFeedBackVisit" path="/feedback/addFeedBackVisit.jsp" />
+			<forward name="updateFeedBackVisit" path="/feedback/updateFeedBackVisit.jsp" />
+			<forward name="processFeedBackVisit" path="/feedback/processFeedBackVisit.jsp" />
+			<forward name="previewFeedBackCheck" path="/feedback/previewFeedBackCheck.jsp" />	
+			<forward name="rptQueryTaskDetail" path="/feedback/rptQueryTaskDetail.jsp" />
+			<forward name="rptQueryOutReceiver" path="/feedback/rptQueryOutReceiver.jsp" />	
+        </action>
+        
+        <action path="/customerService/shortMessage" parameter="method"
+            type="org.springframework.web.struts.DelegatingActionProxy"
+            validate="false">
+			<forward name="queryShortMessage" path="/sms/queryShortMessage.jsp" />
+        </action>
+		
+	</action-mappings>
+</struts-config>

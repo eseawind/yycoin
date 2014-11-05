@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query namespace="project">
+	<item name="queryProject" deaultpfix="ProjectBean">
+		<condtion name="beginTime" filed="applyTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="applyTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+		<condtion name="projectName" caption="项目名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="id" caption="标识">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="创建人" pfix="StafferBean">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="客户名称" pfix="CustomerBean">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="projectStatus" caption="项目状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$projectStatus</option>
+		</condtion>
+		<condtion name="projectStage" caption="项目阶段">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$projectStage</option>
+		</condtion>
+	</item>
+	
+	<item name="queryAgreement" deaultpfix="AgreementBean">
+		<condtion name="beginTime" filed="applyTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="applyTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+		<condtion name="agreementName" caption="合同名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="id" caption="标识">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="创建人" pfix="StafferBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="party_a" caption="合同方" >
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="agreementTpye" caption="合同类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$productStockType</option>
+		</condtion>
+		<condtion name="agreementStatus" caption="合同状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$productStockType</option>
+		</condtion>
+		<condtion name="agreementStage" caption="合同阶段">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$productStockType</option>
+		</condtion>
+	</item>
+	
+	<item name="queryProjectTask" deaultpfix="TaskBean">
+		<condtion name="beginTime" filed="applyTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="applyTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+		<condtion name="taskName" caption="任务名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="id" caption="标识">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="责任人" pfix="duty">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="taskType" caption="任务类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$223</option>
+		</condtion>
+		<condtion name="taskStatus" caption="任务状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$taskStatus</option>
+		</condtion>
+	</item>
+	
+	<item name="queryProjectAllTask" deaultpfix="TaskBean">
+		<condtion name="beginTime" filed="planFinishTime" caption="计划完成时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="planFinishTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+		<condtion name="taskName" caption="任务名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="id" caption="标识">
+			<opr>=</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="applerName" filed="name" caption="申请人" pfix="aper">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="name" caption="责任人" pfix="duty">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="rename" filed="name" caption="审核人" pfix="recei">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="taskType" caption="任务类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$223</option>
+		</condtion>
+		<condtion name="taskStatus" caption="任务状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$taskStatus</option>
+		</condtion>
+	</item>
+	
+	<item name="queryApplyProduct" deaultpfix="ProductBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryCheckProduct" deaultpfix="ProductBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryProvider" deaultpfix="ProviderBean">
+		<condtion name="name" caption="供应商名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="供应商编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="供应商类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$109</option>
+		</condtion>
+		<condtion name="location" caption="所属片区">
+            <opr>=</opr>
+            <type>select</type>
+            <option>$123</option>
+        </condtion>
+	</item>
+	
+	<item name="queryCheckHisProvider" deaultpfix="ProviderHisBean">
+		<condtion name="name" caption="供应商名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="供应商编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="供应商类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$109</option>
+		</condtion>
+	</item>
+	
+	<item name="queryDepot" deaultpfix="DepotBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$depotType</option>
+		</condtion>
+	</item>
+	
+	<item name="queryDepotpart" deaultpfix="DepotpartBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$depotpartType</option>
+		</condtion>
+		<condtion name="locationId" caption="仓库">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$depotList</option>
+		</condtion>
+	</item>
+	
+	<item name="queryStorage" deaultpfix="StorageBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="locationId" caption="仓库">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$depotList</option>
+		</condtion>
+		<condtion name="sname" filed="name" caption="仓区" pfix="DepotpartBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryStorageRelation" deaultpfix="StorageRelationBean">
+		<condtion name="name" caption="名称" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="locationId" caption="仓库">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$depotList</option>
+		</condtion>
+		<condtion name="dname" filed="name" caption="仓区" pfix="DepotpartBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="sname" filed="name" caption="储位" pfix="StorageBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferName" filed="name" caption="职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+		<condtion name="type" caption="类型" pfix="DepotpartBean">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$depotpartType</option>
+		</condtion>
+		<condtion name="stafferId" caption="私有">
+            <opr>&lt;&gt;</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$pubStaffer</option>
+        </condtion>
+	</item>
+	
+	<item name="queryPublicStorageRelation" alias="queryStorageRelation"/>
+	
+	<item name="queryDepotStorageRelation" deaultpfix="StorageRelationBean">
+        <condtion name="name" caption="名称" pfix="ProductBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="code" caption="编码" pfix="ProductBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="dname" filed="name" caption="仓区" pfix="DepotpartBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="sname" filed="name" caption="储位" pfix="StorageBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="stafferName" filed="name" caption="职员" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="type" caption="类型" pfix="DepotpartBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$depotpartType</option>
+        </condtion>
+        <condtion name="stafferId" caption="私有">
+            <opr>&lt;&gt;</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$pubStaffer</option>
+        </condtion>
+    </item>
+    
+    <item name="queryMoveProduct" deaultpfix="ProductChangeRecordBean">
+        <condtion name="fid" filed="flowid" caption="批次号" >
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="moveStaffer" filed="name" caption="移交人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="oldStore" filed="name" caption="源仓区" pfix="DepotpartBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="newStore" filed="name" caption="新仓区" pfix="DepotpartBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+       <condtion name="beginTime" filed="moveTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="endTime" filed="moveTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+    </item>
+	
+	<item name="querySelfStorageRelation" alias="queryStorageRelation"/>
+	
+	<item name="queryCompose" deaultpfix="ComposeProductBean">
+		<condtion name="id" caption="标识">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="pname" filed="name" caption="合成产品名称" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="pcode" filed="code" caption="合成产品编码" pfix="ProductBean">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="stafferId" caption="合成人">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$staffer</option>
+		</condtion>
+		<condtion name="type" caption="类型">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$composeType</option>
+		</condtion>
+		<condtion name="checkStatus" caption="核对">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+        <condtion name="mtype" caption="管理类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubManagerType</option>
+        </condtion>
+	</item>
+	
+	<item name="queryPriceChange" deaultpfix="PriceChangeBean">
+		<condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+		<condtion name="id" caption="标识">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$priceChangeStatus</option>
+		</condtion>
+		<condtion name="checkStatus" caption="核对">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$pubCheckStatus</option>
+        </condtion>
+		<condtion name="stafferId" caption="调价人">
+			<opr>=</opr>
+			<datatype>0</datatype>
+			<type>select</type>
+			<option>$staffer</option>
+		</condtion>
+		<condtion name="description" caption="原因">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+	
+	<item name="queryComposeFeeDefined" deaultpfix="ComposeFeeDefinedBean">
+        <condtion name="name" caption="名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryProductApply" deaultpfix="ProductApplyBean">
+		<condtion name="name" caption="名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="code" caption="编码">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		
+	</item>
+	
+	<item name="queryProjectSelfApprove" deaultpfix="ProjectApproveBean">
+        <condtion name="alogTime" filed="logTime" caption="日期从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+        </condtion>
+        <condtion name="applyId" caption="标识(A)" >
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$taskStatus</option>
+        </condtion>
+        <condtion name="type" caption="类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$projectApplyType</option>
+        </condtion>
+         <condtion name="applyerId" filed="name" caption="申请人" pfix="APPLYER">
+             <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+</query>

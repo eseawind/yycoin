@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init">
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+	
+	<osgi:reference id="buffaloOSGiConfigurer" interface="com.china.center.webplugin.inter.BuffaloOSGiConfigurer" />
+	
+	<osgi:reference id="alarmDAO" interface="com.china.center.oa.publics.dao.AlarmDAO" />
+	
+	<osgi:reference id="areaDAO" interface="com.china.center.oa.publics.dao.AreaDAO" />
+
+	<osgi:reference id="authDAO" interface="com.china.center.oa.publics.dao.AuthDAO" />
+
+	<osgi:reference id="cityDAO" interface="com.china.center.oa.publics.dao.CityDAO" />
+
+	<osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+
+	<osgi:reference id="departmentDAO" interface="com.china.center.oa.publics.dao.DepartmentDAO" />
+
+	<osgi:reference id="enumDAO" interface="com.china.center.oa.publics.dao.EnumDAO" />
+
+	<osgi:reference id="locationDAO" interface="com.china.center.oa.publics.dao.LocationDAO" />
+
+	<osgi:reference id="locationVSCityDAO" interface="com.china.center.oa.publics.dao.LocationVSCityDAO" />
+
+	<osgi:reference id="logDAO" interface="com.china.center.oa.publics.dao.LogDAO" />
+
+	<osgi:reference id="menuItemDAO" interface="com.china.center.oa.publics.dao.MenuItemDAO" />
+
+	<osgi:reference id="orgDAO" interface="com.china.center.oa.publics.dao.OrgDAO" />
+
+	<osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />
+
+	<osgi:reference id="postDAO" interface="com.china.center.oa.publics.dao.PostDAO" />
+
+	<osgi:reference id="principalshipDAO" interface="com.china.center.oa.publics.dao.PrincipalshipDAO" />
+
+	<osgi:reference id="provinceDAO" interface="com.china.center.oa.publics.dao.ProvinceDAO" />
+
+	<osgi:reference id="roleAuthDAO" interface="com.china.center.oa.publics.dao.RoleAuthDAO" />
+
+	<osgi:reference id="roleDAO" interface="com.china.center.oa.publics.dao.RoleDAO" />
+
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="desktopManager" interface="com.china.center.oa.publics.manager.DesktopManager" />
+
+	<osgi:reference id="systemTemplateFileDAO" interface="com.china.center.oa.publics.dao.SystemTemplateFileDAO" />
+
+	<osgi:reference id="userDAO" interface="com.china.center.oa.publics.dao.UserDAO">
+		<!--  <osgi:listener ref="aaaa" bind-method="setUserDAO2" unbind-method="setUserDAO2"/>-->
+	</osgi:reference>
+
+	<osgi:reference id="commonManager" interface="com.china.center.oa.publics.manager.CommonManager" />
+
+	<osgi:reference id="departmentManager" interface="com.china.center.oa.publics.manager.DepartmentManager" />
+
+	<osgi:reference id="enumManager" interface="com.china.center.oa.publics.manager.EnumManager" />
+
+	<osgi:reference id="locationManager" interface="com.china.center.oa.publics.manager.LocationManager" />
+
+	<osgi:reference id="orgManager" interface="com.china.center.oa.publics.manager.OrgManager" />
+
+	<osgi:reference id="postManager" interface="com.china.center.oa.publics.manager.PostManager" />
+
+	<osgi:reference id="publicQueryManager" interface="com.china.center.oa.publics.manager.PublicQueryManager" />
+
+	<osgi:reference id="roleManager" interface="com.china.center.oa.publics.manager.RoleManager" />
+
+	<osgi:reference id="stafferManager" interface="com.china.center.oa.publics.manager.StafferManager" />
+
+	<osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+
+	<osgi:reference id="publicTrigger" interface="com.china.center.oa.publics.trigger.PublicTrigger" />
+
+	<osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+	
+	<osgi:reference id="dutyDAO" interface="com.china.center.oa.publics.dao.DutyDAO" />
+
+	<osgi:reference id="dutyManager" interface="com.china.center.oa.publics.manager.DutyManager" />
+	
+	<osgi:reference id="stafferVSPriDAO" interface="com.china.center.oa.publics.dao.StafferVSPriDAO" />
+	
+	<osgi:reference id="enumDefineDAO" interface="com.china.center.oa.publics.dao.EnumDefineDAO" />
+	
+	<osgi:reference id="queryManager" interface="com.china.center.oa.publics.manager.QueryManager" />
+	
+	<osgi:reference id="invoiceDAO" interface="com.china.center.oa.publics.dao.InvoiceDAO" />
+	
+	<osgi:reference id="authManager" interface="com.china.center.oa.publics.manager.AuthManager" />
+	
+	<osgi:reference id="menuManager" interface="com.china.center.oa.publics.manager.MenuManager" />
+	
+	<osgi:reference id="showDAO" interface="com.china.center.oa.publics.dao.ShowDAO" />
+	
+	<osgi:reference id="invoiceCreditDAO" interface="com.china.center.oa.publics.dao.InvoiceCreditDAO" />
+	
+	<osgi:reference id="stafferVSIndustryDAO" interface="com.china.center.oa.publics.dao.StafferVSIndustryDAO" />
+	
+	<osgi:reference id="stafferTransferDAO" interface="com.china.center.oa.publics.dao.StafferTransferDAO" />
+
+	<osgi:reference id="agentConfigDAO" interface="com.china.center.oa.publics.dao.AgentConfigDAO" />
+
+</beans>

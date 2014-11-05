@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+	
+	<item name="queryTemplateFile" deaultpfix="TemplateFileBean">
+		<condtion name="name" caption="模板名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+	</item>
+
+	<item name="queryFlowDefine" deaultpfix="FlowDefineBean">
+		<condtion name="name" caption="流程名称">
+			<opr>like</opr>
+			<type>text</type>
+		</condtion>
+		<condtion name="status" caption="流程状态">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$flowStatus</option>
+		</condtion>
+		<condtion name="mode" caption="流程模式">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$flowMode</option>
+		</condtion>
+		<condtion name="type" caption="流程分类">
+			<opr>=</opr>
+			<datatype>1</datatype>
+			<type>select</type>
+			<option>$112</option>
+		</condtion>
+		<condtion name="stafferId" caption="创建人">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$staffer</option>
+        </condtion>
+	</item>
+	
+	<item name="queryFlowDefine2" deaultpfix="FlowDefineBean">
+        <condtion name="name" caption="流程名称">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="mode" caption="流程模式">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$flowMode</option>
+        </condtion>
+        <condtion name="type" caption="流程分类">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$112</option>
+        </condtion>
+    </item>
+    
+    <item name="queryFlowInstance0" deaultpfix="FlowInstanceBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="stafferId" caption="提交人">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$staffer</option>
+        </condtion>
+        <condtion name="name" caption="流程定义" pfix="FlowDefineBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="title" caption="主题">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" caption="标识(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryFlowInstance1" deaultpfix="FlowBelongBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间" pfix="FlowInstanceBean">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间" pfix="FlowInstanceBean">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="sname" filed="name" caption="提交人" pfix="SB1">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="name" caption="流程定义" pfix="FlowDefineBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="title" caption="主题" pfix="FlowInstanceBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="instanceId" caption="标识(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryFlowInstance2" deaultpfix="FlowInstanceBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="sname" filed="name" caption="提交人" pfix="StafferBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="name" caption="流程定义" pfix="FlowDefineBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="title" caption="主题">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" caption="标识(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryFlowInstance3" deaultpfix="FlowInstanceBean">
+        <condtion name="alogTime" filed="logTime" caption="开始时间">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="结束时间">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="sname" filed="name" caption="创建人" pfix="sf3">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="pname" filed="name" caption="处理人" pfix="sf1">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="name" caption="流程定义" pfix="FlowDefineBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="title" caption="主题">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" caption="标识(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+
+</query>

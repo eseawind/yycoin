@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<query>
+    
+    <item name="queryOut" deaultpfix="OutBean">
+        <condtion name="name" caption="指标项">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="face" caption="类型" pfix="CreditItemSecBean">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$creditItemFace</option>
+        </condtion>
+        <condtion name="pid" caption="父项">
+            <opr>=</opr>
+            <datatype>0</datatype>
+            <type>select</type>
+            <option>$creditItemSecList</option>
+        </condtion>
+    </item>
+    
+    <item name="querySailConfig" deaultpfix="SailConfBean">
+        <condtion name="productName" filed="name" caption="品名" pfix="ProductBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="sailType" caption="销售类型">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$productSailType</option>
+        </condtion>
+        <condtion name="industryName" filed="name" caption="事业部" pfix="PrincipalshipBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="querySelfSailTranApply" deaultpfix="SailTranApplyBean">
+        <condtion name="customerName" filed="name" caption="客户" pfix="CustomerBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="outId" caption="销售单(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryApproveSailTranApply" deaultpfix="SailTranApplyBean">
+        <condtion name="customerName" filed="name" caption="客户" pfix="CustomerBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="outId" caption="销售单(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryPromotion" deaultpfix="PromotionBean">
+        <condtion name="name" filed="name" caption="活动名称" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="id" filed="id" caption="标识" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>      
+        <condtion name="isAddUp" filed="isAddUp" caption="订单是否累计" >
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$isAddUp</option>
+        </condtion>        
+        <condtion name="rebateType" filed="rebateType" caption="折扣方式" >
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$rebateType</option>
+        </condtion>
+        <condtion name="industryId" filed="industryId" caption="事业部" >
+            <opr>like</opr>
+            <type>select</type>
+            <option>$industryList</option>
+            <inner></inner>
+        </condtion>        
+        <condtion name="refTime" filed="refTime" caption="参照时间" >
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$refTime</option>
+        </condtion> 
+        <condtion name="beginDate" filed="beginDate" caption="开始日期从" >
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="beginDate1" filed="beginDate" caption="到" >
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+      
+        <condtion name="endDate" filed="endDate" caption="结束日期从" >
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="endDate1" filed="endDate" caption="到" >
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="inValid" filed="inValid" caption="是否有效" >
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$inValid</option>
+        </condtion> 
+    </item>
+    
+    <item name="queryApproveOutRepaireApply" deaultpfix="OutRepaireBean">
+        <condtion name="outId" caption="销售单" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outRepaireStatus</option>
+        </condtion>
+        <condtion name="stafferName" caption="申请人" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+	
+	<item name="querySelfOutRepaireApply" deaultpfix="OutRepaireBean">
+        <condtion name="outId" caption="销售单" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outRepaireStatus</option>
+        </condtion>
+        <condtion name="stafferName" caption="申请人" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+    
+    <item name="queryAllOutRepaireApply" deaultpfix="OutRepaireBean">
+        <condtion name="outId" caption="销售单" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outRepaireStatus</option>
+        </condtion>
+        <condtion name="stafferName" caption="申请人" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>
+	
+	<item name="queryOutImport" deaultpfix="OutImportBean">
+        <condtion name="batchId" caption="批次标识" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$citic_status</option>
+        </condtion>
+        <condtion name="comunicatonBranchName" caption="网点" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="citicNo" caption="中信单号" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="oaNo" caption="OA单号" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="beginDate" filed="logTime" caption="日期从" >
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="beginDate1" filed="logTime" caption="到" >
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="orderDate" filed="citicOrderDate" caption="中信日期从" >
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="orderDate1" filed="citicOrderDate" caption="到" >
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>    
+    </item>	
+	
+	<item name="queryOutImportLog" deaultpfix="OutImportLogBean">
+        <condtion name="batchId" caption="批次标识" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$logStatus</option>
+        </condtion>
+        <condtion name="beginDate" filed="logTime" caption="日期从" >
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="beginDate1" filed="logTime" caption="到" >
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>         
+    </item>		
+	
+    <item name="queryAppOut" deaultpfix="AppOutBean">
+        <condtion name="name" filed="loginName" caption="用户名" pfix="AppUserBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="orderNo" caption="APP 订单号">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+    </item>	
+	
+	<item name="queryPackage" deaultpfix="PackageBean">
+        <condtion name="alogTime" filed="logTime" caption="导入时间从">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="logTime" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="id" caption="ID(A)">
+            <opr>=</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="industryName" caption="事业部">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="receiver" caption="收货人">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion> 
+        <condtion name="locationId" caption="仓库地点">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$adminindustryList</option>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$shipStatus</option>
+        </condtion>
+        <condtion name="emergency" caption="紧急">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outEmergency</option>
+        </condtion>
+    </item>	
+    
+     <item name="queryOutBack" deaultpfix="OutBackBean">
+        <condtion name="expressCompany" filed="name" caption="快递公司" pfix="TransportBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="transportNo" caption="运单号">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion> 
+        <condtion name="alogTime" filed="receiverDate" caption="收货日期">
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <datatype>2</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="blogTime" filed="receiverDate" caption="到">
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <datatype>3</datatype>
+            <inner></inner>
+        </condtion>
+        <condtion name="status" caption="状态">
+            <opr>=</opr>
+            <datatype>1</datatype>
+            <type>select</type>
+            <option>$outbackStatus</option>
+        </condtion>
+         <condtion name="claimer" caption="认领人">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion> 
+    </item>
+    
+    <item name="queryBankSail" deaultpfix="BankSailBean">
+        <condtion name="batchId" caption="批次标识" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="customerName" caption="网点名称" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="beginDate" filed="logTime" caption="日期从" >
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="beginDate1" filed="logTime" caption="到" >
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+        <condtion name="orderDate" filed="outTime" caption="销售日期从" >
+            <opr>&gt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="orderDate1" filed="outTime" caption="到" >
+            <opr>&lt;=</opr>
+            <type>date</type>
+            <inner></inner>
+        </condtion>    
+    </item>
+    
+    <item name="queryEstimateProfit" deaultpfix="EstimateProfitBean">
+        <condtion name="produtcName" caption="产品" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="beginDate" filed="logTime" caption="日期从" >
+            <opr>&gt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion> 
+        <condtion name="beginDate1" filed="logTime" caption="到" >
+            <opr>&lt;=</opr>
+            <type>datetime</type>
+            <inner></inner>
+        </condtion>
+    </item>
+    
+    <item name="queryZJRCProduct" deaultpfix="ZJRCProductBean">
+        <condtion name="produtcName" filed="name" caption="OA产品名" pfix="ProductBean">
+            <opr>like</opr>
+            <type>text</type>
+        </condtion>
+        <condtion name="zjrProductName" caption="银行产品名" >
+            <opr>like</opr>
+            <type>text</type>
+        </condtion> 
+    </item>
+	
+</query>

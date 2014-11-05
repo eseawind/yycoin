@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init"
+	default-destroy-method="destroy">
+	
+	<bean id="baseDAO" class="com.china.center.oa.sail.dao.impl.BaseDAOImpl" />
+
+    <bean id="outDAO" class="com.china.center.oa.sail.dao.impl.OutDAOImpl" />
+
+    <bean id="outUniqueDAO" class="com.china.center.oa.sail.dao.impl.OutUniqueDAOImpl" />
+
+    <bean id="consignDAO" class="com.china.center.oa.sail.dao.impl.ConsignDAOImpl" />
+    
+    <bean id="consign2DAO" class="com.china.center.oa.sail.dao.impl.Consign2DAOImpl" />
+
+    <bean id="consignManager" class="com.china.center.oa.sail.manager.impl.ConsignManagerImpl" />
+
+    <bean id="outBalanceDAO" class="com.china.center.oa.sail.dao.impl.OutBalanceDAOImpl" />
+
+    <bean id="baseBalanceDAO" class="com.china.center.oa.sail.dao.impl.BaseBalanceDAOImpl" />
+
+    <bean id="unitViewDAO" class="com.china.center.oa.sail.dao.impl.UnitViewDAOImpl" />
+
+	<bean id="outManager" class="com.china.center.oa.sail.manager.impl.OutManagerImpl" />
+		
+	<bean id="sailConfigDAO" class="com.china.center.oa.sail.dao.impl.SailConfigDAOImpl" />
+
+	<bean id="sailConfigManager" class="com.china.center.oa.sail.manager.impl.SailConfigManagerImpl" />
+
+	<bean id="sailManager" class="com.china.center.oa.sail.manager.impl.SailManagerImpl" />
+
+	<bean id="sailConfDAO" class="com.china.center.oa.sail.dao.impl.SailConfDAOImpl" />
+
+	<bean id="sailTranApplyDAO" class="com.china.center.oa.sail.dao.impl.SailTranApplyDAOImpl" />
+
+	<bean id="outStatManager" class="com.china.center.oa.sail.manager.impl.OutStatManagerImpl" />
+	
+	
+	<bean id="promotionDAO" class="com.china.center.oa.sail.dao.impl.PromotionDAOImpl"/>
+	
+	<bean id="promotionItemDAO" class="com.china.center.oa.sail.dao.impl.PromotionItemDAOImpl"/>
+	
+	<bean id="promotionManager" class="com.china.center.oa.sail.manager.impl.PromotionManagerImpl"/>
+
+	<bean id="baseRepaireDAO" class="com.china.center.oa.sail.dao.impl.BaseRepaireDAOImpl" />
+
+    <bean id="outRepaireDAO" class="com.china.center.oa.sail.dao.impl.OutRepaireDAOImpl" />
+    
+    <bean id="distributionDAO" class="com.china.center.oa.sail.dao.impl.DistributionDAOImpl" />
+	
+	<bean id="distributionBaseDAO" class="com.china.center.oa.sail.dao.impl.DistributionBaseDAOImpl" />
+	
+	<bean id="expressDAO" class="com.china.center.oa.sail.dao.impl.ExpressDAOImpl"/>
+	
+	<bean id="auditRuleDAO" class="com.china.center.oa.sail.dao.impl.AuditRuleDAOImpl"/>
+
+	<bean id="auditRuleItemDAO" class="com.china.center.oa.sail.dao.impl.AuditRuleItemDAOImpl"/>
+	
+	<bean id="auditRuleManager" class="com.china.center.oa.sail.manager.impl.AuditRuleManagerImpl"/>
+
+	<bean id="outImportDAO" class="com.china.center.oa.sail.dao.impl.OutImportDAOImpl" />
+
+	<bean id="outImportResultDAO" class="com.china.center.oa.sail.dao.impl.OutImportResultDAOImpl" />
+
+	<bean id="outImportManager" class="com.china.center.oa.sail.manager.impl.OutImportManagerImpl" />
+	
+	<bean id="replenishmentDAO" class="com.china.center.oa.sail.dao.impl.ReplenishmentDAOImpl" />
+	
+	<bean id="outImportLogDAO" class="com.china.center.oa.sail.dao.impl.OutImportLogDAOImpl" />
+	
+	<bean id="swatchStatsDAO" class="com.china.center.oa.sail.dao.impl.SwatchStatsDAOImpl" />
+	
+	<bean id="swatchStatsItemDAO" class="com.china.center.oa.sail.dao.impl.SwatchStatsItemDAOImpl" />
+	
+	<bean id="appOutDAO" class="com.china.center.oa.sail.dao.impl.AppOutDAOImpl" />
+	<bean id="appBaseDAO" class="com.china.center.oa.sail.dao.impl.AppBaseDAOImpl" />
+	<bean id="appInvoiceDAO" class="com.china.center.oa.sail.dao.impl.AppInvoiceDAOImpl" />
+	<bean id="appDistributionDAO" class="com.china.center.oa.sail.dao.impl.AppDistributionDAOImpl" />
+	
+	<bean id="appOutVSOutDAO" class="com.china.center.oa.sail.dao.impl.AppOutVSOutDAOImpl" />
+	
+	<bean id="appOutManager" class="com.china.center.oa.sail.manager.impl.AppOutManagerImpl" />
+	
+	<bean id="batchApproveDAO" class="com.china.center.oa.sail.dao.impl.BatchApproveDAOImpl" />
+	<bean id="batchSwatchDAO" class="com.china.center.oa.sail.dao.impl.BatchSwatchDAOImpl" />
+	<bean id="statsDeliveryRankDAO" class="com.china.center.oa.sail.dao.impl.StatsDeliveryRankDAOImpl" />
+	<bean id="deliveryRankVSOutDAO" class="com.china.center.oa.sail.dao.impl.DeliveryRankVSOutDAOImpl" />
+	
+	<bean id="packageDAO" class="com.china.center.oa.sail.dao.impl.PackageDAOImpl" />
+	<bean id="packageItemDAO" class="com.china.center.oa.sail.dao.impl.PackageItemDAOImpl" />
+	<bean id="preConsignDAO" class="com.china.center.oa.sail.dao.impl.PreConsignDAOImpl" />
+	
+	<bean id="shipManager" class="com.china.center.oa.sail.manager.impl.ShipManagerImpl" />
+	
+	<bean id="packageVSCustomerDAO" class="com.china.center.oa.sail.dao.impl.PackageVSCustomerDAOImpl" />
+	
+	<bean id="outBackDAO" class="com.china.center.oa.sail.dao.impl.OutBackDAOImpl" />
+	<bean id="outBackManager" class="com.china.center.oa.sail.manager.impl.OutBackManagerImpl" />
+	
+	<bean id="zjrcOutDAO" class="com.china.center.oa.extsail.dao.impl.ZJRCOutDAOImpl" />
+	<bean id="zjrcBaseDAO" class="com.china.center.oa.extsail.dao.impl.ZJRCBaseDAOImpl" />
+	<bean id="zjrcProductDAO" class="com.china.center.oa.extsail.dao.impl.ZJRCProductDAOImpl" />
+	<bean id="zjrcManager" class="com.china.center.oa.extsail.manager.impl.ZJRCManagerImpl" />
+	
+	<bean id="zjrcDistributionDAO" class="com.china.center.oa.extsail.dao.impl.ZJRCDistributionDAOImpl" />
+	
+	<bean id="batchReturnLogDAO" class="com.china.center.oa.sail.dao.impl.BatchReturnLogDAOImpl" />
+	
+	<bean id="vmOutManager" class="com.china.center.oa.sail.manager.impl.VMOutManagerImpl" />
+	
+	<bean id="outPayTagDAO" class="com.china.center.oa.sail.dao.impl.OutPayTagDAOImpl" />
+	
+	<bean id="bankSailDAO" class="com.china.center.oa.sail.dao.impl.BankSailDAOImpl" />
+	
+	<bean id="estimateProfitDAO" class="com.china.center.oa.sail.dao.impl.EstimateProfitDAOImpl" />
+	
+</beans>

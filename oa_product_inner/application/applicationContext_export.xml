@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+	<osgi:service ref="productCombinationDAO" interface="com.china.center.oa.product.dao.ProductCombinationDAO" />
+
+	<osgi:service ref="productDAO" interface="com.china.center.oa.product.dao.ProductDAO" />
+
+	<osgi:service ref="productVSLocationDAO" interface="com.china.center.oa.product.dao.ProductVSLocationDAO" />
+
+	<osgi:service ref="productFacade" interface="com.china.center.oa.product.facade.ProductFacade" />
+
+	<osgi:service ref="productManager" interface="com.china.center.oa.product.manager.ProductManager" />
+
+	<osgi:service ref="providerDAO" interface="com.china.center.oa.product.dao.ProviderDAO" />
+
+	<osgi:service ref="providerHisDAO" interface="com.china.center.oa.product.dao.ProviderHisDAO" />
+
+	<osgi:service ref="providerUserDAO" interface="com.china.center.oa.product.dao.ProviderUserDAO" />
+
+	<osgi:service ref="productTypeVSCustomerDAO" interface="com.china.center.oa.product.dao.ProductTypeVSCustomerDAO" />
+
+	<osgi:service ref="providerManager" interface="com.china.center.oa.product.manager.ProviderManager" />
+
+	<osgi:service ref="depotDAO" interface="com.china.center.oa.product.dao.DepotDAO" />
+
+	<osgi:service ref="depotManager" interface="com.china.center.oa.product.manager.DepotManager" />
+
+	<osgi:service ref="depotpartDAO" interface="com.china.center.oa.product.dao.DepotpartDAO" />
+
+	<osgi:service ref="storageDAO" interface="com.china.center.oa.product.dao.StorageDAO" />
+
+	<osgi:service ref="storageRelationDAO" interface="com.china.center.oa.product.dao.StorageRelationDAO" />
+
+	<osgi:service ref="storageManager" interface="com.china.center.oa.product.manager.StorageManager" />
+
+	<osgi:service ref="depotpartManager" interface="com.china.center.oa.product.manager.DepotpartManager" />
+
+	<osgi:service ref="storageLogDAO" interface="com.china.center.oa.product.dao.StorageLogDAO" />
+
+	<osgi:service ref="storageRelationManager" interface="com.china.center.oa.product.manager.StorageRelationManager" />
+
+	<osgi:service ref="composeFeeDAO" interface="com.china.center.oa.product.dao.ComposeFeeDAO" />
+
+	<osgi:service ref="composeItemDAO" interface="com.china.center.oa.product.dao.ComposeItemDAO" />
+
+	<osgi:service ref="composeProductDAO" interface="com.china.center.oa.product.dao.ComposeProductDAO" />
+
+	<osgi:service ref="composeProductManager" interface="com.china.center.oa.product.manager.ComposeProductManager" />
+
+	<osgi:service ref="priceChangeDAO" interface="com.china.center.oa.product.dao.PriceChangeDAO" />
+
+	<osgi:service ref="priceChangeNewItemDAO" interface="com.china.center.oa.product.dao.PriceChangeNewItemDAO" />
+
+	<osgi:service ref="priceChangeSrcItemDAO" interface="com.china.center.oa.product.dao.PriceChangeSrcItemDAO" />
+
+	<osgi:service ref="priceChangeManager" interface="com.china.center.oa.product.manager.PriceChangeManager" />
+
+	<osgi:service ref="priceHistoryDAO" interface="com.china.center.oa.product.dao.PriceHistoryDAO" />
+
+	<osgi:service ref="storageApplyDAO" interface="com.china.center.oa.product.dao.StorageApplyDAO" />
+
+	<osgi:service ref="storageApplyManager" interface="com.china.center.oa.product.manager.StorageApplyManager" />
+
+	<osgi:service ref="composeFeeDefinedDAO" interface="com.china.center.oa.product.dao.ComposeFeeDefinedDAO" />
+
+	<!-- add 2012.5.23 -->
+	<osgi:service ref="productApplyDAO" interface="com.china.center.oa.product.dao.ProductApplyDAO" />
+	
+	<osgi:service ref="productChangeRecordDAO" interface="com.china.center.oa.product.dao.ProductChangeRecordDAO" />
+	
+	<osgi:service ref="productApplyFacade" interface="com.china.center.oa.product.facade.ProductApplyFacade" />
+	
+	<osgi:service ref="productApplyManager" interface="com.china.center.oa.product.manager.ProductApplyManager" />
+	
+	<osgi:service ref="productSubApplyDAO" interface="com.china.center.oa.product.dao.ProductSubApplyDAO" />	
+	
+	<osgi:service ref="productVSStafferDAO" interface="com.china.center.oa.product.dao.ProductVSStafferDAO" />
+	
+	<osgi:service ref="priceConfigDAO" interface="com.china.center.oa.product.dao.PriceConfigDAO" />
+	
+	<osgi:service ref="priceConfigManager" interface="com.china.center.oa.product.manager.PriceConfigManager" />
+	
+	<osgi:service ref="goldSilverPriceDAO" interface="com.china.center.oa.product.dao.GoldSilverPriceDAO" />	
+		
+	<osgi:service ref="citicVSOAProductDAO" interface="com.china.center.oa.product.dao.CiticVSOAProductDAO" />	
+	
+	<osgi:service ref="productVSGiftDAO" interface="com.china.center.oa.product.dao.ProductVSGiftDAO" />
+	
+	<osgi:service ref="productBOMDAO" interface="com.china.center.oa.product.dao.ProductBOMDAO" />
+	
+	<osgi:service ref="decomposeProductDAO" interface="com.china.center.oa.product.dao.DecomposeProductDAO" />
+	
+	<osgi:service ref="gsOutDAO" interface="com.china.center.oa.product.dao.GSOutDAO" />
+	
+	<osgi:service ref="gsOutItemDAO" interface="com.china.center.oa.product.dao.GSOutItemDAO" />
+	
+</beans>

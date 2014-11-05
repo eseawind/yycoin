@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="OutStatDAOImpl">
+
+    <resultMap id="NotPayWrap"
+        class="com.china.center.oa.client.wrap.NotPayWrap">
+        <result property="cid" column="cid" />
+        <result property="cname" column="cname" />
+        <result property="ccode" column="ccode" />
+        <result property="creditName" column="creditName" />
+        <result property="creditVal" column="creditVal" />
+        <result property="notPay" column="notPay" />
+    </resultMap>
+
+	<select id="queryMaxBusiness" parameterClass="java.util.Map" resultClass="java.lang.Double">
+		<![CDATA[
+            select max(t1.total) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t2.productName not like 'D%' 
+            and t1.customerId = #customerId# 
+            and t1.type = 0 
+            and t1.outtype = 0
+            and t1.pay = 1
+            and t1.tempType = 0
+            and t1.outTime >= #beginDate#
+            and t1.outTime <= #endDate#
+        ]]>
+	</select>
+	
+	<select id="sumBusiness" parameterClass="java.util.Map" resultClass="java.lang.Double">
+        <![CDATA[
+            select sum(t1.total) from t_center_out t1
+            where t1.customerId = #customerId# 
+            and t1.type = 0 
+            and t1.outtype = 0
+            and t1.pay = 1
+            and t1.tempType = 0
+            and t1.outTime >= #beginDate#
+            and t1.outTime <= #endDate#
+        ]]>
+    </select>
+    
+    <select id="listNotPayWrap" parameterClass="java.util.Map" resultMap="NotPayWrap">
+        <![CDATA[
+            select sum(t1.total) as notPay , t3.name as creditName, t2.id as cid , 
+            t2.name as cname,t2.code as ccode, t2.creditVal as creditVal
+            from t_center_out t1, T_CENTER_CUSTOMER_MAIN t2 , t_center_credit_level t3
+            where t2.id = t1.customerId and  t1.pay = 0 and t1.type = 0 and t1.status in (3, 4)
+            and t1.outTime >= #outTime# and t3.id = t2.creditLevelId
+            GROUP by t1.customerId ORDER by notPay desc
+        ]]>
+    </select>
+
+</sqlMap>

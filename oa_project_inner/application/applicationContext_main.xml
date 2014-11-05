@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/ex 
+  	  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+
+	<bean id="projectDAO" class="com.china.center.oa.project.dao.impl.ProjectDAOImpl" />
+	
+	<bean id="agreementDAO" class="com.china.center.oa.project.dao.impl.AgreementDAOImpl" />
+	
+	<bean id="proLineProjectDAO" class="com.china.center.oa.project.dao.impl.ProLineProjectDAOImpl" />
+	
+	<bean id="payLineProjectDAO" class="com.china.center.oa.project.dao.impl.PayLineProjectDAOImpl" />
+	
+	<bean id="tranLineProjectDAO" class="com.china.center.oa.project.dao.impl.TranLineProjectDAOImpl" />
+	
+	<bean id="invoiceLineProjectDAO" class="com.china.center.oa.project.dao.impl.InvoiceLineProjectDAOImpl" />
+	
+	<bean id="stafferProjectDAO" class="com.china.center.oa.project.dao.impl.StafferProjectDAOImpl" />
+	
+	<bean id="taskDAO" class="com.china.center.oa.project.dao.impl.TaskDAOImpl" />
+	
+	<bean id="taskManager" class="com.china.center.oa.project.manager.impl.TaskManagerImpl" />
+	
+	<bean id="agreementManager" class="com.china.center.oa.project.manager.impl.AgreementManagerImpl" />
+	
+	<bean id="proLineProjectManager" class="com.china.center.oa.project.manager.impl.ProLineProjectManagerImpl" />
+	
+	<bean id="payLineProjectManager" class="com.china.center.oa.project.manager.impl.PayLineProjectManagerImpl" />
+	
+	<bean id="tranLineProjectManager" class="com.china.center.oa.project.manager.impl.TranLineProjectManagerImpl" />
+	
+	<bean id="stafferProjectManager" class="com.china.center.oa.project.manager.impl.StafferProjectManagerImpl" />
+	
+	<bean id="invoiceLineProjectManager" class="com.china.center.oa.project.manager.impl.InvoiceLineProjectManagerImpl" />
+	
+	<bean id="projectApplyDAO" class="com.china.center.oa.project.dao.impl.ProjectApplyDAOImpl" />
+	
+	<bean id="projectHandleHisDAO" class="com.china.center.oa.project.dao.impl.ProjectHandleHisDAOImpl" />
+	
+	<bean id="projectFlowDAO" class="com.china.center.oa.project.dao.impl.ProjectFlowDAOImpl" />
+	
+	<bean id="projectApproveDAO" class="com.china.center.oa.project.dao.impl.ProjectApproveDAOImpl" />
+	
+	<bean id="projectManager" class="com.china.center.oa.project.manager.impl.ProjectManagerImpl" />
+	
+	<bean id="taskMailPlanDAO" class="com.china.center.oa.project.dao.impl.TaskMailPlanDAOImpl" />
+
+</beans>

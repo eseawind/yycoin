@@ -1,0 +1,36 @@
+.top {
+  background-color: #c0c0c0;
+}
+
+.cal {
+  background-color: #C0EDFA;
+}
+
+.head {
+  color: #ff0000;
+  font-family: Arial;
+  font-weight: bold;
+  text-align: left;
+  font-size: 14;
+}
+
+.days {
+  color: #000000;
+  font-family: Arial;
+  font-size: 9;  
+  text-align: center;
+}
+
+.grey {
+  color: #808080;
+  font-family: Arial;
+  font-size: 12;
+  text-align: center;
+}
+
+.today, .links {
+  color: #0000FF;
+  font-family: Arial;
+  font-size: 12;
+  text-align: center;
+}

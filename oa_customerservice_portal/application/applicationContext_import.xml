@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd"
+	default-autowire="byName" default-init-method="init" default-destroy-method="destroy">
+
+	<osgi:reference id="actionConfigManager" interface="com.china.center.struts.wrap.ActionConfigManager" />
+    
+    <osgi:reference id="publicFacade" interface="com.china.center.oa.publics.facade.PublicFacade" />
+    
+    <osgi:reference id="commonDAO" interface="com.china.center.oa.publics.dao.CommonDAO" />
+    
+    <osgi:reference id="enumDAO" interface="com.china.center.oa.publics.dao.EnumDAO" />
+    
+    <osgi:reference id="dutyDAO" interface="com.china.center.oa.publics.dao.DutyDAO" />
+    
+    <osgi:reference id="userManager" interface="com.china.center.oa.publics.manager.UserManager" />
+    
+    <osgi:reference id="authManager" interface="com.china.center.oa.publics.manager.AuthManager" />
+    
+    <osgi:reference id="stafferManager" interface="com.china.center.oa.publics.manager.StafferManager" />
+    
+    <osgi:reference id="parameterDAO" interface="com.china.center.oa.publics.dao.ParameterDAO" />
+    
+    <osgi:reference id="showDAO" interface="com.china.center.oa.publics.dao.ShowDAO" />
+    
+    <osgi:reference id="flowLogDAO" interface="com.china.center.oa.publics.dao.FlowLogDAO" />
+    
+    <osgi:reference id="stafferTransferDAO" interface="com.china.center.oa.publics.dao.StafferTransferDAO" />
+    
+    <osgi:reference id="dutyVSInvoiceDAO" interface="com.china.center.oa.publics.dao.DutyVSInvoiceDAO" />	
+
+	<osgi:reference id="productDAO" interface="com.china.center.oa.product.dao.ProductDAO" />
+	
+	<osgi:reference id="principalshipDAO" interface="com.china.center.oa.publics.dao.PrincipalshipDAO" />
+	
+	<osgi:reference id="stafferDAO" interface="com.china.center.oa.publics.dao.StafferDAO" />
+	
+	<osgi:reference id="commonMailManager" interface="com.china.center.oa.publics.manager.CommonMailManager" />
+	<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+	    
+   	<osgi:reference id="creditLevelDAO" interface="com.china.center.oa.credit.dao.CreditLevelDAO" />
+   	
+   	<osgi:reference id="customerMainDAO" interface="com.china.center.oa.client.dao.CustomerMainDAO" />
+   	
+   	<osgi:reference id="customerContactDAO" interface="com.china.center.oa.client.dao.CustomerContactDAO" />
+    
+    <osgi:reference id="outDAO" interface="com.china.center.oa.sail.dao.OutDAO" />
+    
+    <osgi:reference id="distributionDAO" interface="com.china.center.oa.sail.dao.DistributionDAO" />
+    
+    <osgi:reference id="inBillDAO" interface="com.china.center.oa.finance.dao.InBillDAO" />
+    
+    <osgi:reference id="feedBackDAO" interface="com.china.center.oa.customerservice.dao.FeedBackDAO" />
+
+	<osgi:reference id="feedBackCheckDAO" interface="com.china.center.oa.customerservice.dao.FeedBackCheckDAO" />
+	
+	<osgi:reference id="feedBackDetailDAO" interface="com.china.center.oa.customerservice.dao.FeedBackDetailDAO" />
+	
+	<osgi:reference id="feedBackVisitDAO" interface="com.china.center.oa.customerservice.dao.FeedBackVisitDAO" />
+
+	<osgi:reference id="feedBackVisitItemDAO" interface="com.china.center.oa.customerservice.dao.FeedBackVisitItemDAO" />
+
+	<osgi:reference id="feedBackVSOutDAO" interface="com.china.center.oa.customerservice.dao.FeedBackVSOutDAO" />
+	
+	<osgi:reference id="customerServiceManager" interface="com.china.center.oa.customerservice.manager.CustomerServiceManager" />
+	
+	<osgi:reference id="shortMessageDAO" interface="com.china.center.oa.customerservice.dao.ShortMessageDAO" />
+	
+	<osgi:reference id="shortMessageStatusDAO" interface="com.china.center.oa.customerservice.dao.ShortMessageStatusDAO" />
+	
+	<osgi:reference id="shortMessageManager" interface="com.china.center.oa.customerservice.manager.ShortMessageManager" />
+    
+</beans>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+	  http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+	  http://www.springframework.org/schema/osgi http://www.springframework.org/schema/osgi/spring-osgi.xsd
+	  http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd"
+	default-destroy-method="destroy">
+	
+    <bean id="exportAllStorageRelationJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="storageRelationManager" />
+        <property name="targetMethod" value="exportAllStorageRelation" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="exportAllStorageRelationTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="exportAllStorageRelationJob" />
+        <property name="cronExpression" value="0 59 23 * * ?" />
+    </bean>
+    
+    <bean id="checkStorageLogJob"
+        class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="targetObject" ref="storageRelationManager" />
+        <property name="targetMethod" value="checkStorageLog" />
+        <property name="concurrent" value="false" />
+    </bean>
+    
+    <bean id="checkStorageLogTrigger"
+        class="org.springframework.scheduling.quartz.CronTriggerBean">
+        <property name="jobDetail" ref="checkStorageLogJob" />
+        <property name="cronExpression" value="0 50 3 * * ?" />
+    </bean>
+    
+    <bean
+		class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+				<ref bean="exportAllStorageRelationTrigger" />
+				<ref bean="checkStorageLogTrigger" />
+			</list>
+		</property>
+	</bean>
+</beans>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:ex="http://www.springframework.org/schema/ex"
+	xmlns:osgi="http://www.springframework.org/schema/osgi"
+	xsi:schemaLocation="
+  http://www.springframework.org/schema/beans
+  http://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/tx 
+  http://www.springframework.org/schema/tx/spring-tx-2.0.xsd
+  http://www.springframework.org/schema/ex 
+  http://www.springframework.org/schema/ex/spring-ex-2.0.xsd
+  http://www.springframework.org/schema/osgi
+  http://www.springframework.org/schema/osgi/spring-osgi.xsd">
+
+	<osgi:service ref="priceAskDAO" interface="com.china.center.oa.stock.dao.PriceAskDAO" />
+
+	<osgi:service ref="priceAskProviderDAO" interface="com.china.center.oa.stock.dao.PriceAskProviderDAO" />
+
+	<osgi:service ref="priceAskManager" interface="com.china.center.oa.stock.manager.PriceAskManager" />
+
+	<osgi:service ref="stockDAO" interface="com.china.center.oa.stock.dao.StockDAO" />
+
+	<osgi:service ref="stockItemDAO" interface="com.china.center.oa.stock.dao.StockItemDAO" />
+
+	<osgi:service ref="stockManager" interface="com.china.center.oa.stock.manager.StockManager" />
+	
+	<osgi:service ref="stockWorkDAO" interface="com.china.center.oa.stock.dao.StockWorkDAO" />
+	
+	<osgi:service ref="stockWorkCountDAO" interface="com.china.center.oa.stock.dao.StockWorkCountDAO" />
+
+	<osgi:service ref="stockWorkManager" interface="com.china.center.oa.stock.manager.StockWorkManager" />
+
+</beans>

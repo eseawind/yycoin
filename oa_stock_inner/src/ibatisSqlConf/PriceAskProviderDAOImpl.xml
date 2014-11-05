@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="PriceAskProviderDAOImpl">
+
+	<select id="queryByCondition"
+		parameterClass="java.util.Map" resultClass="com.china.center.oa.stock.vo.PriceAskProviderBeanVO">
+		Select t2.*, t3.name as productName, t3.code as productCode, t4.name as providerName 
+		From T_CENTER_PRICEASK t1, T_CENTER_PRICEASKPROVIDER t2 ,
+        T_CENTER_PRODUCT t3, T_CENTER_PROVIDE t4
+        Where t2.askId = t1.id
+        and t1.productId = t3.id
+        and t1.productId = #productId#
+        and t4.id = t2.providerId
+        and t1.src = #src#
+        and t1.askDate >= #askDate#
+        and t1.refStock = #stockId#
+	</select>
+
+</sqlMap>

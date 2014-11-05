@@ -1,0 +1,47 @@
+.border {
+	BORDER-TOP: #000000 1px solid;
+	BORDER-LEFT: #000000 1px solid;
+	BACKGROUND-COLOR: #000000
+}
+
+.border2 {
+	BORDER-LEFT: #000000 1px solid;
+	BACKGROUND-COLOR: #000000
+}
+
+.border1 {
+	BORDER-RIGHT: #000000 1px solid;
+	BORDER-BOTTOM: #000000 1px solid;
+	height: 100%;
+	width: 100%;
+	cellspacing: 0px;
+	cellpadding: 0px;
+	BACKGROUND-COLOR: #FFFFFF
+}
+
+.content2 {
+	background-color: #FFFFFF;
+	font-size: 12px;
+	height: 20px;
+}
+
+.content1 {
+	font-size: 12px;
+	height: 20px;
+	background-color: #FFFFFF;
+}
+
+.button_class {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	background-color: #f5f5f5;
+	border: 1px solid #666666;
+	background-position: center center;
+	height: 18px;
+	CURSOR: hand;
+	vertical-align: middle;
+	visibility: visible;
+}
+
+

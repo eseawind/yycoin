@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/osgi/work/Catalina/localhost/localhost.iml" filepath="$PROJECT_DIR$/osgi/work/Catalina/localhost/localhost.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_budget_inner/oa_budget_inner.iml" filepath="$PROJECT_DIR$/oa_budget_inner/oa_budget_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_budget_manager/oa_budget_manager.iml" filepath="$PROJECT_DIR$/oa_budget_manager/oa_budget_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_budget_portal/oa_budget_portal.iml" filepath="$PROJECT_DIR$/oa_budget_portal/oa_budget_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_commission_inner/oa_commission_inner.iml" filepath="$PROJECT_DIR$/oa_commission_inner/oa_commission_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_commission_manager/oa_commission_manager.iml" filepath="$PROJECT_DIR$/oa_commission_manager/oa_commission_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_commission_portal/oa_commission_portal.iml" filepath="$PROJECT_DIR$/oa_commission_portal/oa_commission_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_customer_inner/oa_customer_inner.iml" filepath="$PROJECT_DIR$/oa_customer_inner/oa_customer_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_customer_manager/oa_customer_manager.iml" filepath="$PROJECT_DIR$/oa_customer_manager/oa_customer_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_customer_portal/oa_customer_portal.iml" filepath="$PROJECT_DIR$/oa_customer_portal/oa_customer_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_customerservice_inner/oa_customerservice_inner.iml" filepath="$PROJECT_DIR$/oa_customerservice_inner/oa_customerservice_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_customerservice_manager/oa_customerservice_manager.iml" filepath="$PROJECT_DIR$/oa_customerservice_manager/oa_customerservice_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_customerservice_portal/oa_customerservice_portal.iml" filepath="$PROJECT_DIR$/oa_customerservice_portal/oa_customerservice_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_customervssail_glue/oa_customervssail_glue.iml" filepath="$PROJECT_DIR$/oa_customervssail_glue/oa_customervssail_glue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_finance_inner/oa_finance_inner.iml" filepath="$PROJECT_DIR$/oa_finance_inner/oa_finance_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_finance_manager/oa_finance_manager.iml" filepath="$PROJECT_DIR$/oa_finance_manager/oa_finance_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_finance_portal/oa_finance_portal.iml" filepath="$PROJECT_DIR$/oa_finance_portal/oa_finance_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_flow_manager/oa_flow_manager.iml" filepath="$PROJECT_DIR$/oa_flow_manager/oa_flow_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_flow_manager_dy/oa_flow_manager_dy.iml" filepath="$PROJECT_DIR$/oa_flow_manager_dy/oa_flow_manager_dy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_flow_portal/oa_flow_portal.iml" filepath="$PROJECT_DIR$/oa_flow_portal/oa_flow_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_mailandgroup_manager/oa_mailandgroup_manager.iml" filepath="$PROJECT_DIR$/oa_mailandgroup_manager/oa_mailandgroup_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_mailandgroup_portal/oa_mailandgroup_portal.iml" filepath="$PROJECT_DIR$/oa_mailandgroup_portal/oa_mailandgroup_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_note_manager/oa_note_manager.iml" filepath="$PROJECT_DIR$/oa_note_manager/oa_note_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_openservice_portal/oa_openservice_portal.iml" filepath="$PROJECT_DIR$/oa_openservice_portal/oa_openservice_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_product_inner/oa_product_inner.iml" filepath="$PROJECT_DIR$/oa_product_inner/oa_product_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_product_manager/oa_product_manager.iml" filepath="$PROJECT_DIR$/oa_product_manager/oa_product_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_product_portal/oa_product_portal.iml" filepath="$PROJECT_DIR$/oa_product_portal/oa_product_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_project_inner/oa_project_inner.iml" filepath="$PROJECT_DIR$/oa_project_inner/oa_project_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_project_manager/oa_project_manager.iml" filepath="$PROJECT_DIR$/oa_project_manager/oa_project_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_project_portal/oa_project_portal.iml" filepath="$PROJECT_DIR$/oa_project_portal/oa_project_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_public_inner/oa_public_inner.iml" filepath="$PROJECT_DIR$/oa_public_inner/oa_public_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_public_manager/oa_public_manager.iml" filepath="$PROJECT_DIR$/oa_public_manager/oa_public_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_public_portal/oa_public_portal.iml" filepath="$PROJECT_DIR$/oa_public_portal/oa_public_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_sail_inner/oa_sail_inner.iml" filepath="$PROJECT_DIR$/oa_sail_inner/oa_sail_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_sail_manager/oa_sail_manager.iml" filepath="$PROJECT_DIR$/oa_sail_manager/oa_sail_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_sail_portal/oa_sail_portal.iml" filepath="$PROJECT_DIR$/oa_sail_portal/oa_sail_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_stock_inner/oa_stock_inner.iml" filepath="$PROJECT_DIR$/oa_stock_inner/oa_stock_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_stock_manager/oa_stock_manager.iml" filepath="$PROJECT_DIR$/oa_stock_manager/oa_stock_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_stock_portal/oa_stock_portal.iml" filepath="$PROJECT_DIR$/oa_stock_portal/oa_stock_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_stockvssail_glue/oa_stockvssail_glue.iml" filepath="$PROJECT_DIR$/oa_stockvssail_glue/oa_stockvssail_glue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_tax_glue/oa_tax_glue.iml" filepath="$PROJECT_DIR$/oa_tax_glue/oa_tax_glue.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_tax_inner/oa_tax_inner.iml" filepath="$PROJECT_DIR$/oa_tax_inner/oa_tax_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_tax_manager/oa_tax_manager.iml" filepath="$PROJECT_DIR$/oa_tax_manager/oa_tax_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_tax_portal/oa_tax_portal.iml" filepath="$PROJECT_DIR$/oa_tax_portal/oa_tax_portal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_tcp_inner/oa_tcp_inner.iml" filepath="$PROJECT_DIR$/oa_tcp_inner/oa_tcp_inner.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_tcp_manager/oa_tcp_manager.iml" filepath="$PROJECT_DIR$/oa_tcp_manager/oa_tcp_manager.iml" />
+      <module fileurl="file://$PROJECT_DIR$/oa_tcp_portal/oa_tcp_portal.iml" filepath="$PROJECT_DIR$/oa_tcp_portal/oa_tcp_portal.iml" />
+    </modules>
+  </component>
+</project>
+

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="OutStatDAO">
+
+	<select id="queryMaxBusiness" parameterClass="java.util.Map" resultClass="java.lang.Double">
+		<![CDATA[
+            select max(t1.total) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t2.productName not like 'D%' 
+            and t1.customerId = #customerId# 
+            and t1.type = 0 
+            and t1.outtype = 0
+            and t1.pay = 1
+            and t1.tempType = 0
+            and t1.outTime >= #beginDate#
+            and t1.outTime <= #endDate#
+        ]]>
+	</select>
+	
+	<select id="sumBusiness" parameterClass="java.util.Map" resultClass="java.lang.Double">
+        <![CDATA[
+            select sum(t1.total) from t_center_out t1
+            where t1.customerId = #customerId# 
+            and t1.type = 0 
+            and t1.outtype = 0
+            and t1.pay = 1
+            and t1.tempType = 0
+            and t1.outTime >= #beginDate#
+            and t1.outTime <= #endDate#
+        ]]>
+    </select>
+  
+</sqlMap>

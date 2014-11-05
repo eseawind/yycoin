@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="StorageRelationDAO">
+
+     <select id="queryStorageRelationWithoutPrice" parameterClass="java.util.Map" resultClass="com.china.center.oa.product.vo.StorageRelationVO">
+        <![CDATA[
+           select t1.*, sum(t1.amount) as total, t2.name as productName, t2.code as productCode , 
+            t3.name as depotpartName , t3.type as depotpartType
+			from T_CENTER_STORAGERALATION t1, t_center_product t2, t_center_depotpart t3
+			where  t1.locationid = #depotId# 
+			and t1.productid = t2.id  
+			and t1.depotpartId = t3.id
+			GROUP by t1.productid, t1.depotpartId
+        ]]>
+    </select>
+
+</sqlMap>

@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="OutDAO">
+
+    <resultMap id="CreditWrap"
+        class="com.china.center.oa.sail.wrap.CreditWrap">
+        <result property="stafferId" column="stafferId" />
+        <result property="industryId" column="industryId" />
+        <result property="fullId" column="fullId" />
+        <result property="total" column="total" />
+        <result property="credit" column="credit" />
+        <result property="outTime" column="outTime" />
+        <result property="customerName" column="customerName" />
+    </resultMap>
+
+    <!-- 在途的产品 -->
+	<select id="sumPreassignAmount" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+		<![CDATA[
+            select sum(t2.amount) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = #type# 
+            and t1.location = #location# 
+            and t2.productId = #productId# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (1, 6, 7, 8, 9)
+        ]]>
+	</select>
+	
+	<!-- 客户信用预占金额 -->
+	<select id="sumNoPayBusiness" parameterClass="java.util.Map" resultClass="java.lang.Double">
+        <![CDATA[
+            select sum(t1.curcredit) from t_center_out t1
+            where t1.customerId = #customerId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 职员信用预占金额 -->
+    <select id="sumNoPayAndAvouchBusinessByStafferId" parameterClass="java.util.Map" resultClass="java.lang.Double">
+        <![CDATA[
+            select sum(t1.staffcredit) from t_center_out t1
+            where t1.stafferId = #stafferId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 查询自己未付款的单据(industryId暂时忽略) -->
+    <select id="queryNoPayAndAvouchBusinessByStafferId" parameterClass="java.util.Map" resultClass="com.china.center.oa.sail.wrap.CreditWrap">
+        <![CDATA[
+            select stafferId, industryId, fullId, total, outTime,
+             hadPay, staffcredit as credit, customerName ,curcredit,
+             staffcredit,managercredit
+            from t_center_out t1
+            where t1.stafferId = #stafferId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.total > 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <select id="queryNoPayAndAvouchBusinessByManagerId" parameterClass="java.util.Map" resultClass="com.china.center.oa.sail.wrap.CreditWrap">
+        <![CDATA[
+            select stafferId, industryId, fullId, managercredit as total, outTime, hadPay, customerName from t_center_out t1
+            where t1.managerId = #stafferId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.total > 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 分公司经理信用预占金额 -->
+    <select id="sumNoPayAndAvouchBusinessByManagerId" parameterClass="java.util.Map" resultClass="java.lang.Double">
+        <![CDATA[
+            select sum(t1.managercredit) from t_center_out t1
+            where t1.managerId = #stafferId# 
+            AND t1.industryId = #industryId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 查询共计担保 -->
+    <select id="queryNoPayAndAvouchBusinessByManagerId2" parameterClass="java.util.Map" resultClass="com.china.center.oa.sail.wrap.CreditWrap">
+        <![CDATA[
+            select stafferId, industryId, fullId, managercredit as total, outTime, hadPay, managercredit as credit, customerName from t_center_out t1
+            where t1.managerId = #stafferId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.total > 0
+            AND t1.managercredit > 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 共计担保金额 -->
+    <select id="sumNoPayAndAvouchBusinessByManagerId2" parameterClass="java.util.Map" resultClass="java.lang.Double">
+        <![CDATA[
+            select sum(t1.managercredit) from t_center_out t1
+            where t1.managerId = #stafferId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 查询被担保 -->
+    <select id="queryNoPayAndAvouchBusinessByManagerId3" parameterClass="java.util.Map" resultClass="com.china.center.oa.sail.wrap.CreditWrap">
+        <![CDATA[
+            select stafferId, industryId, fullId, managercredit as total, outTime, hadPay, managercredit as credit, customerName from t_center_out t1
+            where t1.stafferId = #stafferId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.managercredit > 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 被担保金额 -->
+    <select id="sumNoPayAndAvouchBusinessByManagerId3" parameterClass="java.util.Map" resultClass="java.lang.Double">
+        <![CDATA[
+            select sum(t1.managercredit) from t_center_out t1
+            where t1.stafferId = #stafferId# 
+            AND t1.type = 0 
+            AND t1.pay = 0
+            AND t1.outTime >= #beginDate#
+            AND t1.outTime <= #endDate#
+            AND t1.status in (1, 3, 4, 6, 7, 8)
+        ]]>
+    </select>
+    
+    <!-- 销售产品在途的,主要是调价需要剔除 -->
+    <select id="countNotEndProductInOut" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+		<![CDATA[
+            select count(t2.productId) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = 0 
+            and t2.productId = #productId# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (1, 6, 7, 8, 9)
+        ]]>
+	</select>
+	
+	<!-- 入库产品在途的,主要是调价需要剔除 -->
+	<select id="countNotEndProductInIn" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+		<![CDATA[
+            select count(t2.productId) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = 1 
+            and t1.inway = 1 
+            and t2.productId = #productId# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (1, 6, 7, 8, 9, 10)
+        ]]>
+	</select>
+	
+	<!-- 销售产品预占的,主要是显示库存页面需要 -->
+	<select id="sumNotEndProductInOutByStorageRelation" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+        <![CDATA[
+            select sum(t2.amount) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = 0 
+            and t2.productId = #productId# 
+            and t2.depotpartId = #depotpartId# 
+            and t2.costPriceKey = #costPriceKey# 
+            and t2.owner = #owner# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (1, 6, 7, 8, 9)
+        ]]>
+    </select>
+    
+   	<!-- 销售产品预占的,主要是显示库存页面需要 -->
+	<select id="sumNotEndProductInOutByStorageRelation2" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+        <![CDATA[
+            select sum(t2.amount) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = 0 
+            and t2.productId = #productId# 
+            and t2.depotpartId = #depotpartId# 
+            and t2.owner = #owner# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (1, 6, 7, 8, 9)
+        ]]>
+    </select>
+    
+    <!-- 入库产品预占的,主要是显示库存页面需要 -->
+    <select id="sumNotEndProductInInByStorageRelation" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+        <![CDATA[
+            select sum(t2.amount) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = 1 
+            and t1.outtype <> 25
+            and t2.amount < 0
+            and t2.productId = #productId# 
+            and t2.depotpartId = #depotpartId# 
+            and t2.costPriceKey = #costPriceKey# 
+            and t2.owner = #owner# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (1, 6, 7, 8, 9, 10)
+        ]]>
+    </select>
+    
+    <!-- 入库产品预占的,主要是显示库存页面需要 -->
+    <select id="sumNotEndProductInInByStorageRelation2" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+        <![CDATA[
+            select sum(t2.amount) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = 1 
+            and t1.outtype <> 25
+            and t2.amount < 0
+            and t2.productId = #productId# 
+            and t2.depotpartId = #depotpartId# 
+            and t2.owner = #owner# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (1, 6, 7, 8, 9, 10)
+        ]]>
+    </select>
+    
+    <select id="sumInwayProductInBuy" parameterClass="java.util.Map" resultClass="java.lang.Integer">
+        <![CDATA[
+            select sum(t2.amount) from t_center_out t1, t_center_base t2 
+            where t1.fullid = t2.outid 
+            and t1.type = 1 
+            and t1.outType = 1 
+            and t1.inway = 1 
+            and t2.depotpartId = #depotpartId# 
+            and t2.productId = #productId# 
+            and t2.costPriceKey = #costPriceKey# 
+            and t2.owner = #owner# 
+            and t1.outtime >= #beginDate# 
+            AND t1.outtime <= #endDate# 
+            AND t1.status in (3, 4)
+        ]]>
+    </select>
+    
+     <select id="queryBaseByConditions"
+        parameterClass="java.util.Map" resultClass="com.china.center.oa.sail.bean.BaseBean">
+         <![CDATA[
+        select B.id,B.outId,B.productId,B.productName,B.showName,B.showId,B.locationId,B.unit,
+        B.amount,B.mtype,B.inway,B.storageId,B.depotpartId,B.depotpartName,B.owner,B.ownerName,B.price,B.pprice,B.iprice,B.inputPrice,
+        B.costPrice,B.costPriceKey,B.value,B.invoiceMoney,B.description,B.profit,B.profitRatio,B.deliverType,B.expressPay,B.transportPay
+         from T_CENTER_BASE B , t_center_out O
+        where B.OUTID=O.fullid and
+         O.status in(3,4) 
+        and O.customerId=#custid#     
+        and B.productId in(#proids#)
+        ]]>
+    </select>
+
+</sqlMap>
