@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="OA" default="doc">
+<project name="OA_product_portal" default="doc">
 	<property name="OA.home" value="." />
 	<!-- 源jsp文件地址 -->
 	<property name="jsp.dir" value="${OA.home}/webroot" />
