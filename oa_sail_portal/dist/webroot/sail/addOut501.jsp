@@ -38,10 +38,15 @@ function opens(obj)
 	}
 
 	var os = obj.parentNode.parentNode;
+//    alert(os.innerHTML);
 
-	var location = os.cells[0].childNodes[0].value;
+//	var location = os.cells[0].childNodes[0].value;
+    var location = document.getElementById("unLocationId").value;
+//    alert(location);
+//    alert(os.cells[0].innerHTML);
+//    alert(os.cells[0].childNodes[0].innerHTML);
 
-	if (location == '')
+	if (location == '' || typeof location === 'undefined')
     {
         alert('请选择仓库');
         

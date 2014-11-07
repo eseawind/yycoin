@@ -8519,6 +8519,9 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
                     
                     // 判断地址在地址库中是否存在，不存在则自动新增
                     compareAddressAndSave(distBean, outBean);
+
+                    // 更新客户省市信息
+                    saveCustomerInfo(distBean, outBean);
                     
                     
                     // 防止溢出
@@ -8627,7 +8630,6 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
 				}
 			}
 		}
-		
 		distBean.setAddress(address);
 		
 		Map<String,List<BaseBean>> map = new HashMap<String,List<BaseBean>>();
@@ -8721,6 +8723,34 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
 	    	addressDAO.saveEntityBean(addBean);
 		}
 	}
+
+
+    private void saveCustomerInfo(DistributionBean distBean, OutBean outBean)
+    {
+        String psProvinceId = distBean.getProvinceId();
+        String psCityId = distBean.getCityId();
+        if (StringTools.isNullOrNone(psProvinceId) || StringTools.isNullOrNone(psCityId)){
+            System.out.println("Empty province ID and City ID");
+            return;
+        }else{
+            System.out.println("***************new provinceId:"+psProvinceId+" cityId:"+psCityId);
+            System.out.println("Customer ID*****"+outBean.getCustomerId());
+            CustomerBean customer = this.customerMainDAO.find(outBean.getCustomerId());
+            String provinceId = customer.getProvinceId();
+            String cityId = customer.getCityId();
+            System.out.println("Customer current provinceId*****"+provinceId+" cityId:"+cityId);
+            //如果原客户地址是虚拟省市，并且配送单地址非虚拟省市，则更新客户地址信息
+            if ("000000".equals(provinceId) && "000010".equals(cityId) &&
+                    !"000000".equals(distBean.getProvinceId()) && !("000010").equals(distBean.getCityId())){
+                System.out.println("Update customer info*****");
+                customer.setProvinceId(distBean.getProvinceId());
+                customer.setCityId(distBean.getCityId());
+                this.customerMainDAO.updateEntityBean(customer);
+            }
+        }
+
+
+    }
 	
 	/**
 	 * 每10分钟运行一次 JOB
