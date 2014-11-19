@@ -82,6 +82,8 @@
 	<osgi:reference id="creditLevelDAO" interface="com.china.center.oa.credit.dao.CreditLevelDAO" />
 	
 	<osgi:reference id="customerMainDAO" interface="com.china.center.oa.client.dao.CustomerMainDAO" />
+
+    <osgi:reference id="customerIndividualDAO" interface="com.china.center.oa.client.dao.CustomerIndividualDAO" />
 	
 	<osgi:reference id="storageDAO" interface="com.china.center.oa.product.dao.StorageDAO" />
 	

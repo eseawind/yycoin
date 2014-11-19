@@ -25,6 +25,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import com.china.center.oa.client.dao.CustomerIndividualDAO;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.china.center.spring.ex.annotation.Exceptional;
@@ -47,6 +48,7 @@ import com.china.center.jdbc.util.ConditionParse;
 import com.china.center.jdbc.util.PageSeparate;
 import com.china.center.oa.client.bean.AddressBean;
 import com.china.center.oa.client.bean.CustomerBean;
+import com.china.center.oa.client.bean.CustomerIndividualBean;
 import com.china.center.oa.client.dao.AddressDAO;
 import com.china.center.oa.client.dao.CustomerMainDAO;
 import com.china.center.oa.client.dao.StafferVSCustomerDAO;
@@ -314,6 +316,8 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
     private OutPayTagDAO outPayTagDAO = null;
     
     private ZJRCManager zjrcManager = null;
+
+    private CustomerIndividualDAO  customerIndividualDAO = null;
     
     /**
      * 短信最大停留时间
@@ -8735,17 +8739,32 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
         }else{
             System.out.println("***************new provinceId:"+psProvinceId+" cityId:"+psCityId);
             System.out.println("Customer ID*****"+outBean.getCustomerId());
-            CustomerBean customer = this.customerMainDAO.find(outBean.getCustomerId());
+            String customerId = outBean.getCustomerId();
+            CustomerBean customer = this.customerMainDAO.find(customerId);
             String provinceId = customer.getProvinceId();
             String cityId = customer.getCityId();
             System.out.println("Customer current provinceId*****"+provinceId+" cityId:"+cityId);
             //如果原客户地址是虚拟省市，并且配送单地址非虚拟省市，则更新客户地址信息
             if ("000000".equals(provinceId) && "000010".equals(cityId) &&
                     !"000000".equals(distBean.getProvinceId()) && !("000010").equals(distBean.getCityId())){
-                System.out.println("Update customer info*****");
+                System.out.println("Update customer main info*****");
                 customer.setProvinceId(distBean.getProvinceId());
                 customer.setCityId(distBean.getCityId());
                 this.customerMainDAO.updateEntityBean(customer);
+
+                //更新对应的Individual表
+                if (customer.getType() == CustomerConstant.NATURE_INDIVIDUAL){
+                    System.out.println("Update customer individual info*****");
+                    CustomerIndividualBean indiBean = this.customerIndividualDAO.find(customerId);
+                    indiBean.setProvinceId(distBean.getProvinceId());
+                    indiBean.setCityId(distBean.getCityId());
+                    this.customerIndividualDAO.updateEntityBean(indiBean);
+                } else if (customer.getType() == CustomerConstant.NATURE_DEPART){
+                    System.out.println("Update depart individual info*****");
+                } else if (customer.getType() == CustomerConstant.NATURE_CORPORATION){
+                    System.out.println("Update corporation individual info*****");
+                }
+
             }
         }
 
@@ -8763,32 +8782,37 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
         
         long statsStar = System.currentTimeMillis();
         
-        TransactionTemplate tran = new TransactionTemplate(transactionManager);
-        
         final UserVO user = new UserVO();
         
         user.setStafferId(StafferConstant.SUPER_STAFFER);
         
         try
         {
+            TransactionTemplate tran = new TransactionTemplate(transactionManager);
+
             tran.execute(new TransactionCallback()
             {
                 public Object doInTransaction(TransactionStatus arg0)
                 {
                 	try
 					{
-                		List<OutBean> list = checkPayInner(user);
-                		
-                		// 发邮件
-                		for (OutBean each : list)
-                		{
-                			sendOutMail(each, "款到发货未在一小时内勾款,系统自动驳回");
-                		}
+                        triggerLog.info("handleCheckPay 暂停统计，款到发货1小时内未付款，不会自动驳回...");
+//                		List<OutBean> list = checkPayInner(user);
+//
+//                		// 发邮件
+//                		for (OutBean each : list)
+//                		{
+//                			sendOutMail(each, "款到发货未在一小时内勾款,系统自动驳回");
+//                		}
 					}
-					catch (MYException e)
-					{
-						throw new RuntimeException(e);
-					}
+//					catch (MYException e)
+//					{
+//						throw new RuntimeException(e);
+//					}
+                    catch(Exception e){
+                        e.printStackTrace();
+                        throw new RuntimeException(e);
+                    }
                     
                     return Boolean.TRUE;
                 }
@@ -8796,6 +8820,7 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
         }
         catch (Exception e)
         {
+            e.printStackTrace();
             triggerLog.error(e, e);
         }
       
@@ -11333,4 +11358,12 @@ public class OutManagerImpl extends AbstractListenerManager<OutListener> impleme
 	{
 		this.zjrcManager = zjrcManager;
 	}
+
+    public CustomerIndividualDAO getCustomerIndividualDAO() {
+        return customerIndividualDAO;
+    }
+
+    public void setCustomerIndividualDAO(CustomerIndividualDAO customerIndividualDAO) {
+        this.customerIndividualDAO = customerIndividualDAO;
+    }
 }

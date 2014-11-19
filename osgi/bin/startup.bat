@@ -9,7 +9,7 @@ set CATALINA_BASE=%OSGI_HOME%
 set osgi.home=%OSGI_HOME%
 echo Using CATALINA_BASE: %CATALINA_HOME%
 
-set JAVA_OPTS=%JAVA_OPTS% -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=%OSGI_HOME%/dump
+set JAVA_OPTS=%JAVA_OPTS% -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=%OSGI_HOME%/dump -Xmx1024m -Xmn512m -Xss128k -XX:MaxPermSize=256m
 
 rem clean %CATALINA_HOME%\webapps
 rd %CATALINA_HOME%\webapps /s /q

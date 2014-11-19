@@ -183,7 +183,7 @@ public class OutImportAction extends DispatchAction
             HttpServletRequest request, HttpServletResponse response)
 	throws ServletException
 	{
-    	User user = Helper.getUser(request);
+        User user = Helper.getUser(request);
     	
         RequestDataStream rds = new RequestDataStream(request);
         
@@ -192,7 +192,6 @@ public class OutImportAction extends DispatchAction
         List<OutImportBean> importItemList = new ArrayList<OutImportBean>(); 
         
         StringBuilder builder = new StringBuilder();
-        
         try
         {
             rds.parser();
@@ -205,7 +204,6 @@ public class OutImportAction extends DispatchAction
 
             return mapping.findForward("importOut");
         }
-
         if ( !rds.haveStream())
         {
             request.setAttribute(KeyConstant.ERROR_MESSAGE, "解析失败");
@@ -216,11 +214,9 @@ public class OutImportAction extends DispatchAction
         String itype = rds.getParameter("type"); 
         
         ReaderFile reader = ReadeFileFactory.getXLSReader();
-        
-        try
+         try
         {
             reader.readFile(rds.getUniqueInputStream());
-            
             while (reader.hasNext())
             {
                 String[] obj = fillObj((String[])reader.next());
@@ -702,7 +698,14 @@ public class OutImportAction extends DispatchAction
 			}else{
 				bean.setCiticOrderDate(name);
 			}
-		}
+		} else {
+            builder
+                    .append("第[" + currentNumber + "]错误:")
+                    .append("中信订单日期不能为空")
+                    .append("<br>");
+
+            importError = true;
+        }
 		
 		// 仓库
 		if ( !StringTools.isNullOrNone(obj[30]))
