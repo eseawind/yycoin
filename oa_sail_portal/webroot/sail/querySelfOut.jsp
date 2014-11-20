@@ -620,6 +620,11 @@ function checkCurrentUser()
 					
 					</tr>
 
+                    <tr class="content2">
+                        <td width="15%" align="center">产品名称</td>
+                        <td align="center"><input type="text" name="product_name"></td>
+                    </tr>
+
 					<tr class="content2">
 
 						<td colspan="4" align="right"><input type="button" id="query_b"

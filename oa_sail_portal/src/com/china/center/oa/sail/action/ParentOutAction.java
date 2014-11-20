@@ -522,10 +522,12 @@ public class ParentOutAction extends DispatchAction
 		if (OATools.isChangeToV5())
 		{
 			// 销售单
+            System.out.println("*******************find you********");
 			return mapping.findForward("addOut501");
 		}
 		else
 		{
+            System.out.println("*******************aha********");
 			return mapping.findForward("addOut4_bak");
 		}
 	}
@@ -5889,6 +5891,7 @@ public class ParentOutAction extends DispatchAction
 			HttpServletRequest request, HttpServletResponse reponse)
 			throws ServletException
 	{
+        System.out.println("addOutStep2111111111111111111");
 		// 是否锁定库存
 		if (storageRelationManager.isStorageRelationLock())
 		{
@@ -5896,6 +5899,7 @@ public class ParentOutAction extends DispatchAction
 
 			return mapping.findForward("error");
 		}
+        System.out.println("addOutStep211122222222222222222");
 
 		User user = (User) request.getSession().getAttribute("user");
 
@@ -5913,21 +5917,21 @@ public class ParentOutAction extends DispatchAction
 		}
 
 		ActionForward action = null;
-
+        System.out.println("addOutStep233333333333333333");
 		OutBean outBean = outDAO.find(fullId);
-
+        System.out.println("addOutStep2444444444444444");
 		if (null == outBean)
 		{
 			request.setAttribute(KeyConstant.ERROR_MESSAGE, "库单不存在,请重新操作");
 
 			return mapping.findForward("error");
 		}
-
+        System.out.println("addOutStep255555555555555555");
 		fillDistribution(request, outBean);
-
+        System.out.println("addOutStep21166666666666666666");
 		// 商务 - begin
 		ActionForward error = checkAuthForEcommerce(request, user, mapping);
-
+        System.out.println("addOutStep2177777777777777");
 		if (null != error)
 		{
 			return error;
@@ -5945,11 +5949,11 @@ public class ParentOutAction extends DispatchAction
 		}
 
 		// 商务 - end
-
+        System.out.println("addOutStep2188888888888888888");
 		// 销售单
 		action = processCommonOut(mapping, form, request, reponse, user, saves,
 				fullId, outBean, null, "2");
-
+        System.out.println("addOutStep211999999999999999999");
 		if (action != null)
 		{
 			return action;
@@ -5971,9 +5975,10 @@ public class ParentOutAction extends DispatchAction
 
 		if (!outBean.getStafferId().equals(outBean.getOperator()))
 		{
-			outManager.sendOutMail(outBean, "商务开单确认.");
+            System.out.println("addOutStep2 sendOutMailsendOutMailsendOutMailsendOutMail");
+			//outManager.sendOutMail(outBean, "商务开单确认.");
 		}
-
+        System.out.println("addOutStep2aaaaaaaaaaaaaaaaaa");
 		return querySelfOut(mapping, form, request, reponse);
 	}
 
@@ -6060,6 +6065,7 @@ public class ParentOutAction extends DispatchAction
 			HttpServletResponse reponse, User user, String saves,
 			String fullId, OutBean outBean, ParamterMap map, String step)
 	{
+        System.out.println("processCommonOut:**************step***"+step);
 		// 增加库单
 		if (!StringTools.isNullOrNone(fullId))
 		{
@@ -6088,6 +6094,7 @@ public class ParentOutAction extends DispatchAction
 			{
 				id = outManager.addOutStep2(outBean, user);
 			}
+            System.out.println("step:"+step+" id******************"+id);
 
 			// 提交
 			if (OutConstant.FLOW_DECISION_SUBMIT.equals(saves)
@@ -6122,6 +6129,7 @@ public class ParentOutAction extends DispatchAction
 		}
 		catch (MYException e)
 		{
+            e.printStackTrace();
 			_logger.warn(e, e);
 
 			request.setAttribute(KeyConstant.ERROR_MESSAGE, e.getErrorContent());
@@ -6524,7 +6532,7 @@ public class ParentOutAction extends DispatchAction
 			HttpServletRequest request, HttpServletResponse reponse)
 			throws ServletException
 	{
-		User user = (User) request.getSession().getAttribute("user");
+        User user = (User) request.getSession().getAttribute("user");
 
 		request.getSession().setAttribute("exportKey", QUERYSELFOUT);
 
@@ -6536,9 +6544,9 @@ public class ParentOutAction extends DispatchAction
 		{
 			if (OldPageSeparateTools.isFirstLoad(request))
 			{
-				ConditionParse condtion = getQuerySelfCondition(request, user);
+               ConditionParse condtion = getQuerySelfCondition(request, user);
 
-				int tatol = outDAO.countVOByCondition(condtion.toString());
+                int tatol = outDAO.countVOByCondition(condtion.toString());
 
 				PageSeparate page = new PageSeparate(tatol,
 						PublicConstant.PAGE_SIZE - 5);
@@ -6551,7 +6559,6 @@ public class ParentOutAction extends DispatchAction
 			else
 			{
 				OldPageSeparateTools.processSeparate(request, QUERYSELFOUT);
-
 				list = outDAO.queryEntityVOsByCondition(OldPageSeparateTools
 						.getCondition(request, QUERYSELFOUT),
 						OldPageSeparateTools.getPageSeparate(request,
@@ -6560,16 +6567,17 @@ public class ParentOutAction extends DispatchAction
 		}
 		catch (Exception e)
 		{
+            e.printStackTrace();
 			request.setAttribute(KeyConstant.ERROR_MESSAGE, "查询单据失败");
 
 			_logger.error(e, e);
 
 			return mapping.findForward("error");
 		}
+        request.setAttribute("listOut1", list);
 
-		request.setAttribute("listOut1", list);
 
-		// 发货单
+        // 发货单
 		ConsignBean temp = null;
 
 		for (OutBean outBean : list)
@@ -6581,15 +6589,12 @@ public class ParentOutAction extends DispatchAction
 				outBean.setConsign(temp.getCurrentStatus());
 			}
 		}
-
-		List<InvoiceBean> invoiceList = invoiceDAO.queryEntityBeansByCondition(
+        List<InvoiceBean> invoiceList = invoiceDAO.queryEntityBeansByCondition(
 				"where forward = ?", InvoiceConstant.INVOICE_FORWARD_OUT);
-
-		request.setAttribute("invoiceList", invoiceList);
+        request.setAttribute("invoiceList", invoiceList);
 
 		List<DutyVO> dutyList = dutyDAO.listEntityVOs();
-
-		for (DutyVO vo : dutyList)
+        for (DutyVO vo : dutyList)
 		{
 			List<InvoiceBean> queryForwardOutByDutyId = invoiceDAO
 					.queryForwardOutByDutyId(vo.getId());
@@ -6607,8 +6612,24 @@ public class ParentOutAction extends DispatchAction
 
 		request.setAttribute("now", TimeTools.now("yyyy-MM-dd"));
 
-		getDivs(request, list);
+        this.getDivs(request, list);
+//		List<String> fullIdList = getDivsForSelfOut(request, list);
+//        System.out.println("querySelfOut1dutyList*********Finished:"+fullIdList);
+        //Filter list with fullId
+//        String productName = request.getParameter("product_name");
+//        if (!StringTools.isNullOrNone(productName)){
+//            for (Iterator<OutVO> iterator = list.iterator(); iterator.hasNext();) {
+//                OutVO vo = iterator.next();
+//                if (!fullIdList.contains(vo.getFullId())){
+//                    iterator.remove();
+//                }
+//            }
+//        }
 
+//        System.out.println("querySelfOut1dutyList*********listOut1:"+list);
+//        System.out.println("querySelfOut1dutyList*********listOut1 size:"+list.size());
+//        request.getSession().setAttribute("listOut1", list);
+//        request.setAttribute("listOut1", list);
 		return mapping.findForward("querySelfOut");
 	}
 
@@ -7646,6 +7667,11 @@ public class ParentOutAction extends DispatchAction
 		{
 			condtion.addIntCondition("OutBean.tempType", "=", tempType);
 		}
+
+        String productName = request.getParameter("product_name");
+        if (!StringTools.isNullOrNone(productName)){
+            condtion.addCondition(" and exists (select b.id from t_center_base b where b.outId=OutBean.fullId and b.productName like '%"+productName+"%')");
+        }
 
 		condtion.addCondition("order by OutBean.id desc");
 
@@ -9490,6 +9516,7 @@ public class ParentOutAction extends DispatchAction
 	protected void getDivs(HttpServletRequest request, List list)
 	{
 		Map divMap = new HashMap();
+        List<String> fullIdList = new ArrayList<String>();
 
 		String queryType = RequestTools.getValueFromRequest(request,
 				"queryType");
@@ -9551,7 +9578,98 @@ public class ParentOutAction extends DispatchAction
 		}
 
 		request.setAttribute("divMap", divMap);
+
 	}
+
+    /**
+     * Get DIV for querySelfOut
+     * @param request
+     * @param list
+     * @return
+     */
+    protected List<String> getDivsForSelfOut(HttpServletRequest request, List list)
+    {
+        String productName = request.getParameter("product_name");
+        System.out.println("********product**********"+productName);
+        Map divMap = new HashMap();
+        List<String> fullIdList = new ArrayList<String>();
+
+        String queryType = RequestTools.getValueFromRequest(request,
+                "queryType");
+
+        // 是否可以看到真实的成本
+        boolean containAuth = userManager.containAuth(Helper.getUser(request)
+                .getId(), AuthConstant.SAIL_QUERY_COST);
+
+        if (list != null)
+        {
+            for (Object each : list)
+            {
+                OutBean bean = (OutBean) each;
+
+                try
+                {
+                    List<BaseBean> baseList = baseDAO.queryEntityBeansByFK(bean
+                            .getFullId());
+
+                    for (BaseBean baseBean : baseList)
+                    {
+                        // 销售价低于成本
+                        if ("2".equals(queryType))
+                        {
+                            if (bean.getOutType() == OutConstant.OUTTYPE_OUT_PRESENT)
+                            {
+                                break;
+                            }
+
+                            if (baseBean.getPrice() < baseBean.getCostPrice())
+                            {
+                                bean.setReserve9("1");
+
+                                break;
+                            }
+                        }
+                    }
+
+                    //check productName
+                    if (!StringTools.isNullOrNone(productName)){
+                        for (BaseBean baseBean : baseList)
+                        {
+                            if (baseBean.getProductName().indexOf(productName)!=-1){
+                                System.out.println("Product found***********"+baseBean.getProductName());
+                                fullIdList.add(bean.getFullId());
+                                break;
+                            }
+                        }
+                    }
+
+
+                    if (OATools.isChangeToV5())
+                    {
+                        if (!containAuth)
+                        {
+                            for (BaseBean baseBean : baseList)
+                            {
+                                // 显示成本
+                                baseBean.setCostPrice(baseBean.getInputPrice());
+                            }
+                        }
+                    }
+
+                    divMap.put(bean.getFullId(),
+                            OutHelper.createTable(baseList, bean.getTotal()));
+                }
+                catch (Exception e)
+                {
+                    _logger.error("addOut", e);
+                }
+            }
+        }
+
+        request.setAttribute("divMap", divMap);
+        return fullIdList;
+
+    }
 
 	/**
 	 * 校验商品是否满足 促销规则,并根据数量与金额计算折扣金额
