@@ -8387,6 +8387,11 @@ public class ParentOutAction extends DispatchAction
 						String.valueOf(OutConstant.STATUS_PASS));
 			}
 
+            //Filter by product name
+            String productName = request.getParameter("product_name");
+            if (!StringTools.isNullOrNone(productName)){
+                condtion.addCondition(" and exists (select b.id from t_center_base b where b.outId=OutBean.fullId and b.productName like '%"+productName+"%')");
+            }
 			condtion.addCondition("order by changeTime desc");
 		}
 		// 总裁审批赠送
@@ -8492,6 +8497,7 @@ public class ParentOutAction extends DispatchAction
 		{
 			condtion.addFlaseCondition();
 		}
+
 
 		if (!condtion.containOrder())
 		{
