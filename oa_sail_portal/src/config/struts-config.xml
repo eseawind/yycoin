@@ -177,6 +177,8 @@
             <forward name="addZJRCOut" path="/sailImport/addZJRCOut.jsp" />
             <forward name="updateZJRCOut" path="/sailImport/updateZJRCOut.jsp" />
             <forward name="detailZJRCOut" path="/sailImport/detailZJRCOut.jsp" />
+            <forward name="ysqrdPrint" path="/sailImport/ysqrdPrint.jsp" />
+            <forward name="cjqrdPrint" path="/sailImport/cjqrdPrint.jsp" />
             <forward name="rptQueryZJRCProduct" path="/sailImport/rptQueryZJRCProduct.jsp" />
             <forward name="queryZJRCProduct" path="/sailImport/queryZJRCProduct.jsp" />
             <forward name="addZJRCProduct" path="/sailImport/addZJRCProduct.jsp" />

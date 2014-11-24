@@ -71,6 +71,16 @@ function modfiy()
 	}
 }
 
+function ysPrint()
+{
+    document.location.href = '../sail/extout.do?method=ysqrdPrint&outId=' + getRadioValue("fullId") + "&fow=1";
+}
+
+function cjPrint()
+{
+    document.location.href = '../sail/extout.do?method=cjqrdPrint&outId=' + getRadioValue("fullId") + "&fow=1";
+}
+
 function del()
 {
 	//if (getRadio('fullId').statuss == '0' || getRadio('fullId').statuss == '1')
@@ -300,6 +310,10 @@ function load()
 				value="&nbsp;&nbsp;修 改&nbsp;&nbsp;" onclick="modfiy()" />&nbsp;&nbsp;
 			<input type="button" class="button_class"
 				value="&nbsp;&nbsp;删 除&nbsp;&nbsp;" onclick="del()" />&nbsp;&nbsp;
+            <input type="button" class="button_class"
+                   value="&nbsp;&nbsp;预售确认单打印&nbsp;&nbsp;" onclick="ysPrint()" />&nbsp;&nbsp;
+            <input type="button" class="button_class"
+                   value="&nbsp;&nbsp;成交确认单打印&nbsp;&nbsp;" onclick="cjPrint()" />&nbsp;&nbsp;
 			
 		</div>
 		</td>

@@ -1024,6 +1024,154 @@ public class ExtOutAction extends DispatchAction
        
        return querySelfZJRCOut(mapping, form, request, reponse);
 	}
+
+    /**
+     * ysPrint 紫金农商“预售确认单打印”
+     * @param mapping
+     * @param form
+     * @param request
+     * @param reponse
+     * @return
+     * @throws ServletException
+     */
+    public ActionForward ysqrdPrint(ActionMapping mapping, ActionForm form,
+                                     HttpServletRequest request, HttpServletResponse reponse)
+            throws ServletException
+    {
+        String outId = RequestTools.getValueFromRequest(request, "outId");
+        System.out.println("**************outId***********"+outId);
+        CommonTools.saveParamers(request);
+
+        String goback = request.getParameter("goback");
+
+        if (StringTools.isNullOrNone(goback))
+        {
+            goback = "1";
+        }
+
+        request.setAttribute("goback", goback);
+
+        ZJRCOutVO bean = null;
+        try
+        {
+            bean = zjrcOutDAO.findVO(outId);
+            System.out.println("**************ZJRCOutVO***********"+bean);
+
+            if (bean == null)
+            {
+                request.setAttribute(KeyConstant.ERROR_MESSAGE, "库单不存在,请重新操作");
+
+                return mapping.findForward("error");
+            }
+
+            List<ZJRCBaseBean> list = zjrcBaseDAO.queryEntityBeansByFK(outId);
+            System.out.println("**************list***********"+list);
+
+            if (ListTools.isEmptyOrNull(list))
+            {
+                request.setAttribute(KeyConstant.ERROR_MESSAGE, "库单不存在子项,请重新操作");
+
+                return mapping.findForward("error");
+            }
+
+            bean.setBaseList(list);
+
+            request.setAttribute("bean", bean);
+
+            request.setAttribute("fristBase", list.get(0));
+
+            if (list.size() > 1)
+            {
+                request.setAttribute("lastBaseList", list.subList(1, list.size()));
+            }
+        }
+        catch (Exception e)
+        {
+            request.setAttribute(KeyConstant.ERROR_MESSAGE, "查询库单失败");
+
+            _logger.error(e, e);
+
+            return mapping.findForward("error");
+        }
+
+        request.setAttribute("flag", "0");
+        System.out.println("**************forward***********");
+
+        // 详细
+        return mapping.findForward("ysqrdPrint");
+    }
+
+    /**
+     * ysPrint 紫金农商“成交确认单打印”
+     * @param mapping
+     * @param form
+     * @param request
+     * @param reponse
+     * @return
+     * @throws ServletException
+     */
+    public ActionForward cjqrdPrint(ActionMapping mapping, ActionForm form,
+                                 HttpServletRequest request, HttpServletResponse reponse)
+            throws ServletException
+    {
+        String outId = RequestTools.getValueFromRequest(request, "outId");
+        CommonTools.saveParamers(request);
+
+        String goback = request.getParameter("goback");
+
+        if (StringTools.isNullOrNone(goback))
+        {
+            goback = "1";
+        }
+
+        request.setAttribute("goback", goback);
+
+        ZJRCOutVO bean = null;
+        try
+        {
+            bean = zjrcOutDAO.findVO(outId);
+
+            if (bean == null)
+            {
+                request.setAttribute(KeyConstant.ERROR_MESSAGE, "库单不存在,请重新操作");
+
+                return mapping.findForward("error");
+            }
+
+            List<ZJRCBaseBean> list = zjrcBaseDAO.queryEntityBeansByFK(outId);
+
+            if (ListTools.isEmptyOrNull(list))
+            {
+                request.setAttribute(KeyConstant.ERROR_MESSAGE, "库单不存在子项,请重新操作");
+
+                return mapping.findForward("error");
+            }
+
+            bean.setBaseList(list);
+
+            request.setAttribute("bean", bean);
+
+            request.setAttribute("fristBase", list.get(0));
+
+            if (list.size() > 1)
+            {
+                request.setAttribute("lastBaseList", list.subList(1, list.size()));
+            }
+        }
+        catch (Exception e)
+        {
+            request.setAttribute(KeyConstant.ERROR_MESSAGE, "查询库单失败");
+
+            _logger.error(e, e);
+
+            return mapping.findForward("error");
+        }
+
+        request.setAttribute("flag", "0");
+
+        // 详细
+        return mapping.findForward("cjqrdPrint");
+    }
 	
 	/**
 	 * 
