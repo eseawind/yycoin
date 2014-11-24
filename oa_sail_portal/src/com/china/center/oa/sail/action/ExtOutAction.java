@@ -1039,7 +1039,6 @@ public class ExtOutAction extends DispatchAction
             throws ServletException
     {
         String outId = RequestTools.getValueFromRequest(request, "outId");
-        System.out.println("**************outId***********"+outId);
         CommonTools.saveParamers(request);
 
         String goback = request.getParameter("goback");
@@ -1055,7 +1054,6 @@ public class ExtOutAction extends DispatchAction
         try
         {
             bean = zjrcOutDAO.findVO(outId);
-            System.out.println("**************ZJRCOutVO***********"+bean);
 
             if (bean == null)
             {
@@ -1065,7 +1063,6 @@ public class ExtOutAction extends DispatchAction
             }
 
             List<ZJRCBaseBean> list = zjrcBaseDAO.queryEntityBeansByFK(outId);
-            System.out.println("**************list***********"+list);
 
             if (ListTools.isEmptyOrNull(list))
             {
@@ -1078,12 +1075,12 @@ public class ExtOutAction extends DispatchAction
 
             request.setAttribute("bean", bean);
 
-            request.setAttribute("fristBase", list.get(0));
-
-            if (list.size() > 1)
-            {
-                request.setAttribute("lastBaseList", list.subList(1, list.size()));
-            }
+//            request.setAttribute("fristBase", list.get(0));
+//            if (list.size() > 1)
+//            {
+//                request.setAttribute("lastBaseList", list.subList(1, list.size()));
+//            }
+            request.setAttribute("baseList", list);
         }
         catch (Exception e)
         {
@@ -1095,7 +1092,6 @@ public class ExtOutAction extends DispatchAction
         }
 
         request.setAttribute("flag", "0");
-        System.out.println("**************forward***********");
 
         // 详细
         return mapping.findForward("ysqrdPrint");
@@ -1151,12 +1147,13 @@ public class ExtOutAction extends DispatchAction
 
             request.setAttribute("bean", bean);
 
-            request.setAttribute("fristBase", list.get(0));
-
-            if (list.size() > 1)
-            {
-                request.setAttribute("lastBaseList", list.subList(1, list.size()));
-            }
+//            request.setAttribute("fristBase", list.get(0));
+//
+//            if (list.size() > 1)
+//            {
+//                request.setAttribute("lastBaseList", list.subList(1, list.size()));
+//            }
+            request.setAttribute("baseList", list);
         }
         catch (Exception e)
         {

@@ -128,46 +128,16 @@ function hiddenCost(str)
                     <td>编号</td>
                     <td>金额</td>
                 </tr>
-                <tr class="content2">
-                    <td width="20%"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="content2">
-                    <td width="20%"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="content2">
-                    <td width="20%"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="content2">
-                    <td width="20%"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-                <tr class="content2">
-                    <td width="20%"></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
+                <c:forEach items="${baseList}" var="fristBase" varStatus="vs">
+                    <tr class="content2">
+                        <td width="20%">${fristBase.zjrcProductName}</td>
+                        <td></td>
+                        <td>${fristBase.price}</td>
+                        <td>${fristBase.amount}</td>
+                        <td></td>
+                        <td>${fristBase.value}</td>
+                    </tr>
+                </c:forEach>
                 <tr class="content2">
                     <td colspan="5" align="center">总计:</td>
                     <td colspan="1"></td>
