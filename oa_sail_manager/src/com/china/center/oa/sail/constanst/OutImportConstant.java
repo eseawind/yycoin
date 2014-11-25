@@ -147,6 +147,13 @@ public interface OutImportConstant
      */
     @Defined(key = "zjrcOutStatus", value = "配送中")
     int STATUS_SHIPPING = 3;
+
+    /**
+     * 主出纳签收
+     * 增加紫金订单状态“主出纳签收”，此状态在流程中置于 “银行签收” 状态前，“配送中” 状态后
+     */
+    @Defined(key = "zjrcOutStatus", value = "主出纳签收")
+    int STATUS_CASHER_RECEIVE = 6;
     
     /**
      * 待银行签收
@@ -159,6 +166,7 @@ public interface OutImportConstant
      */
     @Defined(key = "zjrcOutStatus", value = "客户已签收")
     int STATUS_CUSTOMER_RECEIVE = 5;
+
     
     /**
      * 结束

@@ -108,7 +108,7 @@ function hiddenCost(str)
 
 	<tr>
 		<td colspan='2' align='center'>
-            <table width="100%" border="0" cellspacing='0' id="mainTable">
+            <table width="80%" border="0" cellspacing='0' id="mainTable">
                 <tr class="content2 title">
                     <td colspan="3" align="center">业务申请单</td>
                 </tr>
@@ -128,9 +128,9 @@ function hiddenCost(str)
                     </td>
                 </tr>
                 <tr class="content2">
-                    <td width="30%">规格</td>
-                    <td>申请数量（大写)</td>
-                    <td>申请数量（小写）</td>
+                    <td width="30%" align="center">规格</td>
+                    <td align="center">申请数量（大写)</td>
+                    <td align="center">申请数量（小写）</td>
                 </tr>
                 <tr class="content2">
                     <td></td>

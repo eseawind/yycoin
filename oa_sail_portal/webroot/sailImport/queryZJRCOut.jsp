@@ -194,7 +194,9 @@ function receive(flag)
 {
 	if (flag == '1')
 	{
-		if (getRadio('fullId').statuss == '3')
+        //银行签收
+        //暂时允许两种状态都能进入:配送中/主出纳签收
+		if (getRadio('fullId').statuss == '3' || getRadio('fullId').statuss == '6')
 		{
 			if (window.confirm("确定该操作?"))
 			 {
@@ -209,9 +211,10 @@ function receive(flag)
 		}else{
 			alert('此状态不能操作!');
 		}
-	}else {
+	}else if (flag == '2'){
 		if (getRadio('fullId').statuss == '4')
 		{
+            //客户签收
 			if (window.confirm("确定该操作?"))
 			 {
 			 	$O('method').value = 'modifyOutStatus';
@@ -225,7 +228,25 @@ function receive(flag)
 		}else{
 			alert('此状态不能操作!');
 		}
-	}
+	} else if (flag == '3'){
+        //主出纳签收   “
+        // 此状态在流程中置于 “银行签收” 状态前，“配送中” 状态后
+        if (getRadio('fullId').statuss == '3')
+        {
+            if (window.confirm("确定该操作?"))
+            {
+                $O('method').value = 'modifyOutStatus';
+                $O('oldStatus').value = getRadio('fullId').statuss;
+                $O('statuss').value = '6';
+                $O('outId').value = getRadioValue("fullId");
+
+                disableAllButton();
+                adminForm.submit();
+            }
+        }else{
+            alert('此状态不能操作!');
+        }
+    }
 }
 
 </script>
@@ -407,6 +428,10 @@ function receive(flag)
 			<input type="button" class="button_class"
 				value="&nbsp;&nbsp;客户签收&nbsp;&nbsp;" onclick="receive(2)" />&nbsp;&nbsp;
 			</c:if>
+            <c:if test="${my:auth(user, '9036')}">
+                <input type="button" class="button_class"
+                       value="&nbsp;&nbsp;主出纳签收&nbsp;&nbsp;" onclick="receive(3)" />&nbsp;&nbsp;
+            </c:if>
 		</div>
 		</td>
 		

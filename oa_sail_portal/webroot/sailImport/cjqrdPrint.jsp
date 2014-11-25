@@ -108,48 +108,50 @@ function hiddenCost(str)
 
 	<tr>
 		<td colspan='2' align='center'>
-            <table width="100%" border="0" cellspacing='0' id="mainTable">
+            <table width="80%" border="0" cellspacing='0' id="mainTable">
                 <tr class="content2 title">
                     <td colspan="6" align="center">成交确认单</td>
                 </tr>
                 <tr class="content2">
-                    <td width="30%" colspan="2">交易网点：</td>
-                    <td colspan="2">交易业务：预售业务</td>
-                    <td colspan="2">计价币种：人民币</td>
+                    <td width="30%" colspan="2" align="center">交易网点：${bean.customerName}</td>
+                    <td colspan="2" align="center">交易业务：预售业务</td>
+                    <td colspan="2" align="center">计价币种：人民币</td>
                 </tr>
                 <tr class="content2">
-                    <td colspan="6" align="center">流水号</td>
+                    <td colspan="6" align="center">流水号：${bean.fullId}</td>
                 </tr>
                 <tr class="content2">
-                    <td width="20%">名称</td>
-                    <td>规格</td>
-                    <td>单价</td>
-                    <td>数量</td>
-                    <td>编号</td>
-                    <td>金额</td>
+                    <td width="20%" align="center">名称</td>
+                    <td align="center">规格</td>
+                    <td align="center">单价</td>
+                    <td align="center">数量</td>
+                    <td align="center">编号</td>
+                    <td align="center">金额</td>
                 </tr>
                 <c:forEach items="${baseList}" var="fristBase" varStatus="vs">
                     <tr class="content2">
-                        <td width="20%">${fristBase.zjrcProductName}</td>
-                        <td></td>
-                        <td>${fristBase.price}</td>
-                        <td>${fristBase.amount}</td>
-                        <td></td>
-                        <td>${fristBase.value}</td>
+                        <td width="20%" align="center">${fristBase.zjrcProductName}</td>
+                        <td align="center"></td>
+                        <td align="center">${fristBase.price}</td>
+                        <td align="center">${fristBase.amount}</td>
+                        <td align="center">ZJ-${vs.count}</td>
+                        <td align="center">${fristBase.price * fristBase.amount}</td>
                     </tr>
                 </c:forEach>
                 <tr class="content2">
                     <td colspan="5" align="center">总计:</td>
-                    <td colspan="1"></td>
+                    <td colspan="1">${total}</td>
                 </tr>
                 <tr class="content2">
-                    <td colspan="3">经办人:</td>
-                    <td colspan="3">银行签单：</td>
+                    <td colspan="3" align="center">经办人:</td>
+                    <td colspan="1" align="center">银行签单：</td>
+                    <td colspan="2" align="center"></td>
                 </tr>
                 <tr class="content2">
-                    <td colspan="2">客户签字确认：</td>
-                    <td colspan="1"></td>
-                    <td colspan="3">联系电话：</td>
+                    <td colspan="2" align="center">客户签字确认：</td>
+                    <td colspan="1" align="center"></td>
+                    <td colspan="1" align="center">联系电话：</td>
+                    <td colspan="2" align="center"></td>
                 </tr>
                 <tr class="content2">
                     <td colspan="6"><p align="center">客户须知</p><br><br><br><br><br>
@@ -188,6 +190,10 @@ function hiddenCost(str)
             <input type="button" name="pr"
                 class="button_class" onclick="pagePrint()"
                 value="&nbsp;&nbsp;打 印&nbsp;&nbsp;">&nbsp;&nbsp;
+            <input
+                    type="button" name="ba" class="button_class"
+                    onclick="javascript:history.go(-${goback})"
+                    value="&nbsp;&nbsp;返 回&nbsp;&nbsp;">
         </div>
         </td>
         <td width="0%"></td>

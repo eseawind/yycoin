@@ -1081,6 +1081,12 @@ public class ExtOutAction extends DispatchAction
 //                request.setAttribute("lastBaseList", list.subList(1, list.size()));
 //            }
             request.setAttribute("baseList", list);
+
+            double total = 0.0;
+            for (ZJRCBaseBean zjrc: list){
+                total +=zjrc.getPrice()*zjrc.getAmount();
+            }
+            request.setAttribute("total", total);
         }
         catch (Exception e)
         {
@@ -1154,6 +1160,11 @@ public class ExtOutAction extends DispatchAction
 //                request.setAttribute("lastBaseList", list.subList(1, list.size()));
 //            }
             request.setAttribute("baseList", list);
+            double total = 0.0;
+            for (ZJRCBaseBean zjrc: list){
+                total +=zjrc.getPrice()*zjrc.getAmount();
+            }
+            request.setAttribute("total", total);
         }
         catch (Exception e)
         {
